@@ -1,0 +1,10 @@
+﻿<ConnectionInformation>
+	<DBName>GX_KB_GXObligatorio1</DBName>
+	<IntegratedSecurity>True</IntegratedSecurity>
+	<ServerInstance>LAPTOP-3P8RENSJ\SQLEXPRESS</ServerInstance>
+	<CreateDbInKbFolder>True</CreateDbInKbFolder>
+	<Directory>C:\KB\Models\GXObligatorio1</Directory>
+	<DataFile>GX_KB_GXObligatorio1.mdf</DataFile>
+	<LogFile>GX_KB_GXObligatorio1_log.ldf</LogFile>
+	<HostName>LAPTOP-3P8RENSJ</HostName>
+</ConnectionInformation>

@@ -1,0 +1,35 @@
+current_obj_i(2,mnproc,3).
+ 
+current_guid('7fae6f56-159a-75e0-aaca-a0b3f0953cdc').
+ 
+ 
+called_tree_i(33,3,1000,3).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_main_object(alugar_dataprovider,'Lugar_Data Provider','','""','INTERNAL',default).
+ 
+ 
+ 
+ 
+ij_object_dependency(alugar_dataprovider,[],[],[],3).
+ 
+ 
+obj_parms_i([ 'GXBCCollection<SdtLugar> aP0_Gxm2rootcol' ],[ [ 'Gxm2rootcol',out ] ]).
+ 
+ 
+ 
+ 
+ 
+module_info_i('GeneXus\Common','CSHARP_NAME_SPACE','GeneXus.Core').
+module_info_i('GeneXus\Common','AssemblyName','GeneXus.dll').
+ 

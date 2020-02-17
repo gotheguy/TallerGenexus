@@ -1,0 +1,15 @@
+bc_dt_elem_i([ 0,3,0 ],'Lugarid',allownulls,no).
+bc_dt_elem_i([ 0,3,0 ],'Lugarnombre',allownulls,no).
+bc_dt_elem_i([ 0,3,0 ],'Lugarfoto',allownulls,no).
+bc_dt_elem_i([ 0,3,0 ],'Paisid',allownulls,no).
+bc_dt_elem_i([ 0,3,0 ],'Paisnombre',readonly,yes).
+bc_dt_elem_i([ 0,3,0 ],'Paisnombre',allownulls,no).
+bc_dt_elem_i([ 0,3,0 ],'Paisbandera',readonly,yes).
+bc_dt_elem_i([ 0,3,0 ],'Paisbandera',allownulls,no).
+bc_dt_elem_i([ 0,3,0 ],'Ciudadid',allownulls,no).
+bc_dt_elem_i([ 0,3,0 ],'Ciudadnombre',readonly,yes).
+bc_dt_elem_i([ 0,3,0 ],'Ciudadnombre',allownulls,no).
+bc_dt_elem_i([ 0,3,0 ],'Lugarfoto_gxi',allownulls,no).
+bc_dt_elem_i([ 0,3,0 ],'Paisbandera_gxi',readonly,yes).
+bc_dt_elem_i([ 0,3,0 ],'Paisbandera_gxi',allownulls,no).
+ 

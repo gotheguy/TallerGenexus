@@ -1,0 +1,1227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportLog>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>AttSubTitle</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>CheckBox</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>SpecialButtonsDisabled</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>ActionButtons</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>ButtonDisabled</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>WorkWith</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>ImageTop</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>ImageHandCenter</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>TableGrid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>TableTop</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>TableContent</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>Table100x100</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>TableBorder</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>ViewTable</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>TableHorizontalLine</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>header_pink_line</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>HorizontalSpace</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>TableBottom</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>RecentLinksTable</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>Table960</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>TableGreyFooter</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>TableBlackFooter</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>TableBlackHeader</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>Table95</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>TableLogin</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>Label</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>SmallText</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>TextBlockHeader</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>RecentLink</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>Separator</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>FooterText</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>RecentLinkItem</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>VerticalMenuOption</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>VerticalTabGrid</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>TabContainer</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>BlobInputAttSubTitle</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>BlobContentAttSubTitle</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>ReadonlyBlobContentAttSubTitle</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>ReadonlyAttSubTitle</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>BlobContentCheckBox</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>ReadonlyBlobContentCheckBox</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>BlobInputCheckBox</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>ReadonlyCheckBox</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>ImageHandCenter:hover</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>TabPaging</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>TabPagingNext</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>TabPagingPrevious</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>td5</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>td100</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>ToolbarMain</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>d4876646-98dd-419b-8c1c-896f83c48368</Type>
+		<TypeName>ThemeClass</TypeName>
+		<Name>MenuOption</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>c804fdbd-7c0b-440d-8527-4316c92649a6</Type>
+		<TypeName>Theme</TypeName>
+		<Name>GeneXusXEv2</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>PageFirst</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>PageLast</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>PageNext</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>PagePrevious</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>menuarrow</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>ClosePrompt</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>VideoDownload</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>AudioDownload</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>btnL</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>btnR</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>btnC</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>btnLDisabled</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>btnRDisabled</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>btnCDisabled</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>ico_error</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>ico_warning</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>footer_body</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>cabezal_cuerpo</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>PlaceHolderImage</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>PlaceHolderVideo</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>PlaceHolderAudio</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>MultimediaEdit</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>MultimediaClear</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>LoginHeader</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>ActionDelete</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>ActionDeleteDisabled</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>ActionDisabled</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>ActionDisplay</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>ActionDisplayDisabled</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>ActionExport</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>ActionInsert</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>ActionUpdate</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>ActionUpdateDisabled</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>asc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>BigButton</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>blank</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>btn_cancel</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>Button</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>calendar</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>Cancel</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>Close</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>collapse</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>DeleteRow</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>desc</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>download</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>expand</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>First</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>FooterLine</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>header_small1</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>HeaderBackground</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>indicator</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>Last</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>LeftTopWW</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>line_header</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>locateMe</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>new</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>Next</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>popupheader</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>Previous</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>prompt</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>RecentLinksBackground</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>resize</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>RightTopWW</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>Save</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>Select</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>selectRow</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>TabBeginSelected</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>TabBeginUnselected</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>TabEndSelected</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>TabEndUnselected</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>TabGroupNext</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>TabGroupPrevious</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>TabLine</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>TabSelected</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>TabSelectedUnselected</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>TabUnselected</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>TabUnselectedSelected</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>TabUnselectedUnselected</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>toolbarbg</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>toolbarseparator</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>topL</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>topR</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>unchecked</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+	<RowImport>
+		<Status>Ok</Status>
+		<Type>9fb193d9-64a4-4d30-b129-ff7c76830f7e</Type>
+		<TypeName>Image</TypeName>
+		<Name>UndeleteRow</Name>
+		<Errors />
+		<Warnings />
+		<Info />
+	</RowImport>
+</ImportLog>

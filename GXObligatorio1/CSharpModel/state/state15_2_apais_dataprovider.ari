@@ -1,0 +1,35 @@
+current_obj_i(2,mnproc,1).
+ 
+current_guid('cac3c585-15d0-7e37-8c4a-31ce7889806c').
+ 
+ 
+called_tree_i(33,1,1000,1).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ij_main_object(apais_dataprovider,'Pais_Data Provider','','""','INTERNAL',default).
+ 
+ 
+ 
+ 
+ij_object_dependency(apais_dataprovider,[],[],[],1).
+ 
+ 
+obj_parms_i([ 'GXBCCollection<SdtPais> aP0_Gxm2rootcol' ],[ [ 'Gxm2rootcol',out ] ]).
+ 
+ 
+ 
+ 
+ 
+module_info_i('GeneXus\Common','CSHARP_NAME_SPACE','GeneXus.Core').
+module_info_i('GeneXus\Common','AssemblyName','GeneXus.dll').
+ 

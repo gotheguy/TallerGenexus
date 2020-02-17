@@ -1,0 +1,4 @@
+CREATE TABLE [EspectaculoLocalidadSector] ([EspectaculoId] smallint NOT NULL , [LocalidadId] smallint NOT NULL , [SectorId] smallint NOT NULL , [SectorNombre] nchar(100) NOT NULL , PRIMARY KEY([EspectaculoId], [LocalidadId], [SectorId]))
+
+ALTER TABLE [EspectaculoLocalidadSector] ADD CONSTRAINT [IESPECTACULOLOCALIDADSECTOR1] FOREIGN KEY ([EspectaculoId], [LocalidadId]) REFERENCES [EspectaculoLocalidad] ([EspectaculoId], [LocalidadId])
+
