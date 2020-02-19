@@ -107,29 +107,19 @@
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
 <Attribute>
-<AttriId>24</AttriId>
-<AttriName>VentaPaisId</AttriName>
-<Description>Venta Pais Id</Description></Attribute></KeyAttributes></Table>
-<Table>
-<TableId>7</TableId>
-<TableName>Espectaculo</TableName>
-<Description>Espectaculo</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>29</AttriId>
-<AttriName>LugarPaisId</AttriName>
-<Description>Lugar Pais Id</Description></Attribute></KeyAttributes></Table>
-<Table>
-<TableId>7</TableId>
-<TableName>Espectaculo</TableName>
-<Description>Espectaculo</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
 <AttriId>19</AttriId>
 <AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute></KeyAttributes></Table></TablesToControlOnDelete>
+<Description>Espectaculo Pais Id</Description></Attribute></KeyAttributes></Table>
+<Table>
+<TableId>8</TableId>
+<TableName>Venta</TableName>
+<Description>Venta</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>VentaPaisId</AttriName>
+<Description>Venta Pais Id</Description></Attribute></KeyAttributes></Table></TablesToControlOnDelete>
 <Levels>
 <Level>
 <LevelType>Trn</LevelType>
@@ -212,34 +202,6 @@
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
 <Attribute>
-<AttriId>24</AttriId>
-<AttriName>VentaPaisId</AttriName>
-<Description>Venta Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>27</AttriId>
-<AttriName>VentaCiudadId</AttriName>
-<Description>Venta Ciudad Id</Description></Attribute></KeyAttributes></Table>
-<Table>
-<TableId>7</TableId>
-<TableName>Espectaculo</TableName>
-<Description>Espectaculo</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>29</AttriId>
-<AttriName>LugarPaisId</AttriName>
-<Description>Lugar Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>32</AttriId>
-<AttriName>LugarCiudadId</AttriName>
-<Description>Lugar Ciudad Id</Description></Attribute></KeyAttributes></Table>
-<Table>
-<TableId>7</TableId>
-<TableName>Espectaculo</TableName>
-<Description>Espectaculo</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
 <AttriId>19</AttriId>
 <AttriName>EspectaculoPaisId</AttriName>
 <Description>Espectaculo Pais Id</Description></Attribute>
@@ -247,6 +209,20 @@
 <AttriId>22</AttriId>
 <AttriName>EspectaculoCiudadId</AttriName>
 <Description>Espectaculo Ciudad Id</Description></Attribute></KeyAttributes></Table>
+<Table>
+<TableId>8</TableId>
+<TableName>Venta</TableName>
+<Description>Venta</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>VentaPaisId</AttriName>
+<Description>Venta Pais Id</Description></Attribute>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>VentaCiudadId</AttriName>
+<Description>Venta Ciudad Id</Description></Attribute></KeyAttributes></Table>
 <Table>
 <TableId>4</TableId>
 <TableName>Lugar</TableName>

@@ -9,7 +9,7 @@
 <ObjDesc>Espectaculoes</ObjDesc>
 <ObjPgmName>WWEspectaculo</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
-<Result>nogenreq</Result>
+<Result>genreq</Result>
 <Warnings>
 <Warning>
 <MsgCode>spc0038</MsgCode>
@@ -132,58 +132,6 @@
 <AttriId>6</AttriId>
 <AttriName>TipoEspectaculoId</AttriName>
 <Description>Tipo Espectaculo Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table>
-<Table>
-<TableId>1</TableId>
-<TableName>Pais</TableName>
-<Description>Pais</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table>
-<Table>
-<TableId>1</TableId>
-<TableName>Pais</TableName>
-<Description>Pais</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>29</AttriId>
-<AttriName>LugarPaisId</AttriName>
-<Description>Lugar Pais Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table>
-<Table>
-<TableId>2</TableId>
-<TableName>PaisCiudad</TableName>
-<Description>Ciudad</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>22</AttriId>
-<AttriName>EspectaculoCiudadId</AttriName>
-<Description>Espectaculo Ciudad Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table>
-<Table>
-<TableId>2</TableId>
-<TableName>PaisCiudad</TableName>
-<Description>Ciudad</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>29</AttriId>
-<AttriName>LugarPaisId</AttriName>
-<Description>Lugar Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>32</AttriId>
-<AttriName>LugarCiudadId</AttriName>
-<Description>Lugar Ciudad Id</Description></Attribute></KeyAttributes>
 <Tables></Tables></Table></Tables></Table></NavigationTree>
 <TablesToUpdate></TablesToUpdate>
 <Formulas>

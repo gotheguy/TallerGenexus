@@ -197,10 +197,9 @@ index_i(8,[ 'IVENTA',u,[ 37 ],'IVenta' ]).
 add_att_i(bits,2,'Linkselection_GXI','Linkselection','Linkselection_GXI',[ svchar,2048,0,0 ]).
 add_att_i(bits,2,40000,38,'VentaFecha_GXI',[ svchar,2048,0,0 ]).
 add_att_i(bits,2,40001,26,'VentaPaisBandera_GXI',[ svchar,2048,0,0 ]).
-add_att_i(bits,2,40002,3,'PaisBandera_GXI',[ svchar,2048,0,0 ]).
-add_att_i(bits,2,40003,31,'LugarPaisBandera_GXI',[ svchar,2048,0,0 ]).
-add_att_i(bits,2,40004,21,'EspectaculoPaisBandera_GXI',[ svchar,2048,0,0 ]).
-add_att_i(bits,2,40005,10,'LugarFoto_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40002,21,'EspectaculoPaisBandera_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40003,3,'PaisBandera_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40004,10,'LugarFoto_GXI',[ svchar,2048,0,0 ]).
  
  
  
@@ -209,9 +208,8 @@ start_i(2,0,0,[ [ [ 37,23,'Cventaid',>= ] ],many ]).
  
  
  
-map_i(518,a,40001,[ 'PaisBandera_GXI' ]).
-map_i(520,a,40003,[ 'PaisBandera_GXI' ]).
-map_i(516,a,40004,[ 'PaisBandera_GXI' ]).
+map_i(513,a,40001,[ 'PaisBandera_GXI' ]).
+map_i(511,a,40002,[ 'PaisBandera_GXI' ]).
  
  
  
@@ -1273,8 +1271,7 @@ var_prop_i(2,'Pventaid',idBasedOn,'',v).
  
  
 a_alias_i(40001,'VentaPaisBandera_GXI').
-a_alias_i(40003,'LugarPaisBandera_GXI').
-a_alias_i(40004,'EspectaculoPaisBandera_GXI').
+a_alias_i(40002,'EspectaculoPaisBandera_GXI').
  
  
  

@@ -316,8 +316,6 @@ struct_dt_i([ 0,1,0 ],camelname,'Pais').
 struct_dt_i([ 0,1,[ 1,4 ] ],camelname,'Ciudad').
 struct_dt_i([ 26,10,0 ],camelname,'Genexus\common\messages').
 struct_dt_i([ 26,10,27 ],camelname,'Message').
-struct_dt_i([ 26,10,0 ],modified,yes).
-struct_dt_i([ 26,10,27 ],modified,yes).
  
 struct_dt_elem_i([ 0,1,0 ],1,name,'Paisid').
 struct_dt_elem_i([ 0,1,0 ],1,camelname,'PaisId').

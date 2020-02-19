@@ -2,7 +2,7 @@
                File: ViewLugar
         Description: View Lugar
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/16/2020 21:49:11.91
+       Generated on: 2/17/2020 21:44:22.65
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -229,7 +229,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 138086), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 138086), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202021621491193", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202021721442269", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1042,7 +1042,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202021621491211", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202021721442293", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1058,7 +1058,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("viewlugar.js", "?202021621491211", false, true);
+         context.AddJavascriptSource("viewlugar.js", "?202021721442293", false, true);
          context.AddJavascriptSource("Shared/HistoryManager/HistoryManager.js", "", false, true);
          context.AddJavascriptSource("Shared/HistoryManager/rsh/json2005.js", "", false, true);
          context.AddJavascriptSource("Shared/HistoryManager/rsh/rsh.js", "", false, true);

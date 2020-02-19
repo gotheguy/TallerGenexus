@@ -2,7 +2,7 @@
                File: RwdRecentLinks
         Description: Responsive Recent Links
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/16/2020 21:49:10.24
+       Generated on: 2/17/2020 21:44:18.64
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -290,7 +290,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 138086), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 138086), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202021621491027", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202021721441869", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -380,7 +380,7 @@ namespace GeneXus.Programs {
          SendCloseFormHiddens( ) ;
          if ( ( StringUtil.Len( sPrefix) != 0 ) && ( context.isAjaxRequest( ) || context.isSpaRequest( ) ) )
          {
-            context.AddJavascriptSource("rwdrecentlinks.js", "?202021621491029", false, true);
+            context.AddJavascriptSource("rwdrecentlinks.js", "?202021721441871", false, true);
          }
          GxWebStd.gx_hidden_field( context, sPrefix+"GX_FocusControl", GX_FocusControl);
          define_styles( ) ;
@@ -1226,7 +1226,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202021621491041", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202021721441889", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1241,7 +1241,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("rwdrecentlinks.js", "?202021621491041", false, true);
+         context.AddJavascriptSource("rwdrecentlinks.js", "?202021721441889", false, true);
          /* End function include_jscripts */
       }
 

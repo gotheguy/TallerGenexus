@@ -2,7 +2,7 @@
                File: reorganization
         Description: No description for object
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/17/2020 0:0:12.74
+       Generated on: 2/18/2020 22:47:33.52
        Program type: Callable routine
           Main DBMS: SQL Server
 */

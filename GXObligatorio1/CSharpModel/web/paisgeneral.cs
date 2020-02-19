@@ -2,7 +2,7 @@
                File: PaisGeneral
         Description: Pais General
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/16/2020 21:49:10.24
+       Generated on: 2/18/2020 22:53:9.62
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -254,7 +254,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 138086), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 138086), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202021621491027", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?20202182253964", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -339,7 +339,7 @@ namespace GeneXus.Programs {
          SendCloseFormHiddens( ) ;
          if ( ( StringUtil.Len( sPrefix) != 0 ) && ( context.isAjaxRequest( ) || context.isSpaRequest( ) ) )
          {
-            context.AddJavascriptSource("paisgeneral.js", "?202021621491028", false, true);
+            context.AddJavascriptSource("paisgeneral.js", "?20202182253965", false, true);
          }
          GxWebStd.gx_hidden_field( context, sPrefix+"GX_FocusControl", GX_FocusControl);
          define_styles( ) ;
@@ -1081,7 +1081,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202021621491042", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20202182253980", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1096,7 +1096,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("paisgeneral.js", "?202021621491042", false, true);
+         context.AddJavascriptSource("paisgeneral.js", "?20202182253980", false, true);
          /* End function include_jscripts */
       }
 

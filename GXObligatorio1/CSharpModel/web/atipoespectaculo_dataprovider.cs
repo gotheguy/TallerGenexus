@@ -2,7 +2,7 @@
                File: TipoEspectaculo_DataProvider
         Description: Tipo Espectaculo_Data Provider
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/16/2020 21:49:11.46
+       Generated on: 2/18/2020 22:53:9.44
        Program type: Main program
           Main DBMS: SQL Server
 */

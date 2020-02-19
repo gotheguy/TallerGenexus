@@ -2,7 +2,7 @@
                File: LugarGeneral
         Description: Lugar General
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/16/2020 21:49:10.49
+       Generated on: 2/17/2020 21:44:19.38
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -254,7 +254,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 138086), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 138086), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202021621491051", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202021721441943", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -344,7 +344,7 @@ namespace GeneXus.Programs {
          SendCloseFormHiddens( ) ;
          if ( ( StringUtil.Len( sPrefix) != 0 ) && ( context.isAjaxRequest( ) || context.isSpaRequest( ) ) )
          {
-            context.AddJavascriptSource("lugargeneral.js", "?202021621491052", false, true);
+            context.AddJavascriptSource("lugargeneral.js", "?202021721441945", false, true);
          }
          GxWebStd.gx_hidden_field( context, sPrefix+"GX_FocusControl", GX_FocusControl);
          define_styles( ) ;
@@ -1223,7 +1223,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202021621491075", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202021721441979", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1238,7 +1238,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("lugargeneral.js", "?202021621491075", false, true);
+         context.AddJavascriptSource("lugargeneral.js", "?202021721441979", false, true);
          /* End function include_jscripts */
       }
 

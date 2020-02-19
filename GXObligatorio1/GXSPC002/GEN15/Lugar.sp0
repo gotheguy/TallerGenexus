@@ -1517,8 +1517,8 @@ att_prop_i(2,40001,'FullName','',v).
 tbl_prop_i(2,7,'AllDirSuper',[ [ 4,[ 8 ] ] ],v).
 tbl_prop_i(2,2,'AllDirSuper',[ [ 1,[ 1 ] ] ],v).
 tbl_prop_i(2,4,'AllDirSuper',[ [ 2,[ 1,4 ] ] ],v).
-tbl_prop_i(2,2,'DirSubor',[ [ 4,[ 1,4 ] ],[ 7,[ 19,22 ] ],[ 7,[ 29,32 ] ] ],v).
-tbl_prop_i(2,1,'DirSubor',[ [ 2,[ 1 ] ],[ 7,[ 19 ] ],[ 7,[ 29 ] ] ],v).
+tbl_prop_i(2,2,'DirSubor',[ [ 4,[ 1,4 ] ] ],v).
+tbl_prop_i(2,1,'DirSubor',[ [ 2,[ 1 ] ] ],v).
 tbl_prop_i(2,4,'DirSubor',[ [ 7,[ 8 ] ] ],v).
 tbl_prop_i(2,7,'DirSuper',[ [ 4,[ 8 ] ] ],v).
 tbl_prop_i(2,2,'DirSuper',[ [ 1,[ 1 ] ] ],v).

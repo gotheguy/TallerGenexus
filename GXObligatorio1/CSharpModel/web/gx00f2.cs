@@ -2,7 +2,7 @@
                File: Gx00F2
         Description: Selection List Sector
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/17/2020 0:13:7.12
+       Generated on: 2/17/2020 21:44:24.80
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -266,7 +266,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 138086), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 138086), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?2020217013714", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202021721442484", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1315,7 +1315,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2020217013733", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202021721442517", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1331,7 +1331,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("gx00f2.js", "?2020217013733", false, true);
+         context.AddJavascriptSource("gx00f2.js", "?202021721442517", false, true);
          /* End function include_jscripts */
       }
 

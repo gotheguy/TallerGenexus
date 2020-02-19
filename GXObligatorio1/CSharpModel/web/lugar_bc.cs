@@ -2,7 +2,7 @@
                File: Lugar_BC
         Description: Lugar
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/16/2020 21:49:10.52
+       Generated on: 2/17/2020 21:44:20.8
        Program type: Callable routine
           Main DBMS: SQL Server
 */

@@ -850,10 +850,6 @@ struct_dt_i([ 26,47,0 ],fullname,'GridState').
 struct_dt_i([ 26,47,74 ],fullname,'GridState.FilterValue').
 struct_dt_i([ 26,50,0 ],fullname,'TransactionContext').
 struct_dt_i([ 26,50,78 ],fullname,'TransactionContext.Attribute').
-struct_dt_i([ 26,47,0 ],modified,yes).
-struct_dt_i([ 26,47,74 ],modified,yes).
-struct_dt_i([ 26,50,0 ],modified,yes).
-struct_dt_i([ 26,50,78 ],modified,yes).
  
 struct_dt_elem_i([ 26,47,0 ],1,name,'Currentpage').
 struct_dt_elem_i([ 26,47,0 ],1,camelname,'CurrentPage').
@@ -1051,6 +1047,8 @@ struct_dt_elem_i([ 26,50,78 ],2,soaptype,'').
 struct_dt_elem_i([ 26,50,78 ],2,'XmlInclude',idXmlIncludeAlways).
 struct_dt_elem_i([ 26,50,78 ],2,'JsonName','').
 struct_dt_elem_i([ 26,50,78 ],2,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,50,0 ],1,pic,'ZZZ9').
+struct_dt_elem_i([ 26,50,0 ],4,pic,'ZZZ9').
  
  
  

@@ -569,8 +569,6 @@ struct_dt_i([ 26,50,78 ],name,'Attribute').
 struct_dt_i([ 26,50,78 ],namespace,'GXObligatorio1.TransactionContext').
 struct_dt_i([ 26,50,0 ],fullname,'TransactionContext').
 struct_dt_i([ 26,50,78 ],fullname,'TransactionContext.Attribute').
-struct_dt_i([ 26,50,0 ],modified,yes).
-struct_dt_i([ 26,50,78 ],modified,yes).
  
 struct_dt_elem_i([ 26,50,0 ],1,name,'Callerobject').
 struct_dt_elem_i([ 26,50,0 ],1,camelname,'CallerObject').
@@ -686,6 +684,8 @@ struct_dt_elem_i([ 26,50,78 ],2,soaptype,'').
 struct_dt_elem_i([ 26,50,78 ],2,'XmlInclude',idXmlIncludeAlways).
 struct_dt_elem_i([ 26,50,78 ],2,'JsonName','').
 struct_dt_elem_i([ 26,50,78 ],2,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,50,0 ],1,pic,'ZZZ9').
+struct_dt_elem_i([ 26,50,0 ],4,pic,'ZZZ9').
  
  
  

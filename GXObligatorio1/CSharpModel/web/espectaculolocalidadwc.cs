@@ -2,7 +2,7 @@
                File: EspectaculoLocalidadWC
         Description: Espectaculo Localidad WC
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/16/2020 21:51:2.32
+       Generated on: 2/18/2020 22:53:9.87
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -288,7 +288,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 138086), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 138086), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?20202162151235", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?20202182253991", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -381,7 +381,7 @@ namespace GeneXus.Programs {
          SendCloseFormHiddens( ) ;
          if ( ( StringUtil.Len( sPrefix) != 0 ) && ( context.isAjaxRequest( ) || context.isSpaRequest( ) ) )
          {
-            context.AddJavascriptSource("espectaculolocalidadwc.js", "?20202162151236", false, true);
+            context.AddJavascriptSource("espectaculolocalidadwc.js", "?20202182253992", false, true);
          }
          GxWebStd.gx_hidden_field( context, sPrefix+"GX_FocusControl", GX_FocusControl);
          define_styles( ) ;
@@ -1492,7 +1492,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20202162151261", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202021822531015", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1509,7 +1509,7 @@ namespace GeneXus.Programs {
       {
          if ( nGXWrapped != 1 )
          {
-            context.AddJavascriptSource("espectaculolocalidadwc.js", "?20202162151261", false, true);
+            context.AddJavascriptSource("espectaculolocalidadwc.js", "?202021822531015", false, true);
          }
          /* End function include_jscripts */
       }

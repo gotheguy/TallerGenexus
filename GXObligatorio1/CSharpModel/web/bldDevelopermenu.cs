@@ -56,7 +56,6 @@ public class bldDevelopermenu : GxBaseBuilder
       sc.Add( @"gx0070", "dll");
       sc.Add( @"gx0080", "dll");
       sc.Add( @"gx0040", "dll");
-      sc.Add( @"gx0090", "dll");
       sc.Add( @"home", "dll");
       sc.Add( @"home", "dll");
       sc.Add( @"notauthorized", "dll");
@@ -69,16 +68,10 @@ public class bldDevelopermenu : GxBaseBuilder
       sc.Add( @"wwpais", "dll");
       sc.Add( @"paisgeneral", "dll");
       sc.Add( @"paisciudadwc", "dll");
-      sc.Add( @"paisespectaculowc", "dll");
-      sc.Add( @"paisespectaculo1wc", "dll");
       sc.Add( @"paisventawc", "dll");
       sc.Add( @"wwventa", "dll");
       sc.Add( @"ventageneral", "dll");
-      sc.Add( @"ventaentradawc", "dll");
       sc.Add( @"viewventa", "dll");
-      sc.Add( @"viewentrada", "dll");
-      sc.Add( @"wwentrada", "dll");
-      sc.Add( @"entradageneral", "dll");
       sc.Add( @"viewtipoespectaculo", "dll");
       sc.Add( @"wwtipoespectaculo", "dll");
       sc.Add( @"tipoespectaculogeneral", "dll");
@@ -91,11 +84,11 @@ public class bldDevelopermenu : GxBaseBuilder
       sc.Add( @"espectaculolocalidadwc", "dll");
       sc.Add( @"espectaculoventawc", "dll");
       sc.Add( @"gx00f2", "dll");
+      sc.Add( @"paisventa1wc", "dll");
       sc.Add( @"pais", "dll");
       sc.Add( @"lugar", "dll");
       sc.Add( @"espectaculo", "dll");
       sc.Add( @"venta", "dll");
-      sc.Add( @"entrada", "dll");
       sc.Add( @"tipoespectaculo", "dll");
       return sc ;
    }
@@ -125,13 +118,13 @@ public class bldDevelopermenu : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\genexus.programs.sdt.rsp" ))
             return true;
-         if (checkTime(obj, cs_path + @"\type_SdtPais.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_SdtPais_Ciudad.cs" ))
-            return true;
          if (checkTime(obj, cs_path + @"\type_SdtLugar.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_SdtTipoEspectaculo.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_SdtPais.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_SdtPais_Ciudad.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\gxdomainpage.cs" ))
             return true;

@@ -1,4 +1,4 @@
-spec_i([ web,33,'Lugars','WWLugar',0,eng,'16_0_7-138086' ]).
+spec_i([ web,33,'Work With Lugar','WWLugar',0,eng,'16_0_7-138086' ]).
  
 struct_i(2,1,[ 'Pgmname','Update','Delete' ],[]).
  
@@ -130,7 +130,7 @@ rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
 rule_i(0,prop('MasterPage',o(13,'RwdMasterPage'))).
 rule_i(0,prop('WEB_COMP','No')).
 rule_i(0,prop('Theme',o(25,'Carmine'))).
-rule_i(0,prop('ObjDesc','Lugars')).
+rule_i(0,prop('ObjDesc','Work With Lugar')).
 rule_i(0,prop('ObjName','WWLugar')).
 rule_i(0,maingen(15)).
 rule_i(0,rule([ a(22,[ '''DoInsert''','''DoInsert''','' ]) ],[],[],[])).

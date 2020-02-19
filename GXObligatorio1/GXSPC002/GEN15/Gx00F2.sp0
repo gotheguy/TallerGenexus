@@ -185,10 +185,8 @@ index_i(15,[ 'IESPECTACULOLOCALIDADSECTOR',u,[ 34,11,17 ],'IEspectaculoLocalidad
  
  
 add_att_i(bits,2,'Linkselection_GXI','Linkselection','Linkselection_GXI',[ svchar,2048,0,0 ]).
-add_att_i(bits,2,40000,21,'EspectaculoPaisBandera_GXI',[ svchar,2048,0,0 ]).
-add_att_i(bits,2,40001,31,'LugarPaisBandera_GXI',[ svchar,2048,0,0 ]).
-add_att_i(bits,2,40002,3,'PaisBandera_GXI',[ svchar,2048,0,0 ]).
-add_att_i(bits,2,40003,10,'LugarFoto_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40000,10,'LugarFoto_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40001,3,'PaisBandera_GXI',[ svchar,2048,0,0 ]).
  
  
  
@@ -198,8 +196,6 @@ start_i(2,0,0,[ [ [ 34,23,'Pespectaculoid',= ],[ 11,23,'Plocalidadid',= ],[ 17,2
 end_i(2,0,0,[ [ [ t(34,2),t(=,10),t('Pespectaculoid',23) ],[ t(11,2),t(=,10),t('Plocalidadid',23) ] ] ]).
  
  
-map_i(516,a,40000,[ 'PaisBandera_GXI' ]).
-map_i(520,a,40001,[ 'PaisBandera_GXI' ]).
  
  
  
@@ -946,8 +942,6 @@ var_prop_i(2,'Psectorid',idBasedOn,'',v).
  
  
  
-a_alias_i(40000,'EspectaculoPaisBandera_GXI').
-a_alias_i(40001,'LugarPaisBandera_GXI').
  
  
  

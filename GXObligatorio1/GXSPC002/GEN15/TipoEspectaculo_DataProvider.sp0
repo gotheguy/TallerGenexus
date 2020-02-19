@@ -197,8 +197,6 @@ struct_dt_i([ 26,10,27 ],namespace,'GeneXus.Messages').
 struct_dt_i([ 0,8,0 ],fullname,'TipoEspectaculo').
 struct_dt_i([ 26,10,0 ],fullname,'GeneXus\Common\Messages').
 struct_dt_i([ 26,10,27 ],fullname,'GeneXus\Common\Messages.Message').
-struct_dt_i([ 26,10,0 ],modified,yes).
-struct_dt_i([ 26,10,27 ],modified,yes).
  
 struct_dt_elem_i([ 0,8,0 ],1,name,'Tipoespectaculoid').
 struct_dt_elem_i([ 0,8,0 ],1,camelname,'TipoEspectaculoId').

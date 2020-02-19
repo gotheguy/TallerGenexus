@@ -109,7 +109,7 @@
 <AttriId>34</AttriId>
 <AttriName>EspectaculoId</AttriName>
 <Description>Espectaculo Id</Description></Attribute></KeyAttributes>
-<Tables>
+<Tables></Tables></Table>
 <Table>
 <TableId>1</TableId>
 <TableName>Pais</TableName>
@@ -128,21 +128,6 @@
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
 <Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>22</AttriId>
-<AttriName>EspectaculoCiudadId</AttriName>
-<Description>Espectaculo Ciudad Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table></Tables></Table>
-<Table>
-<TableId>2</TableId>
-<TableName>PaisCiudad</TableName>
-<Description>Ciudad</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
 <AttriId>24</AttriId>
 <AttriName>VentaPaisId</AttriName>
 <Description>Venta Pais Id</Description></Attribute>
@@ -150,6 +135,21 @@
 <AttriId>27</AttriId>
 <AttriName>VentaCiudadId</AttriName>
 <Description>Venta Ciudad Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table>
+<Table>
+<TableId>2</TableId>
+<TableName>PaisCiudad</TableName>
+<Description>Ciudad</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>19</AttriId>
+<AttriName>EspectaculoPaisId</AttriName>
+<Description>Espectaculo Pais Id</Description></Attribute>
+<Attribute>
+<AttriId>22</AttriId>
+<AttriName>EspectaculoCiudadId</AttriName>
+<Description>Espectaculo Ciudad Id</Description></Attribute></KeyAttributes>
 <Tables></Tables></Table></Tables></Table></NavigationTree>
 <TablesToUpdate></TablesToUpdate>
 <Formulas>

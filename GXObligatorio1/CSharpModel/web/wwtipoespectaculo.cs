@@ -1,8 +1,8 @@
 /*
                File: WWTipoEspectaculo
-        Description: Tipo Espectaculoes
+        Description: Work With Tipo Espectaculo
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/16/2020 21:49:12.73
+       Generated on: 2/17/2020 21:44:23.47
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -251,7 +251,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 138086), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 138086), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202021621491276", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202021721442351", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -376,7 +376,7 @@ namespace GeneXus.Programs {
 
       public override String GetPgmdesc( )
       {
-         return "Tipo Espectaculoes" ;
+         return "Work With Tipo Espectaculo" ;
       }
 
       protected void WB1I0( )
@@ -633,7 +633,7 @@ namespace GeneXus.Programs {
          if ( ! context.isSpaRequest( ) )
          {
             Form.Meta.addItem("generator", "GeneXus C# 16_0_7-138086", 0) ;
-            Form.Meta.addItem("description", "Tipo Espectaculoes", 0) ;
+            Form.Meta.addItem("description", "Work With Tipo Espectaculo", 0) ;
          }
          context.wjLoc = "";
          context.nUserReturn = 0;
@@ -1335,7 +1335,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202021621491299", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202021721442380", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1353,7 +1353,7 @@ namespace GeneXus.Programs {
          if ( nGXWrapped != 1 )
          {
             context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-            context.AddJavascriptSource("wwtipoespectaculo.js", "?202021621491299", false, true);
+            context.AddJavascriptSource("wwtipoespectaculo.js", "?202021721442380", false, true);
          }
          /* End function include_jscripts */
       }
@@ -1528,7 +1528,7 @@ namespace GeneXus.Programs {
          Form.Background = "";
          Form.Textcolor = 0;
          Form.Backcolor = (int)(0xFFFFFF);
-         Form.Caption = "Tipo Espectaculoes";
+         Form.Caption = "Work With Tipo Espectaculo";
          subGrid_Rows = 10;
          context.GX_msglist.DisplayMode = 1;
          if ( context.isSpaRequest( ) )

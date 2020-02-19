@@ -2,7 +2,7 @@
                File: RwdMasterPage
         Description: Responsive Master Page
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/16/2020 21:49:11.67
+       Generated on: 2/17/2020 21:44:24.8
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -143,7 +143,7 @@ namespace GeneXus.Programs {
          {
             WebComp_Wcrecentlinks.componentjscripts();
          }
-         context.AddJavascriptSource("rwdmasterpage.js", "?202021621491168", false, true);
+         context.AddJavascriptSource("rwdmasterpage.js", "?202021721442410", false, true);
          context.WriteHtmlTextNl( "</body>") ;
          context.WriteHtmlTextNl( "</html>") ;
          if ( context.isSpaRequest( ) )
@@ -693,7 +693,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= (getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?202021621491173", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?202021721442416", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -708,7 +708,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("rwdmasterpage.js", "?202021621491174", false, true);
+         context.AddJavascriptSource("rwdmasterpage.js", "?202021721442416", false, true);
          /* End function include_jscripts */
       }
 

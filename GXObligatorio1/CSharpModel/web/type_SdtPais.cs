@@ -2,7 +2,7 @@
                File: type_SdtPais
         Description: Pais
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/16/2020 21:49:11.19
+       Generated on: 2/18/2020 22:53:12.44
        Program type: Callable routine
           Main DBMS: SQL Server
 */

@@ -4,54 +4,54 @@
       <MaximumItems>10</MaximumItems>
       <RecentKBObjects>
         <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-6</Key>
-          <Name>Venta</Name>
-          <LastAccess>2020-02-17T00:02:33.2381524-03:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-7</Key>
-          <Name>Entrada</Name>
-          <LastAccess>2020-02-17T00:02:24.537363-03:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>857ca50e-7905-0000-0007-c5d9ff2975ec-9</Key>
-          <Name>Entrada</Name>
-          <LastAccess>2020-02-17T00:02:19.1494096-03:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>857ca50e-7905-0000-0007-c5d9ff2975ec-8</Key>
-          <Name>Venta</Name>
-          <LastAccess>2020-02-17T00:02:09.2642292-03:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>857ca50e-7905-0000-0007-c5d9ff2975ec-11</Key>
-          <Name>TipoEspectaculo</Name>
-          <LastAccess>2020-02-17T00:02:06.7767311-03:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>857ca50e-7905-0000-0007-c5d9ff2975ec-1</Key>
-          <Name>Pais</Name>
-          <LastAccess>2020-02-17T00:02:04.0119038-03:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>857ca50e-7905-0000-0007-c5d9ff2975ec-4</Key>
-          <Name>Lugar</Name>
-          <LastAccess>2020-02-17T00:01:59.2340483-03:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-5</Key>
-          <Name>Espectaculo</Name>
-          <LastAccess>2020-02-17T00:01:15.7230708-03:00</LastAccess>
-        </RecentKBObject>
-        <RecentKBObject>
-          <Key>857ca50e-7905-0000-0007-c5d9ff2975ec-20</Key>
-          <Name>EspectaculoLocalidadSector</Name>
-          <LastAccess>2020-02-16T23:59:05.9026252-03:00</LastAccess>
+          <Key>c9584656-94b6-4ccd-890f-332d11fc2c25-64</Key>
+          <Name>WWEspectaculo</Name>
+          <LastAccess>2020-02-18T22:41:07.9688364-03:00</LastAccess>
         </RecentKBObject>
         <RecentKBObject>
           <Key>78cecefe-be7d-4980-86ce-8d6e91fba04b-2</Key>
           <Name>WorkWithEspectaculo</Name>
-          <LastAccess>2020-02-16T21:46:44.0033873-03:00</LastAccess>
+          <LastAccess>2020-02-18T22:40:59.1076205-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>280c149c-48b2-4284-a532-0c999df9e006-1</Key>
+          <Name>Diagrama</Name>
+          <LastAccess>2020-02-18T22:28:32.5627111-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-5</Key>
+          <Name>Espectaculo</Name>
+          <LastAccess>2020-02-18T22:07:07.2553094-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-6</Key>
+          <Name>Venta</Name>
+          <LastAccess>2020-02-18T22:06:29.1096154-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>2a9e9aba-d2de-4801-ae7f-5e3819222daf-3</Key>
+          <Name>Lugar_DataProvider</Name>
+          <LastAccess>2020-02-18T22:05:53.7701832-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-3</Key>
+          <Name>Lugar</Name>
+          <LastAccess>2020-02-17T21:17:48.1255005-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-8</Key>
+          <Name>TipoEspectaculo</Name>
+          <LastAccess>2020-02-17T21:17:42.6520141-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-1</Key>
+          <Name>Pais</Name>
+          <LastAccess>2020-02-17T21:17:37.3529198-03:00</LastAccess>
+        </RecentKBObject>
+        <RecentKBObject>
+          <Key>1db606f2-af09-4cf9-a3b5-b481519d28f6-7</Key>
+          <Name>Entrada</Name>
+          <LastAccess>2020-02-17T20:49:12.7589779-03:00</LastAccess>
         </RecentKBObject>
       </RecentKBObjects>
     </RecentKBObjectsList>

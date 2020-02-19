@@ -70,58 +70,6 @@
 <AttriId>6</AttriId>
 <AttriName>TipoEspectaculoId</AttriName>
 <Description>Tipo Espectaculo Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table>
-<Table>
-<TableId>1</TableId>
-<TableName>Pais</TableName>
-<Description>Pais</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table>
-<Table>
-<TableId>1</TableId>
-<TableName>Pais</TableName>
-<Description>Pais</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>29</AttriId>
-<AttriName>LugarPaisId</AttriName>
-<Description>Lugar Pais Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table>
-<Table>
-<TableId>2</TableId>
-<TableName>PaisCiudad</TableName>
-<Description>Ciudad</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>22</AttriId>
-<AttriName>EspectaculoCiudadId</AttriName>
-<Description>Espectaculo Ciudad Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table>
-<Table>
-<TableId>2</TableId>
-<TableName>PaisCiudad</TableName>
-<Description>Ciudad</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>29</AttriId>
-<AttriName>LugarPaisId</AttriName>
-<Description>Lugar Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>32</AttriId>
-<AttriName>LugarCiudadId</AttriName>
-<Description>Lugar Ciudad Id</Description></Attribute></KeyAttributes>
 <Tables></Tables></Table></Tables></Table></NavigationTree>
 <Formulas>
 <VerticalFormulas></VerticalFormulas>
@@ -157,23 +105,7 @@
 <Attribute>
 <AttriId>6</AttriId>
 <AttriName>TipoEspectaculoId</AttriName>
-<Description>Tipo Espectaculo Id</Description></Attribute>
-<Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>29</AttriId>
-<AttriName>LugarPaisId</AttriName>
-<Description>Lugar Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>22</AttriId>
-<AttriName>EspectaculoCiudadId</AttriName>
-<Description>Espectaculo Ciudad Id</Description></Attribute>
-<Attribute>
-<AttriId>32</AttriId>
-<AttriName>LugarCiudadId</AttriName>
-<Description>Lugar Ciudad Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<Description>Tipo Espectaculo Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
 <TableToUpdate>
 <Table>
 <TableId>7</TableId>
@@ -196,23 +128,7 @@
 <Attribute>
 <AttriId>6</AttriId>
 <AttriName>TipoEspectaculoId</AttriName>
-<Description>Tipo Espectaculo Id</Description></Attribute>
-<Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>29</AttriId>
-<AttriName>LugarPaisId</AttriName>
-<Description>Lugar Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>22</AttriId>
-<AttriName>EspectaculoCiudadId</AttriName>
-<Description>Espectaculo Ciudad Id</Description></Attribute>
-<Attribute>
-<AttriId>32</AttriId>
-<AttriName>LugarCiudadId</AttriName>
-<Description>Lugar Ciudad Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<Description>Tipo Espectaculo Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
 <TableToUpdate>
 <Table>
 <TableId>7</TableId>
@@ -445,8 +361,13 @@
 <TableId>15</TableId>
 <TableName>EspectaculoLocalidadSector</TableName>
 <Description>Sector</Description></Table>
-<ProgramName>
-<Token>Gx00F2</Token></ProgramName>
+<Object>
+<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
+<ObjCls>13</ObjCls>
+<ObjId>68</ObjId>
+<ObjName>Gx00F2</ObjName>
+<ObjPgmName>Gx00F2</ObjPgmName>
+<ObjClsName>Web Panel</ObjClsName></Object>
 <InputParameters>
 <Attribute>
 <AttriId>34</AttriId>
@@ -484,90 +405,6 @@
 <AttriId>11</AttriId>
 <AttriName>LocalidadId</AttriName>
 <Description>Localidad Id</Description></Attribute></OutputParameters>
-<PromptType>System</PromptType></Prompt>
-<Prompt>
-<Table>
-<TableId>2</TableId>
-<TableName>PaisCiudad</TableName>
-<Description>Ciudad</Description></Table>
-<Object>
-<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
-<ObjCls>13</ObjCls>
-<ObjId>8</ObjId>
-<ObjName>Gx0021</ObjName>
-<ObjPgmName>Gx0021</ObjPgmName>
-<ObjClsName>Web Panel</ObjClsName></Object>
-<InputParameters></InputParameters>
-<OutputParameters>
-<Attribute>
-<AttriId>29</AttriId>
-<AttriName>LugarPaisId</AttriName>
-<Description>Lugar Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>32</AttriId>
-<AttriName>LugarCiudadId</AttriName>
-<Description>Lugar Ciudad Id</Description></Attribute></OutputParameters>
-<PromptType>System</PromptType></Prompt>
-<Prompt>
-<Table>
-<TableId>2</TableId>
-<TableName>PaisCiudad</TableName>
-<Description>Ciudad</Description></Table>
-<Object>
-<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
-<ObjCls>13</ObjCls>
-<ObjId>8</ObjId>
-<ObjName>Gx0021</ObjName>
-<ObjPgmName>Gx0021</ObjPgmName>
-<ObjClsName>Web Panel</ObjClsName></Object>
-<InputParameters></InputParameters>
-<OutputParameters>
-<Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>22</AttriId>
-<AttriName>EspectaculoCiudadId</AttriName>
-<Description>Espectaculo Ciudad Id</Description></Attribute></OutputParameters>
-<PromptType>System</PromptType></Prompt>
-<Prompt>
-<Table>
-<TableId>1</TableId>
-<TableName>Pais</TableName>
-<Description>Pais</Description></Table>
-<Object>
-<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
-<ObjCls>13</ObjCls>
-<ObjId>7</ObjId>
-<ObjName>Gx0010</ObjName>
-<ObjPgmName>Gx0010</ObjPgmName>
-<ObjClsName>Web Panel</ObjClsName></Object>
-<InputParameters></InputParameters>
-<OutputParameters>
-<Attribute>
-<AttriId>29</AttriId>
-<AttriName>LugarPaisId</AttriName>
-<Description>Lugar Pais Id</Description></Attribute></OutputParameters>
-<PromptType>System</PromptType></Prompt>
-<Prompt>
-<Table>
-<TableId>1</TableId>
-<TableName>Pais</TableName>
-<Description>Pais</Description></Table>
-<Object>
-<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
-<ObjCls>13</ObjCls>
-<ObjId>7</ObjId>
-<ObjName>Gx0010</ObjName>
-<ObjPgmName>Gx0010</ObjPgmName>
-<ObjClsName>Web Panel</ObjClsName></Object>
-<InputParameters></InputParameters>
-<OutputParameters>
-<Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute></OutputParameters>
 <PromptType>System</PromptType></Prompt>
 <Prompt>
 <Table>

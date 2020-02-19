@@ -2,7 +2,7 @@
                File: WWPais
         Description: Pais
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/16/2020 21:49:12.11
+       Generated on: 2/18/2020 22:53:8.74
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -251,7 +251,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 138086), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 138086), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202021621491214", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?20202182253878", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1350,7 +1350,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202021621491240", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2020218225396", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1368,7 +1368,7 @@ namespace GeneXus.Programs {
          if ( nGXWrapped != 1 )
          {
             context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-            context.AddJavascriptSource("wwpais.js", "?202021621491241", false, true);
+            context.AddJavascriptSource("wwpais.js", "?2020218225396", false, true);
          }
          /* End function include_jscripts */
       }

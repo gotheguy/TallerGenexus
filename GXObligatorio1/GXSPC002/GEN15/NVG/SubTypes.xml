@@ -1,0 +1,31 @@
+
+<ObjectSpec>
+<SpecVersion>16_0_7-138086</SpecVersion>
+<Object>
+<ObjClsGuid>87313f43-5eb2-41d7-9b8c-e8d9f5bf9588</ObjClsGuid>
+<ObjCls>10</ObjCls>
+<ObjId>0</ObjId>
+<ObjName>SubTypes</ObjName>
+<ObjDesc>Subtype groups analysis report</ObjDesc>
+<ObjPgmName>SubTypes</ObjPgmName>
+<ObjClsName>Subtype group</ObjClsName></Object>
+<Warnings>
+<Warning>
+<MsgCode>spc0079</MsgCode>
+<Message>
+<Token>Attribute(s) </Token>
+<Attribute>
+<AttriId>29</AttriId>
+<AttriName>LugarPaisId</AttriName>
+<Description>Lugar Pais Id</Description></Attribute>
+<Token>, </Token>
+<Attribute>
+<AttriId>32</AttriId>
+<AttriName>LugarCiudadId</AttriName>
+<Description>Lugar Ciudad Id</Description></Attribute>
+<Token> in subtype group '</Token>
+<SubtypeGroup>
+<SubtypeGroupId>3</SubtypeGroupId>
+<SubtypeGroupName>LugarPais</SubtypeGroupName></SubtypeGroup>
+<Token>' is(are) not associated to any transaction.</Token></Message></Warning></Warnings>
+<Errors></Errors></ObjectSpec>

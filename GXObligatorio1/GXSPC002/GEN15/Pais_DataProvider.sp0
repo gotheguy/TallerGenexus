@@ -201,8 +201,6 @@ struct_dt_i([ 0,1,0 ],fullname,'Pais').
 struct_dt_i([ 0,1,[ 1,4 ] ],fullname,'Pais.Ciudad').
 struct_dt_i([ 26,10,0 ],fullname,'GeneXus\Common\Messages').
 struct_dt_i([ 26,10,27 ],fullname,'GeneXus\Common\Messages.Message').
-struct_dt_i([ 26,10,0 ],modified,yes).
-struct_dt_i([ 26,10,27 ],modified,yes).
  
 struct_dt_elem_i([ 0,1,0 ],1,name,'Paisid').
 struct_dt_elem_i([ 0,1,0 ],1,camelname,'PaisId').
