@@ -1,0 +1,535 @@
+spec_i([ proc,14,'Imprimir Entradas','ImprimirEntradas',78,eng,'16_0_7-138086' ]).
+ 
+struct_i(2,1,[ 37 ],[]).
+struct_i(3,2,[ 34,9,43,40,18,12,35,36,37 ],[]).
+ 
+level_i(2,[ 8,[ [ 8,many ],[ 7,one ],[ 4,one ],[ 14,one ],[ 15,one ] ],[],[],[ [ [ 8,7,4,14,15 ],[ 37,34,9,18,12,35,36,14,43,40,8,11,17 ] ] ],[ [ [ 8,7,4,14,15 ],[] ] ],[ 37 ],'IVENTA',[ 8,[ [ [],37,37 ] ] ],[] ]).
+level_i(3,[ 7,[ [ 7,many ] ],[],[],[ [ [ 7 ],[ 34 ] ] ],[ [ [ 7 ],[] ] ],[ 34 ],'IESPECTACULO',[ 7,[ [ [],34,34 ] ] ],[] ]).
+ 
+tw_i(2,[ [ 7,[ [ 8,34,34 ] ] ],[ 4,[ [ 7,8,8 ] ] ],[ 14,[ [ 8,34,34 ],[ 8,11,11 ] ] ],[ 15,[ [ 8,34,34 ],[ 8,11,11 ],[ 8,17,17 ] ] ] ]).
+tw_i(3,[]).
+ 
+lwi_i(2,[ [] ]).
+lwi_i(3,[ [ c([ t(37,23),t(=,10),t(37,23) ],[ 37 ]) ] ]).
+ 
+ 
+ 
+level_option_i(3,usr_condition,y).
+ 
+ta_i(2,[ [ [ 7,8 ],[ 8,11 ],[ 8,17 ],[ 8,37 ],[ 8,34 ],[ 4,9 ],[ 15,18 ],[ 14,12 ],[ 7,35 ],[ 7,36 ],[ 14,14 ],[ 8,43 ] ] ]).
+ta_i(3,[ [ [ 7,34 ] ] ]).
+ 
+las_i(2,[ [ 37,34,9,18,12,35,36,14,43,40,8,11,17 ] ]).
+las_i(3,[ [ 34 ] ]).
+ 
+lac_i(2,[ [] ]).
+lac_i(3,[ [] ]).
+ 
+ 
+ 
+ 
+ 
+ 
+default_i(e('Output',2,2,'''FIL''')).
+default_i(e('Today',2,2,'''today''')).
+ 
+rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
+rule_i(0,datastore(1,'LOCK_RETRY','10')).
+rule_i(0,datastore(1,'WAIT_RECORD','0')).
+rule_i(0,datastore(1,'ISOLATION_LEVEL','CR')).
+rule_i(0,datastore(1,'SQLSERVER_VERSION','10')).
+rule_i(0,datastore(1,'COMMENT_ON','No')).
+rule_i(0,datastore(1,'DFT_TMP_TBLSPACE','')).
+rule_i(0,datastore(1,'DFT_IDX_TBLSPACE','')).
+rule_i(0,datastore(1,'DFT_TBL_TBLSPACE','')).
+rule_i(0,datastore(1,'DCL_REF_INT_DB','Yes')).
+rule_i(0,datastore(1,'PRIMARY_KEY_TYPE','PK')).
+rule_i(0,datastore(1,'CS_SCHEMA','')).
+rule_i(0,datastore(1,'SORT_ATTRIBUTES','Yes')).
+rule_i(0,datastore(1,'JRN400','QSQJRN')).
+rule_i(0,datastore(1,'CREATE_SAVF','Yes')).
+rule_i(0,datastore(1,'PGMLIB','')).
+rule_i(0,datastore(1,'DTALIB','')).
+rule_i(0,datastore(1,'CC_USER_PASS',Öfd hvklZRÅv»X∏Å)).
+rule_i(0,datastore(1,'CC_USER_ID',uXX4fDClZHyt6V0q)).
+rule_i(0,datastore(1,'CC_SERVER','trialapps3.genexus.com')).
+rule_i(0,datastore(1,'CC_DBNAME','Idc681087fb90b05461386ed8a9fd77940')).
+rule_i(0,datastore(1,'RecycleRWMin','30')).
+rule_i(0,datastore(1,'RecycleRWType','1')).
+rule_i(0,datastore(1,'RecycleRW','-1')).
+rule_i(0,datastore(1,'POOL_STARTUP','No')).
+rule_i(0,datastore(1,'POOLSIZE_RW','10')).
+rule_i(0,datastore(1,'UnlimitedRWPool','-1')).
+rule_i(0,datastore(1,'PoolRWEnabled','-1')).
+rule_i(0,datastore(1,'CS_RPCPGML','')).
+rule_i(0,datastore(1,'JDBC_DATASOURCE','')).
+rule_i(0,datastore(1,'USE_JDBC_DATASOURCE','0')).
+rule_i(0,datastore(1,'DS_DBMS_ADDINFO','')).
+rule_i(0,datastore(1,'USER_PASSWORD','uXX‘,ñÍB‚CndX}í“6V⁄øi')).
+rule_i(0,datastore(1,'USER_ID',uXX4fDClZHyt6V0q)).
+rule_i(0,datastore(1,'TRUSTED_CONNECTION','No')).
+rule_i(0,datastore(1,'CS_CONNECT','First')).
+rule_i(0,datastore(1,'DBMS_PORT','')).
+rule_i(0,datastore(1,'CS_SERVER','trialapps3.genexus.com')).
+rule_i(0,datastore(1,'CS_DBNAME','Idc681087fb90b05461386ed8a9fd77940')).
+rule_i(0,datastore(1,'CS_FLEDSNAME','')).
+rule_i(0,datastore(1,'CS_DRVNAME','sql server')).
+rule_i(0,datastore(1,'CS_DSNAME','')).
+rule_i(0,datastore(1,'DB_URL','')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_URL','0')).
+rule_i(0,datastore(1,'JDBC_CUSTOM_DRIVER','')).
+rule_i(0,datastore(1,'JDBC_DRIVER','net.sourceforge.jtds.jdbc.Driver')).
+rule_i(0,datastore(1,'CONNECT_METHOD','OPSYS')).
+rule_i(0,datastore(1,'ACCESS_TECHNO','ADONET')).
+rule_i(0,datastore(1,'MAIN_DS','-1')).
+rule_i(0,datastore(1,'REORG_GEN','8')).
+rule_i(0,datastore(1,'HelpKeyword','20')).
+rule_i(0,datastore(1,'DBMS',12)).
+rule_i(0,datastore(1,'NAME','Default')).
+rule_i(0,prop(idNULLS_BEHAVIOR,idNB_Current)).
+rule_i(0,prop('PWFCallable','0')).
+rule_i(0,prop('ObjectVisibility','Public')).
+rule_i(0,prop('FullyQualifiedName','ImprimirEntradas')).
+rule_i(0,prop('GenerateObject','-1')).
+rule_i(0,prop('CS_ORA_FORUPD','UMPV')).
+rule_i(0,prop('Optimize_copy','UMPV')).
+rule_i(0,prop('JOIN_TYPE','UMPV')).
+rule_i(0,prop('DBMS_JOINS','UMPV')).
+rule_i(0,prop('BEEPONMSG','UMPV')).
+rule_i(0,prop('GENERATE_ILE','UMPV')).
+rule_i(0,prop('PRT_DDS','UMPV')).
+rule_i(0,prop('TRNCMT','YES')).
+rule_i(0,prop('NULLVALUE_AS_NULL','UMPV')).
+rule_i(0,prop('INITIALIZE_NEW','UMPV')).
+rule_i(0,prop('STD_FUNC_OBJECT','Yes')).
+rule_i(0,prop('SPC_WARNINGS_DISABLED','spc0096 spc0107 spc0142')).
+rule_i(0,prop('TRNEND','Yes')).
+rule_i(0,prop('AUTOCENTER','UMPV')).
+rule_i(0,prop('LSTPFOOT','YES')).
+rule_i(0,prop('CANCEL','YES')).
+rule_i(0,prop('CONFIRM','UMPV')).
+rule_i(0,prop('TRNCFM','UMPV')).
+rule_i(0,prop('PRINT_CUST_LAYOUT','UMPV')).
+rule_i(0,prop('OUTPUT','FIL')).
+rule_i(0,prop(idConnectivitySupport,idInherit)).
+rule_i(0,prop(idISBCEJB,'0')).
+rule_i(0,prop(idISPRCWEBSERVICE,'0')).
+rule_i(0,prop('WEB_SECURITY_LEVEL','High')).
+rule_i(0,prop('HTTP_PROTOCOL','Secure')).
+rule_i(0,prop('USE_ENCRYPTION','NO')).
+rule_i(0,prop('COMPRESS_HTML','UMPV')).
+rule_i(0,prop('EXECUTE_IN_NEW_UTL','0')).
+rule_i(0,prop('Theme',o(25,'Carmine'))).
+rule_i(0,prop('OBJECT_METADATA','')).
+rule_i(0,prop('CALL_PROTOCOL','HTTP')).
+rule_i(0,prop('IsMain','0')).
+rule_i(0,prop(sessiontype,'RW')).
+rule_i(0,prop('Folder',o(120,'Root Module'))).
+rule_i(0,prop('ObjDesc','Imprimir Entradas')).
+rule_i(0,prop('ObjName','ImprimirEntradas')).
+rule_i(0,maingen(15)).
+rule_i(0,parm([ 37 ],[ 37 ])).
+rule_i(0,parmio([ [ 37,in ] ])).
+rule_i(0,output_file(t('DatosVenta.pdf',3),t(pdf,3))).
+rule_i(0,output('FIL')).
+ 
+a_i(1,1,f,'Line',[],[ [],[ t(0,3) ] ]).
+a_i(2,1,f,'Today',[],[ [],[ t('today(',1),t(')',4) ] ]).
+a_i(3,1,f,'Err',[],[ [],[ t('0',3) ] ]).
+a_i(4,3,t,7,[],[ [ [ [],34,34 ] ],'IESPECTACULO',[] ]).
+a_i(5,2,f,40,[],[ [],[ t(14,2),t(*,6),t(43,2) ] ]).
+a_i(6,2,t,8,[],[ [ [ [],37,37 ] ],'IVENTA',[] ]).
+a_i(7,2,r,7,[],[ [ [ 8,34,34 ] ],'IESPECTACULO',[] ]).
+a_i(8,2,r,4,[],[ [ [ 7,8,8 ] ],'ILUGAR',[] ]).
+a_i(9,2,r,14,[],[ [ [ 8,34,34 ],[ 8,11,11 ] ],'IESPECTACULOLOCALIDAD',[] ]).
+a_i(10,2,r,15,[],[ [ [ 8,34,34 ],[ 8,11,11 ],[ 8,17,17 ] ],'IESPECTACULOLOCALIDADSECTOR',[] ]).
+ 
+v_i(f,i,1,[]).
+v_i(f,o,1,'Line').
+v_i(f,i,2,[]).
+v_i(f,o,2,'Today').
+v_i(f,i,3,[]).
+v_i(f,o,3,'Err').
+v_i(t,i,4,34).
+v_i(t,o,4,[]).
+v_i(f,i,5,14).
+v_i(f,i,5,43).
+v_i(f,o,5,40).
+v_i(t,i,6,37).
+v_i(t,o,6,11).
+v_i(t,o,6,17).
+v_i(t,o,6,34).
+v_i(t,o,6,43).
+v_i(r,i,7,34).
+v_i(r,o,7,8).
+v_i(r,o,7,35).
+v_i(r,o,7,36).
+v_i(r,i,8,8).
+v_i(r,o,8,9).
+v_i(r,i,9,34).
+v_i(r,i,9,11).
+v_i(r,o,9,12).
+v_i(r,o,9,14).
+v_i(r,i,10,34).
+v_i(r,i,10,11).
+v_i(r,i,10,17).
+v_i(r,o,10,18).
+ 
+ 
+ 
+ 
+ 
+ 
+attri_i('Output',[ 'Gx_out',char,3,0,'',1,'','',9 ]).
+attri_i(17,[ 'SectorId',int,4,0,'ZZZ9',0,'Sector Id','',0 ]).
+attri_i(11,[ 'LocalidadId',int,4,0,'ZZZ9',0,'Localidad Id','',0 ]).
+attri_i(14,[ 'LocalidadPrecio',int,9,2,'ZZZZZ9.99',0,'Localidad Precio','',0 ]).
+attri_i(8,[ 'LugarId',int,4,0,'ZZZ9',0,'Lugar Id','',0 ]).
+attri_i(34,[ 'EspectaculoId',int,4,0,'ZZZ9',0,'Espectaculo Id','',0 ]).
+attri_i(37,[ 'VentaId',int,4,0,'ZZZ9',0,'Venta Id','',0 ]).
+attri_i('Page',[ 'Gx_page',int,6,0,'ZZZZZ9',0,'Page number','',8 ]).
+attri_i('Line',[ 'Gx_line',int,6,0,'ZZZZZ9',0,'Line number','',7 ]).
+attri_i(9,[ 'LugarNombre',char,100,0,'',0,'Lugar Nombre','',0 ]).
+attri_i(43,[ 'VentaCantidadEntradas',int,4,0,'ZZZ9',0,'Venta Cantidad Entradas','',0 ]).
+attri_i(40,[ 'VentaTotal',int,9,2,'ZZZZZ9.99',0,'Venta Total','',0 ]).
+attri_i(18,[ 'SectorNombre',char,100,0,'',0,'Sector Nombre','',0 ]).
+attri_i(12,[ 'LocalidadNombre',char,100,0,'',0,'Localidad Nombre','',0 ]).
+attri_i(35,[ 'EspectaculoNombre',char,100,0,'',0,'Espectaculo Nombre','',0 ]).
+attri_i(36,[ 'EspectaculoFecha',date,8,0,'99/99/9999',0,'Espectaculo Fecha','',0 ]).
+attri_i('Today',[ 'Gx_date',date,8,0,'99/99/99',1,'','',4 ]).
+attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',3 ]).
+attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',2 ]).
+ 
+table_i(14,[ 'EspectaculoLocalidad',[ 34,11,12,14 ],'Localidad','EspectaculoLocalidad' ]).
+table_i(15,[ 'EspectaculoLocalidadSector',[ 34,11,17,18 ],'Sector','EspectaculoLocalidadSector' ]).
+table_i(4,[ 'Lugar',[ 8,9 ],'Lugar','Lugar' ]).
+table_i(8,[ 'Venta',[ 37,34,43,11,17 ],'Venta','Venta' ]).
+table_i(7,[ 'Espectaculo',[ 34,35,36,8 ],'Espectaculo','Espectaculo' ]).
+ 
+index_i(7,[ 'IESPECTACULO',u,[ 34 ],'IEspectaculo' ]).
+index_i(8,[ 'IVENTA',u,[ 37 ],'IVenta' ]).
+index_i(4,[ 'ILUGAR',u,[ 8 ],'ILugar' ]).
+index_i(14,[ 'IESPECTACULOLOCALIDAD',u,[ 34,11 ],'IEspectaculoLocalidad' ]).
+index_i(15,[ 'IESPECTACULOLOCALIDADSECTOR',u,[ 34,11,17 ],'IEspectaculoLocalidadSector' ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+sql_no_eval_hor_i(2,40).
+ 
+add_att_i(bits,2,40000,10,'LugarFoto_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40001,3,'PaisBandera_GXI',[ svchar,2048,0,0 ]).
+ 
+ 
+ 
+ 
+start_i(2,0,0,[ [ [ 37,2,37,= ] ],one ]).
+start_i(3,0,0,[ [ [ 34,2,34,= ] ],one ]).
+ 
+end_i(2,0,0,[ [ [ t(37,2),t(=,10),t(37,23) ] ] ]).
+end_i(3,0,0,[ [ [ t(34,2),t(=,10),t(34,23) ] ] ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+dom_info_i(72,[ 'Nombre' ]).
+dom_info_i(71,[ 'Id' ]).
+ 
+ 
+break_i(3,nvg,2,[],[ [ 36,35,12,18,40,43,9 ],[ 37 ],[] ]).
+break_i(2,nvg,1,[],[ [],[],[] ]).
+break_i(1,rpt,0,[],[ [],[],[] ]).
+ 
+b_group_i(1,1,lit,0,1,7).
+b_group_i(1,2,nvg,2,3,3).
+b_group_i(2,1,lit,0,9,9).
+b_group_i(2,2,nvg,3,4,4).
+b_group_i(3,1,lit,0,10,16).
+b_group_i(2,3,lit,0,18,18).
+b_group_i(1,3,lit,0,19,0).
+ 
+b_line_i(0,1,1,cmd,0,[]).
+b_line_i(1,1,1,pb,0,[ t('Titulo',29,0,7) ]).
+b_line_i([ 1,0 ],1,1,line,0,[ t(' ',3,0,0) ]).
+b_line_i([ 1,1 ],1,1,line,1,[ t('Detalle de tu compra',3,1,41),t('Today',23,1,104) ]).
+b_line_i([ 1,3 ],1,1,line,3,[ t(' ',3,3,0) ]).
+b_line_i(2,1,1,pb,4,[ t('Columnas',29,4,7) ]).
+b_line_i([ 2,0 ],1,1,line,4,[ t(' ',3,0,0) ]).
+b_line_i([ 2,1 ],1,1,line,5,[ t('Fecha',3,1,6),t('Espect·culo',3,1,23),t('Lugar',3,1,45),t('Localidad',3,1,61),t('Sector',3,1,81),t('Total',3,1,96),t('Cantidad',3,1,107) ]).
+b_line_i([ 2,2 ],1,1,line,6,[ t(' ',3,2,0) ]).
+b_line_i(3,2,1,cmd,9,[ t('',121,3,0),t(table,3,3,10),t(8,3,3,10) ]).
+b_line_i(4,3,1,cmd,10,[ t('',121,4,0),t(table,3,4,11),t(7,3,4,11) ]).
+b_line_i(6,3,1,pb,10,[ t('Datos',29,10,9) ]).
+b_line_i([ 6,0 ],3,1,line,10,[ t(36,2,0,2),t(35,2,0,19),t(9,2,0,40),t(12,2,0,57),t(18,2,0,76),t(40,2,0,94),t(43,2,0,106) ]).
+b_line_i([ 6,5 ],3,1,line,15,[ t(' ',3,5,0) ]).
+b_line_i(7,3,1,cmd,16,[ t('',128,16,0) ]).
+b_line_i(8,2,3,cmd,18,[ t('',128,18,0) ]).
+ 
+ 
+ 
+ 
+ 
+ 
+page_layout_i([ 66,0,6 ]).
+ 
+ 
+ 
+paper_info_i([ 0,256,'',11909,16834,0,0,0,0,1 ]).
+ 
+ppi_i([ 100,100 ]).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+lit_i(20,1,t('Detalle de tu compra',3),[ font('Microsoft Sans Serif',16,[]),rect(292,17,499,44),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel1'),gxcolor([]) ]).
+lit_i(21,1,t('Today',23),[ font('Microsoft Sans Serif',8,[]),rect(733,17,800,32),outstyle(none),align(center),valign(middle),fore(rgb(0,0,0)),border(1),format(0),ctlname('&today'),ctrltype(edit,21),ispwd(0),gxcolor([]) ]).
+lit_i(1,1,window,[ title('Text'),rect(0,0,827,66),outstyle(none),fill,graph,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Titulo'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(4,2,t('Fecha',3),[ font('Microsoft Sans Serif',8,[]),rect(42,17,74,31),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel2'),gxcolor([]) ]).
+lit_i(5,2,t('Espect·culo',3),[ font('Microsoft Sans Serif',8,[]),rect(167,17,229,31),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel3'),gxcolor([]) ]).
+lit_i(6,2,t('Cantidad',3),[ font('Microsoft Sans Serif',8,[]),rect(750,17,795,31),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel4'),gxcolor([]) ]).
+lit_i(7,2,t('Sector',3),[ font('Microsoft Sans Serif',8,[]),rect(567,17,600,31),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel5'),gxcolor([]) ]).
+lit_i(8,2,t('Localidad',3),[ font('Microsoft Sans Serif',8,[]),rect(433,17,482,31),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel6'),gxcolor([]) ]).
+lit_i(9,2,t('Total',3),[ font('Microsoft Sans Serif',8,[]),rect(675,17,701,31),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel7'),gxcolor([]) ]).
+lit_i(16,2,rect(16),[ rect(17,33,817,33),outstyle(none),fill,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(1),ctlname('Gxreportline1'),gxcolor([]),borderstyle(0) ]).
+lit_i(18,2,t('Lugar',3),[ font('Microsoft Sans Serif',8,[]),rect(317,17,346,31),outstyle(none),align(left),valign(top),noclip,fore(rgb(0,0,0)),border(1),ctlname('Gxreportlabel9'),gxcolor([]) ]).
+lit_i(1,2,window,[ title('Text'),rect(0,0,827,47),outstyle(none),fill,graph,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Columnas'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT') ]).
+lit_i(10,6,t(36,2),[ font('Microsoft Sans Serif',8,[]),rect(17,0,117,50),outstyle(none),align(center),valign(middle),fore(rgb(0,0,0)),border(1),format(0),ctlname('36'),ctrltype(edit,10),ispwd(0),gxcolor([]) ]).
+lit_i(11,6,t(35,2),[ font('Microsoft Sans Serif',8,[]),rect(133,0,266,50),outstyle(none),align(center),valign(middle),fore(rgb(0,0,0)),border(1),format(0),ctlname('35'),ctrltype(edit,11),ispwd(0),gxcolor([]) ]).
+lit_i(12,6,t(12,2),[ font('Microsoft Sans Serif',8,[]),rect(400,0,517,50),outstyle(none),align(center),valign(middle),fore(rgb(0,0,0)),border(1),format(0),ctlname('12'),ctrltype(edit,12),ispwd(0),gxcolor([]) ]).
+lit_i(13,6,t(18,2),[ font('Microsoft Sans Serif',8,[]),rect(533,0,641,50),outstyle(none),align(center),valign(middle),fore(rgb(0,0,0)),border(1),format(0),ctlname('18'),ctrltype(edit,13),ispwd(0),gxcolor([]) ]).
+lit_i(14,6,t(40,2),[ font('Microsoft Sans Serif',8,[]),rect(658,0,725,50),outstyle(none),align(center),valign(middle),fore(rgb(0,0,0)),border(1),format(0),ctlname('40'),ctrltype(edit,14),ispwd(0),gxcolor([]) ]).
+lit_i(15,6,t(43,2),[ font('Microsoft Sans Serif',8,[]),rect(742,0,800,50),outstyle(none),align(center),valign(middle),fore(rgb(0,0,0)),border(1),format(0),ctlname('43'),ctrltype(edit,15),ispwd(0),gxcolor([]) ]).
+lit_i(19,6,t(9,2),[ font('Microsoft Sans Serif',8,[]),rect(283,0,383,50),outstyle(none),align(center),valign(middle),fore(rgb(0,0,0)),border(1),format(0),ctlname('9'),ctrltype(edit,19),ispwd(0),gxcolor([]) ]).
+lit_i(2,6,window,[ title('Text'),rect(0,0,827,100),outstyle(none),fill,graph,back(rgb(0,0,0)),fore(rgb(0,0,0)),border(0),ctlname('Datos'),align(left),valign(top),gxcolor([]),defgxcolor('BLK','WHT') ]).
+ 
+grid_i(7,15).
+ 
+ 
+ 
+form_class_i(1,'Graphic').
+ 
+ 
+ctrl_info_i(1,21,[ [ 0,0,sort,[],[],0,0,5,0,0 ] ]).
+ 
+ 
+ 
+att_prop_i(2,36,'ExternalName','EspectaculoFecha',d).
+att_prop_i(2,36,'ExternalNamespace','GXObligatorio1',d).
+att_prop_i(2,36,'EmptyAsNull','Yes',d).
+att_prop_i(2,36,idBasedOn,'',d).
+att_prop_i(2,36,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,36,'AttRegEx','',d).
+att_prop_i(2,36,'AttValidationFailedMsg','',d).
+att_prop_i(2,36,idDATEFORMAT,idDATEFORMAT_LONG,v).
+att_prop_i(2,36,'DownloadOffline','0',d).
+att_prop_i(2,36,'FullName','EspectaculoFecha',v).
+att_prop_i(2,35,'ExternalName','EspectaculoNombre',d).
+att_prop_i(2,35,'ExternalNamespace','GXObligatorio1',d).
+att_prop_i(2,35,'EmptyAsNull','Yes',d).
+att_prop_i(2,35,idBasedOn,72,v).
+att_prop_i(2,35,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,35,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,35,'AttRegEx','',d).
+att_prop_i(2,35,'AttValidationFailedMsg','',d).
+att_prop_i(2,35,'DownloadOffline','0',d).
+att_prop_i(2,35,'FullName','EspectaculoNombre',v).
+att_prop_i(2,12,'ExternalName','LocalidadNombre',d).
+att_prop_i(2,12,'ExternalNamespace','GXObligatorio1',d).
+att_prop_i(2,12,'EmptyAsNull','Yes',d).
+att_prop_i(2,12,idBasedOn,72,v).
+att_prop_i(2,12,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,12,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,12,'AttRegEx','',d).
+att_prop_i(2,12,'AttValidationFailedMsg','',d).
+att_prop_i(2,12,'DownloadOffline','0',d).
+att_prop_i(2,12,'FullName','LocalidadNombre',v).
+att_prop_i(2,18,'ExternalName','SectorNombre',d).
+att_prop_i(2,18,'ExternalNamespace','GXObligatorio1',d).
+att_prop_i(2,18,'EmptyAsNull','Yes',d).
+att_prop_i(2,18,idBasedOn,72,v).
+att_prop_i(2,18,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,18,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,18,'AttRegEx','',d).
+att_prop_i(2,18,'AttValidationFailedMsg','',d).
+att_prop_i(2,18,'DownloadOffline','0',d).
+att_prop_i(2,18,'FullName','SectorNombre',v).
+att_prop_i(2,40,'ExternalName','VentaTotal',d).
+att_prop_i(2,40,'ExternalNamespace','GXObligatorio1',d).
+att_prop_i(2,40,idBasedOn,'',d).
+att_prop_i(2,40,'DownloadOffline','0',d).
+att_prop_i(2,40,'FullName','VentaTotal',v).
+att_prop_i(2,43,'ExternalName','VentaCantidadEntradas',d).
+att_prop_i(2,43,'ExternalNamespace','GXObligatorio1',d).
+att_prop_i(2,43,'EmptyAsNull','Yes',d).
+att_prop_i(2,43,idBasedOn,'',d).
+att_prop_i(2,43,'AUTONUMBER','0',d).
+att_prop_i(2,43,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,43,'AttRegEx','',d).
+att_prop_i(2,43,'AttValidationFailedMsg','',d).
+att_prop_i(2,43,'DownloadOffline','0',d).
+att_prop_i(2,43,'FullName','VentaCantidadEntradas',v).
+att_prop_i(2,9,'ExternalName','LugarNombre',d).
+att_prop_i(2,9,'ExternalNamespace','GXObligatorio1',d).
+att_prop_i(2,9,'EmptyAsNull','Yes',d).
+att_prop_i(2,9,idBasedOn,72,v).
+att_prop_i(2,9,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,9,'DB_NLS_SUPPORT','Yes',d).
+att_prop_i(2,9,'AttRegEx','',d).
+att_prop_i(2,9,'AttValidationFailedMsg','',d).
+att_prop_i(2,9,'DownloadOffline','0',d).
+att_prop_i(2,9,'FullName','LugarNombre',v).
+att_prop_i(2,37,'ExternalName','VentaId',d).
+att_prop_i(2,37,'ExternalNamespace','GXObligatorio1',d).
+att_prop_i(2,37,'EmptyAsNull','Yes',d).
+att_prop_i(2,37,idBasedOn,71,v).
+att_prop_i(2,37,'AUTONUMBER','-1',v).
+att_prop_i(2,37,'AUTONUMBER_START','1',d).
+att_prop_i(2,37,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,37,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,37,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,37,'AttRegEx','',d).
+att_prop_i(2,37,'AttValidationFailedMsg','',d).
+att_prop_i(2,37,'DownloadOffline','0',d).
+att_prop_i(2,37,'FullName','VentaId',v).
+att_prop_i(2,34,'ExternalName','EspectaculoId',d).
+att_prop_i(2,34,'ExternalNamespace','GXObligatorio1',d).
+att_prop_i(2,34,'EmptyAsNull','Yes',d).
+att_prop_i(2,34,idBasedOn,71,v).
+att_prop_i(2,34,'AUTONUMBER','-1',v).
+att_prop_i(2,34,'AUTONUMBER_START','1',d).
+att_prop_i(2,34,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,34,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,34,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
+att_prop_i(2,34,'AttRegEx','',d).
+att_prop_i(2,34,'AttValidationFailedMsg','',d).
+att_prop_i(2,34,'DownloadOffline','0',d).
+att_prop_i(2,34,'FullName','EspectaculoId',v).
+att_prop_i(2,8,'ExternalName','LugarId',d).
+att_prop_i(2,8,'ExternalNamespace','GXObligatorio1',d).
+att_prop_i(2,8,'EmptyAsNull','Yes',d).
+att_prop_i(2,8,idBasedOn,71,v).
+att_prop_i(2,8,'AUTONUMBER','-1',v).
+att_prop_i(2,8,'AUTONUMBER_START','1',d).
+att_prop_i(2,8,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,8,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,8,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
+att_prop_i(2,8,'AttRegEx','',d).
+att_prop_i(2,8,'AttValidationFailedMsg','',d).
+att_prop_i(2,8,'DownloadOffline','0',d).
+att_prop_i(2,8,'FullName','LugarId',v).
+att_prop_i(2,14,'ExternalName','LocalidadPrecio',d).
+att_prop_i(2,14,'ExternalNamespace','GXObligatorio1',d).
+att_prop_i(2,14,'EmptyAsNull','Yes',d).
+att_prop_i(2,14,idBasedOn,'',d).
+att_prop_i(2,14,'AUTONUMBER','0',d).
+att_prop_i(2,14,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,14,'AttRegEx','',d).
+att_prop_i(2,14,'AttValidationFailedMsg','',d).
+att_prop_i(2,14,'DownloadOffline','0',d).
+att_prop_i(2,14,'FullName','LocalidadPrecio',v).
+att_prop_i(2,11,'ExternalName','LocalidadId',d).
+att_prop_i(2,11,'ExternalNamespace','GXObligatorio1',d).
+att_prop_i(2,11,'EmptyAsNull','Yes',d).
+att_prop_i(2,11,idBasedOn,71,v).
+att_prop_i(2,11,'AUTONUMBER','0',v).
+att_prop_i(2,11,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,11,'AttRegEx','',d).
+att_prop_i(2,11,'AttValidationFailedMsg','',d).
+att_prop_i(2,11,'DownloadOffline','0',d).
+att_prop_i(2,11,'FullName','LocalidadId',v).
+att_prop_i(2,17,'ExternalName','SectorId',d).
+att_prop_i(2,17,'ExternalNamespace','GXObligatorio1',d).
+att_prop_i(2,17,'EmptyAsNull','Yes',d).
+att_prop_i(2,17,idBasedOn,71,v).
+att_prop_i(2,17,'AUTONUMBER','0',v).
+att_prop_i(2,17,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,17,'AttRegEx','',d).
+att_prop_i(2,17,'AttValidationFailedMsg','',d).
+att_prop_i(2,17,'DownloadOffline','0',d).
+att_prop_i(2,17,'FullName','SectorId',v).
+ 
+tbl_prop_i(2,15,'AllDirSuper',[ [ 14,[ 34,11 ] ] ],v).
+tbl_prop_i(2,14,'AllDirSuper',[ [ 7,[ 34 ] ] ],v).
+tbl_prop_i(2,7,'AllDirSuper',[ [ 4,[ 8 ] ] ],v).
+tbl_prop_i(2,8,'AllDirSuper',[ [ 15,[ 34,11,17 ] ] ],v).
+tbl_prop_i(2,15,'DirSubor',[ [ 8,[ 34,11,17 ] ] ],v).
+tbl_prop_i(2,14,'DirSubor',[ [ 15,[ 34,11 ] ] ],v).
+tbl_prop_i(2,4,'DirSubor',[ [ 7,[ 8 ] ] ],v).
+tbl_prop_i(2,7,'DirSubor',[ [ 14,[ 34 ] ] ],v).
+tbl_prop_i(2,15,'DirSuper',[ [ 14,[ 34,11 ] ] ],v).
+tbl_prop_i(2,14,'DirSuper',[ [ 7,[ 34 ] ] ],v).
+tbl_prop_i(2,7,'DirSuper',[ [ 4,[ 8 ] ] ],v).
+tbl_prop_i(2,8,'DirSuper',[ [ 15,[ 34,11,17 ] ] ],v).
+ 
+tbl_att_prop_i(2,7,34,'AllowNulls',n).
+tbl_att_prop_i(2,7,34,'AUTONUMBER',y).
+tbl_att_prop_i(2,7,35,'AllowNulls',n).
+tbl_att_prop_i(2,7,36,'AllowNulls',n).
+tbl_att_prop_i(2,7,8,'AllowNulls',n).
+tbl_att_prop_i(2,8,37,'AllowNulls',n).
+tbl_att_prop_i(2,8,37,'AUTONUMBER',y).
+tbl_att_prop_i(2,8,34,'AllowNulls',n).
+tbl_att_prop_i(2,8,43,'AllowNulls',n).
+tbl_att_prop_i(2,8,11,'AllowNulls',n).
+tbl_att_prop_i(2,8,17,'AllowNulls',n).
+tbl_att_prop_i(2,4,8,'AllowNulls',n).
+tbl_att_prop_i(2,4,8,'AUTONUMBER',y).
+tbl_att_prop_i(2,4,9,'AllowNulls',n).
+tbl_att_prop_i(2,14,34,'AllowNulls',n).
+tbl_att_prop_i(2,14,11,'AllowNulls',n).
+tbl_att_prop_i(2,14,12,'AllowNulls',n).
+tbl_att_prop_i(2,14,14,'AllowNulls',n).
+tbl_att_prop_i(2,15,34,'AllowNulls',n).
+tbl_att_prop_i(2,15,11,'AllowNulls',n).
+tbl_att_prop_i(2,15,17,'AllowNulls',n).
+tbl_att_prop_i(2,15,18,'AllowNulls',n).
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+pgm_callprotocol_i(proc,14,'IMPRIMIRENTRADAS','HTTP','Secure').
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

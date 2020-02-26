@@ -65,10 +65,6 @@
 <TableAction>insert</TableAction>
 <AttrisToUpdate>
 <Attribute>
-<AttriId>6</AttriId>
-<AttriName>TipoEspectaculoId</AttriName>
-<Description>Tipo Espectaculo Id</Description></Attribute>
-<Attribute>
 <AttriId>7</AttriId>
 <AttriName>TipoEspectaculoNombre</AttriName>
 <Description>Tipo Espectaculo Nombre</Description></Attribute></AttrisToUpdate></TableToUpdate>

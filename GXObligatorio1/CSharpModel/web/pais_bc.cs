@@ -2,7 +2,7 @@
                File: Pais_BC
         Description: Pais
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/18/2020 22:53:11.71
+       Generated on: 2/25/2020 21:45:22.61
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -238,11 +238,11 @@ namespace GeneXus.Programs {
 
       protected void ZM011( short GX_JID )
       {
-         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
          {
             Z2PaisNombre = A2PaisNombre;
          }
-         if ( GX_JID == -1 )
+         if ( GX_JID == -3 )
          {
             Z1PaisId = A1PaisId;
             Z2PaisNombre = A2PaisNombre;
@@ -253,10 +253,15 @@ namespace GeneXus.Programs {
 
       protected void standaloneNotModal( )
       {
+         Gx_BScreen = 0;
       }
 
       protected void standaloneModal( )
       {
+         if ( IsIns( )  && (0==A1PaisId) && ( Gx_BScreen == 0 ) )
+         {
+            A1PaisId = 1;
+         }
       }
 
       protected void Load011( )
@@ -269,7 +274,7 @@ namespace GeneXus.Programs {
             A2PaisNombre = BC00016_A2PaisNombre[0];
             A40000PaisBandera_GXI = BC00016_A40000PaisBandera_GXI[0];
             A3PaisBandera = BC00016_A3PaisBandera[0];
-            ZM011( -1) ;
+            ZM011( -3) ;
          }
          pr_default.close(4);
          OnLoadActions011( ) ;
@@ -291,6 +296,11 @@ namespace GeneXus.Programs {
             AnyError = 1;
          }
          pr_default.close(5);
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( A2PaisNombre)) )
+         {
+            GX_msglist.addItem("Ingresa el nombre del país", 1, "");
+            AnyError = 1;
+         }
       }
 
       protected void CloseExtendedTableCursors011( )
@@ -322,7 +332,7 @@ namespace GeneXus.Programs {
          pr_default.execute(3, new Object[] {A1PaisId});
          if ( (pr_default.getStatus(3) != 101) )
          {
-            ZM011( 1) ;
+            ZM011( 3) ;
             RcdFound1 = 1;
             A1PaisId = BC00015_A1PaisId[0];
             A2PaisNombre = BC00015_A2PaisNombre[0];
@@ -423,14 +433,10 @@ namespace GeneXus.Programs {
                   if ( AnyError == 0 )
                   {
                      /* Using cursor BC00019 */
-                     pr_default.execute(7, new Object[] {A1PaisId, A2PaisNombre, A3PaisBandera, A40000PaisBandera_GXI});
+                     pr_default.execute(7, new Object[] {A2PaisNombre, A3PaisBandera, A40000PaisBandera_GXI});
+                     A1PaisId = BC00019_A1PaisId[0];
                      pr_default.close(7);
                      dsDefault.SmartCacheProvider.SetUpdated("Pais") ;
-                     if ( (pr_default.getStatus(7) == 1) )
-                     {
-                        GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
-                        AnyError = 1;
-                     }
                      if ( AnyError == 0 )
                      {
                         /* Start of After( Insert) rules */
@@ -593,26 +599,10 @@ namespace GeneXus.Programs {
             pr_default.execute(11, new Object[] {A1PaisId});
             if ( (pr_default.getStatus(11) != 101) )
             {
-               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"Venta"+" ("+"Espectaculo Pais"+")"}), "CannotDeleteReferencedRecord", 1, "");
-               AnyError = 1;
-            }
-            pr_default.close(11);
-            /* Using cursor BC000114 */
-            pr_default.execute(12, new Object[] {A1PaisId});
-            if ( (pr_default.getStatus(12) != 101) )
-            {
-               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"Venta"+" ("+"Venta Pais"+")"}), "CannotDeleteReferencedRecord", 1, "");
-               AnyError = 1;
-            }
-            pr_default.close(12);
-            /* Using cursor BC000115 */
-            pr_default.execute(13, new Object[] {A1PaisId});
-            if ( (pr_default.getStatus(13) != 101) )
-            {
                GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"Lugar"}), "CannotDeleteReferencedRecord", 1, "");
                AnyError = 1;
             }
-            pr_default.close(13);
+            pr_default.close(11);
          }
       }
 
@@ -743,16 +733,16 @@ namespace GeneXus.Programs {
       public void ScanKeyStart011( )
       {
          /* Scan By routine */
-         /* Using cursor BC000116 */
-         pr_default.execute(14, new Object[] {A1PaisId});
+         /* Using cursor BC000114 */
+         pr_default.execute(12, new Object[] {A1PaisId});
          RcdFound1 = 0;
-         if ( (pr_default.getStatus(14) != 101) )
+         if ( (pr_default.getStatus(12) != 101) )
          {
             RcdFound1 = 1;
-            A1PaisId = BC000116_A1PaisId[0];
-            A2PaisNombre = BC000116_A2PaisNombre[0];
-            A40000PaisBandera_GXI = BC000116_A40000PaisBandera_GXI[0];
-            A3PaisBandera = BC000116_A3PaisBandera[0];
+            A1PaisId = BC000114_A1PaisId[0];
+            A2PaisNombre = BC000114_A2PaisNombre[0];
+            A40000PaisBandera_GXI = BC000114_A40000PaisBandera_GXI[0];
+            A3PaisBandera = BC000114_A3PaisBandera[0];
          }
          /* Load Subordinate Levels */
       }
@@ -760,7 +750,7 @@ namespace GeneXus.Programs {
       protected void ScanKeyNext011( )
       {
          /* Scan next routine */
-         pr_default.readNext(14);
+         pr_default.readNext(12);
          RcdFound1 = 0;
          ScanKeyLoad011( ) ;
       }
@@ -769,20 +759,20 @@ namespace GeneXus.Programs {
       {
          sMode1 = Gx_mode;
          Gx_mode = "DSP";
-         if ( (pr_default.getStatus(14) != 101) )
+         if ( (pr_default.getStatus(12) != 101) )
          {
             RcdFound1 = 1;
-            A1PaisId = BC000116_A1PaisId[0];
-            A2PaisNombre = BC000116_A2PaisNombre[0];
-            A40000PaisBandera_GXI = BC000116_A40000PaisBandera_GXI[0];
-            A3PaisBandera = BC000116_A3PaisBandera[0];
+            A1PaisId = BC000114_A1PaisId[0];
+            A2PaisNombre = BC000114_A2PaisNombre[0];
+            A40000PaisBandera_GXI = BC000114_A40000PaisBandera_GXI[0];
+            A3PaisBandera = BC000114_A3PaisBandera[0];
          }
          Gx_mode = sMode1;
       }
 
       protected void ScanKeyEnd011( )
       {
-         pr_default.close(14);
+         pr_default.close(12);
       }
 
       protected void AfterConfirm011( )
@@ -821,11 +811,11 @@ namespace GeneXus.Programs {
 
       protected void ZM012( short GX_JID )
       {
-         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 5 ) || ( GX_JID == 0 ) )
          {
             Z5CiudadNombre = A5CiudadNombre;
          }
-         if ( GX_JID == -3 )
+         if ( GX_JID == -5 )
          {
             Z1PaisId = A1PaisId;
             Z4CiudadId = A4CiudadId;
@@ -843,15 +833,15 @@ namespace GeneXus.Programs {
 
       protected void Load012( )
       {
-         /* Using cursor BC000117 */
-         pr_default.execute(15, new Object[] {A1PaisId, A4CiudadId});
-         if ( (pr_default.getStatus(15) != 101) )
+         /* Using cursor BC000115 */
+         pr_default.execute(13, new Object[] {A1PaisId, A4CiudadId});
+         if ( (pr_default.getStatus(13) != 101) )
          {
             RcdFound2 = 1;
-            A5CiudadNombre = BC000117_A5CiudadNombre[0];
-            ZM012( -3) ;
+            A5CiudadNombre = BC000115_A5CiudadNombre[0];
+            ZM012( -5) ;
          }
-         pr_default.close(15);
+         pr_default.close(13);
          OnLoadActions012( ) ;
       }
 
@@ -877,9 +867,9 @@ namespace GeneXus.Programs {
 
       protected void GetKey012( )
       {
-         /* Using cursor BC000118 */
-         pr_default.execute(16, new Object[] {A1PaisId, A4CiudadId});
-         if ( (pr_default.getStatus(16) != 101) )
+         /* Using cursor BC000116 */
+         pr_default.execute(14, new Object[] {A1PaisId, A4CiudadId});
+         if ( (pr_default.getStatus(14) != 101) )
          {
             RcdFound2 = 1;
          }
@@ -887,7 +877,7 @@ namespace GeneXus.Programs {
          {
             RcdFound2 = 0;
          }
-         pr_default.close(16);
+         pr_default.close(14);
       }
 
       protected void getByPrimaryKey012( )
@@ -896,7 +886,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A1PaisId, A4CiudadId});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM012( 3) ;
+            ZM012( 5) ;
             RcdFound2 = 1;
             InitializeNonKey012( ) ;
             A4CiudadId = BC00013_A4CiudadId[0];
@@ -965,11 +955,11 @@ namespace GeneXus.Programs {
                   BeforeInsert012( ) ;
                   if ( AnyError == 0 )
                   {
-                     /* Using cursor BC000119 */
-                     pr_default.execute(17, new Object[] {A1PaisId, A4CiudadId, A5CiudadNombre});
-                     pr_default.close(17);
+                     /* Using cursor BC000117 */
+                     pr_default.execute(15, new Object[] {A1PaisId, A4CiudadId, A5CiudadNombre});
+                     pr_default.close(15);
                      dsDefault.SmartCacheProvider.SetUpdated("PaisCiudad") ;
-                     if ( (pr_default.getStatus(17) == 1) )
+                     if ( (pr_default.getStatus(15) == 1) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
                         AnyError = 1;
@@ -1018,11 +1008,11 @@ namespace GeneXus.Programs {
                   BeforeUpdate012( ) ;
                   if ( AnyError == 0 )
                   {
-                     /* Using cursor BC000120 */
-                     pr_default.execute(18, new Object[] {A5CiudadNombre, A1PaisId, A4CiudadId});
-                     pr_default.close(18);
+                     /* Using cursor BC000118 */
+                     pr_default.execute(16, new Object[] {A5CiudadNombre, A1PaisId, A4CiudadId});
+                     pr_default.close(16);
                      dsDefault.SmartCacheProvider.SetUpdated("PaisCiudad") ;
-                     if ( (pr_default.getStatus(18) == 103) )
+                     if ( (pr_default.getStatus(16) == 103) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"PaisCiudad"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
@@ -1072,9 +1062,9 @@ namespace GeneXus.Programs {
                if ( AnyError == 0 )
                {
                   /* No cascading delete specified. */
-                  /* Using cursor BC000121 */
-                  pr_default.execute(19, new Object[] {A1PaisId, A4CiudadId});
-                  pr_default.close(19);
+                  /* Using cursor BC000119 */
+                  pr_default.execute(17, new Object[] {A1PaisId, A4CiudadId});
+                  pr_default.close(17);
                   dsDefault.SmartCacheProvider.SetUpdated("PaisCiudad") ;
                   if ( AnyError == 0 )
                   {
@@ -1101,30 +1091,14 @@ namespace GeneXus.Programs {
          /* No delete mode formulas found. */
          if ( AnyError == 0 )
          {
-            /* Using cursor BC000122 */
-            pr_default.execute(20, new Object[] {A1PaisId, A4CiudadId});
-            if ( (pr_default.getStatus(20) != 101) )
-            {
-               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"Venta"+" ("+"Espectaculo Pais"+")"}), "CannotDeleteReferencedRecord", 1, "");
-               AnyError = 1;
-            }
-            pr_default.close(20);
-            /* Using cursor BC000123 */
-            pr_default.execute(21, new Object[] {A1PaisId, A4CiudadId});
-            if ( (pr_default.getStatus(21) != 101) )
-            {
-               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"Venta"+" ("+"Venta Pais"+")"}), "CannotDeleteReferencedRecord", 1, "");
-               AnyError = 1;
-            }
-            pr_default.close(21);
-            /* Using cursor BC000124 */
-            pr_default.execute(22, new Object[] {A1PaisId, A4CiudadId});
-            if ( (pr_default.getStatus(22) != 101) )
+            /* Using cursor BC000120 */
+            pr_default.execute(18, new Object[] {A1PaisId, A4CiudadId});
+            if ( (pr_default.getStatus(18) != 101) )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"Lugar"}), "CannotDeleteReferencedRecord", 1, "");
                AnyError = 1;
             }
-            pr_default.close(22);
+            pr_default.close(18);
          }
       }
 
@@ -1144,14 +1118,14 @@ namespace GeneXus.Programs {
       public void ScanKeyStart012( )
       {
          /* Scan By routine */
-         /* Using cursor BC000125 */
-         pr_default.execute(23, new Object[] {A1PaisId});
+         /* Using cursor BC000121 */
+         pr_default.execute(19, new Object[] {A1PaisId});
          RcdFound2 = 0;
-         if ( (pr_default.getStatus(23) != 101) )
+         if ( (pr_default.getStatus(19) != 101) )
          {
             RcdFound2 = 1;
-            A4CiudadId = BC000125_A4CiudadId[0];
-            A5CiudadNombre = BC000125_A5CiudadNombre[0];
+            A4CiudadId = BC000121_A4CiudadId[0];
+            A5CiudadNombre = BC000121_A5CiudadNombre[0];
          }
          /* Load Subordinate Levels */
       }
@@ -1159,7 +1133,7 @@ namespace GeneXus.Programs {
       protected void ScanKeyNext012( )
       {
          /* Scan next routine */
-         pr_default.readNext(23);
+         pr_default.readNext(19);
          RcdFound2 = 0;
          ScanKeyLoad012( ) ;
       }
@@ -1168,18 +1142,18 @@ namespace GeneXus.Programs {
       {
          sMode2 = Gx_mode;
          Gx_mode = "DSP";
-         if ( (pr_default.getStatus(23) != 101) )
+         if ( (pr_default.getStatus(19) != 101) )
          {
             RcdFound2 = 1;
-            A4CiudadId = BC000125_A4CiudadId[0];
-            A5CiudadNombre = BC000125_A5CiudadNombre[0];
+            A4CiudadId = BC000121_A4CiudadId[0];
+            A5CiudadNombre = BC000121_A5CiudadNombre[0];
          }
          Gx_mode = sMode2;
       }
 
       protected void ScanKeyEnd012( )
       {
-         pr_default.close(23);
+         pr_default.close(19);
       }
 
       protected void AfterConfirm012( )
@@ -1260,7 +1234,7 @@ namespace GeneXus.Programs {
 
       protected void InitAll011( )
       {
-         A1PaisId = 0;
+         A1PaisId = 1;
          InitializeNonKey011( ) ;
       }
 
@@ -1386,7 +1360,7 @@ namespace GeneXus.Programs {
             Gx_mode = "UPD";
             Z1PaisId = A1PaisId;
          }
-         ZM011( -1) ;
+         ZM011( -3) ;
          OnLoadActions011( ) ;
          AddRow011( ) ;
          bcPais.gxTpr_Ciudad.ClearCollection();
@@ -1398,7 +1372,7 @@ namespace GeneXus.Programs {
             {
                Z1PaisId = A1PaisId;
                Z4CiudadId = A4CiudadId;
-               ZM012( -3) ;
+               ZM012( -5) ;
                OnLoadActions012( ) ;
                nRcdExists_2 = 1;
                nIsMod_2 = 0;
@@ -1434,7 +1408,7 @@ namespace GeneXus.Programs {
             Gx_mode = "UPD";
             Z1PaisId = A1PaisId;
          }
-         ZM011( -1) ;
+         ZM011( -3) ;
          OnLoadActions011( ) ;
          AddRow011( ) ;
          bcPais.gxTpr_Ciudad.ClearCollection();
@@ -1446,7 +1420,7 @@ namespace GeneXus.Programs {
             {
                Z1PaisId = A1PaisId;
                Z4CiudadId = A4CiudadId;
-               ZM012( -3) ;
+               ZM012( -5) ;
                OnLoadActions012( ) ;
                nRcdExists_2 = 1;
                nIsMod_2 = 0;
@@ -1835,20 +1809,19 @@ namespace GeneXus.Programs {
          BC00014_A2PaisNombre = new String[] {""} ;
          BC00014_A40000PaisBandera_GXI = new String[] {""} ;
          BC00014_A3PaisBandera = new String[] {""} ;
-         BC000113_A37VentaId = new short[1] ;
-         BC000114_A37VentaId = new short[1] ;
-         BC000115_A8LugarId = new short[1] ;
-         BC000116_A1PaisId = new short[1] ;
-         BC000116_A2PaisNombre = new String[] {""} ;
-         BC000116_A40000PaisBandera_GXI = new String[] {""} ;
-         BC000116_A3PaisBandera = new String[] {""} ;
+         BC00019_A1PaisId = new short[1] ;
+         BC000113_A8LugarId = new short[1] ;
+         BC000114_A1PaisId = new short[1] ;
+         BC000114_A2PaisNombre = new String[] {""} ;
+         BC000114_A40000PaisBandera_GXI = new String[] {""} ;
+         BC000114_A3PaisBandera = new String[] {""} ;
          Z5CiudadNombre = "";
          A5CiudadNombre = "";
-         BC000117_A1PaisId = new short[1] ;
-         BC000117_A4CiudadId = new short[1] ;
-         BC000117_A5CiudadNombre = new String[] {""} ;
-         BC000118_A1PaisId = new short[1] ;
-         BC000118_A4CiudadId = new short[1] ;
+         BC000115_A1PaisId = new short[1] ;
+         BC000115_A4CiudadId = new short[1] ;
+         BC000115_A5CiudadNombre = new String[] {""} ;
+         BC000116_A1PaisId = new short[1] ;
+         BC000116_A4CiudadId = new short[1] ;
          BC00013_A1PaisId = new short[1] ;
          BC00013_A4CiudadId = new short[1] ;
          BC00013_A5CiudadNombre = new String[] {""} ;
@@ -1856,12 +1829,10 @@ namespace GeneXus.Programs {
          BC00012_A1PaisId = new short[1] ;
          BC00012_A4CiudadId = new short[1] ;
          BC00012_A5CiudadNombre = new String[] {""} ;
-         BC000122_A37VentaId = new short[1] ;
-         BC000123_A37VentaId = new short[1] ;
-         BC000124_A8LugarId = new short[1] ;
-         BC000125_A1PaisId = new short[1] ;
-         BC000125_A4CiudadId = new short[1] ;
-         BC000125_A5CiudadNombre = new String[] {""} ;
+         BC000120_A8LugarId = new short[1] ;
+         BC000121_A1PaisId = new short[1] ;
+         BC000121_A4CiudadId = new short[1] ;
+         BC000121_A5CiudadNombre = new String[] {""} ;
          BackMsgLst = new msglist();
          LclMsgLst = new msglist();
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.pais_bc__default(),
@@ -1888,6 +1859,7 @@ namespace GeneXus.Programs {
                BC00018_A1PaisId
                }
                , new Object[] {
+               BC00019_A1PaisId
                }
                , new Object[] {
                }
@@ -1896,22 +1868,16 @@ namespace GeneXus.Programs {
                , new Object[] {
                }
                , new Object[] {
-               BC000113_A37VentaId
+               BC000113_A8LugarId
                }
                , new Object[] {
-               BC000114_A37VentaId
+               BC000114_A1PaisId, BC000114_A2PaisNombre, BC000114_A40000PaisBandera_GXI, BC000114_A3PaisBandera
                }
                , new Object[] {
-               BC000115_A8LugarId
+               BC000115_A1PaisId, BC000115_A4CiudadId, BC000115_A5CiudadNombre
                }
                , new Object[] {
-               BC000116_A1PaisId, BC000116_A2PaisNombre, BC000116_A40000PaisBandera_GXI, BC000116_A3PaisBandera
-               }
-               , new Object[] {
-               BC000117_A1PaisId, BC000117_A4CiudadId, BC000117_A5CiudadNombre
-               }
-               , new Object[] {
-               BC000118_A1PaisId, BC000118_A4CiudadId
+               BC000116_A1PaisId, BC000116_A4CiudadId
                }
                , new Object[] {
                }
@@ -1920,19 +1886,15 @@ namespace GeneXus.Programs {
                , new Object[] {
                }
                , new Object[] {
-               BC000122_A37VentaId
+               BC000120_A8LugarId
                }
                , new Object[] {
-               BC000123_A37VentaId
-               }
-               , new Object[] {
-               BC000124_A8LugarId
-               }
-               , new Object[] {
-               BC000125_A1PaisId, BC000125_A4CiudadId, BC000125_A5CiudadNombre
+               BC000121_A1PaisId, BC000121_A4CiudadId, BC000121_A5CiudadNombre
                }
             }
          );
+         Z1PaisId = 1;
+         A1PaisId = 1;
          INITTRN();
          /* Execute Start event if defined. */
          /* Execute user event: Start */
@@ -1949,6 +1911,7 @@ namespace GeneXus.Programs {
       private short nIsMod_2 ;
       private short RcdFound2 ;
       private short GX_JID ;
+      private short Gx_BScreen ;
       private short RcdFound1 ;
       private short nIsDirty_1 ;
       private short nRcdExists_2 ;
@@ -1956,7 +1919,6 @@ namespace GeneXus.Programs {
       private short Z4CiudadId ;
       private short A4CiudadId ;
       private short nIsDirty_2 ;
-      private short Gx_BScreen ;
       private int trnEnded ;
       private int nGXsfl_2_idx=1 ;
       private String scmdbuf ;
@@ -1991,30 +1953,27 @@ namespace GeneXus.Programs {
       private String[] BC00014_A2PaisNombre ;
       private String[] BC00014_A40000PaisBandera_GXI ;
       private String[] BC00014_A3PaisBandera ;
-      private short[] BC000113_A37VentaId ;
-      private short[] BC000114_A37VentaId ;
-      private short[] BC000115_A8LugarId ;
+      private short[] BC00019_A1PaisId ;
+      private short[] BC000113_A8LugarId ;
+      private short[] BC000114_A1PaisId ;
+      private String[] BC000114_A2PaisNombre ;
+      private String[] BC000114_A40000PaisBandera_GXI ;
+      private String[] BC000114_A3PaisBandera ;
+      private short[] BC000115_A1PaisId ;
+      private short[] BC000115_A4CiudadId ;
+      private String[] BC000115_A5CiudadNombre ;
       private short[] BC000116_A1PaisId ;
-      private String[] BC000116_A2PaisNombre ;
-      private String[] BC000116_A40000PaisBandera_GXI ;
-      private String[] BC000116_A3PaisBandera ;
-      private short[] BC000117_A1PaisId ;
-      private short[] BC000117_A4CiudadId ;
-      private String[] BC000117_A5CiudadNombre ;
-      private short[] BC000118_A1PaisId ;
-      private short[] BC000118_A4CiudadId ;
+      private short[] BC000116_A4CiudadId ;
       private short[] BC00013_A1PaisId ;
       private short[] BC00013_A4CiudadId ;
       private String[] BC00013_A5CiudadNombre ;
       private short[] BC00012_A1PaisId ;
       private short[] BC00012_A4CiudadId ;
       private String[] BC00012_A5CiudadNombre ;
-      private short[] BC000122_A37VentaId ;
-      private short[] BC000123_A37VentaId ;
-      private short[] BC000124_A8LugarId ;
-      private short[] BC000125_A1PaisId ;
-      private short[] BC000125_A4CiudadId ;
-      private String[] BC000125_A5CiudadNombre ;
+      private short[] BC000120_A8LugarId ;
+      private short[] BC000121_A1PaisId ;
+      private short[] BC000121_A4CiudadId ;
+      private String[] BC000121_A5CiudadNombre ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
    }
@@ -2032,7 +1991,7 @@ namespace GeneXus.Programs {
          ,new ForEachCursor(def[4])
          ,new ForEachCursor(def[5])
          ,new ForEachCursor(def[6])
-         ,new UpdateCursor(def[7])
+         ,new ForEachCursor(def[7])
          ,new UpdateCursor(def[8])
          ,new UpdateCursor(def[9])
          ,new UpdateCursor(def[10])
@@ -2040,15 +1999,11 @@ namespace GeneXus.Programs {
          ,new ForEachCursor(def[12])
          ,new ForEachCursor(def[13])
          ,new ForEachCursor(def[14])
-         ,new ForEachCursor(def[15])
-         ,new ForEachCursor(def[16])
+         ,new UpdateCursor(def[15])
+         ,new UpdateCursor(def[16])
          ,new UpdateCursor(def[17])
-         ,new UpdateCursor(def[18])
-         ,new UpdateCursor(def[19])
-         ,new ForEachCursor(def[20])
-         ,new ForEachCursor(def[21])
-         ,new ForEachCursor(def[22])
-         ,new ForEachCursor(def[23])
+         ,new ForEachCursor(def[18])
+         ,new ForEachCursor(def[19])
        };
     }
 
@@ -2080,7 +2035,6 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmBC00019 ;
           prmBC00019 = new Object[] {
-          new Object[] {"@PaisId",SqlDbType.SmallInt,4,0} ,
           new Object[] {"@PaisNombre",SqlDbType.NChar,100,0} ,
           new Object[] {"@PaisBandera",SqlDbType.VarBinary,1024,0} ,
           new Object[] {"@PaisBandera_GXI",SqlDbType.NVarChar,2048,0}
@@ -2110,19 +2064,11 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmBC000115 ;
           prmBC000115 = new Object[] {
-          new Object[] {"@PaisId",SqlDbType.SmallInt,4,0}
-          } ;
-          Object[] prmBC000116 ;
-          prmBC000116 = new Object[] {
-          new Object[] {"@PaisId",SqlDbType.SmallInt,4,0}
-          } ;
-          Object[] prmBC000117 ;
-          prmBC000117 = new Object[] {
           new Object[] {"@PaisId",SqlDbType.SmallInt,4,0} ,
           new Object[] {"@CiudadId",SqlDbType.SmallInt,4,0}
           } ;
-          Object[] prmBC000118 ;
-          prmBC000118 = new Object[] {
+          Object[] prmBC000116 ;
+          prmBC000116 = new Object[] {
           new Object[] {"@PaisId",SqlDbType.SmallInt,4,0} ,
           new Object[] {"@CiudadId",SqlDbType.SmallInt,4,0}
           } ;
@@ -2136,40 +2082,30 @@ namespace GeneXus.Programs {
           new Object[] {"@PaisId",SqlDbType.SmallInt,4,0} ,
           new Object[] {"@CiudadId",SqlDbType.SmallInt,4,0}
           } ;
-          Object[] prmBC000119 ;
-          prmBC000119 = new Object[] {
+          Object[] prmBC000117 ;
+          prmBC000117 = new Object[] {
           new Object[] {"@PaisId",SqlDbType.SmallInt,4,0} ,
           new Object[] {"@CiudadId",SqlDbType.SmallInt,4,0} ,
           new Object[] {"@CiudadNombre",SqlDbType.NChar,100,0}
           } ;
+          Object[] prmBC000118 ;
+          prmBC000118 = new Object[] {
+          new Object[] {"@CiudadNombre",SqlDbType.NChar,100,0} ,
+          new Object[] {"@PaisId",SqlDbType.SmallInt,4,0} ,
+          new Object[] {"@CiudadId",SqlDbType.SmallInt,4,0}
+          } ;
+          Object[] prmBC000119 ;
+          prmBC000119 = new Object[] {
+          new Object[] {"@PaisId",SqlDbType.SmallInt,4,0} ,
+          new Object[] {"@CiudadId",SqlDbType.SmallInt,4,0}
+          } ;
           Object[] prmBC000120 ;
           prmBC000120 = new Object[] {
-          new Object[] {"@CiudadNombre",SqlDbType.NChar,100,0} ,
           new Object[] {"@PaisId",SqlDbType.SmallInt,4,0} ,
           new Object[] {"@CiudadId",SqlDbType.SmallInt,4,0}
           } ;
           Object[] prmBC000121 ;
           prmBC000121 = new Object[] {
-          new Object[] {"@PaisId",SqlDbType.SmallInt,4,0} ,
-          new Object[] {"@CiudadId",SqlDbType.SmallInt,4,0}
-          } ;
-          Object[] prmBC000122 ;
-          prmBC000122 = new Object[] {
-          new Object[] {"@PaisId",SqlDbType.SmallInt,4,0} ,
-          new Object[] {"@CiudadId",SqlDbType.SmallInt,4,0}
-          } ;
-          Object[] prmBC000123 ;
-          prmBC000123 = new Object[] {
-          new Object[] {"@PaisId",SqlDbType.SmallInt,4,0} ,
-          new Object[] {"@CiudadId",SqlDbType.SmallInt,4,0}
-          } ;
-          Object[] prmBC000124 ;
-          prmBC000124 = new Object[] {
-          new Object[] {"@PaisId",SqlDbType.SmallInt,4,0} ,
-          new Object[] {"@CiudadId",SqlDbType.SmallInt,4,0}
-          } ;
-          Object[] prmBC000125 ;
-          prmBC000125 = new Object[] {
           new Object[] {"@PaisId",SqlDbType.SmallInt,4,0}
           } ;
           def= new CursorDef[] {
@@ -2180,23 +2116,19 @@ namespace GeneXus.Programs {
              ,new CursorDef("BC00016", "SELECT TM1.[PaisId], TM1.[PaisNombre], TM1.[PaisBandera_GXI], TM1.[PaisBandera] FROM [Pais] TM1 WHERE TM1.[PaisId] = @PaisId ORDER BY TM1.[PaisId]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmBC00016,100, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("BC00017", "SELECT [PaisNombre] FROM [Pais] WHERE ([PaisNombre] = @PaisNombre) AND (Not ( [PaisId] = @PaisId)) ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00017,1, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("BC00018", "SELECT [PaisId] FROM [Pais] WHERE [PaisId] = @PaisId  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmBC00018,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("BC00019", "INSERT INTO [Pais]([PaisId], [PaisNombre], [PaisBandera], [PaisBandera_GXI]) VALUES(@PaisId, @PaisNombre, @PaisBandera, @PaisBandera_GXI)", GxErrorMask.GX_NOMASK,prmBC00019)
+             ,new CursorDef("BC00019", "INSERT INTO [Pais]([PaisNombre], [PaisBandera], [PaisBandera_GXI]) VALUES(@PaisNombre, @PaisBandera, @PaisBandera_GXI); SELECT SCOPE_IDENTITY()", GxErrorMask.GX_NOMASK,prmBC00019)
              ,new CursorDef("BC000110", "UPDATE [Pais] SET [PaisNombre]=@PaisNombre  WHERE [PaisId] = @PaisId", GxErrorMask.GX_NOMASK,prmBC000110)
              ,new CursorDef("BC000111", "UPDATE [Pais] SET [PaisBandera]=@PaisBandera, [PaisBandera_GXI]=@PaisBandera_GXI  WHERE [PaisId] = @PaisId", GxErrorMask.GX_NOMASK,prmBC000111)
              ,new CursorDef("BC000112", "DELETE FROM [Pais]  WHERE [PaisId] = @PaisId", GxErrorMask.GX_NOMASK,prmBC000112)
-             ,new CursorDef("BC000113", "SELECT TOP 1 [VentaId] FROM [Venta] WHERE [EspectaculoPaisId] = @PaisId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000113,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("BC000114", "SELECT TOP 1 [VentaId] FROM [Venta] WHERE [VentaPaisId] = @PaisId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000114,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("BC000115", "SELECT TOP 1 [LugarId] FROM [Lugar] WHERE [PaisId] = @PaisId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000115,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("BC000116", "SELECT TM1.[PaisId], TM1.[PaisNombre], TM1.[PaisBandera_GXI], TM1.[PaisBandera] FROM [Pais] TM1 WHERE TM1.[PaisId] = @PaisId ORDER BY TM1.[PaisId]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmBC000116,100, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("BC000117", "SELECT [PaisId], [CiudadId], [CiudadNombre] FROM [PaisCiudad] WHERE [PaisId] = @PaisId and [CiudadId] = @CiudadId ORDER BY [PaisId], [CiudadId]  OPTION (FAST 11)",true, GxErrorMask.GX_NOMASK, false, this,prmBC000117,11, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("BC000118", "SELECT [PaisId], [CiudadId] FROM [PaisCiudad] WHERE [PaisId] = @PaisId AND [CiudadId] = @CiudadId  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmBC000118,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("BC000119", "INSERT INTO [PaisCiudad]([PaisId], [CiudadId], [CiudadNombre]) VALUES(@PaisId, @CiudadId, @CiudadNombre)", GxErrorMask.GX_NOMASK,prmBC000119)
-             ,new CursorDef("BC000120", "UPDATE [PaisCiudad] SET [CiudadNombre]=@CiudadNombre  WHERE [PaisId] = @PaisId AND [CiudadId] = @CiudadId", GxErrorMask.GX_NOMASK,prmBC000120)
-             ,new CursorDef("BC000121", "DELETE FROM [PaisCiudad]  WHERE [PaisId] = @PaisId AND [CiudadId] = @CiudadId", GxErrorMask.GX_NOMASK,prmBC000121)
-             ,new CursorDef("BC000122", "SELECT TOP 1 [VentaId] FROM [Venta] WHERE [EspectaculoPaisId] = @PaisId AND [EspectaculoCiudadId] = @CiudadId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000122,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("BC000123", "SELECT TOP 1 [VentaId] FROM [Venta] WHERE [VentaPaisId] = @PaisId AND [VentaCiudadId] = @CiudadId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000123,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("BC000124", "SELECT TOP 1 [LugarId] FROM [Lugar] WHERE [PaisId] = @PaisId AND [CiudadId] = @CiudadId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000124,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("BC000125", "SELECT [PaisId], [CiudadId], [CiudadNombre] FROM [PaisCiudad] WHERE [PaisId] = @PaisId ORDER BY [PaisId], [CiudadId]  OPTION (FAST 11)",true, GxErrorMask.GX_NOMASK, false, this,prmBC000125,11, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("BC000113", "SELECT TOP 1 [LugarId] FROM [Lugar] WHERE [PaisId] = @PaisId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000113,1, GxCacheFrequency.OFF ,true,true )
+             ,new CursorDef("BC000114", "SELECT TM1.[PaisId], TM1.[PaisNombre], TM1.[PaisBandera_GXI], TM1.[PaisBandera] FROM [Pais] TM1 WHERE TM1.[PaisId] = @PaisId ORDER BY TM1.[PaisId]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmBC000114,100, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("BC000115", "SELECT [PaisId], [CiudadId], [CiudadNombre] FROM [PaisCiudad] WHERE [PaisId] = @PaisId and [CiudadId] = @CiudadId ORDER BY [PaisId], [CiudadId]  OPTION (FAST 11)",true, GxErrorMask.GX_NOMASK, false, this,prmBC000115,11, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("BC000116", "SELECT [PaisId], [CiudadId] FROM [PaisCiudad] WHERE [PaisId] = @PaisId AND [CiudadId] = @CiudadId  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmBC000116,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("BC000117", "INSERT INTO [PaisCiudad]([PaisId], [CiudadId], [CiudadNombre]) VALUES(@PaisId, @CiudadId, @CiudadNombre)", GxErrorMask.GX_NOMASK,prmBC000117)
+             ,new CursorDef("BC000118", "UPDATE [PaisCiudad] SET [CiudadNombre]=@CiudadNombre  WHERE [PaisId] = @PaisId AND [CiudadId] = @CiudadId", GxErrorMask.GX_NOMASK,prmBC000118)
+             ,new CursorDef("BC000119", "DELETE FROM [PaisCiudad]  WHERE [PaisId] = @PaisId AND [CiudadId] = @CiudadId", GxErrorMask.GX_NOMASK,prmBC000119)
+             ,new CursorDef("BC000120", "SELECT TOP 1 [LugarId] FROM [Lugar] WHERE [PaisId] = @PaisId AND [CiudadId] = @CiudadId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000120,1, GxCacheFrequency.OFF ,true,true )
+             ,new CursorDef("BC000121", "SELECT [PaisId], [CiudadId], [CiudadNombre] FROM [PaisCiudad] WHERE [PaisId] = @PaisId ORDER BY [PaisId], [CiudadId]  OPTION (FAST 11)",true, GxErrorMask.GX_NOMASK, false, this,prmBC000121,11, GxCacheFrequency.OFF ,true,false )
           };
        }
     }
@@ -2241,40 +2173,31 @@ namespace GeneXus.Programs {
              case 6 :
                 ((short[]) buf[0])[0] = rslt.getShort(1) ;
                 return;
+             case 7 :
+                ((short[]) buf[0])[0] = rslt.getShort(1) ;
+                return;
              case 11 :
                 ((short[]) buf[0])[0] = rslt.getShort(1) ;
                 return;
              case 12 :
                 ((short[]) buf[0])[0] = rslt.getShort(1) ;
-                return;
-             case 13 :
-                ((short[]) buf[0])[0] = rslt.getShort(1) ;
-                return;
-             case 14 :
-                ((short[]) buf[0])[0] = rslt.getShort(1) ;
                 ((String[]) buf[1])[0] = rslt.getString(2, 100) ;
                 ((String[]) buf[2])[0] = rslt.getMultimediaUri(3) ;
                 ((String[]) buf[3])[0] = rslt.getMultimediaFile(4, rslt.getVarchar(3)) ;
                 return;
-             case 15 :
+             case 13 :
                 ((short[]) buf[0])[0] = rslt.getShort(1) ;
                 ((short[]) buf[1])[0] = rslt.getShort(2) ;
                 ((String[]) buf[2])[0] = rslt.getString(3, 100) ;
                 return;
-             case 16 :
+             case 14 :
                 ((short[]) buf[0])[0] = rslt.getShort(1) ;
                 ((short[]) buf[1])[0] = rslt.getShort(2) ;
                 return;
-             case 20 :
+             case 18 :
                 ((short[]) buf[0])[0] = rslt.getShort(1) ;
                 return;
-             case 21 :
-                ((short[]) buf[0])[0] = rslt.getShort(1) ;
-                return;
-             case 22 :
-                ((short[]) buf[0])[0] = rslt.getShort(1) ;
-                return;
-             case 23 :
+             case 19 :
                 ((short[]) buf[0])[0] = rslt.getShort(1) ;
                 ((short[]) buf[1])[0] = rslt.getShort(2) ;
                 ((String[]) buf[2])[0] = rslt.getString(3, 100) ;
@@ -2313,10 +2236,9 @@ namespace GeneXus.Programs {
                 stmt.SetParameter(1, (short)parms[0]);
                 return;
              case 7 :
-                stmt.SetParameter(1, (short)parms[0]);
-                stmt.SetParameter(2, (String)parms[1]);
-                stmt.SetParameterBlob(3, (String)parms[2], false);
-                stmt.SetParameterMultimedia(4, (String)parms[3], (String)parms[2], "Pais", "PaisBandera");
+                stmt.SetParameter(1, (String)parms[0]);
+                stmt.SetParameterBlob(2, (String)parms[1], false);
+                stmt.SetParameterMultimedia(3, (String)parms[2], (String)parms[1], "Pais", "PaisBandera");
                 return;
              case 8 :
                 stmt.SetParameter(1, (String)parms[0]);
@@ -2338,45 +2260,31 @@ namespace GeneXus.Programs {
                 return;
              case 13 :
                 stmt.SetParameter(1, (short)parms[0]);
+                stmt.SetParameter(2, (short)parms[1]);
                 return;
              case 14 :
                 stmt.SetParameter(1, (short)parms[0]);
+                stmt.SetParameter(2, (short)parms[1]);
                 return;
              case 15 :
                 stmt.SetParameter(1, (short)parms[0]);
                 stmt.SetParameter(2, (short)parms[1]);
-                return;
-             case 16 :
-                stmt.SetParameter(1, (short)parms[0]);
-                stmt.SetParameter(2, (short)parms[1]);
-                return;
-             case 17 :
-                stmt.SetParameter(1, (short)parms[0]);
-                stmt.SetParameter(2, (short)parms[1]);
                 stmt.SetParameter(3, (String)parms[2]);
                 return;
-             case 18 :
+             case 16 :
                 stmt.SetParameter(1, (String)parms[0]);
                 stmt.SetParameter(2, (short)parms[1]);
                 stmt.SetParameter(3, (short)parms[2]);
                 return;
+             case 17 :
+                stmt.SetParameter(1, (short)parms[0]);
+                stmt.SetParameter(2, (short)parms[1]);
+                return;
+             case 18 :
+                stmt.SetParameter(1, (short)parms[0]);
+                stmt.SetParameter(2, (short)parms[1]);
+                return;
              case 19 :
-                stmt.SetParameter(1, (short)parms[0]);
-                stmt.SetParameter(2, (short)parms[1]);
-                return;
-             case 20 :
-                stmt.SetParameter(1, (short)parms[0]);
-                stmt.SetParameter(2, (short)parms[1]);
-                return;
-             case 21 :
-                stmt.SetParameter(1, (short)parms[0]);
-                stmt.SetParameter(2, (short)parms[1]);
-                return;
-             case 22 :
-                stmt.SetParameter(1, (short)parms[0]);
-                stmt.SetParameter(2, (short)parms[1]);
-                return;
-             case 23 :
                 stmt.SetParameter(1, (short)parms[0]);
                 return;
        }

@@ -1,7 +1,7 @@
 spec_i([ trn,1,'Pais','Pais_BC',[],eng,'16_0_7-138086' ]).
  
-struct_i(1,0,[ 'Websession' ],[]).
-struct_i(2,1,[ 1 ],[]).
+struct_i(1,0,[ 'Paisid','Websession' ],[]).
+struct_i(2,1,[ 'Paisid',1 ],[]).
  
 level_i(2,[ 2,[ [ 2,many ] ],[ 1,4 ],[],[],[],[ 1,4 ],'IPAISCIUDAD',[ 2,[ [ [],1,1 ] ] ],[] ]).
 level_i(1,[ 1,[ [ 1,many ] ],[ 1 ],[],[],[],[ 1 ],'IPAIS',[ 1,[] ],[] ]).
@@ -19,7 +19,7 @@ ta_i(2,[ [ [ 2,1 ],[ 2,4 ],[ 2,5 ] ] ]).
 ta_i(1,[ [ [ 1,1 ],[ 1,2 ],[ 1,3 ],[ 1,40000 ] ] ]).
  
 las_i(2,[ [ 1,4,5 ] ]).
-las_i(1,[ [ 'Websession',1,2,3,40000 ] ]).
+las_i(1,[ [ 'Paisid','Websession',1,'GxBScreen',2,3,40000 ] ]).
  
 lac_i(2,[ [ 4,5 ] ]).
 lac_i(1,[ [ 1,2,3 ] ]).
@@ -30,6 +30,7 @@ cls_i([ 25,80 ],[ 0,0 ]).
  
  
  
+default_i(e(1,4,3,[ t('1',3) ])).
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
 rule_i(0,datastore(1,'LOCK_RETRY','10')).
@@ -182,53 +183,57 @@ rule_i(0,prop('ObjDesc','Pais')).
 rule_i(0,prop('ObjName','Pais')).
 rule_i(0,rule([ a(22,[ 'Dlt','"Delete"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
+rule_i(1,rule([ a(1,[ t('"Ingresa el nombre del país"',3) ]) ],[ t('null(',1),t(2,2),t(')',4) ],[ insert,update,delete,display ],[ 2 ])).
  
-a_i(1,1,t,1,[],[ [ [ [],1,1 ] ],'IPAIS',[] ]).
-a_i(2,1,k,1,[],[ [ [ [],2,2 ] ],'UPAIS',[] ]).
-a_i(3,2,t,2,[],[ [ [ [],1,1 ],[ [],4,4 ] ],'IPAISCIUDAD',[] ]).
+a_i(1,1,f,1,[],[ [ insert ],[ t('1',3),t('IF',17),t(insert,1),t('AND',9),t('null1(',1),t(1,2),t(')',4),t('AND',9),t('GxBScreen',23),t(=,10),t(0,3),t(';',18) ] ]).
+a_i(2,1,b,1,[],[ [],[ a(1,[ t('"Ingresa el nombre del país"',3) ]) ],[ t('null(',1),t(2,2),t(')',4) ] ]).
+a_i(3,1,t,1,[],[ [ [ [],1,1 ] ],'IPAIS',[] ]).
+a_i(4,1,k,1,[],[ [ [ [],2,2 ] ],'UPAIS',[] ]).
+a_i(5,2,t,2,[],[ [ [ [],1,1 ],[ [],4,4 ] ],'IPAISCIUDAD',[] ]).
+a_i(6,1,f,'GxBScreen',[],[ [],[ t('0',3) ] ]).
  
-v_i(t,i,1,1).
-v_i(t,o,1,2).
-v_i(t,o,1,3).
-v_i(t,o,1,40000).
-v_i(k,i,2,2).
-v_i(k,i,2,1).
-v_i(k,o,2,[]).
+v_i(f,i,1,'GxBScreen').
+v_i(f,o,1,1).
+v_i(b,i,2,2).
+v_i(b,o,2,[]).
 v_i(t,i,3,1).
-v_i(t,i,3,4).
-v_i(t,o,3,5).
+v_i(t,o,3,2).
+v_i(t,o,3,3).
+v_i(t,o,3,40000).
+v_i(k,i,4,2).
+v_i(k,i,4,1).
+v_i(k,o,4,[]).
+v_i(t,i,5,1).
+v_i(t,i,5,4).
+v_i(t,o,5,5).
+v_i(f,i,6,[]).
+v_i(f,o,6,'GxBScreen').
+ 
+act_info_i(1,[ [ 1 ] ]).
  
  
- 
-tbl_to_delete_i(2,[ 8,[ [ 2,1,19 ],[ 2,4,22 ] ],c,'IVENTA3',[ [ 8,19 ],[ 8,22 ] ],[ 37 ],'Espectaculo Pais' ]).
-tbl_to_delete_i(2,[ 8,[ [ 2,1,24 ],[ 2,4,27 ] ],c,'IVENTA1',[ [ 8,24 ],[ 8,27 ] ],[ 37 ],'Venta Pais' ]).
 tbl_to_delete_i(2,[ 4,[ [ 2,1,1 ],[ 2,4,4 ] ],c,'ILUGAR1',[ [ 4,1 ],[ 4,4 ] ],[ 8 ],'' ]).
-tbl_to_delete_i(1,[ 8,[ [ 1,1,19 ] ],c,'IVENTA3',[ [ 8,19 ],[ 8,22 ] ],[ 37 ],'Espectaculo Pais' ]).
-tbl_to_delete_i(1,[ 8,[ [ 1,1,24 ] ],c,'IVENTA1',[ [ 8,24 ],[ 8,27 ] ],[ 37 ],'Venta Pais' ]).
 tbl_to_delete_i(1,[ 4,[ [ 1,1,1 ] ],u(2),'ILUGAR1',[ [ 4,1 ],[ 4,4 ] ],[ 8 ],'' ]).
  
  
  
 attri_i(5,[ 'CiudadNombre',char,100,0,'',0,'Ciudad Nombre','',0 ]).
-attri_i(22,[ 'EspectaculoCiudadId',int,4,0,'ZZZ9',0,'Espectaculo Ciudad Id','',0 ]).
-attri_i(19,[ 'EspectaculoPaisId',int,4,0,'ZZZ9',0,'Espectaculo Pais Id','',0 ]).
-attri_i(27,[ 'VentaCiudadId',int,4,0,'ZZZ9',0,'Venta Ciudad Id','',0 ]).
-attri_i(37,[ 'VentaId',int,4,0,'ZZZ9',0,'Venta Id','',0 ]).
-attri_i(24,[ 'VentaPaisId',int,4,0,'ZZZ9',0,'Venta Pais Id','',0 ]).
 attri_i(4,[ 'CiudadId',int,4,0,'ZZZ9',0,'Ciudad Id','',0 ]).
 attri_i(8,[ 'LugarId',int,4,0,'ZZZ9',0,'Lugar Id','',0 ]).
 attri_i(3,[ 'PaisBandera',bits,4,0,'',0,'Pais Bandera','',0 ]).
 attri_i(2,[ 'PaisNombre',char,100,0,'',0,'Pais Nombre','',0 ]).
 attri_i(1,[ 'PaisId',int,4,0,'ZZZ9',0,'Pais Id','',0 ]).
+attri_i('GxBScreen',[ 'Gx_BScreen',int,1,0,'',0,'','',13 ]).
 attri_i(40000,[ 'PaisBandera_GXI',svchar,2048,0,'',0,'',[],0 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
+attri_i('Ciudadnombre',[ 'CiudadNombre',char,100,0,'',0,'Ciudad Nombre','',12 ]).
+attri_i('Paisnombre',[ 'PaisNombre',char,100,0,'',0,'Pais Nombre','',11 ]).
 attri_i('Websession',[ 'WebSession',o(websession),4,0,'',0,'Web Session','',10 ]).
 attri_i('Trncontext',[ 'TrnContext',o('TransactionContext'),0,0,'',0,'Trn Context','',9 ]).
 attri_i('Isauthorized',[ 'IsAuthorized',boolean,4,0,'',0,'Is Authorized','',8 ]).
 attri_i('Paisid',[ 'PaisId',int,4,0,'ZZZ9',0,'Pais Id','',7 ]).
 attri_i('Mode',[ 'Gx_mode',char,3,0,'@!',1,'','',2 ]).
  
-table_i(8,[ 'Venta',[ 37,24,27,19,22 ],'Venta','Venta' ]).
 table_i(4,[ 'Lugar',[ 8,1,4 ],'Lugar','Lugar' ]).
 table_i(1,[ 'Pais',[ 1,2,3,40000 ],'Pais','Pais' ]).
 table_i(2,[ 'PaisCiudad',[ 1,4,5 ],'Ciudad','PaisCiudad' ]).
@@ -237,9 +242,6 @@ index_i(1,[ 'IPAIS',u,[ 1 ],'IPais' ]).
 index_i(1,[ 'UPAIS',k,[ 2 ],'UPais' ]).
 index_i(4,[ 'ILUGAR',u,[ 8 ],'ILugar' ]).
 index_i(4,[ 'ILUGAR1',d,[ 1,4 ],'ILugar1' ]).
-index_i(8,[ 'IVENTA',u,[ 37 ],'IVenta' ]).
-index_i(8,[ 'IVENTA1',d,[ 24,27 ],'IVenta1' ]).
-index_i(8,[ 'IVENTA3',d,[ 19,22 ],'IVenta3' ]).
 index_i(2,[ 'IPAISCIUDAD',u,[ 1,4 ],'IPaisCiudad' ]).
  
  
@@ -255,9 +257,8 @@ index_i(2,[ 'IPAISCIUDAD',u,[ 1,4 ],'IPaisCiudad' ]).
  
 add_att_i(bits,2,40000,3,'PaisBandera_GXI',[ svchar,2048,0,0 ]).
 add_att_i(bits,2,40001,10,'LugarFoto_GXI',[ svchar,2048,0,0 ]).
-add_att_i(bits,2,40002,38,'VentaFecha_GXI',[ svchar,2048,0,0 ]).
  
-upd_i(1,1,i,[ [ 1,2,3,40000 ],[],'IPAIS',[ [ [],1,1 ] ] ]).
+upd_i(1,1,i,[ [ 2,3,40000 ],[],'IPAIS',[ [ [],1,1 ] ] ]).
 upd_i(1,1,u,[ [ 2,3,40000 ],[],'IPAIS',[] ]).
 upd_i(1,1,d,[ [],[],'IPAIS',[] ]).
 upd_i(2,2,i,[ [ 1,4,5 ],[],'IPAISCIUDAD',[ [ [],1,1 ],[ [],4,4 ] ] ]).
@@ -329,8 +330,11 @@ att_prop_i(2,1,'ExternalName','PaisId',d).
 att_prop_i(2,1,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,1,'EmptyAsNull','Yes',d).
 att_prop_i(2,1,idBasedOn,71,v).
-att_prop_i(2,1,'AUTONUMBER','0',d).
-att_prop_i(2,1,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,1,'AUTONUMBER','-1',v).
+att_prop_i(2,1,'AUTONUMBER_START','1',d).
+att_prop_i(2,1,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,1,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,1,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,1,'AttRegEx','',d).
 att_prop_i(2,1,'AttValidationFailedMsg','',d).
 att_prop_i(2,1,'DownloadOffline','0',d).
@@ -362,7 +366,7 @@ att_prop_i(2,4,'ExternalName','CiudadId',d).
 att_prop_i(2,4,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,4,'EmptyAsNull','Yes',d).
 att_prop_i(2,4,idBasedOn,71,v).
-att_prop_i(2,4,'AUTONUMBER','0',d).
+att_prop_i(2,4,'AUTONUMBER','0',v).
 att_prop_i(2,4,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,4,'AttRegEx','',d).
 att_prop_i(2,4,'AttValidationFailedMsg','',d).
@@ -384,67 +388,15 @@ att_prop_i(2,8,'ExternalName','LugarId',d).
 att_prop_i(2,8,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,8,'EmptyAsNull','Yes',d).
 att_prop_i(2,8,idBasedOn,71,v).
-att_prop_i(2,8,'AUTONUMBER','0',d).
-att_prop_i(2,8,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,8,'AUTONUMBER','-1',v).
+att_prop_i(2,8,'AUTONUMBER_START','1',d).
+att_prop_i(2,8,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,8,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,8,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,8,'AttRegEx','',d).
 att_prop_i(2,8,'AttValidationFailedMsg','',d).
 att_prop_i(2,8,'DownloadOffline','0',d).
 att_prop_i(2,8,'FullName','LugarId',v).
-att_prop_i(2,24,'HORIZONTAL_DESCRIPTION','Venta Pais Id',d).
-att_prop_i(2,24,'ExternalName','VentaPaisId',d).
-att_prop_i(2,24,'ExternalNamespace','GXObligatorio1',d).
-att_prop_i(2,24,'EmptyAsNull','Yes',d).
-att_prop_i(2,24,idBasedOn,71,d).
-att_prop_i(2,24,'AUTONUMBER','0',d).
-att_prop_i(2,24,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,24,'AttRegEx','',d).
-att_prop_i(2,24,'AttValidationFailedMsg','',d).
-att_prop_i(2,24,'DownloadOffline','0',d).
-att_prop_i(2,24,'FullName','VentaPaisId',v).
-att_prop_i(2,37,'HORIZONTAL_DESCRIPTION','Venta Id',d).
-att_prop_i(2,37,'ExternalName','VentaId',d).
-att_prop_i(2,37,'ExternalNamespace','GXObligatorio1',d).
-att_prop_i(2,37,'EmptyAsNull','Yes',d).
-att_prop_i(2,37,idBasedOn,71,v).
-att_prop_i(2,37,'AUTONUMBER','0',d).
-att_prop_i(2,37,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,37,'AttRegEx','',d).
-att_prop_i(2,37,'AttValidationFailedMsg','',d).
-att_prop_i(2,37,'DownloadOffline','0',d).
-att_prop_i(2,37,'FullName','VentaId',v).
-att_prop_i(2,27,'HORIZONTAL_DESCRIPTION','Venta Ciudad Id',d).
-att_prop_i(2,27,'ExternalName','VentaCiudadId',d).
-att_prop_i(2,27,'ExternalNamespace','GXObligatorio1',d).
-att_prop_i(2,27,'EmptyAsNull','Yes',d).
-att_prop_i(2,27,idBasedOn,71,d).
-att_prop_i(2,27,'AUTONUMBER','0',d).
-att_prop_i(2,27,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,27,'AttRegEx','',d).
-att_prop_i(2,27,'AttValidationFailedMsg','',d).
-att_prop_i(2,27,'DownloadOffline','0',d).
-att_prop_i(2,27,'FullName','VentaCiudadId',v).
-att_prop_i(2,19,'HORIZONTAL_DESCRIPTION','Espectaculo Pais Id',d).
-att_prop_i(2,19,'ExternalName','EspectaculoPaisId',d).
-att_prop_i(2,19,'ExternalNamespace','GXObligatorio1',d).
-att_prop_i(2,19,'EmptyAsNull','Yes',d).
-att_prop_i(2,19,idBasedOn,71,d).
-att_prop_i(2,19,'AUTONUMBER','0',d).
-att_prop_i(2,19,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,19,'AttRegEx','',d).
-att_prop_i(2,19,'AttValidationFailedMsg','',d).
-att_prop_i(2,19,'DownloadOffline','0',d).
-att_prop_i(2,19,'FullName','EspectaculoPaisId',v).
-att_prop_i(2,22,'HORIZONTAL_DESCRIPTION','Espectaculo Ciudad Id',d).
-att_prop_i(2,22,'ExternalName','EspectaculoCiudadId',d).
-att_prop_i(2,22,'ExternalNamespace','GXObligatorio1',d).
-att_prop_i(2,22,'EmptyAsNull','Yes',d).
-att_prop_i(2,22,idBasedOn,71,d).
-att_prop_i(2,22,'AUTONUMBER','0',d).
-att_prop_i(2,22,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,22,'AttRegEx','',d).
-att_prop_i(2,22,'AttValidationFailedMsg','',d).
-att_prop_i(2,22,'DownloadOffline','0',d).
-att_prop_i(2,22,'FullName','EspectaculoCiudadId',v).
 att_prop_i(2,40000,'ExternalName','',d).
 att_prop_i(2,40000,'ExternalNamespace','',d).
 att_prop_i(2,40000,'EmptyAsNull','Yes',d).
@@ -457,28 +409,28 @@ att_prop_i(2,40000,'FullName','',v).
  
 tbl_prop_i(2,2,'AllDirSuper',[ [ 1,[ 1 ] ] ],v).
 tbl_prop_i(2,4,'AllDirSuper',[ [ 2,[ 1,4 ] ] ],v).
-tbl_prop_i(2,2,'DirSubor',[ [ 4,[ 1,4 ] ],[ 8,[ 24,27 ] ],[ 8,[ 19,22 ] ] ],v).
-tbl_prop_i(2,1,'DirSubor',[ [ 2,[ 1 ] ],[ 8,[ 24 ] ],[ 8,[ 19 ] ] ],v).
+tbl_prop_i(2,2,'DirSubor',[ [ 4,[ 1,4 ] ] ],v).
+tbl_prop_i(2,1,'DirSubor',[ [ 2,[ 1 ] ] ],v).
 tbl_prop_i(2,2,'DirSuper',[ [ 1,[ 1 ] ] ],v).
 tbl_prop_i(2,4,'DirSuper',[ [ 2,[ 1,4 ] ] ],v).
  
 tbl_att_prop_i(2,1,1,'AllowNulls',n).
+tbl_att_prop_i(2,1,1,'AUTONUMBER',y).
 tbl_att_prop_i(2,1,2,'AllowNulls',n).
 tbl_att_prop_i(2,1,3,'AllowNulls',n).
 tbl_att_prop_i(2,1,40000,'AllowNulls',n).
 tbl_att_prop_i(2,4,8,'AllowNulls',n).
+tbl_att_prop_i(2,4,8,'AUTONUMBER',y).
 tbl_att_prop_i(2,4,1,'AllowNulls',n).
 tbl_att_prop_i(2,4,4,'AllowNulls',n).
-tbl_att_prop_i(2,8,37,'AllowNulls',n).
-tbl_att_prop_i(2,8,24,'AllowNulls',n).
-tbl_att_prop_i(2,8,27,'AllowNulls',n).
-tbl_att_prop_i(2,8,19,'AllowNulls',n).
-tbl_att_prop_i(2,8,22,'AllowNulls',n).
 tbl_att_prop_i(2,2,1,'AllowNulls',n).
 tbl_att_prop_i(2,2,4,'AllowNulls',n).
 tbl_att_prop_i(2,2,5,'AllowNulls',n).
  
 var_prop_i(2,'Paisid',idBasedOn,'',v).
+var_prop_i(2,'Paisid','ATT_INITIAL_VALUE',[ t('1',3) ],d).
+var_prop_i(2,'Paisnombre',idBasedOn,'',v).
+var_prop_i(2,'Ciudadnombre',idBasedOn,'',v).
  
 i_tbl_best_trn(1,[ 1,1,'Pais','Pais',[] ]).
 i_tbl_best_trn(2,[ 1,2,'Pais','Pais',[] ]).
@@ -661,6 +613,7 @@ struct_dt_elem_i([ 0,1,0 ],1,collection,'False').
 struct_dt_elem_i([ 0,1,0 ],1,attributeid,'1').
 struct_dt_elem_i([ 0,1,0 ],1,'ExternalName','PaisId').
 struct_dt_elem_i([ 0,1,0 ],1,'ExternalNamespace','GXObligatorio1').
+struct_dt_elem_i([ 0,1,0 ],1,'ATT_INITIAL_VALUE',[ t('1',3) ]).
 struct_dt_elem_i([ 0,1,0 ],2,name,'Paisnombre').
 struct_dt_elem_i([ 0,1,0 ],2,camelname,'PaisNombre').
 struct_dt_elem_i([ 0,1,0 ],2,basedon,72).
@@ -769,6 +722,7 @@ struct_dt_elem_i([ 26,10,27 ],3,'JsonName','').
 struct_dt_elem_i([ 26,10,27 ],3,'JsonInclude',idJsonEmpty).
 struct_dt_elem_i([ 26,50,0 ],1,pic,'ZZZ9').
 struct_dt_elem_i([ 26,50,0 ],4,pic,'ZZZ9').
+struct_dt_elem_i([ 26,10,27 ],2,pic,'99/99/9999').
 struct_dt_elem_i([ 0,1,0 ],4,attributeid,'40000').
  
  

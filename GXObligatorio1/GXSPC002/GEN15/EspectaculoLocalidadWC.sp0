@@ -1,8 +1,8 @@
 spec_i([ web,66,'Espectaculo Localidad WC','EspectaculoLocalidadWC',0,eng,'16_0_7-138086' ]).
  
-struct_i(2,1,[ 'Pgmname' ],[]).
+struct_i(2,1,[ 'Pgmname','Espectaculoid' ],[]).
  
-level_i(2,[ 14,[ [ 14,many ] ],[],[],[ [ [ 14 ],[ 34,16,15,14,13,12,11 ] ] ],[ [ [ 14 ],[] ] ],[ 34 ],'IESPECTACULOLOCALIDAD',[ 14,[ [ [],'Espectaculoid',34 ] ] ],[] ]).
+level_i(2,[ 14,[ [ 14,many ] ],[],[],[ [ [ 14 ],[ 34,15,14,12,11,13,16 ] ] ],[ [ [ 14 ],[] ] ],[ 34 ],'IESPECTACULOLOCALIDAD',[ 14,[ [ [],'Espectaculoid',34 ] ] ],[] ]).
  
 tw_i(2,[]).
  
@@ -12,9 +12,9 @@ lwi_i(2,[ [] ]).
  
 level_option_i(2,server_paging,[ y,[] ]).
  
-ta_i(2,[ [ [ 14,34 ],[ 14,16 ],[ 14,15 ],[ 14,14 ],[ 14,13 ],[ 14,12 ],[ 14,11 ] ] ]).
+ta_i(2,[ [ [ 14,34 ],[ 14,15 ],[ 14,14 ],[ 14,12 ],[ 14,11 ],[ 14,13 ] ] ]).
  
-las_i(2,[ [ 'Espectaculoid',34,16,15,14,13,12,11 ] ]).
+las_i(2,[ [ 'Espectaculoid',34,15,14,12,11,13,16 ] ]).
  
 lac_i(2,[ [] ]).
  
@@ -130,22 +130,24 @@ rule_i(0,maingen(15)).
 rule_i(0,parm([ 'Espectaculoid' ],[])).
 rule_i(0,parmio([ [ 'Espectaculoid',in ] ])).
  
-a_i(1,1,f,'Pgmname',[],[ [],[ t('"EspectaculoLocalidadWC"',3) ] ]).
-a_i(2,1,f,'Err',[],[ [],[ t('0',3) ] ]).
-a_i(3,2,t,14,[],[ [ [ [],'Espectaculoid',34 ] ],'IESPECTACULOLOCALIDAD',[] ]).
+a_i(1,2,f,16,[],[ [],[ t(13,2) ] ]).
+a_i(2,1,f,'Pgmname',[],[ [],[ t('"EspectaculoLocalidadWC"',3) ] ]).
+a_i(3,1,f,'Err',[],[ [],[ t('0',3) ] ]).
+a_i(4,2,t,14,[],[ [ [ [],'Espectaculoid',34 ] ],'IESPECTACULOLOCALIDAD',[] ]).
  
-v_i(f,i,1,[]).
-v_i(f,o,1,'Pgmname').
+v_i(f,i,1,13).
+v_i(f,o,1,16).
 v_i(f,i,2,[]).
-v_i(f,o,2,'Err').
-v_i(t,i,3,'Espectaculoid').
-v_i(t,o,3,34).
-v_i(t,o,3,16).
-v_i(t,o,3,15).
-v_i(t,o,3,14).
-v_i(t,o,3,13).
-v_i(t,o,3,12).
-v_i(t,o,3,11).
+v_i(f,o,2,'Pgmname').
+v_i(f,i,3,[]).
+v_i(f,o,3,'Err').
+v_i(t,i,4,'Espectaculoid').
+v_i(t,o,4,34).
+v_i(t,o,4,15).
+v_i(t,o,4,14).
+v_i(t,o,4,12).
+v_i(t,o,4,11).
+v_i(t,o,4,13).
  
  
  
@@ -170,7 +172,7 @@ attri_i('Session',[ 'Session',o(websession),4,0,'',0,'Session','',7 ]).
 attri_i('Espectaculoid',[ 'EspectaculoId',int,4,0,'ZZZ9',0,'Espectaculo Id','',6 ]).
 attri_i('Isauthorized',[ 'IsAuthorized',boolean,4,0,'',0,'Is Authorized','',5 ]).
  
-table_i(14,[ 'EspectaculoLocalidad',[ 34,11,12,13,14,15,16 ],'Localidad','EspectaculoLocalidad' ]).
+table_i(14,[ 'EspectaculoLocalidad',[ 34,11,12,13,14,15 ],'Localidad','EspectaculoLocalidad' ]).
  
 index_i(14,[ 'IESPECTACULOLOCALIDAD',u,[ 34,11 ],'IEspectaculoLocalidad' ]).
  
@@ -184,6 +186,7 @@ index_i(14,[ 'IESPECTACULOLOCALIDAD',u,[ 34,11 ],'IEspectaculoLocalidad' ]).
  
  
  
+sql_no_eval_hor_i(2,16).
  
 add_att_i(bits,2,40000,10,'LugarFoto_GXI',[ svchar,2048,0,0 ]).
 add_att_i(bits,2,40001,3,'PaisBandera_GXI',[ svchar,2048,0,0 ]).
@@ -650,7 +653,7 @@ att_prop_i(2,11,'ExternalName','LocalidadId',d).
 att_prop_i(2,11,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,11,'EmptyAsNull','Yes',d).
 att_prop_i(2,11,idBasedOn,71,v).
-att_prop_i(2,11,'AUTONUMBER','0',d).
+att_prop_i(2,11,'AUTONUMBER','0',v).
 att_prop_i(2,11,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,11,'AttRegEx','',d).
 att_prop_i(2,11,'AttValidationFailedMsg','',d).
@@ -698,20 +701,18 @@ att_prop_i(2,15,'DownloadOffline','0',d).
 att_prop_i(2,15,'FullName','LocalidadesVendidas',v).
 att_prop_i(2,16,'ExternalName','LocalidadesDisponibles',d).
 att_prop_i(2,16,'ExternalNamespace','GXObligatorio1',d).
-att_prop_i(2,16,'EmptyAsNull','Yes',d).
 att_prop_i(2,16,idBasedOn,'',d).
-att_prop_i(2,16,'AUTONUMBER','0',d).
-att_prop_i(2,16,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,16,'AttRegEx','',d).
-att_prop_i(2,16,'AttValidationFailedMsg','',d).
 att_prop_i(2,16,'DownloadOffline','0',d).
 att_prop_i(2,16,'FullName','LocalidadesDisponibles',v).
 att_prop_i(2,34,'ExternalName','EspectaculoId',d).
 att_prop_i(2,34,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,34,'EmptyAsNull','Yes',d).
 att_prop_i(2,34,idBasedOn,71,v).
-att_prop_i(2,34,'AUTONUMBER','0',d).
-att_prop_i(2,34,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,34,'AUTONUMBER','-1',v).
+att_prop_i(2,34,'AUTONUMBER_START','1',d).
+att_prop_i(2,34,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,34,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,34,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,34,'AttRegEx','',d).
 att_prop_i(2,34,'AttValidationFailedMsg','',d).
 att_prop_i(2,34,'DownloadOffline','0',d).
@@ -724,9 +725,9 @@ tbl_att_prop_i(2,14,12,'AllowNulls',n).
 tbl_att_prop_i(2,14,13,'AllowNulls',n).
 tbl_att_prop_i(2,14,14,'AllowNulls',n).
 tbl_att_prop_i(2,14,15,'AllowNulls',n).
-tbl_att_prop_i(2,14,16,'AllowNulls',n).
  
 var_prop_i(2,'Espectaculoid',idBasedOn,'',v).
+var_prop_i(2,'Espectaculoid','ATT_INITIAL_VALUE',[ t('1',3) ],d).
  
  
  
@@ -742,6 +743,8 @@ struct_dt_i([ 26,50,78 ],name,'Attribute').
 struct_dt_i([ 26,50,78 ],namespace,'GXObligatorio1.TransactionContext').
 struct_dt_i([ 26,50,0 ],fullname,'TransactionContext').
 struct_dt_i([ 26,50,78 ],fullname,'TransactionContext.Attribute').
+struct_dt_i([ 26,50,0 ],modified,yes).
+struct_dt_i([ 26,50,78 ],modified,yes).
  
 struct_dt_elem_i([ 26,50,0 ],1,name,'Callerobject').
 struct_dt_elem_i([ 26,50,0 ],1,camelname,'CallerObject').

@@ -16,14 +16,8 @@
   <Object>
     <ObjCls>13</ObjCls>
     <ObjName>WWPais</ObjName>
-    <ObjDesc>Pais</ObjDesc>
+    <ObjDesc>Work With Pais</ObjDesc>
     <ObjLink>wwpais.aspx</ObjLink>
-  </Object>
-  <Object>
-    <ObjCls>13</ObjCls>
-    <ObjName>WWVenta</ObjName>
-    <ObjDesc>Ventas</ObjDesc>
-    <ObjLink>wwventa.aspx</ObjLink>
   </Object>
   <Object>
     <ObjCls>13</ObjCls>
@@ -34,7 +28,25 @@
   <Object>
     <ObjCls>13</ObjCls>
     <ObjName>WWEspectaculo</ObjName>
-    <ObjDesc>Espectaculoes</ObjDesc>
+    <ObjDesc>Work With Espectaculo</ObjDesc>
     <ObjLink>wwespectaculo.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>13</ObjCls>
+    <ObjName>WWVenta</ObjName>
+    <ObjDesc>Ventas</ObjDesc>
+    <ObjLink>wwventa.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>1</ObjCls>
+    <ObjName>ListaEspectaculosPorTipo</ObjName>
+    <ObjDesc>Lista Espectaculos Por Tipo</ObjDesc>
+    <ObjLink>listaespectaculosportipo.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>1</ObjCls>
+    <ObjName>ListaLocalidadesDeEspectaculos</ObjName>
+    <ObjDesc>Lista Localidades De Espectaculos</ObjDesc>
+    <ObjLink>listalocalidadesdeespectaculos.aspx</ObjLink>
   </Object>
 </Objects>

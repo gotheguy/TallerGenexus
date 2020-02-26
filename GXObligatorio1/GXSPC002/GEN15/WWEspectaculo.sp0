@@ -1,4 +1,4 @@
-spec_i([ web,64,'Espectaculoes','WWEspectaculo',0,eng,'16_0_7-138086' ]).
+spec_i([ web,64,'Work With Espectaculo','WWEspectaculo',0,eng,'16_0_7-138086' ]).
  
 struct_i(2,1,[ 'Pgmname','Update','Delete' ],[]).
  
@@ -20,21 +20,21 @@ las_i(2,[ [ 'Espectaculonombre','Update','Delete',10,40000,9,8,7,6,36,35,34 ] ])
 lac_i(2,[ [ 'Espectaculonombre','Update','Delete' ] ]).
  
  
-lits_i('Espectaculoes',5,10).
+lits_i('Espectáculos',5,10).
  
-cls_i([ 0,0 ],[ 5,1392 ]).
+cls_i([ 0,0 ],[ 5,1394 ]).
  
 pos_i('Espectaculonombre',[ 0,0,0 ]).
 pos_i(34,[ 1,2,0 ]).
 pos_i(35,[ 1,2,5 ]).
 pos_i(36,[ 1,2,106 ]).
-pos_i(6,[ 1,2,115 ]).
-pos_i(7,[ 1,2,120 ]).
-pos_i(8,[ 1,2,221 ]).
-pos_i(9,[ 1,2,226 ]).
-pos_i(10,[ 1,2,327 ]).
-pos_i('Update',[ 1,2,1352 ]).
-pos_i('Delete',[ 1,2,1373 ]).
+pos_i(6,[ 1,2,117 ]).
+pos_i(7,[ 1,2,122 ]).
+pos_i(8,[ 1,2,223 ]).
+pos_i(9,[ 1,2,228 ]).
+pos_i(10,[ 1,2,329 ]).
+pos_i('Update',[ 1,2,1354 ]).
+pos_i('Delete',[ 1,2,1375 ]).
  
 repeat_i(2,[ 1,2,[ 34,35,36,6,7,8,9,10,'Update','Delete' ],[ 'Update','Delete' ] ]).
  
@@ -130,7 +130,7 @@ rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
 rule_i(0,prop('MasterPage',o(13,'RwdMasterPage'))).
 rule_i(0,prop('WEB_COMP','No')).
 rule_i(0,prop('Theme',o(25,'Carmine'))).
-rule_i(0,prop('ObjDesc','Espectaculoes')).
+rule_i(0,prop('ObjDesc','Work With Espectaculo')).
 rule_i(0,prop('ObjName','WWEspectaculo')).
 rule_i(0,maingen(15)).
 rule_i(0,rule([ a(22,[ '''DoInsert''','''DoInsert''','' ]) ],[],[],[])).
@@ -175,7 +175,7 @@ attri_i(9,[ 'LugarNombre',char,100,0,'',0,'Lugar Nombre','',0 ]).
 attri_i(8,[ 'LugarId',int,4,0,'ZZZ9',0,'Lugar Id','',0 ]).
 attri_i(7,[ 'TipoEspectaculoNombre',char,100,0,'',0,'Tipo Espectaculo Nombre','',0 ]).
 attri_i(6,[ 'TipoEspectaculoId',int,4,0,'ZZZ9',0,'Tipo Espectaculo Id','',0 ]).
-attri_i(36,[ 'EspectaculoFecha',date,8,0,'99/99/99',0,'Espectaculo Fecha','',0 ]).
+attri_i(36,[ 'EspectaculoFecha',date,8,0,'99/99/9999',0,'Espectaculo Fecha','',0 ]).
 attri_i(35,[ 'EspectaculoNombre',char,100,0,'',0,'Espectaculo Nombre','',0 ]).
 attri_i(34,[ 'EspectaculoId',int,4,0,'ZZZ9',0,'Espectaculo Id','',0 ]).
 attri_i('Pgmname',[ 'Pgmname',char,129,0,'',1,'Program name','',19 ]).
@@ -342,7 +342,7 @@ html_sub_i(4,5,html_i(0,div(5))).
 html_sub_i(5,6,html_i(0,div(6))).
 html_sub_i(6,7,html_i(0,div(7))).
 html_sub_i(7,8,html_i(0,div(8))).
-html_sub_i(8,9,html_i(0,t('Espectaculoes',3))).
+html_sub_i(8,9,html_i(0,t('Espectáculos',3))).
 html_sub_i(7,10,html_i(1,div(10))).
 html_sub_i(10,11,html_i(0,div(11))).
 html_sub_i(11,12,html_i(0,div(12))).
@@ -424,7 +424,7 @@ html_comp_i(8,'Semanticcontent',div,d,[ str ]).
 html_comp_i(8,'Align',left,d,[ str ]).
 html_comp_i(8,'Valign',top,d,[ str ]).
 html_comp_i(9,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(9,'Caption','Espectaculoes',d,[ str ]).
+html_comp_i(9,'Caption','Espectáculos',d,[ str ]).
 html_comp_i(9,'Id','Titletext',v,[ str ]).
 html_comp_i(9,'Class','SubTitle',v,[ str ]).
 html_comp_i(9,'Event','',d,[ str ]).
@@ -645,7 +645,7 @@ html_comp_i(27,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(27,'Colcount',80,d,[ num ]).
 html_comp_i(27,'Colattid',35,v,[ num ]).
 html_comp_i(27,'Controlname','Espectaculonombre',d,[ str ]).
-html_comp_i(27,'Class','DescriptionAttribute',v,[ str ]).
+html_comp_i(27,'Class','Attribute',v,[ str ]).
 html_comp_i(27,'Columnclass','WWColumn',v,[ str ]).
 html_comp_i(27,'Returnonclick',0,d,[ bool ]).
 html_comp_i(27,'Eventgx','',d,[ str ]).
@@ -673,7 +673,7 @@ html_comp_i(27,'Colvisible',-1,v,[ bool ]).
 html_comp_i(27,'Title','',d,[ str ]).
 html_comp_i(27,'Invitemsg','',d,[ str ]).
 html_comp_i(28,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(28,'Colcount',8,d,[ num ]).
+html_comp_i(28,'Colcount',10,d,[ num ]).
 html_comp_i(28,'Colattid',36,v,[ num ]).
 html_comp_i(28,'Controlname','Espectaculofecha',d,[ str ]).
 html_comp_i(28,'Class','Attribute',v,[ str ]).
@@ -726,7 +726,7 @@ html_comp_i(29,'Coltitlefont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(29,'Coltitlecolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(29,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(29,'Gxformat',0,d,[ num ]).
-html_comp_i(29,'Colvisible',-1,v,[ bool ]).
+html_comp_i(29,'Colvisible',0,v,[ bool ]).
 html_comp_i(29,'Title','',d,[ str ]).
 html_comp_i(29,'Invitemsg','',d,[ str ]).
 html_comp_i(30,'Isabstractlayoutcontrol',0,d,[ bool ]).
@@ -752,7 +752,7 @@ html_comp_i(30,'Colwidth',measure(0,px),d,[ measure ]).
 html_comp_i(30,'Height',measure(17,px),d,[ measure ]).
 html_comp_i(30,'Collinesfont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(30,'Collinescolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(30,'Coltitle','Tipo Espectaculo Nombre',d,[ str ]).
+html_comp_i(30,'Coltitle','Tipo',d,[ str ]).
 html_comp_i(30,'Coltitlefont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(30,'Coltitlecolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(30,'Horizontalalignment',left,d,[ str ]).
@@ -785,7 +785,7 @@ html_comp_i(31,'Coltitlefont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(31,'Coltitlecolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(31,'Horizontalalignment',right,d,[ str ]).
 html_comp_i(31,'Gxformat',0,d,[ num ]).
-html_comp_i(31,'Colvisible',-1,v,[ bool ]).
+html_comp_i(31,'Colvisible',0,v,[ bool ]).
 html_comp_i(31,'Title','',d,[ str ]).
 html_comp_i(31,'Invitemsg','',d,[ str ]).
 html_comp_i(32,'Isabstractlayoutcontrol',0,d,[ bool ]).
@@ -811,7 +811,7 @@ html_comp_i(32,'Colwidth',measure(0,px),d,[ measure ]).
 html_comp_i(32,'Height',measure(17,px),d,[ measure ]).
 html_comp_i(32,'Collinesfont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(32,'Collinescolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(32,'Coltitle','Lugar Nombre',d,[ str ]).
+html_comp_i(32,'Coltitle','Lugar',d,[ str ]).
 html_comp_i(32,'Coltitlefont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(32,'Coltitlecolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(32,'Horizontalalignment',left,d,[ str ]).
@@ -835,7 +835,7 @@ html_comp_i(33,'Emptyasnull','Yes',d,[ str ]).
 html_comp_i(33,'Colautoresize',-1,d,[ bool ]).
 html_comp_i(33,'Colwidth',measure(0,px),d,[ measure ]).
 html_comp_i(33,'Height',measure(17,px),d,[ measure ]).
-html_comp_i(33,'Coltitle','Lugar Foto',d,[ str ]).
+html_comp_i(33,'Coltitle','Foto',d,[ str ]).
 html_comp_i(33,'Coltitlefont',font('Arial',10,[]),d,[ font ]).
 html_comp_i(33,'Coltitlecolor',rgb(255,255,255),d,[ color ]).
 html_comp_i(33,'Colvisible',-1,v,[ bool ]).
@@ -914,7 +914,7 @@ html_comp_i(35,'Invitemsg','',d,[ str ]).
  
 warn_gen_i(msg([],spc0038,[ 'There is no index for order ',[ att(2,35) ],'; poor performance may be noticed',[ ' in grid ''','Grid','''' ],'.' ])).
  
-lit_i(9,1,t('Espectaculoes',3),[ ctlname('Titletext') ]).
+lit_i(9,1,t('Espectáculos',3),[ ctlname('Titletext') ]).
 lit_i(8,1,div(8),[ ctlname('') ]).
 lit_i(13,1,button('''DoInsert'''),[ ctlname('Btninsert'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(12,1,div(12),[ ctlname('') ]).
@@ -962,8 +962,11 @@ att_prop_i(2,34,'ExternalName','EspectaculoId',d).
 att_prop_i(2,34,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,34,'EmptyAsNull','Yes',d).
 att_prop_i(2,34,idBasedOn,71,v).
-att_prop_i(2,34,'AUTONUMBER','0',d).
-att_prop_i(2,34,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,34,'AUTONUMBER','-1',v).
+att_prop_i(2,34,'AUTONUMBER_START','1',d).
+att_prop_i(2,34,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,34,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,34,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,34,'AttRegEx','',d).
 att_prop_i(2,34,'AttValidationFailedMsg','',d).
 att_prop_i(2,34,'DownloadOffline','0',d).
@@ -985,15 +988,18 @@ att_prop_i(2,36,idBasedOn,'',d).
 att_prop_i(2,36,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,36,'AttRegEx','',d).
 att_prop_i(2,36,'AttValidationFailedMsg','',d).
-att_prop_i(2,36,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,36,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,36,'DownloadOffline','0',d).
 att_prop_i(2,36,'FullName','EspectaculoFecha',v).
 att_prop_i(2,6,'ExternalName','TipoEspectaculoId',d).
 att_prop_i(2,6,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,6,'EmptyAsNull','Yes',d).
 att_prop_i(2,6,idBasedOn,71,v).
-att_prop_i(2,6,'AUTONUMBER','0',d).
-att_prop_i(2,6,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,6,'AUTONUMBER','-1',v).
+att_prop_i(2,6,'AUTONUMBER_START','1',d).
+att_prop_i(2,6,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,6,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,6,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,6,'AttRegEx','',d).
 att_prop_i(2,6,'AttValidationFailedMsg','',d).
 att_prop_i(2,6,'DownloadOffline','0',d).
@@ -1012,8 +1018,11 @@ att_prop_i(2,8,'ExternalName','LugarId',d).
 att_prop_i(2,8,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,8,'EmptyAsNull','Yes',d).
 att_prop_i(2,8,idBasedOn,71,v).
-att_prop_i(2,8,'AUTONUMBER','0',d).
-att_prop_i(2,8,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,8,'AUTONUMBER','-1',v).
+att_prop_i(2,8,'AUTONUMBER_START','1',d).
+att_prop_i(2,8,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,8,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,8,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,8,'AttRegEx','',d).
 att_prop_i(2,8,'AttValidationFailedMsg','',d).
 att_prop_i(2,8,'DownloadOffline','0',d).
@@ -1054,15 +1063,18 @@ tbl_prop_i(2,4,'DirSubor',[ [ 7,[ 8 ] ] ],v).
 tbl_prop_i(2,7,'DirSuper',[ [ 11,[ 6 ] ],[ 4,[ 8 ] ] ],v).
  
 tbl_att_prop_i(2,7,34,'AllowNulls',n).
+tbl_att_prop_i(2,7,34,'AUTONUMBER',y).
 tbl_att_prop_i(2,7,35,'AllowNulls',n).
 tbl_att_prop_i(2,7,36,'AllowNulls',n).
 tbl_att_prop_i(2,7,8,'AllowNulls',n).
 tbl_att_prop_i(2,7,6,'AllowNulls',n).
 tbl_att_prop_i(2,4,8,'AllowNulls',n).
+tbl_att_prop_i(2,4,8,'AUTONUMBER',y).
 tbl_att_prop_i(2,4,9,'AllowNulls',n).
 tbl_att_prop_i(2,4,10,'AllowNulls',n).
 tbl_att_prop_i(2,4,40000,'AllowNulls',n).
 tbl_att_prop_i(2,11,6,'AllowNulls',n).
+tbl_att_prop_i(2,11,6,'AUTONUMBER',y).
 tbl_att_prop_i(2,11,7,'AllowNulls',n).
  
 var_prop_i(2,'Espectaculonombre',idBasedOn,'',v).
@@ -1091,6 +1103,10 @@ struct_dt_i([ 26,47,0 ],fullname,'GridState').
 struct_dt_i([ 26,47,74 ],fullname,'GridState.FilterValue').
 struct_dt_i([ 26,50,0 ],fullname,'TransactionContext').
 struct_dt_i([ 26,50,78 ],fullname,'TransactionContext.Attribute').
+struct_dt_i([ 26,47,0 ],modified,yes).
+struct_dt_i([ 26,47,74 ],modified,yes).
+struct_dt_i([ 26,50,0 ],modified,yes).
+struct_dt_i([ 26,50,78 ],modified,yes).
  
 struct_dt_elem_i([ 26,47,0 ],1,name,'Currentpage').
 struct_dt_elem_i([ 26,47,0 ],1,camelname,'CurrentPage').

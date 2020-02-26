@@ -2,7 +2,7 @@
                File: EspectaculoLocalidadWC
         Description: Espectaculo Localidad WC
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/18/2020 22:53:9.87
+       Generated on: 2/25/2020 21:45:22.63
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -288,7 +288,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 138086), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 138086), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?20202182253991", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202022521452267", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -381,7 +381,7 @@ namespace GeneXus.Programs {
          SendCloseFormHiddens( ) ;
          if ( ( StringUtil.Len( sPrefix) != 0 ) && ( context.isAjaxRequest( ) || context.isSpaRequest( ) ) )
          {
-            context.AddJavascriptSource("espectaculolocalidadwc.js", "?20202182253992", false, true);
+            context.AddJavascriptSource("espectaculolocalidadwc.js", "?202022521452269", false, true);
          }
          GxWebStd.gx_hidden_field( context, sPrefix+"GX_FocusControl", GX_FocusControl);
          define_styles( ) ;
@@ -1040,12 +1040,12 @@ namespace GeneXus.Programs {
             {
                A34EspectaculoId = H001U2_A34EspectaculoId[0];
                AssignAttri(sPrefix, false, "A34EspectaculoId", StringUtil.LTrimStr( (decimal)(A34EspectaculoId), 4, 0));
-               A16LocalidadesDisponibles = H001U2_A16LocalidadesDisponibles[0];
                A15LocalidadesVendidas = H001U2_A15LocalidadesVendidas[0];
                A14LocalidadPrecio = H001U2_A14LocalidadPrecio[0];
-               A13LocalidadCapacidad = H001U2_A13LocalidadCapacidad[0];
                A12LocalidadNombre = H001U2_A12LocalidadNombre[0];
                A11LocalidadId = H001U2_A11LocalidadId[0];
+               A13LocalidadCapacidad = H001U2_A13LocalidadCapacidad[0];
+               A16LocalidadesDisponibles = A13LocalidadCapacidad;
                E121U2 ();
                pr_default.readNext(0);
             }
@@ -1492,7 +1492,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202021822531015", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20202252145233", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1509,7 +1509,7 @@ namespace GeneXus.Programs {
       {
          if ( nGXWrapped != 1 )
          {
-            context.AddJavascriptSource("espectaculolocalidadwc.js", "?202021822531015", false, true);
+            context.AddJavascriptSource("espectaculolocalidadwc.js", "?20202252145233", false, true);
          }
          /* End function include_jscripts */
       }
@@ -1733,6 +1733,8 @@ namespace GeneXus.Programs {
          setEventMetadata("GRID_NEXTPAGE",",oparms:[]}");
          setEventMetadata("GRID_LASTPAGE","{handler:'subgrid_lastpage',iparms:[{av:'GRID_nFirstRecordOnPage'},{av:'GRID_nEOF'},{av:'subGrid_Rows',ctrl:'GRID',prop:'Rows'},{av:'AV6EspectaculoId',fld:'vESPECTACULOID',pic:'ZZZ9'},{av:'sPrefix'}]");
          setEventMetadata("GRID_LASTPAGE",",oparms:[]}");
+         setEventMetadata("VALID_LOCALIDADCAPACIDAD","{handler:'Valid_Localidadcapacidad',iparms:[]");
+         setEventMetadata("VALID_LOCALIDADCAPACIDAD",",oparms:[]}");
          setEventMetadata("NULL","{handler:'Valid_Localidadesdisponibles',iparms:[]");
          setEventMetadata("NULL",",oparms:[]}");
          return  ;
@@ -1778,12 +1780,11 @@ namespace GeneXus.Programs {
          sEvtType = "";
          scmdbuf = "";
          H001U2_A34EspectaculoId = new short[1] ;
-         H001U2_A16LocalidadesDisponibles = new int[1] ;
          H001U2_A15LocalidadesVendidas = new int[1] ;
          H001U2_A14LocalidadPrecio = new decimal[1] ;
-         H001U2_A13LocalidadCapacidad = new int[1] ;
          H001U2_A12LocalidadNombre = new String[] {""} ;
          H001U2_A11LocalidadId = new short[1] ;
+         H001U2_A13LocalidadCapacidad = new int[1] ;
          H001U3_AGRID_nRecordCount = new long[1] ;
          GridRow = new GXWebRow();
          AV9TrnContext = new SdtTransactionContext(context);
@@ -1797,7 +1798,7 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.espectaculolocalidadwc__default(),
             new Object[][] {
                 new Object[] {
-               H001U2_A34EspectaculoId, H001U2_A16LocalidadesDisponibles, H001U2_A15LocalidadesVendidas, H001U2_A14LocalidadPrecio, H001U2_A13LocalidadCapacidad, H001U2_A12LocalidadNombre, H001U2_A11LocalidadId
+               H001U2_A34EspectaculoId, H001U2_A15LocalidadesVendidas, H001U2_A14LocalidadPrecio, H001U2_A12LocalidadNombre, H001U2_A11LocalidadId, H001U2_A13LocalidadCapacidad
                }
                , new Object[] {
                H001U3_AGRID_nRecordCount
@@ -1916,12 +1917,11 @@ namespace GeneXus.Programs {
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
       private short[] H001U2_A34EspectaculoId ;
-      private int[] H001U2_A16LocalidadesDisponibles ;
       private int[] H001U2_A15LocalidadesVendidas ;
       private decimal[] H001U2_A14LocalidadPrecio ;
-      private int[] H001U2_A13LocalidadCapacidad ;
       private String[] H001U2_A12LocalidadNombre ;
       private short[] H001U2_A11LocalidadId ;
+      private int[] H001U2_A13LocalidadCapacidad ;
       private long[] H001U3_AGRID_nRecordCount ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
@@ -1958,7 +1958,7 @@ namespace GeneXus.Programs {
           new Object[] {"@AV6EspectaculoId",SqlDbType.SmallInt,4,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("H001U2", "SELECT [EspectaculoId], [LocalidadesDisponibles], [LocalidadesVendidas], [LocalidadPrecio], [LocalidadCapacidad], [LocalidadNombre], [LocalidadId] FROM [EspectaculoLocalidad] WHERE [EspectaculoId] = @AV6EspectaculoId ORDER BY [EspectaculoId]  OFFSET @GXPagingFrom2 ROWS FETCH NEXT CAST((SELECT CASE WHEN @GXPagingTo2 > 0 THEN @GXPagingTo2 ELSE 1e9 END) AS INTEGER) ROWS ONLY",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH001U2,11, GxCacheFrequency.OFF ,true,false )
+              new CursorDef("H001U2", "SELECT [EspectaculoId], [LocalidadesVendidas], [LocalidadPrecio], [LocalidadNombre], [LocalidadId], [LocalidadCapacidad] FROM [EspectaculoLocalidad] WHERE [EspectaculoId] = @AV6EspectaculoId ORDER BY [EspectaculoId]  OFFSET @GXPagingFrom2 ROWS FETCH NEXT CAST((SELECT CASE WHEN @GXPagingTo2 > 0 THEN @GXPagingTo2 ELSE 1e9 END) AS INTEGER) ROWS ONLY",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH001U2,11, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("H001U3", "SELECT COUNT(*) FROM [EspectaculoLocalidad] WHERE [EspectaculoId] = @AV6EspectaculoId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH001U3,1, GxCacheFrequency.OFF ,true,false )
           };
        }
@@ -1973,11 +1973,10 @@ namespace GeneXus.Programs {
              case 0 :
                 ((short[]) buf[0])[0] = rslt.getShort(1) ;
                 ((int[]) buf[1])[0] = rslt.getInt(2) ;
-                ((int[]) buf[2])[0] = rslt.getInt(3) ;
-                ((decimal[]) buf[3])[0] = rslt.getDecimal(4) ;
-                ((int[]) buf[4])[0] = rslt.getInt(5) ;
-                ((String[]) buf[5])[0] = rslt.getString(6, 100) ;
-                ((short[]) buf[6])[0] = rslt.getShort(7) ;
+                ((decimal[]) buf[2])[0] = rslt.getDecimal(3) ;
+                ((String[]) buf[3])[0] = rslt.getString(4, 100) ;
+                ((short[]) buf[4])[0] = rslt.getShort(5) ;
+                ((int[]) buf[5])[0] = rslt.getInt(6) ;
                 return;
              case 1 :
                 ((long[]) buf[0])[0] = rslt.getLong(1) ;

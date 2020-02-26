@@ -2,7 +2,7 @@
                File: GxWebStd
         Description: GeneXus Standard Web Functions
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/17/2020 21:44:18.62
+       Generated on: 2/25/2020 21:45:21.92
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -99,6 +99,43 @@ namespace GeneXus.Programs {
             context.SendWebValue( StringUtil.LTrim( sClass)) ;
             context.WriteHtmlText( "\" ") ;
          }
+      }
+
+      static public void gx_msg_list( IGxContext context ,
+                                      String sCtrlName ,
+                                      int nDisplayMode ,
+                                      String sStyleString ,
+                                      String sClassString ,
+                                      String sCmpCtx ,
+                                      String sInMaster )
+      {
+         int i ;
+         context.WriteHtmlText( "<div>") ;
+         sClassString = sClassString + " gx_ev";
+         if ( nDisplayMode == 1 )
+         {
+            sClassString = sClassString + " ErrorViewerBullet";
+         }
+         context.WriteHtmlText( "<span") ;
+         GxWebStd.ClassAttribute( context, sClassString);
+         GxWebStd.StyleAttribute( context, sStyleString);
+         context.WriteHtmlText( " data-gx-id=\""+sCmpCtx+"gxErrorViewer\"") ;
+         context.WriteHtmlText( ">") ;
+         if ( ! context.isSpaRequest( ) )
+         {
+            i = 1;
+            while ( i <= context.GX_msglist.ItemCount )
+            {
+               context.WriteHtmlText( "<span") ;
+               GxWebStd.ClassAttribute( context, ((context.GX_msglist.getItemType((short)(i))==1) ? "gx-error-message" : "gx-warning-message"));
+               context.WriteHtmlText( ">") ;
+               context.WriteHtmlText( GXUtil.ValueEncode( context.GX_msglist.getItemText((short)(i)))) ;
+               context.WriteHtmlText( "</span>") ;
+               i = (int)(i+1);
+            }
+         }
+         context.WriteHtmlText( "</span>") ;
+         context.WriteHtmlText( "</div>") ;
       }
 
       static public void gx_div_start( IGxContext context ,
@@ -419,128 +456,6 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</div></div>") ;
          }
          context.WriteHtmlText( "</"+sHtmlTag+">") ;
-      }
-
-      static public void gx_msg_list( IGxContext context ,
-                                      String sCtrlName ,
-                                      int nDisplayMode ,
-                                      String sStyleString ,
-                                      String sClassString ,
-                                      String sCmpCtx ,
-                                      String sInMaster )
-      {
-         int i ;
-         context.WriteHtmlText( "<div>") ;
-         sClassString = sClassString + " gx_ev";
-         if ( nDisplayMode == 1 )
-         {
-            sClassString = sClassString + " ErrorViewerBullet";
-         }
-         context.WriteHtmlText( "<span") ;
-         GxWebStd.ClassAttribute( context, sClassString);
-         GxWebStd.StyleAttribute( context, sStyleString);
-         context.WriteHtmlText( " data-gx-id=\""+sCmpCtx+"gxErrorViewer\"") ;
-         context.WriteHtmlText( ">") ;
-         if ( ! context.isSpaRequest( ) )
-         {
-            i = 1;
-            while ( i <= context.GX_msglist.ItemCount )
-            {
-               context.WriteHtmlText( "<span") ;
-               GxWebStd.ClassAttribute( context, ((context.GX_msglist.getItemType((short)(i))==1) ? "gx-error-message" : "gx-warning-message"));
-               context.WriteHtmlText( ">") ;
-               context.WriteHtmlText( GXUtil.ValueEncode( context.GX_msglist.getItemText((short)(i)))) ;
-               context.WriteHtmlText( "</span>") ;
-               i = (int)(i+1);
-            }
-         }
-         context.WriteHtmlText( "</span>") ;
-         context.WriteHtmlText( "</div>") ;
-      }
-
-      static public void gx_table_start( IGxContext context ,
-                                         String sCtrlName ,
-                                         String sHTMLid ,
-                                         String sHTMLTags ,
-                                         String sClassString ,
-                                         int nBorder ,
-                                         String sAlign ,
-                                         String sTooltiptext ,
-                                         int nCellpadding ,
-                                         int nCellspacing ,
-                                         String sStyleString ,
-                                         String sRules ,
-                                         String sCaption ,
-                                         int nParentIsFreeStyle )
-      {
-         if ( context.isSpaRequest( ) )
-         {
-            context.httpAjaxContext.ajax_rsp_assign_prefixed_prop(sCtrlName, "Tooltiptext", sTooltiptext);
-         }
-         context.WriteHtmlText( "<table") ;
-         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( sCtrlName)) )
-         {
-            context.WriteHtmlText( " id=\""+sHTMLid+"\"") ;
-         }
-         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( sHTMLTags)) )
-         {
-            context.WriteHtmlText( sHTMLTags) ;
-         }
-         if ( StringUtil.StrCmp(sAlign, "") != 0 )
-         {
-            if ( StringUtil.StrCmp(sAlign, "left") == 0 )
-            {
-               sStyleString = "margin-right:auto;" + sStyleString;
-            }
-            else
-            {
-               if ( StringUtil.StrCmp(sAlign, "center") == 0 )
-               {
-                  sStyleString = "margin-left:auto; margin-right: auto;" + sStyleString;
-               }
-               else
-               {
-                  if ( StringUtil.StrCmp(sAlign, "right") == 0 )
-                  {
-                     sStyleString = "margin-left:auto;" + sStyleString;
-                  }
-               }
-            }
-         }
-         GxWebStd.ClassAttribute( context, sClassString);
-         if ( ! (0==nBorder) )
-         {
-            context.WriteHtmlText( " border=\"") ;
-            context.WriteHtmlText( StringUtil.Str( (decimal)(nBorder), 3, 0)) ;
-            context.WriteHtmlText( "\"") ;
-         }
-         context.WriteHtmlText( " data-cellpadding=\"") ;
-         context.WriteHtmlText( StringUtil.LTrimStr( (decimal)(nCellpadding), 10, 0)) ;
-         context.WriteHtmlText( "\"") ;
-         context.WriteHtmlText( " data-cellspacing=\"") ;
-         context.WriteHtmlText( StringUtil.LTrim( StringUtil.LTrimStr( (decimal)(nCellspacing), 5, 0))) ;
-         context.WriteHtmlText( "\"") ;
-         if ( ( StringUtil.StrCmp(sRules, "") != 0 ) && ( StringUtil.StrCmp(sRules, "none") != 0 ) )
-         {
-            context.WriteHtmlText( " rules=\"") ;
-            context.WriteHtmlText( sRules) ;
-            context.WriteHtmlText( "\"") ;
-         }
-         if ( StringUtil.StrCmp(sTooltiptext, "") != 0 )
-         {
-            context.WriteHtmlText( " title=\"") ;
-            context.SendWebValue( StringUtil.Trim( sTooltiptext)) ;
-            context.WriteHtmlText( "\"") ;
-         }
-         if ( nParentIsFreeStyle == 0 )
-         {
-            GxWebStd.StyleAttribute( context, sStyleString);
-         }
-         context.WriteHtmlText( ">") ;
-         if ( StringUtil.StrCmp(sCaption, "") != 0 )
-         {
-            context.WriteHtmlText( "<caption>"+sCaption+"</caption>") ;
-         }
       }
 
       static public void gx_label_element( IGxContext context ,
@@ -936,6 +851,88 @@ namespace GeneXus.Programs {
          }
       }
 
+      static public void gx_bitmap( IGxContext context ,
+                                    String sInternalName ,
+                                    String sImageURL ,
+                                    String sLinkURL ,
+                                    String sLinkTarget ,
+                                    String sAccesskey ,
+                                    String sThemeName ,
+                                    int nVisible ,
+                                    int nEnabled ,
+                                    String sAlternateText ,
+                                    String sTooltipText ,
+                                    int nBorderWidth ,
+                                    int nAutoresize ,
+                                    int nWidth ,
+                                    String nWidthUnit ,
+                                    int nHeight ,
+                                    String nHeightUnit ,
+                                    int nVerticalSpace ,
+                                    int nHorizontalSpace ,
+                                    int nJScriptCode ,
+                                    String sUserOnClickCode ,
+                                    String sEventName ,
+                                    String sStyleString ,
+                                    String sClassString ,
+                                    String sColumnClassString ,
+                                    String sColumnHeaderClassString ,
+                                    String sAlign ,
+                                    String sInputTags ,
+                                    String sImageTags ,
+                                    String sUseMap ,
+                                    String sJsDynCode ,
+                                    int nReadOnly ,
+                                    bool bIsBlob ,
+                                    bool bIsAttribute ,
+                                    String sImgSrcSet ,
+                                    String sCallerPgm )
+      {
+         String ClassHTML ;
+         ClassHTML = sClassString;
+         if ( bIsAttribute && ( StringUtil.Len( sClassString) != 0 ) && ( StringUtil.StringSearch( sClassString, "Readonly", 1) != 1 ) )
+         {
+            ClassHTML = "Readonly" + sClassString;
+         }
+         if ( ( nReadOnly == 1 ) || ( nEnabled == 0 ) )
+         {
+            GxWebStd.gx_bitmap_readonly( context, sInternalName, sImageURL, sLinkURL, sLinkTarget, sAccesskey, sThemeName, nVisible, nEnabled, sAlternateText, sTooltipText, nBorderWidth, nAutoresize, nWidth, nWidthUnit, nHeight, nHeightUnit, nVerticalSpace, nHorizontalSpace, nJScriptCode, sUserOnClickCode, sEventName, sStyleString, ClassHTML, sColumnClassString, sColumnHeaderClassString, sAlign, sImageTags, sUseMap, sJsDynCode, sCallerPgm, sImgSrcSet);
+         }
+         else
+         {
+            GxWebStd.gx_multimedia_upload_start( context, sInternalName, nVisible, nWidth, sStyleString);
+            context.WriteHtmlText( "<a class=\"action change-action\" gxfocusable=\"1\" href=\"\"") ;
+            context.WriteHtmlText( sInputTags) ;
+            context.WriteHtmlText( ">") ;
+            context.WriteHtmlText( context.GetMessage( "GXM_multimediachange", "")) ;
+            context.WriteHtmlText( "</a>") ;
+            context.WriteHtmlText( "<a gxfocusable=\"1\" href=\"\" class=\"action clear-action\"></a>") ;
+            context.WriteHtmlText( "<a target=\"_blank\">") ;
+            context.WriteHtmlText( "<img id=\"Object_") ;
+            context.SendWebValue( sInternalName) ;
+            context.WriteHtmlText( "\"") ;
+            context.WriteHtmlText( " class=\"") ;
+            context.SendWebValue( StringUtil.Trim( ClassHTML)) ;
+            context.WriteHtmlText( "\"") ;
+            context.WriteHtmlText( " alt=\"") ;
+            context.SendWebValue( StringUtil.Trim( (String.IsNullOrEmpty(StringUtil.RTrim( sAlternateText)) ? sTooltipText : sAlternateText))) ;
+            context.WriteHtmlText( "\"") ;
+            context.WriteHtmlText( " src=\"") ;
+            if ( ! String.IsNullOrEmpty(StringUtil.RTrim( sImageURL)) )
+            {
+               context.WriteHtmlText( context.convertURL( sImageURL)) ;
+            }
+            context.WriteHtmlText( "\"") ;
+            context.WriteHtmlText( GXUtil.HtmlEndTag( HTMLElement.IMG)) ;
+            context.WriteHtmlText( "<span class=\"") ;
+            context.WriteHtmlText( "gx-image-placeholder") ;
+            context.WriteHtmlText( "\">") ;
+            context.WriteHtmlText( "</span>") ;
+            context.WriteHtmlText( "</a>") ;
+            GxWebStd.gx_multimedia_upload_end( context, sInternalName, sImageURL, sTooltipText, nWidth, nWidthUnit, nHeight, nHeightUnit, sUserOnClickCode, sEventName, sStyleString, sClassString, "", "", sAlign, sInputTags, nReadOnly, bIsBlob, "image/*", sCallerPgm);
+         }
+      }
+
       static public bool gx_redirect( IGxContext context )
       {
          if ( context.WillRedirect( ) )
@@ -993,6 +990,91 @@ namespace GeneXus.Programs {
          else
          {
             return false ;
+         }
+      }
+
+      static public void gx_table_start( IGxContext context ,
+                                         String sCtrlName ,
+                                         String sHTMLid ,
+                                         String sHTMLTags ,
+                                         String sClassString ,
+                                         int nBorder ,
+                                         String sAlign ,
+                                         String sTooltiptext ,
+                                         int nCellpadding ,
+                                         int nCellspacing ,
+                                         String sStyleString ,
+                                         String sRules ,
+                                         String sCaption ,
+                                         int nParentIsFreeStyle )
+      {
+         if ( context.isSpaRequest( ) )
+         {
+            context.httpAjaxContext.ajax_rsp_assign_prefixed_prop(sCtrlName, "Tooltiptext", sTooltiptext);
+         }
+         context.WriteHtmlText( "<table") ;
+         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( sCtrlName)) )
+         {
+            context.WriteHtmlText( " id=\""+sHTMLid+"\"") ;
+         }
+         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( sHTMLTags)) )
+         {
+            context.WriteHtmlText( sHTMLTags) ;
+         }
+         if ( StringUtil.StrCmp(sAlign, "") != 0 )
+         {
+            if ( StringUtil.StrCmp(sAlign, "left") == 0 )
+            {
+               sStyleString = "margin-right:auto;" + sStyleString;
+            }
+            else
+            {
+               if ( StringUtil.StrCmp(sAlign, "center") == 0 )
+               {
+                  sStyleString = "margin-left:auto; margin-right: auto;" + sStyleString;
+               }
+               else
+               {
+                  if ( StringUtil.StrCmp(sAlign, "right") == 0 )
+                  {
+                     sStyleString = "margin-left:auto;" + sStyleString;
+                  }
+               }
+            }
+         }
+         GxWebStd.ClassAttribute( context, sClassString);
+         if ( ! (0==nBorder) )
+         {
+            context.WriteHtmlText( " border=\"") ;
+            context.WriteHtmlText( StringUtil.Str( (decimal)(nBorder), 3, 0)) ;
+            context.WriteHtmlText( "\"") ;
+         }
+         context.WriteHtmlText( " data-cellpadding=\"") ;
+         context.WriteHtmlText( StringUtil.LTrimStr( (decimal)(nCellpadding), 10, 0)) ;
+         context.WriteHtmlText( "\"") ;
+         context.WriteHtmlText( " data-cellspacing=\"") ;
+         context.WriteHtmlText( StringUtil.LTrim( StringUtil.LTrimStr( (decimal)(nCellspacing), 5, 0))) ;
+         context.WriteHtmlText( "\"") ;
+         if ( ( StringUtil.StrCmp(sRules, "") != 0 ) && ( StringUtil.StrCmp(sRules, "none") != 0 ) )
+         {
+            context.WriteHtmlText( " rules=\"") ;
+            context.WriteHtmlText( sRules) ;
+            context.WriteHtmlText( "\"") ;
+         }
+         if ( StringUtil.StrCmp(sTooltiptext, "") != 0 )
+         {
+            context.WriteHtmlText( " title=\"") ;
+            context.SendWebValue( StringUtil.Trim( sTooltiptext)) ;
+            context.WriteHtmlText( "\"") ;
+         }
+         if ( nParentIsFreeStyle == 0 )
+         {
+            GxWebStd.StyleAttribute( context, sStyleString);
+         }
+         context.WriteHtmlText( ">") ;
+         if ( StringUtil.StrCmp(sCaption, "") != 0 )
+         {
+            context.WriteHtmlText( "<caption>"+sCaption+"</caption>") ;
          }
       }
 
@@ -1236,88 +1318,6 @@ namespace GeneXus.Programs {
          else
          {
             GxWebStd.gx_link_end( context, sLinkURL);
-         }
-      }
-
-      static public void gx_bitmap( IGxContext context ,
-                                    String sInternalName ,
-                                    String sImageURL ,
-                                    String sLinkURL ,
-                                    String sLinkTarget ,
-                                    String sAccesskey ,
-                                    String sThemeName ,
-                                    int nVisible ,
-                                    int nEnabled ,
-                                    String sAlternateText ,
-                                    String sTooltipText ,
-                                    int nBorderWidth ,
-                                    int nAutoresize ,
-                                    int nWidth ,
-                                    String nWidthUnit ,
-                                    int nHeight ,
-                                    String nHeightUnit ,
-                                    int nVerticalSpace ,
-                                    int nHorizontalSpace ,
-                                    int nJScriptCode ,
-                                    String sUserOnClickCode ,
-                                    String sEventName ,
-                                    String sStyleString ,
-                                    String sClassString ,
-                                    String sColumnClassString ,
-                                    String sColumnHeaderClassString ,
-                                    String sAlign ,
-                                    String sInputTags ,
-                                    String sImageTags ,
-                                    String sUseMap ,
-                                    String sJsDynCode ,
-                                    int nReadOnly ,
-                                    bool bIsBlob ,
-                                    bool bIsAttribute ,
-                                    String sImgSrcSet ,
-                                    String sCallerPgm )
-      {
-         String ClassHTML ;
-         ClassHTML = sClassString;
-         if ( bIsAttribute && ( StringUtil.Len( sClassString) != 0 ) && ( StringUtil.StringSearch( sClassString, "Readonly", 1) != 1 ) )
-         {
-            ClassHTML = "Readonly" + sClassString;
-         }
-         if ( ( nReadOnly == 1 ) || ( nEnabled == 0 ) )
-         {
-            GxWebStd.gx_bitmap_readonly( context, sInternalName, sImageURL, sLinkURL, sLinkTarget, sAccesskey, sThemeName, nVisible, nEnabled, sAlternateText, sTooltipText, nBorderWidth, nAutoresize, nWidth, nWidthUnit, nHeight, nHeightUnit, nVerticalSpace, nHorizontalSpace, nJScriptCode, sUserOnClickCode, sEventName, sStyleString, ClassHTML, sColumnClassString, sColumnHeaderClassString, sAlign, sImageTags, sUseMap, sJsDynCode, sCallerPgm, sImgSrcSet);
-         }
-         else
-         {
-            GxWebStd.gx_multimedia_upload_start( context, sInternalName, nVisible, nWidth, sStyleString);
-            context.WriteHtmlText( "<a class=\"action change-action\" gxfocusable=\"1\" href=\"\"") ;
-            context.WriteHtmlText( sInputTags) ;
-            context.WriteHtmlText( ">") ;
-            context.WriteHtmlText( context.GetMessage( "GXM_multimediachange", "")) ;
-            context.WriteHtmlText( "</a>") ;
-            context.WriteHtmlText( "<a gxfocusable=\"1\" href=\"\" class=\"action clear-action\"></a>") ;
-            context.WriteHtmlText( "<a target=\"_blank\">") ;
-            context.WriteHtmlText( "<img id=\"Object_") ;
-            context.SendWebValue( sInternalName) ;
-            context.WriteHtmlText( "\"") ;
-            context.WriteHtmlText( " class=\"") ;
-            context.SendWebValue( StringUtil.Trim( ClassHTML)) ;
-            context.WriteHtmlText( "\"") ;
-            context.WriteHtmlText( " alt=\"") ;
-            context.SendWebValue( StringUtil.Trim( (String.IsNullOrEmpty(StringUtil.RTrim( sAlternateText)) ? sTooltipText : sAlternateText))) ;
-            context.WriteHtmlText( "\"") ;
-            context.WriteHtmlText( " src=\"") ;
-            if ( ! String.IsNullOrEmpty(StringUtil.RTrim( sImageURL)) )
-            {
-               context.WriteHtmlText( context.convertURL( sImageURL)) ;
-            }
-            context.WriteHtmlText( "\"") ;
-            context.WriteHtmlText( GXUtil.HtmlEndTag( HTMLElement.IMG)) ;
-            context.WriteHtmlText( "<span class=\"") ;
-            context.WriteHtmlText( "gx-image-placeholder") ;
-            context.WriteHtmlText( "\">") ;
-            context.WriteHtmlText( "</span>") ;
-            context.WriteHtmlText( "</a>") ;
-            GxWebStd.gx_multimedia_upload_end( context, sInternalName, sImageURL, sTooltipText, nWidth, nWidthUnit, nHeight, nHeightUnit, sUserOnClickCode, sEventName, sStyleString, sClassString, "", "", sAlign, sInputTags, nReadOnly, bIsBlob, "image/*", sCallerPgm);
          }
       }
 

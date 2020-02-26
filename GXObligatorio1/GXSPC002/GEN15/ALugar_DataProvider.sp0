@@ -226,6 +226,7 @@ page_layout_i([ 66,0,6 ]).
  
  
  
+warn_gen_i(msg(layout(3,[]),spc0174,[ 'Could not find a proper SDT for root element ','''SDTLugares''. Element should be named ''Lugar''.','' ])).
  
  
  
@@ -279,6 +280,8 @@ struct_dt_i([ 26,10,27 ],fullname,'GeneXus\Common\Messages.Message').
 struct_dt_i([ 0,3,0 ],camelname,'Lugar').
 struct_dt_i([ 26,10,0 ],camelname,'Genexus\common\messages').
 struct_dt_i([ 26,10,27 ],camelname,'Message').
+struct_dt_i([ 26,10,0 ],modified,yes).
+struct_dt_i([ 26,10,27 ],modified,yes).
  
 struct_dt_elem_i([ 0,3,0 ],1,name,'Lugarid').
 struct_dt_elem_i([ 0,3,0 ],1,camelname,'LugarId').
@@ -292,6 +295,7 @@ struct_dt_elem_i([ 0,3,0 ],1,collection,'False').
 struct_dt_elem_i([ 0,3,0 ],1,attributeid,'8').
 struct_dt_elem_i([ 0,3,0 ],1,'ExternalName','LugarId').
 struct_dt_elem_i([ 0,3,0 ],1,'ExternalNamespace','GXObligatorio1').
+struct_dt_elem_i([ 0,3,0 ],1,'ATT_INITIAL_VALUE',[ t('1',3) ]).
 struct_dt_elem_i([ 0,3,0 ],2,name,'Lugarnombre').
 struct_dt_elem_i([ 0,3,0 ],2,camelname,'LugarNombre').
 struct_dt_elem_i([ 0,3,0 ],2,basedon,72).
@@ -332,6 +336,7 @@ struct_dt_elem_i([ 0,3,0 ],5,collection,'False').
 struct_dt_elem_i([ 0,3,0 ],5,attributeid,'1').
 struct_dt_elem_i([ 0,3,0 ],5,'ExternalName','PaisId').
 struct_dt_elem_i([ 0,3,0 ],5,'ExternalNamespace','GXObligatorio1').
+struct_dt_elem_i([ 0,3,0 ],5,'ATT_INITIAL_VALUE',[ t('1',3) ]).
 struct_dt_elem_i([ 0,3,0 ],6,name,'Paisnombre').
 struct_dt_elem_i([ 0,3,0 ],6,camelname,'PaisNombre').
 struct_dt_elem_i([ 0,3,0 ],6,basedon,72).
@@ -383,6 +388,17 @@ struct_dt_elem_i([ 0,3,0 ],10,collection,'False').
 struct_dt_elem_i([ 0,3,0 ],10,attributeid,'5').
 struct_dt_elem_i([ 0,3,0 ],10,'ExternalName','CiudadNombre').
 struct_dt_elem_i([ 0,3,0 ],10,'ExternalNamespace','GXObligatorio1').
+struct_dt_elem_i([ 0,3,0 ],11,name,'Cantespectaculoslugar').
+struct_dt_elem_i([ 0,3,0 ],11,camelname,'CantEspectaculosLugar').
+struct_dt_elem_i([ 0,3,0 ],11,length,4).
+struct_dt_elem_i([ 0,3,0 ],11,decimals,0).
+struct_dt_elem_i([ 0,3,0 ],11,sign,0).
+struct_dt_elem_i([ 0,3,0 ],11,type,[ 4,4,0 ]).
+struct_dt_elem_i([ 0,3,0 ],11,pic,'ZZZ9').
+struct_dt_elem_i([ 0,3,0 ],11,collection,'False').
+struct_dt_elem_i([ 0,3,0 ],11,attributeid,'42').
+struct_dt_elem_i([ 0,3,0 ],11,'ExternalName','CantEspectaculosLugar').
+struct_dt_elem_i([ 0,3,0 ],11,'ExternalNamespace','GXObligatorio1').
 struct_dt_elem_i([ 26,10,27 ],1,name,'Id').
 struct_dt_elem_i([ 26,10,27 ],1,camelname,'Id').
 struct_dt_elem_i([ 26,10,27 ],1,length,128).
@@ -433,6 +449,7 @@ struct_dt_elem_i([ 26,10,27 ],3,soaptype,'').
 struct_dt_elem_i([ 26,10,27 ],3,'XmlInclude',idXmlIncludeAlways).
 struct_dt_elem_i([ 26,10,27 ],3,'JsonName','').
 struct_dt_elem_i([ 26,10,27 ],3,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,10,27 ],2,pic,'99/99/9999').
  
  
  

@@ -1,4 +1,4 @@
-spec_i([ web,37,'Pais','WWPais',0,eng,'16_0_7-138086' ]).
+spec_i([ web,37,'Work With Pais','WWPais',0,eng,'16_0_7-138086' ]).
  
 struct_i(2,1,[ 'Pgmname','Update','Delete' ],[]).
  
@@ -20,7 +20,7 @@ las_i(2,[ [ 'Paisnombre','Update','Delete',3,40000,2,1 ] ]).
 lac_i(2,[ [ 'Paisnombre','Update','Delete' ] ]).
  
  
-lits_i('Pais',5,10).
+lits_i('Paises',5,10).
  
 cls_i([ 0,0 ],[ 5,1171 ]).
  
@@ -125,7 +125,7 @@ rule_i(0,prop('SHOWMASTERPAGE_POPUP','0')).
 rule_i(0,prop('MasterPage',o(13,'RwdMasterPage'))).
 rule_i(0,prop('WEB_COMP','No')).
 rule_i(0,prop('Theme',o(25,'Carmine'))).
-rule_i(0,prop('ObjDesc','Pais')).
+rule_i(0,prop('ObjDesc','Work With Pais')).
 rule_i(0,prop('ObjName','WWPais')).
 rule_i(0,maingen(15)).
 rule_i(0,rule([ a(22,[ '''DoInsert''','''DoInsert''','' ]) ],[],[],[])).
@@ -315,7 +315,7 @@ html_sub_i(4,5,html_i(0,div(5))).
 html_sub_i(5,6,html_i(0,div(6))).
 html_sub_i(6,7,html_i(0,div(7))).
 html_sub_i(7,8,html_i(0,div(8))).
-html_sub_i(8,9,html_i(0,t('Pais',3))).
+html_sub_i(8,9,html_i(0,t('Paises',3))).
 html_sub_i(7,10,html_i(1,div(10))).
 html_sub_i(10,11,html_i(0,div(11))).
 html_sub_i(11,12,html_i(0,div(12))).
@@ -397,7 +397,7 @@ html_comp_i(8,'Semanticcontent',div,d,[ str ]).
 html_comp_i(8,'Align',left,d,[ str ]).
 html_comp_i(8,'Valign',top,d,[ str ]).
 html_comp_i(9,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(9,'Caption','Pais',d,[ str ]).
+html_comp_i(9,'Caption','Paises',d,[ str ]).
 html_comp_i(9,'Id','Titletext',v,[ str ]).
 html_comp_i(9,'Class','SubTitle',v,[ str ]).
 html_comp_i(9,'Event','',d,[ str ]).
@@ -739,7 +739,7 @@ html_comp_i(30,'Invitemsg','',d,[ str ]).
  
  
  
-lit_i(9,1,t('Pais',3),[ ctlname('Titletext') ]).
+lit_i(9,1,t('Paises',3),[ ctlname('Titletext') ]).
 lit_i(8,1,div(8),[ ctlname('') ]).
 lit_i(13,1,button('''DoInsert'''),[ ctlname('Btninsert'),width(0),rect(0,0,10,10),title('Nothing') ]).
 lit_i(12,1,div(12),[ ctlname('') ]).
@@ -782,8 +782,11 @@ att_prop_i(2,1,'ExternalName','PaisId',d).
 att_prop_i(2,1,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,1,'EmptyAsNull','Yes',d).
 att_prop_i(2,1,idBasedOn,71,v).
-att_prop_i(2,1,'AUTONUMBER','0',d).
-att_prop_i(2,1,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,1,'AUTONUMBER','-1',v).
+att_prop_i(2,1,'AUTONUMBER_START','1',d).
+att_prop_i(2,1,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,1,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,1,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,1,'AttRegEx','',d).
 att_prop_i(2,1,'AttValidationFailedMsg','',d).
 att_prop_i(2,1,'DownloadOffline','0',d).
@@ -820,6 +823,7 @@ att_prop_i(2,40000,'FullName','',v).
  
  
 tbl_att_prop_i(2,1,1,'AllowNulls',n).
+tbl_att_prop_i(2,1,1,'AUTONUMBER',y).
 tbl_att_prop_i(2,1,2,'AllowNulls',n).
 tbl_att_prop_i(2,1,3,'AllowNulls',n).
 tbl_att_prop_i(2,1,40000,'AllowNulls',n).
@@ -850,6 +854,10 @@ struct_dt_i([ 26,47,0 ],fullname,'GridState').
 struct_dt_i([ 26,47,74 ],fullname,'GridState.FilterValue').
 struct_dt_i([ 26,50,0 ],fullname,'TransactionContext').
 struct_dt_i([ 26,50,78 ],fullname,'TransactionContext.Attribute').
+struct_dt_i([ 26,47,0 ],modified,yes).
+struct_dt_i([ 26,47,74 ],modified,yes).
+struct_dt_i([ 26,50,0 ],modified,yes).
+struct_dt_i([ 26,50,78 ],modified,yes).
  
 struct_dt_elem_i([ 26,47,0 ],1,name,'Currentpage').
 struct_dt_elem_i([ 26,47,0 ],1,camelname,'CurrentPage').

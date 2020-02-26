@@ -2,7 +2,7 @@
                File: TipoEspectaculoGeneral
         Description: Tipo Espectaculo General
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/17/2020 21:44:21.59
+       Generated on: 2/25/2020 21:45:24.18
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -254,7 +254,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 138086), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 138086), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202021721442162", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202022521452421", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -339,7 +339,7 @@ namespace GeneXus.Programs {
          SendCloseFormHiddens( ) ;
          if ( ( StringUtil.Len( sPrefix) != 0 ) && ( context.isAjaxRequest( ) || context.isSpaRequest( ) ) )
          {
-            context.AddJavascriptSource("tipoespectaculogeneral.js", "?202021721442163", false, true);
+            context.AddJavascriptSource("tipoespectaculogeneral.js", "?202022521452423", false, true);
          }
          GxWebStd.gx_hidden_field( context, sPrefix+"GX_FocusControl", GX_FocusControl);
          define_styles( ) ;
@@ -1049,7 +1049,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202021721442177", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202022521452442", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1064,7 +1064,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("tipoespectaculogeneral.js", "?202021721442177", false, true);
+         context.AddJavascriptSource("tipoespectaculogeneral.js", "?202022521452442", false, true);
          /* End function include_jscripts */
       }
 
@@ -1172,6 +1172,7 @@ namespace GeneXus.Programs {
          AV7TrnContext = new SdtTransactionContext(context);
          AV10HTTPRequest = new GxHttpRequest( context);
          AV8TrnContextAtt = new SdtTransactionContext_Attribute(context);
+         AV6TipoEspectaculoId = 1;
          AV9Session = context.GetSession();
          BackMsgLst = new msglist();
          LclMsgLst = new msglist();

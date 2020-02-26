@@ -1,6 +1,6 @@
 spec_i([ trn,8,'Tipo Espectaculo','TipoEspectaculo_BC',[],eng,'16_0_7-138086' ]).
  
-struct_i(11,0,[ 'Websession' ],[]).
+struct_i(11,0,[ 'Tipoespectaculoid','Websession' ],[]).
  
 level_i(11,[ 11,[ [ 11,many ] ],[ 6 ],[],[],[],[ 6 ],'ITIPOESPECTACULO',[ 11,[] ],[] ]).
  
@@ -13,7 +13,7 @@ lwi_i(11,[ [] ]).
  
 ta_i(11,[ [ [ 11,6 ],[ 11,7 ] ] ]).
  
-las_i(11,[ [ 'Websession',6,7 ] ]).
+las_i(11,[ [ 'Tipoespectaculoid','Websession',6,'GxBScreen',7 ] ]).
  
 lac_i(11,[ [ 6,7 ] ]).
  
@@ -23,6 +23,7 @@ cls_i([ 25,80 ],[ 0,0 ]).
  
  
  
+default_i(e(6,4,3,[ t('1',3) ])).
  
 rule_i(0,datastore(1,'DS_LAST_CHANGE','')).
 rule_i(0,datastore(1,'LOCK_RETRY','10')).
@@ -175,16 +176,27 @@ rule_i(0,prop('ObjDesc','Tipo Espectaculo')).
 rule_i(0,prop('ObjName','TipoEspectaculo')).
 rule_i(0,rule([ a(22,[ 'Dlt','"Delete"','' ]) ],[],[],[])).
 rule_i(0,maingen(15)).
+rule_i(11,rule([ a(1,[ t('"Ingresa un nombre de tipo de espectáculo"',3) ]) ],[ t('null(',1),t(7,2),t(')',4) ],[ insert,update,delete,display ],[ 7 ])).
  
-a_i(1,11,t,11,[],[ [ [ [],6,6 ] ],'ITIPOESPECTACULO',[] ]).
-a_i(2,11,k,11,[],[ [ [ [],7,7 ] ],'UTIPOESPECTACULO',[] ]).
+a_i(1,11,f,6,[],[ [ insert ],[ t('1',3),t('IF',17),t(insert,1),t('AND',9),t('null1(',1),t(6,2),t(')',4),t('AND',9),t('GxBScreen',23),t(=,10),t(0,3),t(';',18) ] ]).
+a_i(2,11,b,1,[],[ [],[ a(1,[ t('"Ingresa un nombre de tipo de espectáculo"',3) ]) ],[ t('null(',1),t(7,2),t(')',4) ] ]).
+a_i(3,11,t,11,[],[ [ [ [],6,6 ] ],'ITIPOESPECTACULO',[] ]).
+a_i(4,11,k,11,[],[ [ [ [],7,7 ] ],'UTIPOESPECTACULO',[] ]).
+a_i(5,11,f,'GxBScreen',[],[ [],[ t('0',3) ] ]).
  
-v_i(t,i,1,6).
-v_i(t,o,1,7).
-v_i(k,i,2,7).
-v_i(k,i,2,6).
-v_i(k,o,2,[]).
+v_i(f,i,1,'GxBScreen').
+v_i(f,o,1,6).
+v_i(b,i,2,7).
+v_i(b,o,2,[]).
+v_i(t,i,3,6).
+v_i(t,o,3,7).
+v_i(k,i,4,7).
+v_i(k,i,4,6).
+v_i(k,o,4,[]).
+v_i(f,i,5,[]).
+v_i(f,o,5,'GxBScreen').
  
+act_info_i(1,[ [ 6 ] ]).
  
  
 tbl_to_delete_i(11,[ 7,[ [ 11,6,6 ] ],c,'IESPECTACULO3',[ [ 7,6 ] ],[ 34 ],'' ]).
@@ -194,6 +206,7 @@ tbl_to_delete_i(11,[ 7,[ [ 11,6,6 ] ],c,'IESPECTACULO3',[ [ 7,6 ] ],[ 34 ],'' ])
 attri_i(34,[ 'EspectaculoId',int,4,0,'ZZZ9',0,'Espectaculo Id','',0 ]).
 attri_i(7,[ 'TipoEspectaculoNombre',char,100,0,'',0,'Tipo Espectaculo Nombre','',0 ]).
 attri_i(6,[ 'TipoEspectaculoId',int,4,0,'ZZZ9',0,'Tipo Espectaculo Id','',0 ]).
+attri_i('GxBScreen',[ 'Gx_BScreen',int,1,0,'',0,'','',11 ]).
 attri_i('Gxremove',[ 'GxRemove',int,1,0,'9',0,'Gx Remove','',5 ]).
 attri_i('Websession',[ 'WebSession',o(websession),4,0,'',0,'Web Session','',10 ]).
 attri_i('Trncontext',[ 'TrnContext',o('TransactionContext'),0,0,'',0,'Trn Context','',9 ]).
@@ -221,7 +234,7 @@ index_i(7,[ 'IESPECTACULO3',d,[ 6 ],'IEspectaculo3' ]).
  
  
  
-upd_i(11,11,i,[ [ 6,7 ],[],'ITIPOESPECTACULO',[ [ [],6,6 ] ] ]).
+upd_i(11,11,i,[ [ 7 ],[],'ITIPOESPECTACULO',[ [ [],6,6 ] ] ]).
 upd_i(11,11,u,[ [ 7 ],[],'ITIPOESPECTACULO',[] ]).
 upd_i(11,11,d,[ [],[],'ITIPOESPECTACULO',[] ]).
  
@@ -288,8 +301,11 @@ att_prop_i(2,6,'ExternalName','TipoEspectaculoId',d).
 att_prop_i(2,6,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,6,'EmptyAsNull','Yes',d).
 att_prop_i(2,6,idBasedOn,71,v).
-att_prop_i(2,6,'AUTONUMBER','0',d).
-att_prop_i(2,6,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,6,'AUTONUMBER','-1',v).
+att_prop_i(2,6,'AUTONUMBER_START','1',d).
+att_prop_i(2,6,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,6,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,6,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,6,'AttRegEx','',d).
 att_prop_i(2,6,'AttValidationFailedMsg','',d).
 att_prop_i(2,6,'DownloadOffline','0',d).
@@ -310,8 +326,11 @@ att_prop_i(2,34,'ExternalName','EspectaculoId',d).
 att_prop_i(2,34,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,34,'EmptyAsNull','Yes',d).
 att_prop_i(2,34,idBasedOn,71,v).
-att_prop_i(2,34,'AUTONUMBER','0',d).
-att_prop_i(2,34,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,34,'AUTONUMBER','-1',v).
+att_prop_i(2,34,'AUTONUMBER_START','1',d).
+att_prop_i(2,34,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,34,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,34,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,34,'AttRegEx','',d).
 att_prop_i(2,34,'AttValidationFailedMsg','',d).
 att_prop_i(2,34,'DownloadOffline','0',d).
@@ -322,11 +341,14 @@ tbl_prop_i(2,11,'DirSubor',[ [ 7,[ 6 ] ] ],v).
 tbl_prop_i(2,7,'DirSuper',[ [ 11,[ 6 ] ] ],v).
  
 tbl_att_prop_i(2,11,6,'AllowNulls',n).
+tbl_att_prop_i(2,11,6,'AUTONUMBER',y).
 tbl_att_prop_i(2,11,7,'AllowNulls',n).
 tbl_att_prop_i(2,7,34,'AllowNulls',n).
+tbl_att_prop_i(2,7,34,'AUTONUMBER',y).
 tbl_att_prop_i(2,7,6,'AllowNulls',n).
  
 var_prop_i(2,'Tipoespectaculoid',idBasedOn,'',v).
+var_prop_i(2,'Tipoespectaculoid','ATT_INITIAL_VALUE',[ t('1',3) ],d).
  
 i_tbl_best_trn(11,[ 8,1,'TipoEspectaculo','Tipo Espectaculo',[] ]).
  
@@ -502,6 +524,7 @@ struct_dt_elem_i([ 0,8,0 ],1,collection,'False').
 struct_dt_elem_i([ 0,8,0 ],1,attributeid,'6').
 struct_dt_elem_i([ 0,8,0 ],1,'ExternalName','TipoEspectaculoId').
 struct_dt_elem_i([ 0,8,0 ],1,'ExternalNamespace','GXObligatorio1').
+struct_dt_elem_i([ 0,8,0 ],1,'ATT_INITIAL_VALUE',[ t('1',3) ]).
 struct_dt_elem_i([ 0,8,0 ],2,name,'Tipoespectaculonombre').
 struct_dt_elem_i([ 0,8,0 ],2,camelname,'TipoEspectaculoNombre').
 struct_dt_elem_i([ 0,8,0 ],2,basedon,72).
@@ -563,6 +586,9 @@ struct_dt_elem_i([ 26,10,27 ],3,soaptype,'').
 struct_dt_elem_i([ 26,10,27 ],3,'XmlInclude',idXmlIncludeAlways).
 struct_dt_elem_i([ 26,10,27 ],3,'JsonName','').
 struct_dt_elem_i([ 26,10,27 ],3,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,50,0 ],1,pic,'ZZZ9').
+struct_dt_elem_i([ 26,50,0 ],4,pic,'ZZZ9').
+struct_dt_elem_i([ 26,10,27 ],2,pic,'99/99/9999').
  
  
  

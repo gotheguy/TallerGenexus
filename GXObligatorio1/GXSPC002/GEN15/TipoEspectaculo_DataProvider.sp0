@@ -197,6 +197,8 @@ struct_dt_i([ 26,10,27 ],namespace,'GeneXus.Messages').
 struct_dt_i([ 0,8,0 ],fullname,'TipoEspectaculo').
 struct_dt_i([ 26,10,0 ],fullname,'GeneXus\Common\Messages').
 struct_dt_i([ 26,10,27 ],fullname,'GeneXus\Common\Messages.Message').
+struct_dt_i([ 26,10,0 ],modified,yes).
+struct_dt_i([ 26,10,27 ],modified,yes).
  
 struct_dt_elem_i([ 0,8,0 ],1,name,'Tipoespectaculoid').
 struct_dt_elem_i([ 0,8,0 ],1,camelname,'TipoEspectaculoId').
@@ -210,6 +212,7 @@ struct_dt_elem_i([ 0,8,0 ],1,collection,'False').
 struct_dt_elem_i([ 0,8,0 ],1,attributeid,'6').
 struct_dt_elem_i([ 0,8,0 ],1,'ExternalName','TipoEspectaculoId').
 struct_dt_elem_i([ 0,8,0 ],1,'ExternalNamespace','GXObligatorio1').
+struct_dt_elem_i([ 0,8,0 ],1,'ATT_INITIAL_VALUE',[ t('1',3) ]).
 struct_dt_elem_i([ 0,8,0 ],2,name,'Tipoespectaculonombre').
 struct_dt_elem_i([ 0,8,0 ],2,camelname,'TipoEspectaculoNombre').
 struct_dt_elem_i([ 0,8,0 ],2,basedon,72).
@@ -271,6 +274,7 @@ struct_dt_elem_i([ 26,10,27 ],3,soaptype,'').
 struct_dt_elem_i([ 26,10,27 ],3,'XmlInclude',idXmlIncludeAlways).
 struct_dt_elem_i([ 26,10,27 ],3,'JsonName','').
 struct_dt_elem_i([ 26,10,27 ],3,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,10,27 ],2,pic,'99/99/9999').
  
  
  

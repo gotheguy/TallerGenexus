@@ -17,5 +17,6 @@
 /r:bin\GeneXus.dll
 /r:GxBaseBuilder.dll
 /out:bin\venta.dll
-isauthorized.cs
 venta.cs
+isauthorized.cs
+imprimirentradas.cs

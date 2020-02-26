@@ -2,7 +2,7 @@
                File: type_SdtTipoEspectaculo
         Description: Tipo Espectaculo
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/17/2020 21:44:22.33
+       Generated on: 2/25/2020 21:45:24.86
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -68,6 +68,7 @@ namespace GeneXus.Programs {
          metadata.Set("Name", "TipoEspectaculo");
          metadata.Set("BT", "TipoEspectaculo");
          metadata.Set("PK", "[ \"TipoEspectaculoId\" ]");
+         metadata.Set("PKAssigned", "[ \"TipoEspectaculoId\" ]");
          metadata.Set("AllowInsert", "True");
          metadata.Set("AllowUpdate", "True");
          metadata.Set("AllowDelete", "True");
@@ -279,6 +280,7 @@ namespace GeneXus.Programs {
 
       public void initialize( )
       {
+         gxTv_SdtTipoEspectaculo_Tipoespectaculoid = 1;
          gxTv_SdtTipoEspectaculo_Tipoespectaculonombre = "";
          gxTv_SdtTipoEspectaculo_Mode = "";
          gxTv_SdtTipoEspectaculo_Tipoespectaculonombre_Z = "";

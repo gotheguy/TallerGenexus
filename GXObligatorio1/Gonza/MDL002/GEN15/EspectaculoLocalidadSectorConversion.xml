@@ -114,7 +114,17 @@
 <AttriName>SectorId</AttriName>
 <Description>Sector Id</Description></Attribute></IndexAttris>
 <IndexExistance>AlreadyExist</IndexExistance>
-<Clustered>Yes</Clustered></Index></Indices></TableIndices>
+<Clustered>Yes</Clustered></Index>
+<Index>
+<IndexName>UESPECTACULOLOCALIDADSECTOR</IndexName>
+<IndexType>k</IndexType>
+<IndexAttris>
+<Attribute>
+<AttriId>18</AttriId>
+<AttriName>SectorNombre</AttriName>
+<Description>Sector Nombre</Description></Attribute></IndexAttris>
+<IndexExistance>AlreadyExist</IndexExistance>
+<Clustered>No</Clustered></Index></Indices></TableIndices>
 <FKConstraints>
 <FKConstraint>
 <ChangeType>none</ChangeType>
@@ -133,6 +143,7 @@
 <Description>Localidad Id</Description></Attribute></Attributes></FKConstraint></FKConstraints>
 <Statements>
 <Statement>CREATE TABLE [EspectaculoLocalidadSector] ([EspectaculoId] smallint NOT NULL , [LocalidadId] smallint NOT NULL , [SectorId] smallint NOT NULL , [SectorNombre] nchar(100) NOT NULL , PRIMARY KEY([EspectaculoId], [LocalidadId], [SectorId])) </Statement>
+<Statement>CREATE UNIQUE NONCLUSTERED INDEX [UESPECTACULOLOCALIDADSECTOR] ON [EspectaculoLocalidadSector] ([SectorNombre] )</Statement>
 <Statement>ALTER TABLE [EspectaculoLocalidadSector] ADD CONSTRAINT [IESPECTACULOLOCALIDADSECTOR1] FOREIGN KEY ([EspectaculoId], [LocalidadId]) REFERENCES [EspectaculoLocalidad] ([EspectaculoId], [LocalidadId])</Statement></Statements>
 <NeedReorganizationProgram>False</NeedReorganizationProgram>
 <Warnings></Warnings>

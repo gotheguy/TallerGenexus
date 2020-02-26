@@ -92,6 +92,18 @@
               </Property>
             </Properties>
           </Field>
+          <Field name="CantEspectaculosLugar" description="Cant Espectaculos Lugar">
+            <Properties>
+              <Property>
+                <Name>Type</Name>
+                <Value>Numeric</Value>
+              </Property>
+              <Property>
+                <Name>Length</Name>
+                <Value>4</Value>
+              </Property>
+            </Properties>
+          </Field>
         </Fields>
       </Field>
     </Parameter>

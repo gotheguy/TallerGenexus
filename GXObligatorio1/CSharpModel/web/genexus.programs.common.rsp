@@ -20,8 +20,8 @@ GxObjectCollection.cs
 GxFullTextSearchReindexer.cs
 GxModelInfoProvider.cs
 @genexus.programs.sdt.rsp
-type_SdtLugar.cs
-type_SdtTipoEspectaculo.cs
 type_SdtPais.cs
 type_SdtPais_Ciudad.cs
+type_SdtLugar.cs
+type_SdtTipoEspectaculo.cs
 gxdomainpage.cs

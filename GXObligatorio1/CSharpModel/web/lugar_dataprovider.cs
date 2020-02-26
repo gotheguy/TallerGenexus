@@ -2,7 +2,7 @@
                File: Lugar_DataProvider
         Description: Stub for Lugar_DataProvider
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/18/2020 22:53:9.81
+       Generated on: 2/25/2020 21:45:22.47
        Program type: Callable routine
           Main DBMS: SQL Server
 */

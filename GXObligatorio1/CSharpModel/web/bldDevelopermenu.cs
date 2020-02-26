@@ -45,17 +45,15 @@ public class bldDevelopermenu : GxBaseBuilder
       sc.Add( @"apais_dataprovider", "dll");
       sc.Add( @"alugar_dataprovider", "dll");
       sc.Add( @"atipoespectaculo_dataprovider", "dll");
+      sc.Add( @"imprimirentradas", "dll");
+      sc.Add( @"listaespectaculosportipo", "dll");
+      sc.Add( @"listalocalidadesdeespectaculos", "dll");
       sc.Add( @"appmasterpage", "dll");
       sc.Add( @"recentlinks", "dll");
       sc.Add( @"promptmasterpage", "dll");
       sc.Add( @"rwdmasterpage", "dll");
       sc.Add( @"rwdrecentlinks", "dll");
       sc.Add( @"rwdpromptmasterpage", "dll");
-      sc.Add( @"gx0010", "dll");
-      sc.Add( @"gx0021", "dll");
-      sc.Add( @"gx0070", "dll");
-      sc.Add( @"gx0080", "dll");
-      sc.Add( @"gx0040", "dll");
       sc.Add( @"home", "dll");
       sc.Add( @"home", "dll");
       sc.Add( @"notauthorized", "dll");
@@ -68,23 +66,25 @@ public class bldDevelopermenu : GxBaseBuilder
       sc.Add( @"wwpais", "dll");
       sc.Add( @"paisgeneral", "dll");
       sc.Add( @"paisciudadwc", "dll");
-      sc.Add( @"paisventawc", "dll");
-      sc.Add( @"wwventa", "dll");
-      sc.Add( @"ventageneral", "dll");
-      sc.Add( @"viewventa", "dll");
       sc.Add( @"viewtipoespectaculo", "dll");
       sc.Add( @"wwtipoespectaculo", "dll");
       sc.Add( @"tipoespectaculogeneral", "dll");
       sc.Add( @"tipoespectaculoespectaculowc", "dll");
-      sc.Add( @"gx00b0", "dll");
-      sc.Add( @"gx00e1", "dll");
       sc.Add( @"viewespectaculo", "dll");
       sc.Add( @"wwespectaculo", "dll");
       sc.Add( @"espectaculogeneral", "dll");
       sc.Add( @"espectaculolocalidadwc", "dll");
-      sc.Add( @"espectaculoventawc", "dll");
+      sc.Add( @"gx0021", "dll");
+      sc.Add( @"gx0010", "dll");
+      sc.Add( @"gx0040", "dll");
+      sc.Add( @"gx00b0", "dll");
+      sc.Add( @"gx00e1", "dll");
       sc.Add( @"gx00f2", "dll");
-      sc.Add( @"paisventa1wc", "dll");
+      sc.Add( @"gx0070", "dll");
+      sc.Add( @"gx0080", "dll");
+      sc.Add( @"viewventa", "dll");
+      sc.Add( @"wwventa", "dll");
+      sc.Add( @"ventageneral", "dll");
       sc.Add( @"pais", "dll");
       sc.Add( @"lugar", "dll");
       sc.Add( @"espectaculo", "dll");
@@ -118,13 +118,13 @@ public class bldDevelopermenu : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\genexus.programs.sdt.rsp" ))
             return true;
-         if (checkTime(obj, cs_path + @"\type_SdtLugar.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_SdtTipoEspectaculo.cs" ))
-            return true;
          if (checkTime(obj, cs_path + @"\type_SdtPais.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_SdtPais_Ciudad.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_SdtLugar.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_SdtTipoEspectaculo.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\gxdomainpage.cs" ))
             return true;

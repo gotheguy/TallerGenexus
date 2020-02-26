@@ -2,7 +2,7 @@
                File: Pais_DataProvider
         Description: Pais_Data Provider
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/18/2020 22:53:8.83
+       Generated on: 2/25/2020 21:45:22.35
        Program type: Main program
           Main DBMS: SQL Server
 */
@@ -94,7 +94,6 @@ namespace GeneXus.Programs {
          /* Output device settings */
          Gxm1pais = new SdtPais(context);
          Gxm2rootcol.Add(Gxm1pais, 0);
-         Gxm1pais.gxTpr_Paisid = 1;
          Gxm1pais.gxTpr_Paisnombre = "Uruguay";
          Gxm1pais.gxTpr_Paisbandera = context.convertURL( (String)(context.GetImagePath( "fb5e7709-5fa0-433b-bf93-6fa156c66b28", "", context.GetTheme( ))));
          Gxm3pais_ciudad = new SdtPais_Ciudad(context);
@@ -111,7 +110,6 @@ namespace GeneXus.Programs {
          Gxm3pais_ciudad.gxTpr_Ciudadnombre = "Canelones";
          Gxm1pais = new SdtPais(context);
          Gxm2rootcol.Add(Gxm1pais, 0);
-         Gxm1pais.gxTpr_Paisid = 2;
          Gxm1pais.gxTpr_Paisnombre = "Brasil";
          Gxm1pais.gxTpr_Paisbandera = context.convertURL( (String)(context.GetImagePath( "29cd09e4-7f1c-4f97-b9eb-47f33e756316", "", context.GetTheme( ))));
          Gxm3pais_ciudad = new SdtPais_Ciudad(context);
@@ -136,7 +134,6 @@ namespace GeneXus.Programs {
          Gxm3pais_ciudad.gxTpr_Ciudadnombre = "Curitiba";
          Gxm1pais = new SdtPais(context);
          Gxm2rootcol.Add(Gxm1pais, 0);
-         Gxm1pais.gxTpr_Paisid = 3;
          Gxm1pais.gxTpr_Paisnombre = "Argentina";
          Gxm1pais.gxTpr_Paisbandera = context.convertURL( (String)(context.GetImagePath( "ad5d6304-d8ba-469d-a73f-2fd0ca5efb86", "", context.GetTheme( ))));
          Gxm3pais_ciudad = new SdtPais_Ciudad(context);
@@ -153,7 +150,6 @@ namespace GeneXus.Programs {
          Gxm3pais_ciudad.gxTpr_Ciudadnombre = "Mendoza";
          Gxm1pais = new SdtPais(context);
          Gxm2rootcol.Add(Gxm1pais, 0);
-         Gxm1pais.gxTpr_Paisid = 4;
          Gxm1pais.gxTpr_Paisnombre = "Mexico";
          Gxm1pais.gxTpr_Paisbandera = context.convertURL( (String)(context.GetImagePath( "c76203b5-4770-469f-9346-1f6614ca4775", "", context.GetTheme( ))));
          Gxm3pais_ciudad = new SdtPais_Ciudad(context);
@@ -174,7 +170,6 @@ namespace GeneXus.Programs {
          Gxm3pais_ciudad.gxTpr_Ciudadnombre = "Cancún";
          Gxm1pais = new SdtPais(context);
          Gxm2rootcol.Add(Gxm1pais, 0);
-         Gxm1pais.gxTpr_Paisid = 5;
          Gxm1pais.gxTpr_Paisnombre = "Chile";
          Gxm1pais.gxTpr_Paisbandera = context.convertURL( (String)(context.GetImagePath( "3d796e5e-0646-49b7-9995-28657c90e2e4", "", context.GetTheme( ))));
          Gxm3pais_ciudad = new SdtPais_Ciudad(context);

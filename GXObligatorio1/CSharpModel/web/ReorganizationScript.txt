@@ -1,3 +1,36 @@
-ALTER TABLE [Venta] ADD [VentaTotal] smallint NOT NULL CONSTRAINT VentaTotalVenta_DEFAULT DEFAULT convert(int, 0)
-ALTER TABLE [Venta] DROP CONSTRAINT VentaTotalVenta_DEFAULT
+CREATE TABLE [EspectaculoLocalidadSector] ([EspectaculoId] smallint NOT NULL , [LocalidadId] smallint NOT NULL , [SectorId] smallint NOT NULL , [SectorNombre] nchar(100) NOT NULL , PRIMARY KEY([EspectaculoId], [LocalidadId], [SectorId]))
+CREATE UNIQUE NONCLUSTERED INDEX [UESPECTACULOLOCALIDADSECTOR] ON [EspectaculoLocalidadSector] ([SectorNombre] )
+
+CREATE TABLE [EspectaculoLocalidad] ([EspectaculoId] smallint NOT NULL , [LocalidadId] smallint NOT NULL , [LocalidadNombre] nchar(100) NOT NULL , [LocalidadCapacidad] int NOT NULL , [LocalidadPrecio] money NOT NULL , [LocalidadesVendidas] int NOT NULL , PRIMARY KEY([EspectaculoId], [LocalidadId]))
+
+CREATE TABLE [TipoEspectaculo] ([TipoEspectaculoId] smallint NOT NULL IDENTITY(1,1), [TipoEspectaculoNombre] nchar(100) NOT NULL , PRIMARY KEY([TipoEspectaculoId]))
+CREATE UNIQUE NONCLUSTERED INDEX [UTIPOESPECTACULO] ON [TipoEspectaculo] ([TipoEspectaculoNombre] )
+
+CREATE TABLE [Venta] ([VentaId] smallint NOT NULL IDENTITY(1,1), [VentaFecha] datetime NOT NULL , [EspectaculoId] smallint NOT NULL , [VentaCantidadEntradas] smallint NOT NULL , [LocalidadId] smallint NOT NULL , [SectorId] smallint NOT NULL , PRIMARY KEY([VentaId]))
+CREATE NONCLUSTERED INDEX [IVENTA2] ON [Venta] ([EspectaculoId] ,[LocalidadId] ,[SectorId] )
+
+CREATE TABLE [Espectaculo] ([EspectaculoId] smallint NOT NULL IDENTITY(1,1), [EspectaculoNombre] nchar(100) NOT NULL , [EspectaculoFecha] datetime NOT NULL , [LugarId] smallint NOT NULL , [TipoEspectaculoId] smallint NOT NULL , PRIMARY KEY([EspectaculoId]))
+CREATE NONCLUSTERED INDEX [IESPECTACULO4] ON [Espectaculo] ([LugarId] )
+CREATE NONCLUSTERED INDEX [IESPECTACULO3] ON [Espectaculo] ([TipoEspectaculoId] )
+
+CREATE TABLE [Lugar] ([LugarId] smallint NOT NULL IDENTITY(1,1), [LugarNombre] nchar(100) NOT NULL , [LugarFoto] VARBINARY(MAX) NOT NULL , [LugarFoto_GXI] varchar(2048) NULL , [PaisId] smallint NOT NULL , [CiudadId] smallint NOT NULL , PRIMARY KEY([LugarId]))
+CREATE NONCLUSTERED INDEX [ILUGAR1] ON [Lugar] ([PaisId] ,[CiudadId] )
+
+CREATE TABLE [PaisCiudad] ([PaisId] smallint NOT NULL , [CiudadId] smallint NOT NULL , [CiudadNombre] nchar(100) NOT NULL , PRIMARY KEY([PaisId], [CiudadId]))
+
+CREATE TABLE [Pais] ([PaisId] smallint NOT NULL IDENTITY(1,1), [PaisNombre] nchar(100) NOT NULL , [PaisBandera] VARBINARY(MAX) NOT NULL , [PaisBandera_GXI] varchar(2048) NULL , PRIMARY KEY([PaisId]))
+CREATE UNIQUE NONCLUSTERED INDEX [UPAIS] ON [Pais] ([PaisNombre] )
+
+ALTER TABLE [PaisCiudad] ADD CONSTRAINT [IPAISCIUDAD1] FOREIGN KEY ([PaisId]) REFERENCES [Pais] ([PaisId])
+
+ALTER TABLE [Lugar] ADD CONSTRAINT [ILUGAR1] FOREIGN KEY ([PaisId], [CiudadId]) REFERENCES [PaisCiudad] ([PaisId], [CiudadId])
+
+ALTER TABLE [Espectaculo] ADD CONSTRAINT [IESPECTACULO4] FOREIGN KEY ([LugarId]) REFERENCES [Lugar] ([LugarId])
+ALTER TABLE [Espectaculo] ADD CONSTRAINT [IESPECTACULO3] FOREIGN KEY ([TipoEspectaculoId]) REFERENCES [TipoEspectaculo] ([TipoEspectaculoId])
+
+ALTER TABLE [Venta] ADD CONSTRAINT [IVENTA2] FOREIGN KEY ([EspectaculoId], [LocalidadId], [SectorId]) REFERENCES [EspectaculoLocalidadSector] ([EspectaculoId], [LocalidadId], [SectorId])
+
+ALTER TABLE [EspectaculoLocalidad] ADD CONSTRAINT [IESPECTACULOLOCALIDAD1] FOREIGN KEY ([EspectaculoId]) REFERENCES [Espectaculo] ([EspectaculoId])
+
+ALTER TABLE [EspectaculoLocalidadSector] ADD CONSTRAINT [IESPECTACULOLOCALIDADSECTOR1] FOREIGN KEY ([EspectaculoId], [LocalidadId]) REFERENCES [EspectaculoLocalidad] ([EspectaculoId], [LocalidadId])
 

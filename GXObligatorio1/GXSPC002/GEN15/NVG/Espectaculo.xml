@@ -87,10 +87,6 @@
 <TableAction>insert</TableAction>
 <AttrisToUpdate>
 <Attribute>
-<AttriId>34</AttriId>
-<AttriName>EspectaculoId</AttriName>
-<Description>Espectaculo Id</Description></Attribute>
-<Attribute>
 <AttriId>35</AttriId>
 <AttriName>EspectaculoNombre</AttriName>
 <Description>Espectaculo Nombre</Description></Attribute>
@@ -140,16 +136,6 @@
 <AfterUpdateRules></AfterUpdateRules>
 <AfterDeleteRules></AfterDeleteRules>
 <TablesToControlOnDelete>
-<Table>
-<TableId>8</TableId>
-<TableName>Venta</TableName>
-<Description>Venta</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>34</AttriId>
-<AttriName>EspectaculoId</AttriName>
-<Description>Espectaculo Id</Description></Attribute></KeyAttributes></Table>
 <Table>
 <TableId>14</TableId>
 <TableName>EspectaculoLocalidad</TableName>
@@ -224,11 +210,7 @@
 <Attribute>
 <AttriId>15</AttriId>
 <AttriName>LocalidadesVendidas</AttriName>
-<Description>Localidades Vendidas</Description></Attribute>
-<Attribute>
-<AttriId>16</AttriId>
-<AttriName>LocalidadesDisponibles</AttriName>
-<Description>Localidades Disponibles</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<Description>Localidades Vendidas</Description></Attribute></AttrisToUpdate></TableToUpdate>
 <TableToUpdate>
 <Table>
 <TableId>14</TableId>
@@ -251,11 +233,7 @@
 <Attribute>
 <AttriId>15</AttriId>
 <AttriName>LocalidadesVendidas</AttriName>
-<Description>Localidades Vendidas</Description></Attribute>
-<Attribute>
-<AttriId>16</AttriId>
-<AttriName>LocalidadesDisponibles</AttriName>
-<Description>Localidades Disponibles</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<Description>Localidades Vendidas</Description></Attribute></AttrisToUpdate></TableToUpdate>
 <TableToUpdate>
 <Table>
 <TableId>14</TableId>
@@ -349,7 +327,25 @@
 <AfterInsertRules></AfterInsertRules>
 <AfterUpdateRules></AfterUpdateRules>
 <AfterDeleteRules></AfterDeleteRules>
-<TablesToControlOnDelete></TablesToControlOnDelete>
+<TablesToControlOnDelete>
+<Table>
+<TableId>8</TableId>
+<TableName>Venta</TableName>
+<Description>Venta</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>34</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>11</AttriId>
+<AttriName>LocalidadId</AttriName>
+<Description>Localidad Id</Description></Attribute>
+<Attribute>
+<AttriId>17</AttriId>
+<AttriName>SectorId</AttriName>
+<Description>Sector Id</Description></Attribute></KeyAttributes></Table></TablesToControlOnDelete>
 <Levels></Levels>
 <AfterLevelRules></AfterLevelRules></Level></Levels>
 <AfterLevelRules></AfterLevelRules></Level></Levels>
@@ -364,7 +360,7 @@
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
-<ObjId>68</ObjId>
+<ObjId>89</ObjId>
 <ObjName>Gx00F2</ObjName>
 <ObjPgmName>Gx00F2</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
@@ -391,7 +387,7 @@
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
-<ObjId>62</ObjId>
+<ObjId>88</ObjId>
 <ObjName>Gx00E1</ObjName>
 <ObjPgmName>Gx00E1</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
@@ -414,7 +410,7 @@
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
-<ObjId>57</ObjId>
+<ObjId>87</ObjId>
 <ObjName>Gx00B0</ObjName>
 <ObjPgmName>Gx00B0</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
@@ -433,7 +429,7 @@
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
-<ObjId>12</ObjId>
+<ObjId>86</ObjId>
 <ObjName>Gx0040</ObjName>
 <ObjPgmName>Gx0040</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>

@@ -2,7 +2,7 @@
                File: NotAuthorized
         Description: Not Authorized web panel
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/17/2020 21:44:22.19
+       Generated on: 2/25/2020 21:45:24.92
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -220,7 +220,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 138086), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 138086), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202021721442221", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202022521452494", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -888,7 +888,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202021721442228", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20202252145252", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -904,7 +904,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("notauthorized.js", "?202021721442228", false, true);
+         context.AddJavascriptSource("notauthorized.js", "?20202252145253", false, true);
          /* End function include_jscripts */
       }
 

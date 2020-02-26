@@ -2,7 +2,7 @@
                File: type_SdtLugar
         Description: Lugar
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/17/2020 21:44:20.75
+       Generated on: 2/25/2020 21:45:24.19
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -68,6 +68,7 @@ namespace GeneXus.Programs {
          metadata.Set("Name", "Lugar");
          metadata.Set("BT", "Lugar");
          metadata.Set("PK", "[ \"LugarId\" ]");
+         metadata.Set("PKAssigned", "[ \"LugarId\" ]");
          metadata.Set("FKList", "[ { \"FK\":[ \"PaisId\",\"CiudadId\" ],\"FKMap\":[  ] } ]");
          metadata.Set("AllowInsert", "True");
          metadata.Set("AllowUpdate", "True");
@@ -88,6 +89,7 @@ namespace GeneXus.Programs {
          state.Add("gxTpr_Paisnombre_Z");
          state.Add("gxTpr_Ciudadid_Z");
          state.Add("gxTpr_Ciudadnombre_Z");
+         state.Add("gxTpr_Cantespectaculoslugar_Z");
          state.Add("gxTpr_Lugarfoto_gxi_Z");
          state.Add("gxTpr_Paisbandera_gxi_Z");
          return state ;
@@ -107,6 +109,7 @@ namespace GeneXus.Programs {
          gxTv_SdtLugar_Paisbandera_gxi = sdt.gxTv_SdtLugar_Paisbandera_gxi ;
          gxTv_SdtLugar_Ciudadid = sdt.gxTv_SdtLugar_Ciudadid ;
          gxTv_SdtLugar_Ciudadnombre = sdt.gxTv_SdtLugar_Ciudadnombre ;
+         gxTv_SdtLugar_Cantespectaculoslugar = sdt.gxTv_SdtLugar_Cantespectaculoslugar ;
          gxTv_SdtLugar_Mode = sdt.gxTv_SdtLugar_Mode ;
          gxTv_SdtLugar_Initialized = sdt.gxTv_SdtLugar_Initialized ;
          gxTv_SdtLugar_Lugarid_Z = sdt.gxTv_SdtLugar_Lugarid_Z ;
@@ -115,6 +118,7 @@ namespace GeneXus.Programs {
          gxTv_SdtLugar_Paisnombre_Z = sdt.gxTv_SdtLugar_Paisnombre_Z ;
          gxTv_SdtLugar_Ciudadid_Z = sdt.gxTv_SdtLugar_Ciudadid_Z ;
          gxTv_SdtLugar_Ciudadnombre_Z = sdt.gxTv_SdtLugar_Ciudadnombre_Z ;
+         gxTv_SdtLugar_Cantespectaculoslugar_Z = sdt.gxTv_SdtLugar_Cantespectaculoslugar_Z ;
          gxTv_SdtLugar_Lugarfoto_gxi_Z = sdt.gxTv_SdtLugar_Lugarfoto_gxi_Z ;
          gxTv_SdtLugar_Paisbandera_gxi_Z = sdt.gxTv_SdtLugar_Paisbandera_gxi_Z ;
          return  ;
@@ -143,6 +147,7 @@ namespace GeneXus.Programs {
          AddObjectProperty("PaisBandera", gxTv_SdtLugar_Paisbandera, false, includeNonInitialized);
          AddObjectProperty("CiudadId", gxTv_SdtLugar_Ciudadid, false, includeNonInitialized);
          AddObjectProperty("CiudadNombre", gxTv_SdtLugar_Ciudadnombre, false, includeNonInitialized);
+         AddObjectProperty("CantEspectaculosLugar", gxTv_SdtLugar_Cantespectaculoslugar, false, includeNonInitialized);
          if ( includeState )
          {
             AddObjectProperty("LugarFoto_GXI", gxTv_SdtLugar_Lugarfoto_gxi, false, includeNonInitialized);
@@ -155,6 +160,7 @@ namespace GeneXus.Programs {
             AddObjectProperty("PaisNombre_Z", gxTv_SdtLugar_Paisnombre_Z, false, includeNonInitialized);
             AddObjectProperty("CiudadId_Z", gxTv_SdtLugar_Ciudadid_Z, false, includeNonInitialized);
             AddObjectProperty("CiudadNombre_Z", gxTv_SdtLugar_Ciudadnombre_Z, false, includeNonInitialized);
+            AddObjectProperty("CantEspectaculosLugar_Z", gxTv_SdtLugar_Cantespectaculoslugar_Z, false, includeNonInitialized);
             AddObjectProperty("LugarFoto_GXI_Z", gxTv_SdtLugar_Lugarfoto_gxi_Z, false, includeNonInitialized);
             AddObjectProperty("PaisBandera_GXI_Z", gxTv_SdtLugar_Paisbandera_gxi_Z, false, includeNonInitialized);
          }
@@ -203,6 +209,10 @@ namespace GeneXus.Programs {
          {
             gxTv_SdtLugar_Ciudadnombre = sdt.gxTv_SdtLugar_Ciudadnombre ;
          }
+         if ( sdt.IsDirty("CantEspectaculosLugar") )
+         {
+            gxTv_SdtLugar_Cantespectaculoslugar = sdt.gxTv_SdtLugar_Cantespectaculoslugar ;
+         }
          return  ;
       }
 
@@ -224,6 +234,7 @@ namespace GeneXus.Programs {
                this.gxTv_SdtLugar_Paisnombre_Z_SetNull( );
                this.gxTv_SdtLugar_Ciudadid_Z_SetNull( );
                this.gxTv_SdtLugar_Ciudadnombre_Z_SetNull( );
+               this.gxTv_SdtLugar_Cantespectaculoslugar_Z_SetNull( );
                this.gxTv_SdtLugar_Lugarfoto_gxi_Z_SetNull( );
                this.gxTv_SdtLugar_Paisbandera_gxi_Z_SetNull( );
             }
@@ -368,6 +379,32 @@ namespace GeneXus.Programs {
             SetDirty("Ciudadnombre");
          }
 
+      }
+
+      [  SoapElement( ElementName = "CantEspectaculosLugar" )]
+      [  XmlElement( ElementName = "CantEspectaculosLugar"   )]
+      public short gxTpr_Cantespectaculoslugar
+      {
+         get {
+            return gxTv_SdtLugar_Cantespectaculoslugar ;
+         }
+
+         set {
+            gxTv_SdtLugar_Cantespectaculoslugar = value;
+            SetDirty("Cantespectaculoslugar");
+         }
+
+      }
+
+      public void gxTv_SdtLugar_Cantespectaculoslugar_SetNull( )
+      {
+         gxTv_SdtLugar_Cantespectaculoslugar = 0;
+         return  ;
+      }
+
+      public bool gxTv_SdtLugar_Cantespectaculoslugar_IsNull( )
+      {
+         return false ;
       }
 
       [  SoapElement( ElementName = "Mode" )]
@@ -578,6 +615,32 @@ namespace GeneXus.Programs {
          return false ;
       }
 
+      [  SoapElement( ElementName = "CantEspectaculosLugar_Z" )]
+      [  XmlElement( ElementName = "CantEspectaculosLugar_Z"   )]
+      public short gxTpr_Cantespectaculoslugar_Z
+      {
+         get {
+            return gxTv_SdtLugar_Cantespectaculoslugar_Z ;
+         }
+
+         set {
+            gxTv_SdtLugar_Cantespectaculoslugar_Z = value;
+            SetDirty("Cantespectaculoslugar_Z");
+         }
+
+      }
+
+      public void gxTv_SdtLugar_Cantespectaculoslugar_Z_SetNull( )
+      {
+         gxTv_SdtLugar_Cantespectaculoslugar_Z = 0;
+         return  ;
+      }
+
+      public bool gxTv_SdtLugar_Cantespectaculoslugar_Z_IsNull( )
+      {
+         return false ;
+      }
+
       [  SoapElement( ElementName = "LugarFoto_GXI_Z" )]
       [  XmlElement( ElementName = "LugarFoto_GXI_Z"   )]
       public String gxTpr_Lugarfoto_gxi_Z
@@ -632,9 +695,11 @@ namespace GeneXus.Programs {
 
       public void initialize( )
       {
+         gxTv_SdtLugar_Lugarid = 1;
          gxTv_SdtLugar_Lugarnombre = "";
          gxTv_SdtLugar_Lugarfoto = "";
          gxTv_SdtLugar_Lugarfoto_gxi = "";
+         gxTv_SdtLugar_Paisid = 1;
          gxTv_SdtLugar_Paisnombre = "";
          gxTv_SdtLugar_Paisbandera = "";
          gxTv_SdtLugar_Paisbandera_gxi = "";
@@ -657,10 +722,12 @@ namespace GeneXus.Programs {
       private short gxTv_SdtLugar_Lugarid ;
       private short gxTv_SdtLugar_Paisid ;
       private short gxTv_SdtLugar_Ciudadid ;
+      private short gxTv_SdtLugar_Cantespectaculoslugar ;
       private short gxTv_SdtLugar_Initialized ;
       private short gxTv_SdtLugar_Lugarid_Z ;
       private short gxTv_SdtLugar_Paisid_Z ;
       private short gxTv_SdtLugar_Ciudadid_Z ;
+      private short gxTv_SdtLugar_Cantespectaculoslugar_Z ;
       private String gxTv_SdtLugar_Lugarnombre ;
       private String gxTv_SdtLugar_Paisnombre ;
       private String gxTv_SdtLugar_Ciudadnombre ;
@@ -799,6 +866,20 @@ namespace GeneXus.Programs {
 
       }
 
+      [DataMember( Name = "CantEspectaculosLugar" , Order = 8 )]
+      [GxSeudo()]
+      public Nullable<short> gxTpr_Cantespectaculoslugar
+      {
+         get {
+            return sdt.gxTpr_Cantespectaculoslugar ;
+         }
+
+         set {
+            sdt.gxTpr_Cantespectaculoslugar = (short)(value.HasValue ? value.Value : 0);
+         }
+
+      }
+
       public SdtLugar sdt
       {
          get {
@@ -820,7 +901,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      [DataMember( Name = "gx_md5_hash", Order = 8 )]
+      [DataMember( Name = "gx_md5_hash", Order = 9 )]
       public string Hash
       {
          get {

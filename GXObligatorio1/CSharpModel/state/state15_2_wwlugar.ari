@@ -4,10 +4,12 @@ current_guid('cc64d87a-aa69-48e5-b499-f56a44b04718').
  
  
 called_tree_i(13,33,13,17).
+called_tree_i(13,33,1,13).
 called_tree_i(13,33,13,36).
 called_tree_i(13,33,13,32).
 called_tree_i(13,33,0,3).
 called_tree_i(13,33,1,11).
+called_tree_i(13,33,1000,3).
 called_tree_i(13,33,13,4).
  
  
@@ -34,6 +36,8 @@ obj_parms_i([],[]).
  
  
  
+module_info_i('GeneXus\Common','CSHARP_NAME_SPACE','GeneXus.Core').
+module_info_i('GeneXus\Common','AssemblyName','GeneXus.dll').
 module_info_i('GeneXus','CSHARP_NAME_SPACE','GeneXus.Core').
 module_info_i('GeneXus','AssemblyName','GeneXus.dll').
  

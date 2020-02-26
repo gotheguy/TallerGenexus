@@ -2,7 +2,7 @@
                File: Pais_DataProvider
         Description: Stub for Pais_DataProvider
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/18/2020 22:53:8.80
+       Generated on: 2/25/2020 21:45:22.31
        Program type: Callable routine
           Main DBMS: SQL Server
 */

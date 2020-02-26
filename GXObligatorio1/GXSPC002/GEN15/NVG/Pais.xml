@@ -65,10 +65,6 @@
 <TableAction>insert</TableAction>
 <AttrisToUpdate>
 <Attribute>
-<AttriId>1</AttriId>
-<AttriName>PaisId</AttriName>
-<Description>Pais Id</Description></Attribute>
-<Attribute>
 <AttriId>2</AttriId>
 <AttriName>PaisNombre</AttriName>
 <Description>Pais Nombre</Description></Attribute>
@@ -109,27 +105,7 @@
 <AfterInsertRules></AfterInsertRules>
 <AfterUpdateRules></AfterUpdateRules>
 <AfterDeleteRules></AfterDeleteRules>
-<TablesToControlOnDelete>
-<Table>
-<TableId>8</TableId>
-<TableName>Venta</TableName>
-<Description>Venta</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute></KeyAttributes></Table>
-<Table>
-<TableId>8</TableId>
-<TableName>Venta</TableName>
-<Description>Venta</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>24</AttriId>
-<AttriName>VentaPaisId</AttriName>
-<Description>Venta Pais Id</Description></Attribute></KeyAttributes></Table></TablesToControlOnDelete>
+<TablesToControlOnDelete></TablesToControlOnDelete>
 <Levels>
 <Level>
 <LevelType>Trn</LevelType>
@@ -206,34 +182,6 @@
 <AfterDeleteRules></AfterDeleteRules>
 <TablesToControlOnDelete>
 <Table>
-<TableId>8</TableId>
-<TableName>Venta</TableName>
-<Description>Venta</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>22</AttriId>
-<AttriName>EspectaculoCiudadId</AttriName>
-<Description>Espectaculo Ciudad Id</Description></Attribute></KeyAttributes></Table>
-<Table>
-<TableId>8</TableId>
-<TableName>Venta</TableName>
-<Description>Venta</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>24</AttriId>
-<AttriName>VentaPaisId</AttriName>
-<Description>Venta Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>27</AttriId>
-<AttriName>VentaCiudadId</AttriName>
-<Description>Venta Ciudad Id</Description></Attribute></KeyAttributes></Table>
-<Table>
 <TableId>4</TableId>
 <TableName>Lugar</TableName>
 <Description>Lugar</Description>
@@ -260,7 +208,7 @@
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
-<ObjId>8</ObjId>
+<ObjId>84</ObjId>
 <ObjName>Gx0021</ObjName>
 <ObjPgmName>Gx0021</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>

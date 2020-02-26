@@ -28,6 +28,7 @@ struct_dt_elem_i([ 0,1,0 ],1,collection,'False').
 struct_dt_elem_i([ 0,1,0 ],1,attributeid,'1').
 struct_dt_elem_i([ 0,1,0 ],1,'ExternalName','PaisId').
 struct_dt_elem_i([ 0,1,0 ],1,'ExternalNamespace','GXObligatorio1').
+struct_dt_elem_i([ 0,1,0 ],1,'ATT_INITIAL_VALUE',[ t('1',3) ]).
 struct_dt_elem_i([ 0,1,0 ],2,name,'Paisnombre').
 struct_dt_elem_i([ 0,1,0 ],2,camelname,'PaisNombre').
 struct_dt_elem_i([ 0,1,0 ],2,basedon,72).

@@ -2,7 +2,7 @@
                File: IsAuthorized
         Description: Is Authorized
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/17/2020 21:44:20.61
+       Generated on: 2/25/2020 21:45:21.90
        Program type: Callable routine
           Main DBMS: SQL Server
 */

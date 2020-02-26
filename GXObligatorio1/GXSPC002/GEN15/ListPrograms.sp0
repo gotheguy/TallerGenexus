@@ -281,6 +281,8 @@ struct_dt_i([ 26,48,75 ],name,'ProgramName').
 struct_dt_i([ 26,48,75 ],namespace,'GXObligatorio1.ProgramNames').
 struct_dt_i([ 26,48,0 ],fullname,'ProgramNames').
 struct_dt_i([ 26,48,75 ],fullname,'ProgramNames.ProgramName').
+struct_dt_i([ 26,48,0 ],modified,yes).
+struct_dt_i([ 26,48,75 ],modified,yes).
  
 struct_dt_elem_i([ 26,48,75 ],1,name,'Name').
 struct_dt_elem_i([ 26,48,75 ],1,camelname,'Name').
@@ -340,7 +342,7 @@ struct_dt_elem_i([ 26,48,75 ],1,pic,'ZZZ9').
  
  
 pgm_parm_i(proc,11,'ISAUTHORIZED',[ [ svchar,256,0,0 ],[ boolean,4,0,0 ] ],[ [ 'GxObject',in,[] ],[ 'Authorized',out,[] ] ]).
-pgm_parm_i(web,43,'WWVENTA',[],[]).
+pgm_parm_i(web,93,'WWVENTA',[],[]).
 pgm_parm_i(web,54,'WWTIPOESPECTACULO',[],[]).
 pgm_parm_i(web,37,'WWPAIS',[],[]).
 pgm_parm_i(web,33,'WWLUGAR',[],[]).
@@ -348,7 +350,7 @@ pgm_parm_i(web,64,'WWESPECTACULO',[],[]).
  
 pgm_callprotocol_i(proc,12,'LISTPROGRAMS','INTERNAL','Secure').
 pgm_callprotocol_i(proc,11,'ISAUTHORIZED','INTERNAL','Secure').
-pgm_callprotocol_i(web,43,'WWVENTA','INTERNAL','Secure').
+pgm_callprotocol_i(web,93,'WWVENTA','INTERNAL','Secure').
 pgm_callprotocol_i(web,54,'WWTIPOESPECTACULO','INTERNAL','Secure').
 pgm_callprotocol_i(web,37,'WWPAIS','INTERNAL','Secure').
 pgm_callprotocol_i(web,33,'WWLUGAR','INTERNAL','Secure').

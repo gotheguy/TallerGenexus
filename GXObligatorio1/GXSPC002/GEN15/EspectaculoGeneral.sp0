@@ -1,6 +1,6 @@
 spec_i([ web,65,'Espectaculo General','EspectaculoGeneral',0,eng,'16_0_7-138086' ]).
  
-struct_i(2,1,[ 'Pgmname',34 ],[]).
+struct_i(2,1,[ 'Pgmname','Espectaculoid',34 ],[]).
  
 level_i(2,[ 7,[ [ 7,many ],[ 4,one ],[ 11,one ] ],[],[],[ [ [ 7,4,11 ],[ 34,10,40000,9,8,7,6,36,35 ] ] ],[ [ [ 7,4,11 ],[] ] ],[ 34 ],'IESPECTACULO',[ 7,[ [ [],34,34 ] ] ],[] ]).
  
@@ -164,7 +164,7 @@ attri_i(9,[ 'LugarNombre',char,100,0,'',0,'Lugar Nombre','',0 ]).
 attri_i(8,[ 'LugarId',int,4,0,'ZZZ9',0,'Lugar Id','',0 ]).
 attri_i(7,[ 'TipoEspectaculoNombre',char,100,0,'',0,'Tipo Espectaculo Nombre','',0 ]).
 attri_i(6,[ 'TipoEspectaculoId',int,4,0,'ZZZ9',0,'Tipo Espectaculo Id','',0 ]).
-attri_i(36,[ 'EspectaculoFecha',date,8,0,'99/99/99',0,'Espectaculo Fecha','',0 ]).
+attri_i(36,[ 'EspectaculoFecha',date,8,0,'99/99/9999',0,'Espectaculo Fecha','',0 ]).
 attri_i(35,[ 'EspectaculoNombre',char,100,0,'',0,'Espectaculo Nombre','',0 ]).
 attri_i(34,[ 'EspectaculoId',int,4,0,'ZZZ9',0,'Espectaculo Id','',0 ]).
 attri_i('Pgmname',[ 'Pgmname',char,129,0,'',1,'Program name','',13 ]).
@@ -616,7 +616,7 @@ html_comp_i(27,'Semanticcontent',div,d,[ str ]).
 html_comp_i(27,'Align',left,d,[ str ]).
 html_comp_i(27,'Valign',top,d,[ str ]).
 html_comp_i(28,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(28,'Colcount',8,d,[ num ]).
+html_comp_i(28,'Colcount',10,d,[ num ]).
 html_comp_i(28,'Attid',36,v,[ num ]).
 html_comp_i(28,'Class','ReadonlyAttribute',v,[ str ]).
 html_comp_i(28,'Controlname','Espectaculofecha',d,[ str ]).
@@ -634,7 +634,7 @@ html_comp_i(28,'Readonly',-1,v,[ bool ]).
 html_comp_i(28,'Autocomplete',-1,d,[ bool ]).
 html_comp_i(28,'Ispassword',0,d,[ bool ]).
 html_comp_i(28,'Autoresize',-1,d,[ bool ]).
-html_comp_i(28,'Gxwidth',measure(8,chr),d,[ measure ]).
+html_comp_i(28,'Gxwidth',measure(10,chr),d,[ measure ]).
 html_comp_i(28,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(28,'Ismultiline',0,d,[ bool ]).
 html_comp_i(28,'Maxtextnumberlines',0,d,[ num ]).
@@ -1043,8 +1043,11 @@ att_prop_i(2,34,'ExternalName','EspectaculoId',d).
 att_prop_i(2,34,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,34,'EmptyAsNull','Yes',d).
 att_prop_i(2,34,idBasedOn,71,v).
-att_prop_i(2,34,'AUTONUMBER','0',d).
-att_prop_i(2,34,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,34,'AUTONUMBER','-1',v).
+att_prop_i(2,34,'AUTONUMBER_START','1',d).
+att_prop_i(2,34,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,34,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,34,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,34,'AttRegEx','',d).
 att_prop_i(2,34,'AttValidationFailedMsg','',d).
 att_prop_i(2,34,'DownloadOffline','0',d).
@@ -1066,15 +1069,18 @@ att_prop_i(2,36,idBasedOn,'',d).
 att_prop_i(2,36,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,36,'AttRegEx','',d).
 att_prop_i(2,36,'AttValidationFailedMsg','',d).
-att_prop_i(2,36,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,36,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,36,'DownloadOffline','0',d).
 att_prop_i(2,36,'FullName','EspectaculoFecha',v).
 att_prop_i(2,6,'ExternalName','TipoEspectaculoId',d).
 att_prop_i(2,6,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,6,'EmptyAsNull','Yes',d).
 att_prop_i(2,6,idBasedOn,71,v).
-att_prop_i(2,6,'AUTONUMBER','0',d).
-att_prop_i(2,6,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,6,'AUTONUMBER','-1',v).
+att_prop_i(2,6,'AUTONUMBER_START','1',d).
+att_prop_i(2,6,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,6,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,6,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,6,'AttRegEx','',d).
 att_prop_i(2,6,'AttValidationFailedMsg','',d).
 att_prop_i(2,6,'DownloadOffline','0',d).
@@ -1093,8 +1099,11 @@ att_prop_i(2,8,'ExternalName','LugarId',d).
 att_prop_i(2,8,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,8,'EmptyAsNull','Yes',d).
 att_prop_i(2,8,idBasedOn,71,v).
-att_prop_i(2,8,'AUTONUMBER','0',d).
-att_prop_i(2,8,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,8,'AUTONUMBER','-1',v).
+att_prop_i(2,8,'AUTONUMBER_START','1',d).
+att_prop_i(2,8,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,8,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,8,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,8,'AttRegEx','',d).
 att_prop_i(2,8,'AttValidationFailedMsg','',d).
 att_prop_i(2,8,'DownloadOffline','0',d).
@@ -1135,18 +1144,22 @@ tbl_prop_i(2,4,'DirSubor',[ [ 7,[ 8 ] ] ],v).
 tbl_prop_i(2,7,'DirSuper',[ [ 11,[ 6 ] ],[ 4,[ 8 ] ] ],v).
  
 tbl_att_prop_i(2,7,34,'AllowNulls',n).
+tbl_att_prop_i(2,7,34,'AUTONUMBER',y).
 tbl_att_prop_i(2,7,35,'AllowNulls',n).
 tbl_att_prop_i(2,7,36,'AllowNulls',n).
 tbl_att_prop_i(2,7,8,'AllowNulls',n).
 tbl_att_prop_i(2,7,6,'AllowNulls',n).
 tbl_att_prop_i(2,4,8,'AllowNulls',n).
+tbl_att_prop_i(2,4,8,'AUTONUMBER',y).
 tbl_att_prop_i(2,4,9,'AllowNulls',n).
 tbl_att_prop_i(2,4,10,'AllowNulls',n).
 tbl_att_prop_i(2,4,40000,'AllowNulls',n).
 tbl_att_prop_i(2,11,6,'AllowNulls',n).
+tbl_att_prop_i(2,11,6,'AUTONUMBER',y).
 tbl_att_prop_i(2,11,7,'AllowNulls',n).
  
 var_prop_i(2,'Espectaculoid',idBasedOn,'',v).
+var_prop_i(2,'Espectaculoid','ATT_INITIAL_VALUE',[ t('1',3) ],d).
  
  
  
@@ -1162,6 +1175,8 @@ struct_dt_i([ 26,50,78 ],name,'Attribute').
 struct_dt_i([ 26,50,78 ],namespace,'GXObligatorio1.TransactionContext').
 struct_dt_i([ 26,50,0 ],fullname,'TransactionContext').
 struct_dt_i([ 26,50,78 ],fullname,'TransactionContext.Attribute').
+struct_dt_i([ 26,50,0 ],modified,yes).
+struct_dt_i([ 26,50,78 ],modified,yes).
  
 struct_dt_elem_i([ 26,50,0 ],1,name,'Callerobject').
 struct_dt_elem_i([ 26,50,0 ],1,camelname,'CallerObject').

@@ -24,6 +24,7 @@ struct_dt_elem_i([ 0,8,0 ],1,collection,'False').
 struct_dt_elem_i([ 0,8,0 ],1,attributeid,'6').
 struct_dt_elem_i([ 0,8,0 ],1,'ExternalName','TipoEspectaculoId').
 struct_dt_elem_i([ 0,8,0 ],1,'ExternalNamespace','GXObligatorio1').
+struct_dt_elem_i([ 0,8,0 ],1,'ATT_INITIAL_VALUE',[ t('1',3) ]).
 struct_dt_elem_i([ 0,8,0 ],2,name,'Tipoespectaculonombre').
 struct_dt_elem_i([ 0,8,0 ],2,camelname,'TipoEspectaculoNombre').
 struct_dt_elem_i([ 0,8,0 ],2,basedon,72).

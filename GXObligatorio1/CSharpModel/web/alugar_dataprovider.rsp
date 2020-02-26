@@ -18,4 +18,5 @@
 /r:GxBaseBuilder.dll
 /out:bin\alugar_dataprovider.dll
 alugar_dataprovider.cs
+getcantespectaculoslugar.cs
 lugar_bc.cs

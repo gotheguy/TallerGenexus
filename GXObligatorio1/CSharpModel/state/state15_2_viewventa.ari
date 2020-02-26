@@ -1,15 +1,13 @@
-current_obj_i(2,web,46).
+current_obj_i(2,web,92).
  
-current_guid('72e04952-e873-44bc-bae4-4c26c57be3c8').
- 
- 
-called_tree_i(13,46,13,17).
-called_tree_i(13,46,13,44).
-called_tree_i(13,46,13,43).
-called_tree_i(13,46,1,11).
-called_tree_i(13,46,13,4).
+current_guid('24626405-6326-4e3d-82e0-04da14d6a5e8').
  
  
+called_tree_i(13,92,13,17).
+called_tree_i(13,92,13,94).
+called_tree_i(13,92,13,93).
+called_tree_i(13,92,1,11).
+called_tree_i(13,92,13,4).
  
  
  
@@ -24,7 +22,9 @@ called_tree_i(13,46,13,4).
  
  
  
-ij_object_dependency(viewventa,[],[],[],46).
+ 
+ 
+ij_object_dependency(viewventa,[],[],[],92).
  
  
 obj_parms_i([ 'short aP0_VentaId','String aP1_TabCode' ],[ [ 'Ventaid',in ],[ 'Tabcode',in ] ]).

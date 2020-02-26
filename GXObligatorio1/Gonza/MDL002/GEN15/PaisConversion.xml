@@ -24,7 +24,7 @@
 <Properties>
 <Property>
 <Name>Autonumber</Name>
-<Value>No</Value></Property>
+<Value>Yes</Value></Property>
 <Property>
 <Name>Autogenerate</Name>
 <Value>No</Value></Property>
@@ -73,7 +73,7 @@
 <Name>AllowNulls</Name>
 <Value>No</Value></Property></Properties></AttriType></Attribute>
 <Attribute>
-<AttriId>40002</AttriId>
+<AttriId>40001</AttriId>
 <AttriName>PaisBandera_GXI</AttriName>
 <Description>PaisBandera_GXI</Description>
 <TakesValueFrom></TakesValueFrom>
@@ -117,7 +117,7 @@
 <Clustered>No</Clustered></Index></Indices></TableIndices>
 <FKConstraints></FKConstraints>
 <Statements>
-<Statement>CREATE TABLE [Pais] ([PaisId] smallint NOT NULL , [PaisNombre] nchar(100) NOT NULL , [PaisBandera] VARBINARY(MAX) NOT NULL , [PaisBandera_GXI] varchar(2048) NOT NULL , PRIMARY KEY([PaisId])) </Statement>
+<Statement>CREATE TABLE [Pais] ([PaisId] smallint NOT NULL IDENTITY(1,1), [PaisNombre] nchar(100) NOT NULL , [PaisBandera] VARBINARY(MAX) NOT NULL , [PaisBandera_GXI] varchar(2048) NOT NULL , PRIMARY KEY([PaisId])) </Statement>
 <Statement>CREATE UNIQUE NONCLUSTERED INDEX [UPAIS] ON [Pais] ([PaisNombre] )</Statement></Statements>
 <NeedReorganizationProgram>False</NeedReorganizationProgram>
 <Warnings></Warnings>

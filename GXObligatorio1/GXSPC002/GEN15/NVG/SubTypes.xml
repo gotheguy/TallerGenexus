@@ -15,17 +15,35 @@
 <Message>
 <Token>Attribute(s) </Token>
 <Attribute>
-<AttriId>29</AttriId>
-<AttriName>LugarPaisId</AttriName>
-<Description>Lugar Pais Id</Description></Attribute>
+<AttriId>19</AttriId>
+<AttriName>EspectaculoPaisId</AttriName>
+<Description>Espectaculo Pais Id</Description></Attribute>
 <Token>, </Token>
 <Attribute>
-<AttriId>32</AttriId>
-<AttriName>LugarCiudadId</AttriName>
-<Description>Lugar Ciudad Id</Description></Attribute>
+<AttriId>22</AttriId>
+<AttriName>EspectaculoCiudadId</AttriName>
+<Description>Espectaculo Ciudad Id</Description></Attribute>
 <Token> in subtype group '</Token>
 <SubtypeGroup>
-<SubtypeGroupId>3</SubtypeGroupId>
-<SubtypeGroupName>LugarPais</SubtypeGroupName></SubtypeGroup>
+<SubtypeGroupId>1</SubtypeGroupId>
+<SubtypeGroupName>EspectaculoPais</SubtypeGroupName></SubtypeGroup>
+<Token>' is(are) not associated to any transaction.</Token></Message></Warning>
+<Warning>
+<MsgCode>spc0079</MsgCode>
+<Message>
+<Token>Attribute(s) </Token>
+<Attribute>
+<AttriId>24</AttriId>
+<AttriName>VentaPaisId</AttriName>
+<Description>Venta Pais Id</Description></Attribute>
+<Token>, </Token>
+<Attribute>
+<AttriId>27</AttriId>
+<AttriName>VentaCiudadId</AttriName>
+<Description>Venta Ciudad Id</Description></Attribute>
+<Token> in subtype group '</Token>
+<SubtypeGroup>
+<SubtypeGroupId>2</SubtypeGroupId>
+<SubtypeGroupName>VentaPais</SubtypeGroupName></SubtypeGroup>
 <Token>' is(are) not associated to any transaction.</Token></Message></Warning></Warnings>
 <Errors></Errors></ObjectSpec>

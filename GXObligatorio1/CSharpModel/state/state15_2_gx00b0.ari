@@ -1,11 +1,9 @@
-current_obj_i(2,web,57).
+current_obj_i(2,web,87).
  
-current_guid('f464651e-0f89-42f3-9c0f-5c21079fdac2').
- 
- 
-called_tree_i(13,57,13,6).
+current_guid('0ebf8f9c-c7dc-4f67-acc3-05c66c3558f2').
  
  
+called_tree_i(13,87,13,6).
  
  
  
@@ -20,7 +18,9 @@ called_tree_i(13,57,13,6).
  
  
  
-ij_object_dependency(gx00b0,[],[],[],57).
+ 
+ 
+ij_object_dependency(gx00b0,[],[],[],87).
  
  
 obj_parms_i([ 'short aP0_pTipoEspectaculoId' ],[ [ 'Ptipoespectaculoid',out ] ]).

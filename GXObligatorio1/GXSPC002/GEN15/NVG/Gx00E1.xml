@@ -4,7 +4,7 @@
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
-<ObjId>62</ObjId>
+<ObjId>88</ObjId>
 <ObjName>Gx00E1</ObjName>
 <ObjDesc>Selection List Localidad</ObjDesc>
 <ObjPgmName>Gx00E1</ObjPgmName>
@@ -42,8 +42,6 @@
 <EventName>Lbllocalidadpreciofilter.Click</EventName></Event>
 <Event>
 <EventName>Lbllocalidadesvendidasfilter.Click</EventName></Event>
-<Event>
-<EventName>Lbllocalidadesdisponiblesfilter.Click</EventName></Event>
 <Event>
 <EventName>Load</EventName>
 <LoadMethod>Auto</LoadMethod>
@@ -189,27 +187,6 @@
 <Variable>
 <VarId>Clocalidadesvendidas</VarId>
 <VarName>&amp;cLocalidadesVendidas</VarName></Variable>
-<Token>.</Token>
-<Token>isempty(</Token>
-<Token>)</Token></Condition></ConditionalConstraint>
-<ConditionalConstraint>
-<Constraint>
-<Attribute>
-<AttriId>16</AttriId>
-<AttriName>LocalidadesDisponibles</AttriName>
-<Description>Localidades Disponibles</Description></Attribute>
-<Sp></Sp>
-<Token>&gt;=</Token>
-<Sp></Sp>
-<Variable>
-<VarId>Clocalidadesdisponibles</VarId>
-<VarName>&amp;cLocalidadesDisponibles</VarName></Variable></Constraint>
-<Condition>
-<Token>not</Token>
-<Sp></Sp>
-<Variable>
-<VarId>Clocalidadesdisponibles</VarId>
-<VarName>&amp;cLocalidadesDisponibles</VarName></Variable>
 <Token>.</Token>
 <Token>isempty(</Token>
 <Token>)</Token></Condition></ConditionalConstraint></NonOptimizedWhere>

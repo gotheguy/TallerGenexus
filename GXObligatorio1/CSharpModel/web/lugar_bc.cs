@@ -2,7 +2,7 @@
                File: Lugar_BC
         Description: Lugar
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/17/2020 21:44:20.8
+       Generated on: 2/25/2020 21:45:23.31
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -109,8 +109,8 @@ namespace GeneXus.Programs {
                CheckExtendedTable034( ) ;
                if ( AnyError == 0 )
                {
-                  ZM034( 2) ;
-                  ZM034( 3) ;
+                  ZM034( 6) ;
+                  ZM034( 7) ;
                }
                CloseExtendedTableCursors034( ) ;
             }
@@ -133,21 +133,24 @@ namespace GeneXus.Programs {
 
       protected void ZM034( short GX_JID )
       {
-         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 5 ) || ( GX_JID == 0 ) )
          {
             Z9LugarNombre = A9LugarNombre;
             Z1PaisId = A1PaisId;
             Z4CiudadId = A4CiudadId;
+            Z42CantEspectaculosLugar = A42CantEspectaculosLugar;
          }
-         if ( ( GX_JID == 2 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 6 ) || ( GX_JID == 0 ) )
          {
             Z2PaisNombre = A2PaisNombre;
+            Z42CantEspectaculosLugar = A42CantEspectaculosLugar;
          }
-         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 7 ) || ( GX_JID == 0 ) )
          {
             Z5CiudadNombre = A5CiudadNombre;
+            Z42CantEspectaculosLugar = A42CantEspectaculosLugar;
          }
-         if ( GX_JID == -1 )
+         if ( GX_JID == -5 )
          {
             Z8LugarId = A8LugarId;
             Z9LugarNombre = A9LugarNombre;
@@ -164,10 +167,31 @@ namespace GeneXus.Programs {
 
       protected void standaloneNotModal( )
       {
+         Gx_BScreen = 0;
       }
 
       protected void standaloneModal( )
       {
+         if ( IsIns( )  && (0==A1PaisId) && ( Gx_BScreen == 0 ) )
+         {
+            A1PaisId = 1;
+         }
+         if ( IsIns( )  && (0==A8LugarId) && ( Gx_BScreen == 0 ) )
+         {
+            A8LugarId = 1;
+         }
+         if ( ( StringUtil.StrCmp(Gx_mode, "INS") == 0 ) && ( Gx_BScreen == 0 ) )
+         {
+            /* Using cursor BC00034 */
+            pr_default.execute(2, new Object[] {A1PaisId});
+            A2PaisNombre = BC00034_A2PaisNombre[0];
+            A40001PaisBandera_GXI = BC00034_A40001PaisBandera_GXI[0];
+            A3PaisBandera = BC00034_A3PaisBandera[0];
+            pr_default.close(2);
+            GXt_int1 = A42CantEspectaculosLugar;
+            new getcantespectaculoslugar(context ).execute(  A8LugarId, out  GXt_int1) ;
+            A42CantEspectaculosLugar = GXt_int1;
+         }
       }
 
       protected void Load034( )
@@ -186,7 +210,7 @@ namespace GeneXus.Programs {
             A4CiudadId = BC00036_A4CiudadId[0];
             A10LugarFoto = BC00036_A10LugarFoto[0];
             A3PaisBandera = BC00036_A3PaisBandera[0];
-            ZM034( -1) ;
+            ZM034( -5) ;
          }
          pr_default.close(4);
          OnLoadActions034( ) ;
@@ -194,12 +218,24 @@ namespace GeneXus.Programs {
 
       protected void OnLoadActions034( )
       {
+         GXt_int1 = A42CantEspectaculosLugar;
+         new getcantespectaculoslugar(context ).execute(  A8LugarId, out  GXt_int1) ;
+         A42CantEspectaculosLugar = GXt_int1;
       }
 
       protected void CheckExtendedTable034( )
       {
          nIsDirty_4 = 0;
          standaloneModal( ) ;
+         nIsDirty_4 = 1;
+         GXt_int1 = A42CantEspectaculosLugar;
+         new getcantespectaculoslugar(context ).execute(  A8LugarId, out  GXt_int1) ;
+         A42CantEspectaculosLugar = GXt_int1;
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( A9LugarNombre)) )
+         {
+            GX_msglist.addItem("Inserta el nombre del lugar", 1, "");
+            AnyError = 1;
+         }
          /* Using cursor BC00034 */
          pr_default.execute(2, new Object[] {A1PaisId});
          if ( (pr_default.getStatus(2) == 101) )
@@ -253,7 +289,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A8LugarId});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM034( 1) ;
+            ZM034( 5) ;
             RcdFound4 = 1;
             A8LugarId = BC00033_A8LugarId[0];
             A9LugarNombre = BC00033_A9LugarNombre[0];
@@ -356,14 +392,10 @@ namespace GeneXus.Programs {
                   if ( AnyError == 0 )
                   {
                      /* Using cursor BC00038 */
-                     pr_default.execute(6, new Object[] {A8LugarId, A9LugarNombre, A10LugarFoto, A40000LugarFoto_GXI, A1PaisId, A4CiudadId});
+                     pr_default.execute(6, new Object[] {A9LugarNombre, A10LugarFoto, A40000LugarFoto_GXI, A1PaisId, A4CiudadId});
+                     A8LugarId = BC00038_A8LugarId[0];
                      pr_default.close(6);
                      dsDefault.SmartCacheProvider.SetUpdated("Lugar") ;
-                     if ( (pr_default.getStatus(6) == 1) )
-                     {
-                        GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
-                        AnyError = 1;
-                     }
                      if ( AnyError == 0 )
                      {
                         /* Start of After( Insert) rules */
@@ -504,6 +536,9 @@ namespace GeneXus.Programs {
          if ( AnyError == 0 )
          {
             /* Delete mode formulas */
+            GXt_int1 = A42CantEspectaculosLugar;
+            new getcantespectaculoslugar(context ).execute(  A8LugarId, out  GXt_int1) ;
+            A42CantEspectaculosLugar = GXt_int1;
             /* Using cursor BC000312 */
             pr_default.execute(10, new Object[] {A1PaisId});
             A2PaisNombre = BC000312_A2PaisNombre[0];
@@ -662,15 +697,16 @@ namespace GeneXus.Programs {
 
       protected void InitializeNonKey034( )
       {
+         A42CantEspectaculosLugar = 0;
          A9LugarNombre = "";
          A10LugarFoto = "";
          A40000LugarFoto_GXI = "";
-         A1PaisId = 0;
          A2PaisNombre = "";
          A3PaisBandera = "";
          A40001PaisBandera_GXI = "";
          A4CiudadId = 0;
          A5CiudadNombre = "";
+         A1PaisId = 1;
          Z9LugarNombre = "";
          Z1PaisId = 0;
          Z4CiudadId = 0;
@@ -678,12 +714,13 @@ namespace GeneXus.Programs {
 
       protected void InitAll034( )
       {
-         A8LugarId = 0;
+         A8LugarId = 1;
          InitializeNonKey034( ) ;
       }
 
       protected void StandaloneModalInsert( )
       {
+         A1PaisId = i1PaisId;
       }
 
       protected bool IsIns( )
@@ -709,15 +746,16 @@ namespace GeneXus.Programs {
       public void VarsToRow4( SdtLugar obj4 )
       {
          obj4.gxTpr_Mode = Gx_mode;
+         obj4.gxTpr_Cantespectaculoslugar = A42CantEspectaculosLugar;
          obj4.gxTpr_Lugarnombre = A9LugarNombre;
          obj4.gxTpr_Lugarfoto = A10LugarFoto;
          obj4.gxTpr_Lugarfoto_gxi = A40000LugarFoto_GXI;
-         obj4.gxTpr_Paisid = A1PaisId;
          obj4.gxTpr_Paisnombre = A2PaisNombre;
          obj4.gxTpr_Paisbandera = A3PaisBandera;
          obj4.gxTpr_Paisbandera_gxi = A40001PaisBandera_GXI;
          obj4.gxTpr_Ciudadid = A4CiudadId;
          obj4.gxTpr_Ciudadnombre = A5CiudadNombre;
+         obj4.gxTpr_Paisid = A1PaisId;
          obj4.gxTpr_Lugarid = A8LugarId;
          obj4.gxTpr_Lugarid_Z = Z8LugarId;
          obj4.gxTpr_Lugarnombre_Z = Z9LugarNombre;
@@ -725,6 +763,7 @@ namespace GeneXus.Programs {
          obj4.gxTpr_Paisnombre_Z = Z2PaisNombre;
          obj4.gxTpr_Ciudadid_Z = Z4CiudadId;
          obj4.gxTpr_Ciudadnombre_Z = Z5CiudadNombre;
+         obj4.gxTpr_Cantespectaculoslugar_Z = Z42CantEspectaculosLugar;
          obj4.gxTpr_Lugarfoto_gxi_Z = Z40000LugarFoto_GXI;
          obj4.gxTpr_Paisbandera_gxi_Z = Z40001PaisBandera_GXI;
          obj4.gxTpr_Mode = Gx_mode;
@@ -741,15 +780,16 @@ namespace GeneXus.Programs {
                               int forceLoad )
       {
          Gx_mode = obj4.gxTpr_Mode;
+         A42CantEspectaculosLugar = obj4.gxTpr_Cantespectaculoslugar;
          A9LugarNombre = obj4.gxTpr_Lugarnombre;
          A10LugarFoto = obj4.gxTpr_Lugarfoto;
          A40000LugarFoto_GXI = obj4.gxTpr_Lugarfoto_gxi;
-         A1PaisId = obj4.gxTpr_Paisid;
          A2PaisNombre = obj4.gxTpr_Paisnombre;
          A3PaisBandera = obj4.gxTpr_Paisbandera;
          A40001PaisBandera_GXI = obj4.gxTpr_Paisbandera_gxi;
          A4CiudadId = obj4.gxTpr_Ciudadid;
          A5CiudadNombre = obj4.gxTpr_Ciudadnombre;
+         A1PaisId = obj4.gxTpr_Paisid;
          A8LugarId = obj4.gxTpr_Lugarid;
          Z8LugarId = obj4.gxTpr_Lugarid_Z;
          Z9LugarNombre = obj4.gxTpr_Lugarnombre_Z;
@@ -757,6 +797,7 @@ namespace GeneXus.Programs {
          Z2PaisNombre = obj4.gxTpr_Paisnombre_Z;
          Z4CiudadId = obj4.gxTpr_Ciudadid_Z;
          Z5CiudadNombre = obj4.gxTpr_Ciudadnombre_Z;
+         Z42CantEspectaculosLugar = obj4.gxTpr_Cantespectaculoslugar_Z;
          Z40000LugarFoto_GXI = obj4.gxTpr_Lugarfoto_gxi_Z;
          Z40001PaisBandera_GXI = obj4.gxTpr_Paisbandera_gxi_Z;
          Gx_mode = obj4.gxTpr_Mode;
@@ -781,7 +822,7 @@ namespace GeneXus.Programs {
             Gx_mode = "UPD";
             Z8LugarId = A8LugarId;
          }
-         ZM034( -1) ;
+         ZM034( -5) ;
          OnLoadActions034( ) ;
          AddRow034( ) ;
          ScanKeyEnd034( ) ;
@@ -810,7 +851,7 @@ namespace GeneXus.Programs {
             Gx_mode = "UPD";
             Z8LugarId = A8LugarId;
          }
-         ZM034( -1) ;
+         ZM034( -5) ;
          OnLoadActions034( ) ;
          AddRow034( ) ;
          ScanKeyEnd034( ) ;
@@ -1187,6 +1228,9 @@ namespace GeneXus.Programs {
          A3PaisBandera = "";
          Z40001PaisBandera_GXI = "";
          A40001PaisBandera_GXI = "";
+         BC00034_A2PaisNombre = new String[] {""} ;
+         BC00034_A40001PaisBandera_GXI = new String[] {""} ;
+         BC00034_A3PaisBandera = new String[] {""} ;
          BC00036_A8LugarId = new short[1] ;
          BC00036_A9LugarNombre = new String[] {""} ;
          BC00036_A40000LugarFoto_GXI = new String[] {""} ;
@@ -1197,9 +1241,6 @@ namespace GeneXus.Programs {
          BC00036_A4CiudadId = new short[1] ;
          BC00036_A10LugarFoto = new String[] {""} ;
          BC00036_A3PaisBandera = new String[] {""} ;
-         BC00034_A2PaisNombre = new String[] {""} ;
-         BC00034_A40001PaisBandera_GXI = new String[] {""} ;
-         BC00034_A3PaisBandera = new String[] {""} ;
          BC00035_A5CiudadNombre = new String[] {""} ;
          BC00037_A8LugarId = new short[1] ;
          BC00033_A8LugarId = new short[1] ;
@@ -1215,6 +1256,7 @@ namespace GeneXus.Programs {
          BC00032_A1PaisId = new short[1] ;
          BC00032_A4CiudadId = new short[1] ;
          BC00032_A10LugarFoto = new String[] {""} ;
+         BC00038_A8LugarId = new short[1] ;
          BC000312_A2PaisNombre = new String[] {""} ;
          BC000312_A40001PaisBandera_GXI = new String[] {""} ;
          BC000312_A3PaisBandera = new String[] {""} ;
@@ -1253,6 +1295,7 @@ namespace GeneXus.Programs {
                BC00037_A8LugarId
                }
                , new Object[] {
+               BC00038_A8LugarId
                }
                , new Object[] {
                }
@@ -1274,6 +1317,11 @@ namespace GeneXus.Programs {
                }
             }
          );
+         Z1PaisId = 1;
+         A1PaisId = 1;
+         i1PaisId = 1;
+         Z8LugarId = 1;
+         A8LugarId = 1;
          INITTRN();
          /* Execute Start event if defined. */
          /* Execute user event: Start */
@@ -1292,8 +1340,13 @@ namespace GeneXus.Programs {
       private short A1PaisId ;
       private short Z4CiudadId ;
       private short A4CiudadId ;
+      private short Z42CantEspectaculosLugar ;
+      private short A42CantEspectaculosLugar ;
+      private short Gx_BScreen ;
       private short RcdFound4 ;
       private short nIsDirty_4 ;
+      private short GXt_int1 ;
+      private short i1PaisId ;
       private int trnEnded ;
       private String scmdbuf ;
       private String PreviousTooltip ;
@@ -1318,6 +1371,9 @@ namespace GeneXus.Programs {
       private SdtLugar bcLugar ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
+      private String[] BC00034_A2PaisNombre ;
+      private String[] BC00034_A40001PaisBandera_GXI ;
+      private String[] BC00034_A3PaisBandera ;
       private short[] BC00036_A8LugarId ;
       private String[] BC00036_A9LugarNombre ;
       private String[] BC00036_A40000LugarFoto_GXI ;
@@ -1328,9 +1384,6 @@ namespace GeneXus.Programs {
       private short[] BC00036_A4CiudadId ;
       private String[] BC00036_A10LugarFoto ;
       private String[] BC00036_A3PaisBandera ;
-      private String[] BC00034_A2PaisNombre ;
-      private String[] BC00034_A40001PaisBandera_GXI ;
-      private String[] BC00034_A3PaisBandera ;
       private String[] BC00035_A5CiudadNombre ;
       private short[] BC00037_A8LugarId ;
       private short[] BC00033_A8LugarId ;
@@ -1345,6 +1398,7 @@ namespace GeneXus.Programs {
       private short[] BC00032_A1PaisId ;
       private short[] BC00032_A4CiudadId ;
       private String[] BC00032_A10LugarFoto ;
+      private short[] BC00038_A8LugarId ;
       private String[] BC000312_A2PaisNombre ;
       private String[] BC000312_A40001PaisBandera_GXI ;
       private String[] BC000312_A3PaisBandera ;
@@ -1376,7 +1430,7 @@ namespace GeneXus.Programs {
          ,new ForEachCursor(def[3])
          ,new ForEachCursor(def[4])
          ,new ForEachCursor(def[5])
-         ,new UpdateCursor(def[6])
+         ,new ForEachCursor(def[6])
          ,new UpdateCursor(def[7])
          ,new UpdateCursor(def[8])
          ,new UpdateCursor(def[9])
@@ -1419,7 +1473,6 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmBC00038 ;
           prmBC00038 = new Object[] {
-          new Object[] {"@LugarId",SqlDbType.SmallInt,4,0} ,
           new Object[] {"@LugarNombre",SqlDbType.NChar,100,0} ,
           new Object[] {"@LugarFoto",SqlDbType.VarBinary,1024,0} ,
           new Object[] {"@LugarFoto_GXI",SqlDbType.NVarChar,2048,0} ,
@@ -1467,7 +1520,7 @@ namespace GeneXus.Programs {
              ,new CursorDef("BC00035", "SELECT [CiudadNombre] FROM [PaisCiudad] WHERE [PaisId] = @PaisId AND [CiudadId] = @CiudadId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00035,1, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("BC00036", "SELECT TM1.[LugarId], TM1.[LugarNombre], TM1.[LugarFoto_GXI], T2.[PaisNombre], T2.[PaisBandera_GXI], T3.[CiudadNombre], TM1.[PaisId], TM1.[CiudadId], TM1.[LugarFoto], T2.[PaisBandera] FROM (([Lugar] TM1 INNER JOIN [Pais] T2 ON T2.[PaisId] = TM1.[PaisId]) INNER JOIN [PaisCiudad] T3 ON T3.[PaisId] = TM1.[PaisId] AND T3.[CiudadId] = TM1.[CiudadId]) WHERE TM1.[LugarId] = @LugarId ORDER BY TM1.[LugarId]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmBC00036,100, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("BC00037", "SELECT [LugarId] FROM [Lugar] WHERE [LugarId] = @LugarId  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmBC00037,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("BC00038", "INSERT INTO [Lugar]([LugarId], [LugarNombre], [LugarFoto], [LugarFoto_GXI], [PaisId], [CiudadId]) VALUES(@LugarId, @LugarNombre, @LugarFoto, @LugarFoto_GXI, @PaisId, @CiudadId)", GxErrorMask.GX_NOMASK,prmBC00038)
+             ,new CursorDef("BC00038", "INSERT INTO [Lugar]([LugarNombre], [LugarFoto], [LugarFoto_GXI], [PaisId], [CiudadId]) VALUES(@LugarNombre, @LugarFoto, @LugarFoto_GXI, @PaisId, @CiudadId); SELECT SCOPE_IDENTITY()", GxErrorMask.GX_NOMASK,prmBC00038)
              ,new CursorDef("BC00039", "UPDATE [Lugar] SET [LugarNombre]=@LugarNombre, [PaisId]=@PaisId, [CiudadId]=@CiudadId  WHERE [LugarId] = @LugarId", GxErrorMask.GX_NOMASK,prmBC00039)
              ,new CursorDef("BC000310", "UPDATE [Lugar] SET [LugarFoto]=@LugarFoto, [LugarFoto_GXI]=@LugarFoto_GXI  WHERE [LugarId] = @LugarId", GxErrorMask.GX_NOMASK,prmBC000310)
              ,new CursorDef("BC000311", "DELETE FROM [Lugar]  WHERE [LugarId] = @LugarId", GxErrorMask.GX_NOMASK,prmBC000311)
@@ -1524,6 +1577,9 @@ namespace GeneXus.Programs {
              case 5 :
                 ((short[]) buf[0])[0] = rslt.getShort(1) ;
                 return;
+             case 6 :
+                ((short[]) buf[0])[0] = rslt.getShort(1) ;
+                return;
              case 10 :
                 ((String[]) buf[0])[0] = rslt.getString(1, 100) ;
                 ((String[]) buf[1])[0] = rslt.getMultimediaUri(2) ;
@@ -1576,12 +1632,11 @@ namespace GeneXus.Programs {
                 stmt.SetParameter(1, (short)parms[0]);
                 return;
              case 6 :
-                stmt.SetParameter(1, (short)parms[0]);
-                stmt.SetParameter(2, (String)parms[1]);
-                stmt.SetParameterBlob(3, (String)parms[2], false);
-                stmt.SetParameterMultimedia(4, (String)parms[3], (String)parms[2], "Lugar", "LugarFoto");
+                stmt.SetParameter(1, (String)parms[0]);
+                stmt.SetParameterBlob(2, (String)parms[1], false);
+                stmt.SetParameterMultimedia(3, (String)parms[2], (String)parms[1], "Lugar", "LugarFoto");
+                stmt.SetParameter(4, (short)parms[3]);
                 stmt.SetParameter(5, (short)parms[4]);
-                stmt.SetParameter(6, (short)parms[5]);
                 return;
              case 7 :
                 stmt.SetParameter(1, (String)parms[0]);

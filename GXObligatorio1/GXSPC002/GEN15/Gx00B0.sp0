@@ -1,6 +1,6 @@
-spec_i([ web,57,'Selection List Tipo Espectaculo','Gx00B0',0,eng,'16_0_7-138086' ]).
+spec_i([ web,87,'Selection List Tipo Espectaculo','Gx00B0',0,eng,'16_0_7-138086' ]).
  
-struct_i(2,1,[ 'Advanced_label_template' ],[]).
+struct_i(2,1,[ 'Advanced_label_template','Ctipoespectaculoid','Ptipoespectaculoid' ],[]).
  
 level_i(2,[ 11,[ [ 11,many ] ],[],[],[ [ [ 11 ],[ 7,6 ] ] ],[ [ [ 11 ],[] ] ],[ 6 ],'ITIPOESPECTACULO',[],[] ]).
  
@@ -821,8 +821,11 @@ att_prop_i(2,6,'ExternalName','TipoEspectaculoId',d).
 att_prop_i(2,6,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,6,'EmptyAsNull','Yes',d).
 att_prop_i(2,6,idBasedOn,71,v).
-att_prop_i(2,6,'AUTONUMBER','0',d).
-att_prop_i(2,6,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,6,'AUTONUMBER','-1',v).
+att_prop_i(2,6,'AUTONUMBER_START','1',d).
+att_prop_i(2,6,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,6,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,6,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,6,'AttRegEx','',d).
 att_prop_i(2,6,'AttValidationFailedMsg','',d).
 att_prop_i(2,6,'DownloadOffline','0',d).
@@ -840,11 +843,14 @@ att_prop_i(2,7,'FullName','TipoEspectaculoNombre',v).
  
  
 tbl_att_prop_i(2,11,6,'AllowNulls',n).
+tbl_att_prop_i(2,11,6,'AUTONUMBER',y).
 tbl_att_prop_i(2,11,7,'AllowNulls',n).
  
 var_prop_i(2,'Ctipoespectaculoid',idBasedOn,'',v).
+var_prop_i(2,'Ctipoespectaculoid','ATT_INITIAL_VALUE',[ t('1',3) ],d).
 var_prop_i(2,'Ctipoespectaculonombre',idBasedOn,'',v).
 var_prop_i(2,'Ptipoespectaculoid',idBasedOn,'',v).
+var_prop_i(2,'Ptipoespectaculoid','ATT_INITIAL_VALUE',[ t('1',3) ],d).
  
  
  
@@ -864,7 +870,7 @@ sub_info_i(146,'Load',36,38,[ [],[ 'Linkselection' ] ]).
 sub_info_i(146,'Enter',40,43,[ [ 6 ],[ 'Ptipoespectaculoid' ] ]).
  
  
-pgm_callprotocol_i(web,57,'GX00B0','INTERNAL','Secure').
+pgm_callprotocol_i(web,87,'GX00B0','INTERNAL','Secure').
  
  
  

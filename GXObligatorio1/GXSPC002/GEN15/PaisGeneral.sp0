@@ -1,6 +1,6 @@
 spec_i([ web,38,'Pais General','PaisGeneral',0,eng,'16_0_7-138086' ]).
  
-struct_i(2,1,[ 'Pgmname',1 ],[]).
+struct_i(2,1,[ 'Pgmname','Paisid',1 ],[]).
  
 level_i(2,[ 1,[ [ 1,many ] ],[],[],[ [ [ 1 ],[ 1,3,40000,2 ] ] ],[ [ [ 1 ],[] ] ],[ 1 ],'IPAIS',[ 1,[ [ [],1,1 ] ] ],[] ]).
  
@@ -635,8 +635,11 @@ att_prop_i(2,1,'ExternalName','PaisId',d).
 att_prop_i(2,1,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,1,'EmptyAsNull','Yes',d).
 att_prop_i(2,1,idBasedOn,71,v).
-att_prop_i(2,1,'AUTONUMBER','0',d).
-att_prop_i(2,1,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,1,'AUTONUMBER','-1',v).
+att_prop_i(2,1,'AUTONUMBER_START','1',d).
+att_prop_i(2,1,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,1,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,1,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,1,'AttRegEx','',d).
 att_prop_i(2,1,'AttValidationFailedMsg','',d).
 att_prop_i(2,1,'DownloadOffline','0',d).
@@ -673,11 +676,13 @@ att_prop_i(2,40000,'FullName','',v).
  
  
 tbl_att_prop_i(2,1,1,'AllowNulls',n).
+tbl_att_prop_i(2,1,1,'AUTONUMBER',y).
 tbl_att_prop_i(2,1,2,'AllowNulls',n).
 tbl_att_prop_i(2,1,3,'AllowNulls',n).
 tbl_att_prop_i(2,1,40000,'AllowNulls',n).
  
 var_prop_i(2,'Paisid',idBasedOn,'',v).
+var_prop_i(2,'Paisid','ATT_INITIAL_VALUE',[ t('1',3) ],d).
  
  
  
@@ -693,6 +698,8 @@ struct_dt_i([ 26,50,78 ],name,'Attribute').
 struct_dt_i([ 26,50,78 ],namespace,'GXObligatorio1.TransactionContext').
 struct_dt_i([ 26,50,0 ],fullname,'TransactionContext').
 struct_dt_i([ 26,50,78 ],fullname,'TransactionContext.Attribute').
+struct_dt_i([ 26,50,0 ],modified,yes).
+struct_dt_i([ 26,50,78 ],modified,yes).
  
 struct_dt_elem_i([ 26,50,0 ],1,name,'Callerobject').
 struct_dt_elem_i([ 26,50,0 ],1,camelname,'CallerObject').

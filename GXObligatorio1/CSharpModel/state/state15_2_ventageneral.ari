@@ -1,14 +1,12 @@
-current_obj_i(2,web,44).
+current_obj_i(2,web,94).
  
-current_guid('f20d36f2-b57a-4378-97b8-b0743e0343a5').
- 
- 
-called_tree_i(13,44,0,6).
-called_tree_i(13,44,13,17).
-called_tree_i(13,44,13,63).
-called_tree_i(13,44,1,11).
+current_guid('86e28658-0f97-404a-a505-ff390dc0e68e').
  
  
+called_tree_i(13,94,0,6).
+called_tree_i(13,94,13,17).
+called_tree_i(13,94,13,63).
+called_tree_i(13,94,1,11).
  
  
  
@@ -23,7 +21,9 @@ called_tree_i(13,44,1,11).
  
  
  
-ij_object_dependency(ventageneral,[],[],[],44).
+ 
+ 
+ij_object_dependency(ventageneral,[],[],[],94).
  
  
 obj_parms_i([ 'short aP0_VentaId' ],[ [ 37,in ] ]).

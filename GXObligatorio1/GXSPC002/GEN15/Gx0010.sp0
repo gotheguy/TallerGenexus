@@ -1,6 +1,6 @@
-spec_i([ web,7,'Selection List Pais','Gx0010',0,eng,'16_0_7-138086' ]).
+spec_i([ web,85,'Selection List Pais','Gx0010',0,eng,'16_0_7-138086' ]).
  
-struct_i(2,1,[ 'Advanced_label_template' ],[]).
+struct_i(2,1,[ 'Advanced_label_template','Cpaisid','Ppaisid' ],[]).
  
 level_i(2,[ 1,[ [ 1,many ] ],[],[],[ [ [ 1 ],[ 3,40000,2,1 ] ] ],[ [ [ 1 ],[] ] ],[ 1 ],'IPAIS',[],[] ]).
  
@@ -853,8 +853,11 @@ att_prop_i(2,1,'ExternalName','PaisId',d).
 att_prop_i(2,1,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,1,'EmptyAsNull','Yes',d).
 att_prop_i(2,1,idBasedOn,71,v).
-att_prop_i(2,1,'AUTONUMBER','0',d).
-att_prop_i(2,1,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,1,'AUTONUMBER','-1',v).
+att_prop_i(2,1,'AUTONUMBER_START','1',d).
+att_prop_i(2,1,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,1,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,1,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,1,'AttRegEx','',d).
 att_prop_i(2,1,'AttValidationFailedMsg','',d).
 att_prop_i(2,1,'DownloadOffline','0',d).
@@ -891,13 +894,16 @@ att_prop_i(2,40000,'FullName','',v).
  
  
 tbl_att_prop_i(2,1,1,'AllowNulls',n).
+tbl_att_prop_i(2,1,1,'AUTONUMBER',y).
 tbl_att_prop_i(2,1,2,'AllowNulls',n).
 tbl_att_prop_i(2,1,3,'AllowNulls',n).
 tbl_att_prop_i(2,1,40000,'AllowNulls',n).
  
 var_prop_i(2,'Cpaisid',idBasedOn,'',v).
+var_prop_i(2,'Cpaisid','ATT_INITIAL_VALUE',[ t('1',3) ],d).
 var_prop_i(2,'Cpaisnombre',idBasedOn,'',v).
 var_prop_i(2,'Ppaisid',idBasedOn,'',v).
+var_prop_i(2,'Ppaisid','ATT_INITIAL_VALUE',[ t('1',3) ],d).
  
  
  
@@ -917,7 +923,7 @@ sub_info_i(146,'Load',36,38,[ [],[ 'Linkselection' ] ]).
 sub_info_i(146,'Enter',40,43,[ [ 1 ],[ 'Ppaisid' ] ]).
  
  
-pgm_callprotocol_i(web,7,'GX0010','INTERNAL','Secure').
+pgm_callprotocol_i(web,85,'GX0010','INTERNAL','Secure').
  
  
  

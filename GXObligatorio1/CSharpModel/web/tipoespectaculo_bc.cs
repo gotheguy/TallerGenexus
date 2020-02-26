@@ -2,7 +2,7 @@
                File: TipoEspectaculo_BC
         Description: Tipo Espectaculo
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/17/2020 21:44:21.89
+       Generated on: 2/25/2020 21:45:24.36
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -131,11 +131,11 @@ namespace GeneXus.Programs {
 
       protected void ZM0811( short GX_JID )
       {
-         if ( ( GX_JID == 1 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 3 ) || ( GX_JID == 0 ) )
          {
             Z7TipoEspectaculoNombre = A7TipoEspectaculoNombre;
          }
-         if ( GX_JID == -1 )
+         if ( GX_JID == -3 )
          {
             Z6TipoEspectaculoId = A6TipoEspectaculoId;
             Z7TipoEspectaculoNombre = A7TipoEspectaculoNombre;
@@ -144,10 +144,15 @@ namespace GeneXus.Programs {
 
       protected void standaloneNotModal( )
       {
+         Gx_BScreen = 0;
       }
 
       protected void standaloneModal( )
       {
+         if ( IsIns( )  && (0==A6TipoEspectaculoId) && ( Gx_BScreen == 0 ) )
+         {
+            A6TipoEspectaculoId = 1;
+         }
       }
 
       protected void Load0811( )
@@ -158,7 +163,7 @@ namespace GeneXus.Programs {
          {
             RcdFound11 = 1;
             A7TipoEspectaculoNombre = BC00084_A7TipoEspectaculoNombre[0];
-            ZM0811( -1) ;
+            ZM0811( -3) ;
          }
          pr_default.close(2);
          OnLoadActions0811( ) ;
@@ -180,6 +185,11 @@ namespace GeneXus.Programs {
             AnyError = 1;
          }
          pr_default.close(3);
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( A7TipoEspectaculoNombre)) )
+         {
+            GX_msglist.addItem("Ingresa un nombre de tipo de espectáculo", 1, "");
+            AnyError = 1;
+         }
       }
 
       protected void CloseExtendedTableCursors0811( )
@@ -211,7 +221,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A6TipoEspectaculoId});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM0811( 1) ;
+            ZM0811( 3) ;
             RcdFound11 = 1;
             A6TipoEspectaculoId = BC00083_A6TipoEspectaculoId[0];
             A7TipoEspectaculoNombre = BC00083_A7TipoEspectaculoNombre[0];
@@ -310,14 +320,10 @@ namespace GeneXus.Programs {
                   if ( AnyError == 0 )
                   {
                      /* Using cursor BC00087 */
-                     pr_default.execute(5, new Object[] {A6TipoEspectaculoId, A7TipoEspectaculoNombre});
+                     pr_default.execute(5, new Object[] {A7TipoEspectaculoNombre});
+                     A6TipoEspectaculoId = BC00087_A6TipoEspectaculoId[0];
                      pr_default.close(5);
                      dsDefault.SmartCacheProvider.SetUpdated("TipoEspectaculo") ;
-                     if ( (pr_default.getStatus(5) == 1) )
-                     {
-                        GX_msglist.addItem(context.GetMessage( "GXM_noupdate", ""), "DuplicatePrimaryKey", 1, "");
-                        AnyError = 1;
-                     }
                      if ( AnyError == 0 )
                      {
                         /* Start of After( Insert) rules */
@@ -586,7 +592,7 @@ namespace GeneXus.Programs {
 
       protected void InitAll0811( )
       {
-         A6TipoEspectaculoId = 0;
+         A6TipoEspectaculoId = 1;
          InitializeNonKey0811( ) ;
       }
 
@@ -661,7 +667,7 @@ namespace GeneXus.Programs {
             Gx_mode = "UPD";
             Z6TipoEspectaculoId = A6TipoEspectaculoId;
          }
-         ZM0811( -1) ;
+         ZM0811( -3) ;
          OnLoadActions0811( ) ;
          AddRow0811( ) ;
          ScanKeyEnd0811( ) ;
@@ -690,7 +696,7 @@ namespace GeneXus.Programs {
             Gx_mode = "UPD";
             Z6TipoEspectaculoId = A6TipoEspectaculoId;
          }
-         ZM0811( -1) ;
+         ZM0811( -3) ;
          OnLoadActions0811( ) ;
          AddRow0811( ) ;
          ScanKeyEnd0811( ) ;
@@ -1060,6 +1066,7 @@ namespace GeneXus.Programs {
          sMode11 = "";
          BC00082_A6TipoEspectaculoId = new short[1] ;
          BC00082_A7TipoEspectaculoNombre = new String[] {""} ;
+         BC00087_A6TipoEspectaculoId = new short[1] ;
          BC000810_A34EspectaculoId = new short[1] ;
          BC000811_A6TipoEspectaculoId = new short[1] ;
          BC000811_A7TipoEspectaculoNombre = new String[] {""} ;
@@ -1083,6 +1090,7 @@ namespace GeneXus.Programs {
                BC00086_A6TipoEspectaculoId
                }
                , new Object[] {
+               BC00087_A6TipoEspectaculoId
                }
                , new Object[] {
                }
@@ -1096,6 +1104,8 @@ namespace GeneXus.Programs {
                }
             }
          );
+         Z6TipoEspectaculoId = 1;
+         A6TipoEspectaculoId = 1;
          INITTRN();
          /* Execute Start event if defined. */
          /* Execute user event: Start */
@@ -1110,6 +1120,7 @@ namespace GeneXus.Programs {
       private short Z6TipoEspectaculoId ;
       private short A6TipoEspectaculoId ;
       private short GX_JID ;
+      private short Gx_BScreen ;
       private short RcdFound11 ;
       private short nIsDirty_11 ;
       private int trnEnded ;
@@ -1132,6 +1143,7 @@ namespace GeneXus.Programs {
       private String[] BC00083_A7TipoEspectaculoNombre ;
       private short[] BC00082_A6TipoEspectaculoId ;
       private String[] BC00082_A7TipoEspectaculoNombre ;
+      private short[] BC00087_A6TipoEspectaculoId ;
       private short[] BC000810_A34EspectaculoId ;
       private short[] BC000811_A6TipoEspectaculoId ;
       private String[] BC000811_A7TipoEspectaculoNombre ;
@@ -1150,7 +1162,7 @@ namespace GeneXus.Programs {
          ,new ForEachCursor(def[2])
          ,new ForEachCursor(def[3])
          ,new ForEachCursor(def[4])
-         ,new UpdateCursor(def[5])
+         ,new ForEachCursor(def[5])
          ,new UpdateCursor(def[6])
          ,new UpdateCursor(def[7])
          ,new ForEachCursor(def[8])
@@ -1186,7 +1198,6 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmBC00087 ;
           prmBC00087 = new Object[] {
-          new Object[] {"@TipoEspectaculoId",SqlDbType.SmallInt,4,0} ,
           new Object[] {"@TipoEspectaculoNombre",SqlDbType.NChar,100,0}
           } ;
           Object[] prmBC00088 ;
@@ -1212,7 +1223,7 @@ namespace GeneXus.Programs {
              ,new CursorDef("BC00084", "SELECT TM1.[TipoEspectaculoId], TM1.[TipoEspectaculoNombre] FROM [TipoEspectaculo] TM1 WHERE TM1.[TipoEspectaculoId] = @TipoEspectaculoId ORDER BY TM1.[TipoEspectaculoId]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmBC00084,100, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("BC00085", "SELECT [TipoEspectaculoNombre] FROM [TipoEspectaculo] WHERE ([TipoEspectaculoNombre] = @TipoEspectaculoNombre) AND (Not ( [TipoEspectaculoId] = @TipoEspectaculoId)) ",true, GxErrorMask.GX_NOMASK, false, this,prmBC00085,1, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("BC00086", "SELECT [TipoEspectaculoId] FROM [TipoEspectaculo] WHERE [TipoEspectaculoId] = @TipoEspectaculoId  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmBC00086,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("BC00087", "INSERT INTO [TipoEspectaculo]([TipoEspectaculoId], [TipoEspectaculoNombre]) VALUES(@TipoEspectaculoId, @TipoEspectaculoNombre)", GxErrorMask.GX_NOMASK,prmBC00087)
+             ,new CursorDef("BC00087", "INSERT INTO [TipoEspectaculo]([TipoEspectaculoNombre]) VALUES(@TipoEspectaculoNombre); SELECT SCOPE_IDENTITY()", GxErrorMask.GX_NOMASK,prmBC00087)
              ,new CursorDef("BC00088", "UPDATE [TipoEspectaculo] SET [TipoEspectaculoNombre]=@TipoEspectaculoNombre  WHERE [TipoEspectaculoId] = @TipoEspectaculoId", GxErrorMask.GX_NOMASK,prmBC00088)
              ,new CursorDef("BC00089", "DELETE FROM [TipoEspectaculo]  WHERE [TipoEspectaculoId] = @TipoEspectaculoId", GxErrorMask.GX_NOMASK,prmBC00089)
              ,new CursorDef("BC000810", "SELECT TOP 1 [EspectaculoId] FROM [Espectaculo] WHERE [TipoEspectaculoId] = @TipoEspectaculoId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC000810,1, GxCacheFrequency.OFF ,true,true )
@@ -1243,6 +1254,9 @@ namespace GeneXus.Programs {
                 ((String[]) buf[0])[0] = rslt.getString(1, 100) ;
                 return;
              case 4 :
+                ((short[]) buf[0])[0] = rslt.getShort(1) ;
+                return;
+             case 5 :
                 ((short[]) buf[0])[0] = rslt.getShort(1) ;
                 return;
              case 8 :
@@ -1278,8 +1292,7 @@ namespace GeneXus.Programs {
                 stmt.SetParameter(1, (short)parms[0]);
                 return;
              case 5 :
-                stmt.SetParameter(1, (short)parms[0]);
-                stmt.SetParameter(2, (String)parms[1]);
+                stmt.SetParameter(1, (String)parms[0]);
                 return;
              case 6 :
                 stmt.SetParameter(1, (String)parms[0]);

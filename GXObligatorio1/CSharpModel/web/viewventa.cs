@@ -2,7 +2,7 @@
                File: ViewVenta
         Description: View Venta
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/18/2020 22:53:8.34
+       Generated on: 2/25/2020 21:45:27.56
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -187,11 +187,11 @@ namespace GeneXus.Programs {
 
       public override short ExecuteStartEvent( )
       {
-         PA1A2( ) ;
+         PA2K2( ) ;
          gxajaxcallmode = (short)((isAjaxCallMode( ) ? 1 : 0));
          if ( ( gxajaxcallmode == 0 ) && ( GxWebError == 0 ) )
          {
-            START1A2( ) ;
+            START2K2( ) ;
          }
          return gxajaxcallmode ;
       }
@@ -229,11 +229,14 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 138086), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 138086), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?20202182253837", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202022521452761", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
          }
+         context.AddJavascriptSource("calendar.js", "?"+context.GetBuildNumber( 138086), false, true);
+         context.AddJavascriptSource("calendar-setup.js", "?"+context.GetBuildNumber( 138086), false, true);
+         context.AddJavascriptSource("calendar-en.js", "?"+context.GetBuildNumber( 138086), false, true);
          context.AddJavascriptSource("Shared/HistoryManager/HistoryManager.js", "", false, true);
          context.AddJavascriptSource("Shared/HistoryManager/rsh/json2005.js", "", false, true);
          context.AddJavascriptSource("Shared/HistoryManager/rsh/rsh.js", "", false, true);
@@ -277,6 +280,11 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "gxhash_vVENTAID", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV12VentaId), "ZZZ9"), context));
          GxWebStd.gx_hidden_field( context, "gxhash_vTABCODE", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( AV6TabCode, "")), context));
          GXKey = Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
+         forbiddenHiddens = new GXProperties();
+         forbiddenHiddens.Add("hshsalt", "hsh"+"ViewVenta");
+         forbiddenHiddens.Add("VentaFecha", context.localUtil.Format(A38VentaFecha, "99/99/9999"));
+         GxWebStd.gx_hidden_field( context, "hsh", GetEncryptedHash( forbiddenHiddens.ToString(), GXKey));
+         GXUtil.WriteLog("viewventa:[ SendSecurityCheck value for]"+forbiddenHiddens.ToJSonString());
       }
 
       protected void SendCloseFormHiddens( )
@@ -330,14 +338,14 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<div") ;
             GxWebStd.ClassAttribute( context, "gx-ct-body"+" "+(String.IsNullOrEmpty(StringUtil.RTrim( Form.Class)) ? "form-horizontal Form" : Form.Class)+"-fx");
             context.WriteHtmlText( ">") ;
-            WE1A2( ) ;
+            WE2K2( ) ;
             context.WriteHtmlText( "</div>") ;
          }
       }
 
       public override void DispatchEvents( )
       {
-         EVT1A2( ) ;
+         EVT2K2( ) ;
       }
 
       public override bool HasEnterEvent( )
@@ -365,7 +373,7 @@ namespace GeneXus.Programs {
          return "View Venta" ;
       }
 
-      protected void WB1A0( )
+      protected void WB2K0( )
       {
          if ( context.isAjaxRequest( ) )
          {
@@ -416,17 +424,16 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 col-sm-6", "left", "top", "", "", "div");
             /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "left", "top", ""+" data-gx-for=\""+imgVentaFecha_Internalname+"\"", "", "div");
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "left", "top", ""+" data-gx-for=\""+edtVentaFecha_Internalname+"\"", "", "div");
             /* Attribute/Variable Label */
-            GxWebStd.gx_label_element( context, "", "Fecha", "col-sm-3 ReadonlyAttributeLabel ReadonlyResponsiveImageAttributeLabel", 1, true);
+            GxWebStd.gx_label_element( context, edtVentaFecha_Internalname, "Fecha", "col-sm-3 ReadonlyAttributeLabel", 1, true);
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
-            /* Static Bitmap Variable */
-            ClassString = "ReadonlyAttribute ReadonlyResponsiveImageAttribute";
-            StyleString = "";
-            A38VentaFecha_IsBlob = (bool)((String.IsNullOrEmpty(StringUtil.RTrim( A38VentaFecha))&&String.IsNullOrEmpty(StringUtil.RTrim( A40000VentaFecha_GXI)))||!String.IsNullOrEmpty(StringUtil.RTrim( A38VentaFecha)));
-            sImgUrl = (String.IsNullOrEmpty(StringUtil.RTrim( A38VentaFecha)) ? A40000VentaFecha_GXI : context.PathToRelativeUrl( A38VentaFecha));
-            GxWebStd.gx_bitmap( context, imgVentaFecha_Internalname, sImgUrl, "", "", "", context.GetTheme( ), 1, 0, "", "", 1, -1, 0, "", 0, "", 0, 0, 0, "", "", StyleString, ClassString, "", "", "", "", "", "", "", 1, A38VentaFecha_IsBlob, true, context.GetImageSrcSet( sImgUrl), "HLP_ViewVenta.htm");
+            /* Single line edit */
+            context.WriteHtmlText( "<div id=\""+edtVentaFecha_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
+            GxWebStd.gx_single_line_edit( context, edtVentaFecha_Internalname, context.localUtil.Format(A38VentaFecha, "99/99/9999"), context.localUtil.Format( A38VentaFecha, "99/99/9999"), "", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtVentaFecha_Jsonclick, 0, "ReadonlyAttribute", "", "", "", "", 1, edtVentaFecha_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_ViewVenta.htm");
+            GxWebStd.gx_bitmap( context, edtVentaFecha_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtVentaFecha_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_ViewVenta.htm");
+            context.WriteHtmlTextNl( "</div>") ;
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -492,7 +499,7 @@ namespace GeneXus.Programs {
          wbLoad = true;
       }
 
-      protected void START1A2( )
+      protected void START2K2( )
       {
          wbLoad = false;
          wbEnd = 0;
@@ -509,16 +516,16 @@ namespace GeneXus.Programs {
          {
          }
          wbErr = false;
-         STRUP1A0( ) ;
+         STRUP2K0( ) ;
       }
 
-      protected void WS1A2( )
+      protected void WS2K2( )
       {
-         START1A2( ) ;
-         EVT1A2( ) ;
+         START2K2( ) ;
+         EVT2K2( ) ;
       }
 
-      protected void EVT1A2( )
+      protected void EVT2K2( )
       {
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
          {
@@ -550,14 +557,14 @@ namespace GeneXus.Programs {
                               context.wbHandled = 1;
                               dynload_actions( ) ;
                               /* Execute user event: Start */
-                              E111A2 ();
+                              E112K2 ();
                            }
                            else if ( StringUtil.StrCmp(sEvt, "LOAD") == 0 )
                            {
                               context.wbHandled = 1;
                               dynload_actions( ) ;
                               /* Execute user event: Load */
-                              E121A2 ();
+                              E122K2 ();
                            }
                            else if ( StringUtil.StrCmp(sEvt, "ENTER") == 0 )
                            {
@@ -612,7 +619,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void WE1A2( )
+      protected void WE2K2( )
       {
          if ( ! GxWebStd.gx_redirect( context) )
          {
@@ -628,7 +635,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void PA1A2( )
+      protected void PA2K2( )
       {
          if ( nDonePA == 0 )
          {
@@ -681,7 +688,7 @@ namespace GeneXus.Programs {
       public void Refresh( )
       {
          send_integrity_hashes( ) ;
-         RF1A2( ) ;
+         RF2K2( ) ;
          if ( isFullAjaxMode( ) )
          {
             send_integrity_footer_hashes( ) ;
@@ -695,7 +702,7 @@ namespace GeneXus.Programs {
          context.Gx_err = 0;
       }
 
-      protected void RF1A2( )
+      protected void RF2K2( )
       {
          initialize_formulas( ) ;
          clear_multi_value_controls( ) ;
@@ -714,33 +721,28 @@ namespace GeneXus.Programs {
          gxdyncontrolsrefreshing = false;
          if ( ! context.WillRedirect( ) && ( context.nUserReturn != 1 ) )
          {
-            /* Using cursor H001A2 */
+            /* Using cursor H002K2 */
             pr_default.execute(0, new Object[] {AV12VentaId});
             while ( (pr_default.getStatus(0) != 101) )
             {
-               A37VentaId = H001A2_A37VentaId[0];
-               A40000VentaFecha_GXI = H001A2_A40000VentaFecha_GXI[0];
-               AssignProp("", false, imgVentaFecha_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A38VentaFecha)) ? A40000VentaFecha_GXI : context.convertURL( context.PathToRelativeUrl( A38VentaFecha))), true);
-               AssignProp("", false, imgVentaFecha_Internalname, "SrcSet", context.GetImageSrcSet( A38VentaFecha), true);
-               A38VentaFecha = H001A2_A38VentaFecha[0];
-               AssignAttri("", false, "A38VentaFecha", A38VentaFecha);
-               AssignProp("", false, imgVentaFecha_Internalname, "Bitmap", (String.IsNullOrEmpty(StringUtil.RTrim( A38VentaFecha)) ? A40000VentaFecha_GXI : context.convertURL( context.PathToRelativeUrl( A38VentaFecha))), true);
-               AssignProp("", false, imgVentaFecha_Internalname, "SrcSet", context.GetImageSrcSet( A38VentaFecha), true);
+               A37VentaId = H002K2_A37VentaId[0];
+               A38VentaFecha = H002K2_A38VentaFecha[0];
+               AssignAttri("", false, "A38VentaFecha", context.localUtil.Format(A38VentaFecha, "99/99/9999"));
                /* Execute user event: Load */
-               E121A2 ();
+               E122K2 ();
                /* Exiting from a For First loop. */
                if (true) break;
             }
             pr_default.close(0);
-            WB1A0( ) ;
+            WB2K0( ) ;
          }
       }
 
-      protected void send_integrity_lvl_hashes1A2( )
+      protected void send_integrity_lvl_hashes2K2( )
       {
       }
 
-      protected void STRUP1A0( )
+      protected void STRUP2K0( )
       {
          /* Before Start, stand alone formulas. */
          AV15Pgmname = "ViewVenta";
@@ -748,7 +750,7 @@ namespace GeneXus.Programs {
          /* Execute Start event if defined. */
          context.wbGlbDoneStart = 0;
          /* Execute user event: Start */
-         E111A2 ();
+         E112K2 ();
          context.wbGlbDoneStart = 1;
          /* After Start, stand alone formulas. */
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
@@ -763,11 +765,29 @@ namespace GeneXus.Programs {
             Tab_Class = cgiGet( "TAB_Class");
             Tab_Historymanagement = StringUtil.StrToBool( cgiGet( "TAB_Historymanagement"));
             /* Read variables values. */
-            A38VentaFecha = cgiGet( imgVentaFecha_Internalname);
-            AssignAttri("", false, "A38VentaFecha", A38VentaFecha);
+            A38VentaFecha = context.localUtil.CToD( cgiGet( edtVentaFecha_Internalname), 1);
+            AssignAttri("", false, "A38VentaFecha", context.localUtil.Format(A38VentaFecha, "99/99/9999"));
             /* Read subfile selected row values. */
             /* Read hidden variables. */
             GXKey = Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
+            forbiddenHiddens = new GXProperties();
+            forbiddenHiddens.Add("hshsalt", "hsh"+"ViewVenta");
+            A38VentaFecha = context.localUtil.CToD( cgiGet( edtVentaFecha_Internalname), 1);
+            AssignAttri("", false, "A38VentaFecha", context.localUtil.Format(A38VentaFecha, "99/99/9999"));
+            forbiddenHiddens.Add("VentaFecha", context.localUtil.Format(A38VentaFecha, "99/99/9999"));
+            hsh = cgiGet( "hsh");
+            if ( ! GXUtil.CheckEncryptedHash( forbiddenHiddens.ToString(), hsh, GXKey) )
+            {
+               GXUtil.WriteLog("viewventa:[ SecurityCheckFailed value for]"+forbiddenHiddens.ToJSonString());
+               GxWebError = 1;
+               context.HttpContext.Response.StatusDescription = 403.ToString();
+               context.HttpContext.Response.StatusCode = 403;
+               context.WriteHtmlText( "<title>403 Forbidden</title>") ;
+               context.WriteHtmlText( "<h1>403 Forbidden</h1>") ;
+               context.WriteHtmlText( "<p /><hr />") ;
+               GXUtil.WriteLog("send_http_error_code " + 403.ToString());
+               return  ;
+            }
          }
          else
          {
@@ -778,7 +798,7 @@ namespace GeneXus.Programs {
       protected void GXStart( )
       {
          /* Execute user event: Start */
-         E111A2 ();
+         E112K2 ();
          if ( returnInSub )
          {
             returnInSub = true;
@@ -786,7 +806,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      protected void E111A2( )
+      protected void E112K2( )
       {
          /* Start Routine */
          if ( ! new isauthorized(context).executeUdp(  AV15Pgmname) )
@@ -795,13 +815,15 @@ namespace GeneXus.Programs {
             context.wjLocDisableFrm = 1;
          }
          AV16GXLvl6 = 0;
-         /* Using cursor H001A3 */
+         /* Using cursor H002K3 */
          pr_default.execute(1, new Object[] {AV12VentaId});
          while ( (pr_default.getStatus(1) != 101) )
          {
-            A37VentaId = H001A3_A37VentaId[0];
+            A37VentaId = H002K3_A37VentaId[0];
+            A38VentaFecha = H002K3_A38VentaFecha[0];
+            AssignAttri("", false, "A38VentaFecha", context.localUtil.Format(A38VentaFecha, "99/99/9999"));
             AV16GXLvl6 = 1;
-            Form.Caption = "Venta";
+            Form.Caption = context.localUtil.DToC( A38VentaFecha, 1, "/");
             AssignProp("", false, "FORM", "Caption", Form.Caption, true);
             lblViewall_Link = formatLink("wwventa.aspx") ;
             AssignProp("", false, lblViewall_Internalname, "Link", lblViewall_Link, true);
@@ -868,7 +890,7 @@ namespace GeneXus.Programs {
       {
       }
 
-      protected void E121A2( )
+      protected void E122K2( )
       {
          /* Load Routine */
       }
@@ -894,9 +916,9 @@ namespace GeneXus.Programs {
          nGotPars = (short)(1);
          nGXWrapped = (short)(1);
          context.SetWrapped(true);
-         PA1A2( ) ;
-         WS1A2( ) ;
-         WE1A2( ) ;
+         PA2K2( ) ;
+         WS2K2( ) ;
+         WE2K2( ) ;
          this.cleanup();
          context.SetWrapped(false);
          context.GX_msglist = BackMsgLst;
@@ -909,6 +931,7 @@ namespace GeneXus.Programs {
 
       protected void define_styles( )
       {
+         AddStyleSheetFile("calendar-system.css", "");
          AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?"+GetCacheInvalidationToken( ));
          if ( ! ( WebComp_Generalwc == null ) )
          {
@@ -925,7 +948,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20202182253854", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202022521452782", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -941,7 +964,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("viewventa.js", "?20202182253854", false, true);
+         context.AddJavascriptSource("viewventa.js", "?202022521452782", false, true);
          context.AddJavascriptSource("Shared/HistoryManager/HistoryManager.js", "", false, true);
          context.AddJavascriptSource("Shared/HistoryManager/rsh/json2005.js", "", false, true);
          context.AddJavascriptSource("Shared/HistoryManager/rsh/rsh.js", "", false, true);
@@ -960,7 +983,7 @@ namespace GeneXus.Programs {
          lblViewtitle_Internalname = "VIEWTITLE";
          lblViewall_Internalname = "VIEWALL";
          divTabletop_Internalname = "TABLETOP";
-         imgVentaFecha_Internalname = "VENTAFECHA";
+         edtVentaFecha_Internalname = "VENTAFECHA";
          divTabtable_1_Internalname = "TABTABLE_1";
          lblGeneral_title_Internalname = "GENERAL_TITLE";
          divTablegeneral_Internalname = "TABLEGENERAL";
@@ -977,6 +1000,8 @@ namespace GeneXus.Programs {
             disableJsOutput();
          }
          init_default_properties( ) ;
+         edtVentaFecha_Jsonclick = "";
+         edtVentaFecha_Enabled = 0;
          lblViewall_Link = "";
          lblViewall_Visible = 1;
          Tab_Historymanagement = Convert.ToBoolean( -1);
@@ -1000,7 +1025,7 @@ namespace GeneXus.Programs {
 
       public override void InitializeDynEvents( )
       {
-         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'AV12VentaId',fld:'vVENTAID',pic:'ZZZ9',hsh:true},{av:'AV6TabCode',fld:'vTABCODE',pic:'',hsh:true}]");
+         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'AV12VentaId',fld:'vVENTAID',pic:'ZZZ9',hsh:true},{av:'AV6TabCode',fld:'vTABCODE',pic:'',hsh:true},{av:'A38VentaFecha',fld:'VENTAFECHA',pic:''}]");
          setEventMetadata("REFRESH",",oparms:[]}");
          return  ;
       }
@@ -1029,17 +1054,14 @@ namespace GeneXus.Programs {
          FormProcess = "";
          bodyStyle = "";
          GXKey = "";
+         forbiddenHiddens = new GXProperties();
+         A38VentaFecha = DateTime.MinValue;
          AV7SelectedTabCode = "";
          GX_FocusControl = "";
          Form = new GXWebForm();
          sPrefix = "";
          lblViewtitle_Jsonclick = "";
          lblViewall_Jsonclick = "";
-         ClassString = "";
-         StyleString = "";
-         A38VentaFecha = "";
-         A40000VentaFecha_GXI = "";
-         sImgUrl = "";
          ucTab = new GXUserControl();
          lblGeneral_title_Jsonclick = "";
          WebComp_Generalwc_Component = "";
@@ -1050,19 +1072,20 @@ namespace GeneXus.Programs {
          sEvtType = "";
          AV15Pgmname = "";
          scmdbuf = "";
-         H001A2_A37VentaId = new short[1] ;
-         H001A2_A40000VentaFecha_GXI = new String[] {""} ;
-         H001A2_A38VentaFecha = new String[] {""} ;
-         H001A3_A37VentaId = new short[1] ;
+         H002K2_A37VentaId = new short[1] ;
+         H002K2_A38VentaFecha = new DateTime[] {DateTime.MinValue} ;
+         hsh = "";
+         H002K3_A37VentaId = new short[1] ;
+         H002K3_A38VentaFecha = new DateTime[] {DateTime.MinValue} ;
          BackMsgLst = new msglist();
          LclMsgLst = new msglist();
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.viewventa__default(),
             new Object[][] {
                 new Object[] {
-               H001A2_A37VentaId, H001A2_A40000VentaFecha_GXI, H001A2_A38VentaFecha
+               H002K2_A37VentaId, H002K2_A38VentaFecha
                }
                , new Object[] {
-               H001A3_A37VentaId
+               H002K3_A37VentaId, H002K3_A38VentaFecha
                }
             }
          );
@@ -1091,6 +1114,7 @@ namespace GeneXus.Programs {
       private short nGXWrapped ;
       private int Tab_Pagecount ;
       private int lblViewall_Visible ;
+      private int edtVentaFecha_Enabled ;
       private int idxLst ;
       private String AV6TabCode ;
       private String wcpOAV6TabCode ;
@@ -1113,10 +1137,8 @@ namespace GeneXus.Programs {
       private String lblViewall_Link ;
       private String lblViewall_Jsonclick ;
       private String divTabtable_1_Internalname ;
-      private String imgVentaFecha_Internalname ;
-      private String ClassString ;
-      private String StyleString ;
-      private String sImgUrl ;
+      private String edtVentaFecha_Internalname ;
+      private String edtVentaFecha_Jsonclick ;
       private String Tab_Internalname ;
       private String lblGeneral_title_Internalname ;
       private String lblGeneral_title_Jsonclick ;
@@ -1129,27 +1151,27 @@ namespace GeneXus.Programs {
       private String sEvtType ;
       private String AV15Pgmname ;
       private String scmdbuf ;
+      private String hsh ;
+      private DateTime A38VentaFecha ;
       private bool entryPointCalled ;
       private bool toggleJsOutput ;
       private bool AV11LoadAllTabs ;
       private bool Tab_Historymanagement ;
       private bool wbLoad ;
-      private bool A38VentaFecha_IsBlob ;
       private bool Rfr0gs ;
       private bool wbErr ;
       private bool gxdyncontrolsrefreshing ;
       private bool returnInSub ;
       private bool AV10Exists ;
-      private String A40000VentaFecha_GXI ;
-      private String A38VentaFecha ;
       private GXWebComponent WebComp_Generalwc ;
+      private GXProperties forbiddenHiddens ;
       private GXUserControl ucTab ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
-      private short[] H001A2_A37VentaId ;
-      private String[] H001A2_A40000VentaFecha_GXI ;
-      private String[] H001A2_A38VentaFecha ;
-      private short[] H001A3_A37VentaId ;
+      private short[] H002K2_A37VentaId ;
+      private DateTime[] H002K2_A38VentaFecha ;
+      private short[] H002K3_A37VentaId ;
+      private DateTime[] H002K3_A38VentaFecha ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
       private GXWebForm Form ;
@@ -1171,17 +1193,17 @@ namespace GeneXus.Programs {
     {
        if ( def == null )
        {
-          Object[] prmH001A2 ;
-          prmH001A2 = new Object[] {
+          Object[] prmH002K2 ;
+          prmH002K2 = new Object[] {
           new Object[] {"@AV12VentaId",SqlDbType.SmallInt,4,0}
           } ;
-          Object[] prmH001A3 ;
-          prmH001A3 = new Object[] {
+          Object[] prmH002K3 ;
+          prmH002K3 = new Object[] {
           new Object[] {"@AV12VentaId",SqlDbType.SmallInt,4,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("H001A2", "SELECT [VentaId], [VentaFecha_GXI], [VentaFecha] FROM [Venta] WHERE [VentaId] = @AV12VentaId ORDER BY [VentaId] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH001A2,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("H001A3", "SELECT [VentaId] FROM [Venta] WHERE [VentaId] = @AV12VentaId ORDER BY [VentaId] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH001A3,1, GxCacheFrequency.OFF ,false,true )
+              new CursorDef("H002K2", "SELECT [VentaId], [VentaFecha] FROM [Venta] WHERE [VentaId] = @AV12VentaId ORDER BY [VentaId] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002K2,1, GxCacheFrequency.OFF ,true,true )
+             ,new CursorDef("H002K3", "SELECT [VentaId], [VentaFecha] FROM [Venta] WHERE [VentaId] = @AV12VentaId ORDER BY [VentaId] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH002K3,1, GxCacheFrequency.OFF ,false,true )
           };
        }
     }
@@ -1194,11 +1216,11 @@ namespace GeneXus.Programs {
        {
              case 0 :
                 ((short[]) buf[0])[0] = rslt.getShort(1) ;
-                ((String[]) buf[1])[0] = rslt.getMultimediaUri(2) ;
-                ((String[]) buf[2])[0] = rslt.getMultimediaFile(3, rslt.getVarchar(2)) ;
+                ((DateTime[]) buf[1])[0] = rslt.getGXDate(2) ;
                 return;
              case 1 :
                 ((short[]) buf[0])[0] = rslt.getShort(1) ;
+                ((DateTime[]) buf[1])[0] = rslt.getGXDate(2) ;
                 return;
        }
     }

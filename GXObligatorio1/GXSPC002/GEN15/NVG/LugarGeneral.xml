@@ -23,7 +23,22 @@
 <AttriId>8</AttriId>
 <AttriName>LugarId</AttriName>
 <Description>Lugar Id</Description></Attribute></Parameter></Parameters>
-<StandAloneRules></StandAloneRules>
+<StandAloneRules>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>42</AttriId>
+<AttriName>CantEspectaculosLugar</AttriName>
+<Description>Cant Espectaculos Lugar</Description></Attribute></FormulaName>
+<FormulaExpression>
+<Token>GetCantEspectaculosLugar</Token>
+<Token>(</Token>
+<Attribute>
+<AttriId>8</AttriId>
+<AttriName>LugarId</AttriName>
+<Description>Lugar Id</Description></Attribute>
+<Token>)</Token></FormulaExpression></Action></StandAloneRules>
 <Event>
 <EventName>Start</EventName>
 <CALL>

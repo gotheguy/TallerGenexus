@@ -1,6 +1,6 @@
 spec_i([ web,56,'Tipo Espectaculo Espectaculo WC','TipoEspectaculoEspectaculoWC',0,eng,'16_0_7-138086' ]).
  
-struct_i(2,1,[ 'Pgmname','Update','Delete' ],[]).
+struct_i(2,1,[ 'Pgmname','Update','Delete','Tipoespectaculoid' ],[]).
  
 level_i(2,[ 7,[ [ 7,many ],[ 4,one ] ],[],[],[ [ [ 7,4 ],[ 6,10,40000,9,8,36,35,34 ] ] ],[ [ [ 7,4 ],[] ] ],[ 6 ],'IESPECTACULO3',[ 7,[ [ [],'Tipoespectaculoid',6 ] ] ],[] ]).
  
@@ -20,16 +20,16 @@ lac_i(2,[ [ 'Update','Delete' ] ]).
  
  
  
-cls_i([ 0,0 ],[ 2,1286 ]).
+cls_i([ 0,0 ],[ 2,1288 ]).
  
 pos_i(34,[ 1,2,0 ]).
 pos_i(35,[ 1,2,5 ]).
 pos_i(36,[ 1,2,106 ]).
-pos_i(8,[ 1,2,115 ]).
-pos_i(9,[ 1,2,120 ]).
-pos_i(10,[ 1,2,221 ]).
-pos_i('Update',[ 1,2,1246 ]).
-pos_i('Delete',[ 1,2,1267 ]).
+pos_i(8,[ 1,2,117 ]).
+pos_i(9,[ 1,2,122 ]).
+pos_i(10,[ 1,2,223 ]).
+pos_i('Update',[ 1,2,1248 ]).
+pos_i('Delete',[ 1,2,1269 ]).
 pos_i(6,[ 0,0,0 ]).
  
 repeat_i(2,[ 1,2,[ 34,35,36,8,9,10,'Update','Delete' ],[ 'Update','Delete' ] ]).
@@ -169,7 +169,7 @@ attri_i(6,[ 'TipoEspectaculoId',int,4,0,'ZZZ9',0,'Tipo Espectaculo Id','',0 ]).
 attri_i(10,[ 'LugarFoto',bits,4,0,'',0,'Lugar Foto','',0 ]).
 attri_i(9,[ 'LugarNombre',char,100,0,'',0,'Lugar Nombre','',0 ]).
 attri_i(8,[ 'LugarId',int,4,0,'ZZZ9',0,'Lugar Id','',0 ]).
-attri_i(36,[ 'EspectaculoFecha',date,8,0,'99/99/99',0,'Espectaculo Fecha','',0 ]).
+attri_i(36,[ 'EspectaculoFecha',date,8,0,'99/99/9999',0,'Espectaculo Fecha','',0 ]).
 attri_i(35,[ 'EspectaculoNombre',char,100,0,'',0,'Espectaculo Nombre','',0 ]).
 attri_i(34,[ 'EspectaculoId',int,4,0,'ZZZ9',0,'Espectaculo Id','',0 ]).
 attri_i('Pgmname',[ 'Pgmname',char,129,0,'',1,'Program name','',16 ]).
@@ -553,7 +553,7 @@ html_comp_i(22,'Colvisible',-1,v,[ bool ]).
 html_comp_i(22,'Title','',d,[ str ]).
 html_comp_i(22,'Invitemsg','',d,[ str ]).
 html_comp_i(23,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(23,'Colcount',8,d,[ num ]).
+html_comp_i(23,'Colcount',10,d,[ num ]).
 html_comp_i(23,'Colattid',36,v,[ num ]).
 html_comp_i(23,'Controlname','Espectaculofecha',d,[ str ]).
 html_comp_i(23,'Class','Attribute',v,[ str ]).
@@ -834,8 +834,11 @@ att_prop_i(2,34,'ExternalName','EspectaculoId',d).
 att_prop_i(2,34,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,34,'EmptyAsNull','Yes',d).
 att_prop_i(2,34,idBasedOn,71,v).
-att_prop_i(2,34,'AUTONUMBER','0',d).
-att_prop_i(2,34,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,34,'AUTONUMBER','-1',v).
+att_prop_i(2,34,'AUTONUMBER_START','1',d).
+att_prop_i(2,34,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,34,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,34,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,34,'AttRegEx','',d).
 att_prop_i(2,34,'AttValidationFailedMsg','',d).
 att_prop_i(2,34,'DownloadOffline','0',d).
@@ -857,15 +860,18 @@ att_prop_i(2,36,idBasedOn,'',d).
 att_prop_i(2,36,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,36,'AttRegEx','',d).
 att_prop_i(2,36,'AttValidationFailedMsg','',d).
-att_prop_i(2,36,idDATEFORMAT,idDATEFORMAT_SHORT,d).
+att_prop_i(2,36,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,36,'DownloadOffline','0',d).
 att_prop_i(2,36,'FullName','EspectaculoFecha',v).
 att_prop_i(2,8,'ExternalName','LugarId',d).
 att_prop_i(2,8,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,8,'EmptyAsNull','Yes',d).
 att_prop_i(2,8,idBasedOn,71,v).
-att_prop_i(2,8,'AUTONUMBER','0',d).
-att_prop_i(2,8,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,8,'AUTONUMBER','-1',v).
+att_prop_i(2,8,'AUTONUMBER_START','1',d).
+att_prop_i(2,8,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,8,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,8,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,8,'AttRegEx','',d).
 att_prop_i(2,8,'AttValidationFailedMsg','',d).
 att_prop_i(2,8,'DownloadOffline','0',d).
@@ -894,8 +900,11 @@ att_prop_i(2,6,'ExternalName','TipoEspectaculoId',d).
 att_prop_i(2,6,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,6,'EmptyAsNull','Yes',d).
 att_prop_i(2,6,idBasedOn,71,v).
-att_prop_i(2,6,'AUTONUMBER','0',d).
-att_prop_i(2,6,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,6,'AUTONUMBER','-1',v).
+att_prop_i(2,6,'AUTONUMBER_START','1',d).
+att_prop_i(2,6,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,6,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,6,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,6,'AttRegEx','',d).
 att_prop_i(2,6,'AttValidationFailedMsg','',d).
 att_prop_i(2,6,'DownloadOffline','0',d).
@@ -915,16 +924,19 @@ tbl_prop_i(2,4,'DirSubor',[ [ 7,[ 8 ] ] ],v).
 tbl_prop_i(2,7,'DirSuper',[ [ 4,[ 8 ] ] ],v).
  
 tbl_att_prop_i(2,7,34,'AllowNulls',n).
+tbl_att_prop_i(2,7,34,'AUTONUMBER',y).
 tbl_att_prop_i(2,7,35,'AllowNulls',n).
 tbl_att_prop_i(2,7,36,'AllowNulls',n).
 tbl_att_prop_i(2,7,8,'AllowNulls',n).
 tbl_att_prop_i(2,7,6,'AllowNulls',n).
 tbl_att_prop_i(2,4,8,'AllowNulls',n).
+tbl_att_prop_i(2,4,8,'AUTONUMBER',y).
 tbl_att_prop_i(2,4,9,'AllowNulls',n).
 tbl_att_prop_i(2,4,10,'AllowNulls',n).
 tbl_att_prop_i(2,4,40000,'AllowNulls',n).
  
 var_prop_i(2,'Tipoespectaculoid',idBasedOn,'',v).
+var_prop_i(2,'Tipoespectaculoid','ATT_INITIAL_VALUE',[ t('1',3) ],d).
  
  
  
@@ -1057,6 +1069,8 @@ struct_dt_elem_i([ 26,50,78 ],2,soaptype,'').
 struct_dt_elem_i([ 26,50,78 ],2,'XmlInclude',idXmlIncludeAlways).
 struct_dt_elem_i([ 26,50,78 ],2,'JsonName','').
 struct_dt_elem_i([ 26,50,78 ],2,'JsonInclude',idJsonEmpty).
+struct_dt_elem_i([ 26,50,0 ],1,pic,'ZZZ9').
+struct_dt_elem_i([ 26,50,0 ],4,pic,'ZZZ9').
  
  
  

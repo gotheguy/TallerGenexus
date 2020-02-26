@@ -26,36 +26,52 @@
 <TableId>4</TableId>
 <TableName>Lugar</TableName>
 <Description>Lugar</Description></Table></BaseTable>
-<NavigationTree>
+<StandAloneRules>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Variable>
+<VarId>GxBScreen</VarId>
+<VarName>&amp;Gxbscreen</VarName></Variable></FormulaName>
+<FormulaExpression>
+<Token>0</Token></FormulaExpression></Action></StandAloneRules>
+<BaseTableRule>
+<Action>
+<ActionType>ReadBaseTable</ActionType>
 <Table>
 <TableId>4</TableId>
 <TableName>Lugar</TableName>
-<Description>Lugar</Description>
-<Updated>Yes</Updated>
-<RecordsToRead>many</RecordsToRead>
-<KeyAttributes>
+<Description>Lugar</Description></Table>
+<JoinConditions>
+<Table>
+<TableId>4</TableId>
+<TableName>Lugar</TableName>
+<Description>Lugar</Description></Table>
+<JoinCondition>
+<AttributeTo>
 <Attribute>
 <AttriId>8</AttriId>
 <AttriName>LugarId</AttriName>
-<Description>Lugar Id</Description></Attribute></KeyAttributes>
-<Tables>
-<Table>
-<TableId>1</TableId>
-<TableName>Pais</TableName>
-<Description>Pais</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
+<Description>Lugar Id</Description></Attribute></AttributeTo>
+<Table></Table>
+<AttributeFrom>
 <Attribute>
-<AttriId>1</AttriId>
-<AttriName>PaisId</AttriName>
-<Description>Pais Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table>
-<Table>
-<TableId>2</TableId>
-<TableName>PaisCiudad</TableName>
-<Description>Ciudad</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
+<AttriId>8</AttriId>
+<AttriName>LugarId</AttriName>
+<Description>Lugar Id</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
+<Into>
+<Attribute>
+<AttriId>9</AttriId>
+<AttriName>LugarNombre</AttriName>
+<Description>Lugar Nombre</Description></Attribute>
+<Attribute>
+<AttriId>10</AttriId>
+<AttriName>LugarFoto</AttriName>
+<Description>Lugar Foto</Description></Attribute>
+<Attribute>
+<AttriId>40000</AttriId>
+<AttriName>LugarFoto.Uri  </AttriName>
+<Description></Description></Attribute>
 <Attribute>
 <AttriId>1</AttriId>
 <AttriName>PaisId</AttriName>
@@ -63,14 +79,173 @@
 <Attribute>
 <AttriId>4</AttriId>
 <AttriName>CiudadId</AttriName>
-<Description>Ciudad Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table></Tables></Table></NavigationTree>
-<Formulas>
-<VerticalFormulas></VerticalFormulas>
-<AggSelFormulas></AggSelFormulas></Formulas>
-<DynamicLoads></DynamicLoads>
-<Rules></Rules>
-<AfterAttributeRules></AfterAttributeRules>
+<Description>Ciudad Id</Description></Attribute></Into></Action></BaseTableRule>
+<StandAloneWithModeRules>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>PaisId</AttriName>
+<Description>Pais Id</Description></Attribute></FormulaName>
+<FormulaExpression>
+<Token>1</Token>
+<Token>IF</Token>
+<Token>insert</Token>
+<Token>and</Token>
+<Token>null1(</Token>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>PaisId</AttriName>
+<Description>Pais Id</Description></Attribute>
+<Token>)</Token>
+<Token>and</Token>
+<Variable>
+<VarId>GxBScreen</VarId>
+<VarName>&amp;Gxbscreen</VarName></Variable>
+<Token>=</Token>
+<Token>0</Token>
+<Token>;</Token></FormulaExpression></Action>
+<Action>
+<ActionType>ReadTable</ActionType>
+<Table>
+<TableId>1</TableId>
+<TableName>Pais</TableName>
+<Description>Pais</Description></Table>
+<JoinConditions>
+<Table>
+<TableId>1</TableId>
+<TableName>Pais</TableName>
+<Description>Pais</Description></Table>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>PaisId</AttriName>
+<Description>Pais Id</Description></Attribute></AttributeTo>
+<Table>
+<TableId>4</TableId>
+<TableName>Lugar</TableName>
+<Description>Lugar</Description></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>PaisId</AttriName>
+<Description>Pais Id</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
+<Into>
+<Attribute>
+<AttriId>2</AttriId>
+<AttriName>PaisNombre</AttriName>
+<Description>Pais Nombre</Description></Attribute>
+<Attribute>
+<AttriId>3</AttriId>
+<AttriName>PaisBandera</AttriName>
+<Description>Pais Bandera</Description></Attribute>
+<Attribute>
+<AttriId>40001</AttriId>
+<AttriName>PaisBandera.Uri  </AttriName>
+<Description></Description></Attribute></Into></Action>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>8</AttriId>
+<AttriName>LugarId</AttriName>
+<Description>Lugar Id</Description></Attribute></FormulaName>
+<FormulaExpression>
+<Token>1</Token>
+<Token>IF</Token>
+<Token>insert</Token>
+<Token>and</Token>
+<Token>null1(</Token>
+<Attribute>
+<AttriId>8</AttriId>
+<AttriName>LugarId</AttriName>
+<Description>Lugar Id</Description></Attribute>
+<Token>)</Token>
+<Token>and</Token>
+<Variable>
+<VarId>GxBScreen</VarId>
+<VarName>&amp;Gxbscreen</VarName></Variable>
+<Token>=</Token>
+<Token>0</Token>
+<Token>;</Token></FormulaExpression></Action></StandAloneWithModeRules>
+<Rules>
+<Action>
+<ActionType>Formula</ActionType>
+<FormulaName>
+<Attribute>
+<AttriId>42</AttriId>
+<AttriName>CantEspectaculosLugar</AttriName>
+<Description>Cant Espectaculos Lugar</Description></Attribute></FormulaName>
+<FormulaExpression>
+<Token>GetCantEspectaculosLugar</Token>
+<Token>(</Token>
+<Attribute>
+<AttriId>8</AttriId>
+<AttriName>LugarId</AttriName>
+<Description>Lugar Id</Description></Attribute>
+<Token>)</Token></FormulaExpression></Action>
+<Action>
+<ActionType>BusinessRule</ActionType>
+<RuleType>ErrorRule</RuleType>
+<Expression>
+<Token>&quot;Inserta el nombre del lugar&quot;</Token></Expression>
+<Condition>
+<Attribute>
+<AttriId>9</AttriId>
+<AttriName>LugarNombre</AttriName>
+<Description>Lugar Nombre</Description></Attribute>
+<Token>.</Token>
+<Token>isempty(</Token>
+<Token>)</Token></Condition></Action>
+<Action>
+<ActionType>ReadTable</ActionType>
+<Table>
+<TableId>2</TableId>
+<TableName>PaisCiudad</TableName>
+<Description>Ciudad</Description></Table>
+<JoinConditions>
+<Table>
+<TableId>2</TableId>
+<TableName>PaisCiudad</TableName>
+<Description>Ciudad</Description></Table>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>PaisId</AttriName>
+<Description>Pais Id</Description></Attribute></AttributeTo>
+<Table>
+<TableId>4</TableId>
+<TableName>Lugar</TableName>
+<Description>Lugar</Description></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>1</AttriId>
+<AttriName>PaisId</AttriName>
+<Description>Pais Id</Description></Attribute></AttributeFrom></JoinCondition>
+<JoinCondition>
+<AttributeTo>
+<Attribute>
+<AttriId>4</AttriId>
+<AttriName>CiudadId</AttriName>
+<Description>Ciudad Id</Description></Attribute></AttributeTo>
+<Table>
+<TableId>4</TableId>
+<TableName>Lugar</TableName>
+<Description>Lugar</Description></Table>
+<AttributeFrom>
+<Attribute>
+<AttriId>4</AttriId>
+<AttriName>CiudadId</AttriName>
+<Description>Ciudad Id</Description></Attribute></AttributeFrom></JoinCondition></JoinConditions>
+<Into>
+<Attribute>
+<AttriId>5</AttriId>
+<AttriName>CiudadNombre</AttriName>
+<Description>Ciudad Nombre</Description></Attribute></Into></Action></Rules>
+<BeforeConfirmRules></BeforeConfirmRules>
 <AfterConfirmRules></AfterConfirmRules>
 <TablesToUpdate>
 <TableToUpdate>
@@ -80,10 +255,6 @@
 <Description>Lugar</Description></Table>
 <TableAction>insert</TableAction>
 <AttrisToUpdate>
-<Attribute>
-<AttriId>8</AttriId>
-<AttriName>LugarId</AttriName>
-<Description>Lugar Id</Description></Attribute>
 <Attribute>
 <AttriId>9</AttriId>
 <AttriName>LugarNombre</AttriName>
@@ -138,9 +309,13 @@
 <Description>Lugar</Description></Table>
 <TableAction>delete</TableAction>
 <AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
+<BeforeInsertRules></BeforeInsertRules>
 <AfterInsertRules></AfterInsertRules>
+<BeforeUpdateRules></BeforeUpdateRules>
 <AfterUpdateRules></AfterUpdateRules>
+<BeforeDeleteRules></BeforeDeleteRules>
 <AfterDeleteRules></AfterDeleteRules>
+<AfterDisplayRules></AfterDisplayRules>
 <TablesToControlOnDelete>
 <Table>
 <TableId>7</TableId>
@@ -153,6 +328,9 @@
 <AttriName>LugarId</AttriName>
 <Description>Lugar Id</Description></Attribute></KeyAttributes></Table></TablesToControlOnDelete>
 <Levels></Levels>
+<BeforeTrnRules></BeforeTrnRules>
 <AfterTrnRules></AfterTrnRules>
-<AfterLevelRules></AfterLevelRules></Level></Levels>
+<AfterLevelRules></AfterLevelRules>
+<Formulas>
+<AggSelFormulas></AggSelFormulas></Formulas></Level></Levels>
 <Suggests></Suggests></ObjectSpec>

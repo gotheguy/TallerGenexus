@@ -24,7 +24,7 @@
 <Properties>
 <Property>
 <Name>Autonumber</Name>
-<Value>No</Value></Property>
+<Value>Yes</Value></Property>
 <Property>
 <Name>Autogenerate</Name>
 <Value>No</Value></Property>
@@ -79,7 +79,7 @@
 <Clustered>No</Clustered></Index></Indices></TableIndices>
 <FKConstraints></FKConstraints>
 <Statements>
-<Statement>CREATE TABLE [TipoEspectaculo] ([TipoEspectaculoId] smallint NOT NULL , [TipoEspectaculoNombre] nchar(100) NOT NULL , PRIMARY KEY([TipoEspectaculoId])) </Statement>
+<Statement>CREATE TABLE [TipoEspectaculo] ([TipoEspectaculoId] smallint NOT NULL IDENTITY(1,1), [TipoEspectaculoNombre] nchar(100) NOT NULL , PRIMARY KEY([TipoEspectaculoId])) </Statement>
 <Statement>CREATE UNIQUE NONCLUSTERED INDEX [UTIPOESPECTACULO] ON [TipoEspectaculo] ([TipoEspectaculoNombre] )</Statement></Statements>
 <NeedReorganizationProgram>False</NeedReorganizationProgram>
 <Warnings></Warnings>

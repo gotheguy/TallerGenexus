@@ -10,7 +10,16 @@
 <ObjPgmName>Pais_DataProvider</ObjPgmName>
 <ObjClsName>DataProvider</ObjClsName></Object>
 <Result>genreq</Result>
-<Warnings></Warnings>
+<Warnings>
+<Warning>
+<MsgCode>spc0174</MsgCode>
+<Location>
+<Type>Source</Type>
+<Line>3</Line></Location>
+<Message>
+<Token>Could not find a proper SDT for root element </Token>
+<Token>'SDTPaises'. Element should be named 'Pais'.</Token>
+<Token></Token></Message></Warning></Warnings>
 <Errors></Errors>
 <OutputDevices>
 <Device>None</Device></OutputDevices>

@@ -1,10 +1,10 @@
-spec_i([ web,46,'View Venta','ViewVenta',0,eng,'16_0_7-138086' ]).
+spec_i([ web,92,'View Venta','ViewVenta',0,eng,'16_0_7-138086' ]).
  
 struct_i(2,1,[ 'Pgmname','Exists','GXLvl6' ],[]).
 struct_i(3,1,[],[]).
  
-level_i(2,[ 8,[ [ 8,many ] ],[],[],[ [ [ 8 ],[ 37,38,40000 ] ] ],[ [ [ 8 ],[] ] ],[ 37 ],'IVENTA',[ 8,[ [ [],'Ventaid',37 ] ] ],[] ]).
-level_i(3,[ 8,[ [ 8,many ] ],[],[],[ [ [ 8 ],[ 37 ] ] ],[ [ [ 8 ],[] ] ],[ 37 ],'IVENTA',[ 8,[ [ [],'Ventaid',37 ] ] ],[] ]).
+level_i(2,[ 8,[ [ 8,many ] ],[],[],[ [ [ 8 ],[ 37,38 ] ] ],[ [ [ 8 ],[] ] ],[ 37 ],'IVENTA',[ 8,[ [ [],'Ventaid',37 ] ] ],[] ]).
+level_i(3,[ 8,[ [ 8,many ] ],[],[],[ [ [ 8 ],[ 37,38 ] ] ],[ [ [ 8 ],[] ] ],[ 37 ],'IVENTA',[ 8,[ [ [],'Ventaid',37 ] ] ],[] ]).
  
 tw_i(2,[]).
 tw_i(3,[]).
@@ -17,11 +17,11 @@ lwi_i(3,[ [] ]).
 level_option_i(3,usr_condition,y).
 level_option_i(3,when_none,'GXLvl6').
  
-ta_i(2,[ [ [ 8,37 ],[ 8,38 ],[ 8,40000 ] ] ]).
-ta_i(3,[ [ [ 8,37 ] ] ]).
+ta_i(2,[ [ [ 8,37 ],[ 8,38 ] ] ]).
+ta_i(3,[ [ [ 8,37 ],[ 8,38 ] ] ]).
  
-las_i(2,[ [ 'Ventaid','Tabcode',37,38,40000 ] ]).
-las_i(3,[ [ 'Ventaid','Tabcode',37 ] ]).
+las_i(2,[ [ 'Ventaid','Tabcode',37,38 ] ]).
+las_i(3,[ [ 'Ventaid','Tabcode',37,38 ] ]).
  
 lac_i(2,[ [] ]).
 lac_i(3,[ [] ]).
@@ -31,7 +31,7 @@ lits_i('Venta Information',5,10).
 lits_i('Ventas',5,10).
 lits_i('General',5,10).
  
-cls_i([ 0,0 ],[ 5,1023 ]).
+cls_i([ 0,0 ],[ 5,26 ]).
  
 pos_i(38,[ 0,0,0 ]).
  
@@ -145,10 +145,10 @@ v_i(f,i,2,[]).
 v_i(f,o,2,'Err').
 v_i(t,i,3,'Ventaid').
 v_i(t,o,3,37).
+v_i(t,o,3,38).
 v_i(t,i,4,'Ventaid').
 v_i(t,o,4,37).
 v_i(t,o,4,38).
-v_i(t,o,4,40000).
  
  
  
@@ -156,8 +156,7 @@ v_i(t,o,4,40000).
  
  
 attri_i(37,[ 'VentaId',int,4,0,'ZZZ9',0,'Venta Id','',0 ]).
-attri_i(40000,[ 'VentaFecha_GXI',svchar,2048,0,'',0,'',[],0 ]).
-attri_i(38,[ 'VentaFecha',bits,4,0,'',0,'Venta Fecha','',0 ]).
+attri_i(38,[ 'VentaFecha',date,8,0,'99/99/9999',0,'Venta Fecha','',0 ]).
 attri_i('GXLvl6',[ 'GXLvl6',int,1,0,'',0,'',[],16 ]).
 attri_i('Pgmname',[ 'Pgmname',char,129,0,'',1,'Program name','',15 ]).
 attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',14 ]).
@@ -171,7 +170,7 @@ attri_i('Selectedtabcode',[ 'SelectedTabCode',char,50,0,'',0,'Selected Tab Code'
 attri_i('Tabcode',[ 'TabCode',char,50,0,'',0,'Tab Code','',6 ]).
 attri_i('Isauthorized',[ 'IsAuthorized',boolean,4,0,'',0,'Is Authorized','',5 ]).
  
-table_i(8,[ 'Venta',[ 37,38,40000 ],'Venta','Venta' ]).
+table_i(8,[ 'Venta',[ 37,38 ],'Venta','Venta' ]).
  
 index_i(8,[ 'IVENTA',u,[ 37 ],'IVenta' ]).
  
@@ -186,11 +185,8 @@ index_i(8,[ 'IVENTA',u,[ 37 ],'IVenta' ]).
  
  
  
-add_att_i(bits,2,40000,38,'VentaFecha_GXI',[ svchar,2048,0,0 ]).
-add_att_i(bits,2,40001,26,'VentaPaisBandera_GXI',[ svchar,2048,0,0 ]).
-add_att_i(bits,2,40002,21,'EspectaculoPaisBandera_GXI',[ svchar,2048,0,0 ]).
-add_att_i(bits,2,40003,3,'PaisBandera_GXI',[ svchar,2048,0,0 ]).
-add_att_i(bits,2,40004,10,'LugarFoto_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40000,10,'LugarFoto_GXI',[ svchar,2048,0,0 ]).
+add_att_i(bits,2,40001,3,'PaisBandera_GXI',[ svchar,2048,0,0 ]).
  
  
  
@@ -202,8 +198,6 @@ end_i(2,0,0,[ [ [ t(37,2),t(=,10),t('Ventaid',23) ] ] ]).
 end_i(3,0,0,[ [ [ t(37,2),t(=,10),t('Ventaid',23) ] ] ]).
  
  
-map_i(513,a,40001,[ 'PaisBandera_GXI' ]).
-map_i(511,a,40002,[ 'PaisBandera_GXI' ]).
  
  
  
@@ -214,7 +208,7 @@ dom_info_i(71,[ 'Id' ]).
 dom_info_i(74,[ 'TabCode' ]).
  
  
-break_i(3,nvg,1,[],[ [],[ 37 ],[] ]).
+break_i(3,nvg,1,[],[ [ 38 ],[ 37 ],[] ]).
 break_i(2,nvg,1,[],[ [ 38 ],[],[] ]).
  
 b_group_i(2,1,lit,0,1,1).
@@ -232,7 +226,7 @@ b_line_i(4,2,2,cmd,1,[ t('',111,1,0) ]).
 b_line_i([ 6,0 ],2,2,cmd,1,[ t('',107,1,0),t('GXLvl6',23,1,0),t(=,10,1,0),t('0',3,1,0) ]).
 b_line_i(6,3,1,cmd,7,[ t('',121,6,0) ]).
 b_line_i([ 6,1 ],3,1,cmd,6,[ t('',107,6,0),t('GXLvl6',23,6,0),t(=,10,6,0),t('1',3,6,0) ]).
-b_line_i(8,3,1,cmd,7,[ t('',107,7,0),t([ t('Form',3,7,0),t('Caption',3,7,0) ],29,7,0),t(=,10,7,0),t('"Venta"',3,7,0) ]).
+b_line_i(8,3,1,cmd,7,[ t('',107,7,0),t([ t('Form',3,7,0),t('Caption',3,7,0) ],29,7,0),t(=,10,7,0),t('dtoc(',1,7,0),t(38,2,7,0),t(')',4,7,0) ]).
 b_line_i(9,3,1,cmd,7,[ t('',107,7,0),t([ t('Viewall',3,7,0),t('Link',3,7,0) ],29,7,0),t(=,10,7,0),t('link(',1,7,0),t(o(13,'WWVenta'),28,7,0),t(')',4,7,0) ]).
 b_line_i(10,3,1,cmd,7,[ t('',107,7,0),t('Exists',23,7,0),t(=,10,7,0),t('TRUE',40,7,0) ]).
 b_line_i(12,3,1,cmd,7,[ t('',128,7,0) ]).
@@ -460,13 +454,13 @@ html_comp_i(18,'Semanticcontent',div,d,[ str ]).
 html_comp_i(18,'Align',left,d,[ str ]).
 html_comp_i(18,'Valign',top,d,[ str ]).
 html_comp_i(19,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(19,'Colcount',5,d,[ num ]).
+html_comp_i(19,'Colcount',10,d,[ num ]).
 html_comp_i(19,'Attid',38,v,[ num ]).
-html_comp_i(19,'Class','ReadonlyAttribute ReadonlyResponsiveImageAttribute',v,[ str ]).
+html_comp_i(19,'Class','ReadonlyAttribute',v,[ str ]).
 html_comp_i(19,'Controlname','Ventafecha',d,[ str ]).
 html_comp_i(19,'Returnonclick',0,v,[ bool ]).
 html_comp_i(19,'Eventgx','',d,[ str ]).
-html_comp_i(19,'Captionclass','col-sm-3 ReadonlyAttributeLabel ReadonlyResponsiveImageAttributeLabel',v,[ str ]).
+html_comp_i(19,'Captionclass','col-sm-3 ReadonlyAttributeLabel',v,[ str ]).
 html_comp_i(19,'Captionposition','Left',v,[ str ]).
 html_comp_i(19,'Captionvalue','Fecha',d,[ str ]).
 html_comp_i(19,'Layoutclass','col-sm-9',v,[ str ]).
@@ -474,15 +468,23 @@ html_comp_i(19,'Controltype',2,d,[ num ]).
 html_comp_i(19,'Inputtype',0,d,[ num ]).
 html_comp_i(19,'Notifycontextchange',0,d,[ bool ]).
 html_comp_i(19,'Emptyasnull','Yes',d,[ str ]).
-html_comp_i(19,'Autocomplete',0,d,[ bool ]).
+html_comp_i(19,'Readonly',-1,v,[ bool ]).
+html_comp_i(19,'Autocomplete',-1,d,[ bool ]).
+html_comp_i(19,'Ispassword',0,d,[ bool ]).
 html_comp_i(19,'Autoresize',-1,d,[ bool ]).
+html_comp_i(19,'Gxwidth',measure(10,chr),d,[ measure ]).
+html_comp_i(19,'Gxheight',measure(1,row),d,[ measure ]).
 html_comp_i(19,'Ismultiline',0,d,[ bool ]).
 html_comp_i(19,'Maxtextnumberlines',0,d,[ num ]).
-html_comp_i(19,'Border','1',d,[ str ]).
-html_comp_i(19,'Alt','',d,[ str ]).
+html_comp_i(19,'Fill',-1,d,[ bool ]).
+html_comp_i(19,'Backcolor',rgb(255,255,255),d,[ color ]).
+html_comp_i(19,'Forecolor',rgb(0,0,0),d,[ color ]).
+html_comp_i(19,'Font',font('Arial',10,[]),d,[ font ]).
+html_comp_i(19,'Horizontalalignment',right,d,[ str ]).
+html_comp_i(19,'Gxformat',0,d,[ num ]).
 html_comp_i(19,'Title','',d,[ str ]).
-html_comp_i(19,'Hspace',0,d,[ num ]).
-html_comp_i(19,'Vspace',0,d,[ num ]).
+html_comp_i(19,'Use_datepicker',-1,d,[ bool ]).
+html_comp_i(19,'Flat_datepicker',0,d,[ bool ]).
 html_comp_i(20,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(20,'Class',row,v,[ str ]).
 html_comp_i(20,'Id','',d,[ str ]).
@@ -607,37 +609,31 @@ lit_i(1,1,window,[ rect(0,0,1000,1000),ctlname('Form') ]).
 att_prop_i(2,38,'ExternalName','VentaFecha',d).
 att_prop_i(2,38,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,38,'EmptyAsNull','Yes',d).
-att_prop_i(2,38,'ExternalStorage','-1',d).
 att_prop_i(2,38,idBasedOn,'',d).
 att_prop_i(2,38,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,38,'AttRegEx','',d).
 att_prop_i(2,38,'AttValidationFailedMsg','',d).
+att_prop_i(2,38,idDATEFORMAT,idDATEFORMAT_LONG,v).
 att_prop_i(2,38,'DownloadOffline','0',d).
 att_prop_i(2,38,'FullName','VentaFecha',v).
 att_prop_i(2,37,'ExternalName','VentaId',d).
 att_prop_i(2,37,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,37,'EmptyAsNull','Yes',d).
 att_prop_i(2,37,idBasedOn,71,v).
-att_prop_i(2,37,'AUTONUMBER','0',d).
+att_prop_i(2,37,'AUTONUMBER','-1',v).
+att_prop_i(2,37,'AUTONUMBER_START','1',d).
+att_prop_i(2,37,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,37,'AUTONUMBER_FORREPLICATION','-1',d).
 att_prop_i(2,37,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,37,'AttRegEx','',d).
 att_prop_i(2,37,'AttValidationFailedMsg','',d).
 att_prop_i(2,37,'DownloadOffline','0',d).
 att_prop_i(2,37,'FullName','VentaId',v).
-att_prop_i(2,40000,'ExternalName','',d).
-att_prop_i(2,40000,'ExternalNamespace','',d).
-att_prop_i(2,40000,'EmptyAsNull','Yes',d).
-att_prop_i(2,40000,idBasedOn,'',d).
-att_prop_i(2,40000,'AUTONUMBER','0',d).
-att_prop_i(2,40000,'ATT_INITIAL_VALUE','',d).
-att_prop_i(2,40000,'AttRegEx','',d).
-att_prop_i(2,40000,'AttValidationFailedMsg','',d).
-att_prop_i(2,40000,'FullName','',v).
  
  
 tbl_att_prop_i(2,8,37,'AllowNulls',n).
+tbl_att_prop_i(2,8,37,'AUTONUMBER',y).
 tbl_att_prop_i(2,8,38,'AllowNulls',n).
-tbl_att_prop_i(2,8,40000,'AllowNulls',n).
  
 var_prop_i(2,'Tabcode',idBasedOn,74,v).
 var_prop_i(2,'Selectedtabcode',idBasedOn,74,v).
@@ -645,8 +641,6 @@ var_prop_i(2,'Ventaid',idBasedOn,'',v).
  
  
  
-a_alias_i(40001,'VentaPaisBandera_GXI').
-a_alias_i(40002,'EspectaculoPaisBandera_GXI').
  
  
 struct_dt_i([ 26,49,0 ],name,'TabOptions').
@@ -669,6 +663,8 @@ struct_dt_i([ 26,49,76 ],name,'TabOptionsItem').
 struct_dt_i([ 26,49,76 ],namespace,'GXObligatorio1.TabOptions').
 struct_dt_i([ 26,49,0 ],fullname,'TabOptions').
 struct_dt_i([ 26,49,76 ],fullname,'TabOptions.TabOptionsItem').
+struct_dt_i([ 26,49,0 ],modified,yes).
+struct_dt_i([ 26,49,76 ],modified,yes).
  
 struct_dt_elem_i([ 26,49,76 ],1,name,'Code').
 struct_dt_elem_i([ 26,49,76 ],1,camelname,'Code').
@@ -742,18 +738,18 @@ struct_dt_elem_i([ 26,49,76 ],4,'JsonInclude',idJsonEmpty).
  
  
  
-sub_info_i(146,'Start',1,24,[ [ 'Pgmname',37,'Ventaid','Tabcode','Loadalltabs','Selectedtabcode' ],[ [ t('Form',3),t('Caption',3) ],[ t('Viewall',3),t('Link',3) ],[ t('Viewall',3),t('Visible',3) ],'Loadalltabs','Selectedtabcode',[ t('Tab',3),t('Activepagecontrolname',3) ],[ t('Generalwc',3),t('Object',3) ] ] ]).
+sub_info_i(146,'Start',1,24,[ [ 'Pgmname',37,'Ventaid',38,'Tabcode','Loadalltabs','Selectedtabcode' ],[ [ t('Form',3),t('Caption',3) ],[ t('Viewall',3),t('Link',3) ],[ t('Viewall',3),t('Visible',3) ],'Loadalltabs','Selectedtabcode',[ t('Tab',3),t('Activepagecontrolname',3) ],[ t('Generalwc',3),t('Object',3) ] ] ]).
 sub_info_i(146,[ t('Tab',3,26,7),t('Tabchanged',3,26,11) ],26,30,[ [ [ t('Tab',3),t('Activepagecontrolname',3) ],'Loadalltabs','Selectedtabcode','Ventaid' ],[ 'Selectedtabcode','Loadalltabs',[ t('Generalwc',3),t('Object',3) ] ] ]).
  
 pgm_parm_i(web,17,'NOTAUTHORIZED',[ [ svchar,256,0,0 ] ],[ [ 'GxObject',in,[] ] ]).
-pgm_parm_i(web,44,'VENTAGENERAL',[ [ int,4,0,0 ] ],[ [ 'VentaId',in,[] ] ]).
-pgm_parm_i(web,43,'WWVENTA',[],[]).
+pgm_parm_i(web,94,'VENTAGENERAL',[ [ int,4,0,0 ] ],[ [ 'VentaId',in,[] ] ]).
+pgm_parm_i(web,93,'WWVENTA',[],[]).
 pgm_parm_i(proc,11,'ISAUTHORIZED',[ [ svchar,256,0,0 ],[ boolean,4,0,0 ] ],[ [ 'GxObject',in,[] ],[ 'Authorized',out,[] ] ]).
  
-pgm_callprotocol_i(web,46,'VIEWVENTA','INTERNAL','Secure').
+pgm_callprotocol_i(web,92,'VIEWVENTA','INTERNAL','Secure').
 pgm_callprotocol_i(web,17,'NOTAUTHORIZED','INTERNAL','Secure').
-pgm_callprotocol_i(web,44,'VENTAGENERAL','INTERNAL','Secure').
-pgm_callprotocol_i(web,43,'WWVENTA','INTERNAL','Secure').
+pgm_callprotocol_i(web,94,'VENTAGENERAL','INTERNAL','Secure').
+pgm_callprotocol_i(web,93,'WWVENTA','INTERNAL','Secure').
 pgm_callprotocol_i(proc,11,'ISAUTHORIZED','INTERNAL','Secure').
  
  

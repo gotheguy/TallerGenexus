@@ -19,3 +19,5 @@
 /out:bin\lugargeneral.dll
 lugargeneral.cs
 isauthorized.cs
+lugar_bc.cs
+getcantespectaculoslugar.cs

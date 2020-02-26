@@ -67,13 +67,13 @@ public class bldalugar_dataprovider : GxBaseBuilder
             return true;
          if (checkTime(obj, cs_path + @"\genexus.programs.sdt.rsp" ))
             return true;
-         if (checkTime(obj, cs_path + @"\type_SdtLugar.cs" ))
-            return true;
-         if (checkTime(obj, cs_path + @"\type_SdtTipoEspectaculo.cs" ))
-            return true;
          if (checkTime(obj, cs_path + @"\type_SdtPais.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\type_SdtPais_Ciudad.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_SdtLugar.cs" ))
+            return true;
+         if (checkTime(obj, cs_path + @"\type_SdtTipoEspectaculo.cs" ))
             return true;
          if (checkTime(obj, cs_path + @"\gxdomainpage.cs" ))
             return true;

@@ -2,7 +2,7 @@
                File: Home
         Description: Home
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/17/2020 21:44:22.34
+       Generated on: 2/25/2020 21:45:24.78
        Program type: Main program
           Main DBMS: SQL Server
 */
@@ -243,7 +243,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 138086), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 138086), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202021721442256", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202022521452481", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -893,7 +893,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202021721442266", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202022521452493", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -911,7 +911,7 @@ namespace GeneXus.Programs {
          if ( nGXWrapped != 1 )
          {
             context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-            context.AddJavascriptSource("home.js", "?202021721442267", false, true);
+            context.AddJavascriptSource("home.js", "?202022521452493", false, true);
          }
          /* End function include_jscripts */
       }

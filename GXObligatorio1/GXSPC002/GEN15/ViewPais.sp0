@@ -1,6 +1,6 @@
 spec_i([ web,36,'View Pais','ViewPais',0,eng,'16_0_7-138086' ]).
  
-struct_i(2,1,[ 'Pgmname','Exists','GXLvl6' ],[]).
+struct_i(2,1,[ 'Pgmname','Exists','GXLvl6','Paisid' ],[]).
 struct_i(3,1,[],[]).
  
 level_i(2,[ 1,[ [ 1,many ] ],[],[],[ [ [ 1 ],[ 1,2 ] ] ],[ [ [ 1 ],[] ] ],[ 1 ],'IPAIS',[ 1,[ [ [],'Paisid',1 ] ] ],[] ]).
@@ -31,8 +31,6 @@ lits_i('Pais Information',5,10).
 lits_i('Pais',5,10).
 lits_i('General',5,10).
 lits_i('Ciudad',5,10).
-lits_i('Venta Pais',5,10).
-lits_i('Espectaculo Pais',5,10).
  
 cls_i([ 0,0 ],[ 5,99 ]).
  
@@ -257,13 +255,7 @@ b_line_i(35,2,6,cmd,8,[ t('',111,8,0) ]).
 b_line_i(36,2,6,cmd,8,[ t('',109,8,0),t('Loadalltabs',23,8,5),t('.OR.',9,8,18),t('Selectedtabcode',23,8,23),t(=,10,8,40),t('"Ciudad"',3,36,42) ]).
 b_line_i(37,2,6,cmd,8,[ t('',107,8,0),t([ t('Ciudadwc',3,8,0),t('Object',3,8,0) ],29,8,0),t(=,10,8,0),t('create(',1,8,0),t(o(13,'PaisCiudadWC'),28,8,0),t(',',7,8,0),t('Paisid',23,8,0),t(')',4,8,0) ]).
 b_line_i(38,2,6,cmd,8,[ t('',111,8,0) ]).
-b_line_i(39,2,6,cmd,8,[ t('',109,8,0),t('Loadalltabs',23,8,5),t('.OR.',9,8,18),t('Selectedtabcode',23,8,23),t(=,10,8,40),t('"Venta"',3,39,42) ]).
-b_line_i(40,2,6,cmd,8,[ t('',107,8,0),t([ t('Ventawc',3,8,0),t('Object',3,8,0) ],29,8,0),t(=,10,8,0),t('create(',1,8,0),t(o(13,'PaisVentaWC'),28,8,0),t(',',7,8,0),t('Paisid',23,8,0),t(')',4,8,0) ]).
-b_line_i(41,2,6,cmd,8,[ t('',111,8,0) ]).
-b_line_i(42,2,6,cmd,8,[ t('',109,8,0),t('Loadalltabs',23,8,5),t('.OR.',9,8,18),t('Selectedtabcode',23,8,23),t(=,10,8,40),t('"Venta1"',3,42,42) ]).
-b_line_i(43,2,6,cmd,8,[ t('',107,8,0),t([ t('Venta1wc',3,8,0),t('Object',3,8,0) ],29,8,0),t(=,10,8,0),t('create(',1,8,0),t(o(13,'PaisVenta1WC'),28,8,0),t(',',7,8,0),t('Paisid',23,8,0),t(')',4,8,0) ]).
-b_line_i(44,2,6,cmd,8,[ t('',111,8,0) ]).
-b_line_i(45,2,6,cmd,8,[ t('',144,8,0) ]).
+b_line_i(39,2,6,cmd,8,[ t('',144,8,0) ]).
 b_line_i(1000,2,6,cmd,0,[ t('',146,0,0),t('Load',3,0,0) ]).
 b_line_i(1001,2,6,cmd,0,[ t('',155,0,0) ]).
 b_line_i(1002,2,6,cmd,0,[ t('',147,0,0) ]).
@@ -321,24 +313,6 @@ html_sub_i(34,35,html_i(0,div(35))).
 html_sub_i(35,36,html_i(0,div(36))).
 html_sub_i(36,37,html_i(0,div(37))).
 html_sub_i(37,38,html_i(0,comp(webcomp))).
-html_sub_i(22,39,html_i(4,container(39))).
-html_sub_i(39,40,html_i(0,t('Venta Pais',3))).
-html_sub_i(39,41,html_i(1,div(41))).
-html_sub_i(41,0,html_i(0,html('Venta'))).
-html_sub_i(22,42,html_i(5,container(42))).
-html_sub_i(42,43,html_i(0,div(43))).
-html_sub_i(43,44,html_i(0,div(44))).
-html_sub_i(44,45,html_i(0,div(45))).
-html_sub_i(45,46,html_i(0,comp(webcomp))).
-html_sub_i(22,47,html_i(6,container(47))).
-html_sub_i(47,48,html_i(0,t('Espectaculo Pais',3))).
-html_sub_i(47,49,html_i(1,div(49))).
-html_sub_i(49,0,html_i(0,html('Venta1'))).
-html_sub_i(22,50,html_i(7,container(50))).
-html_sub_i(50,51,html_i(0,div(51))).
-html_sub_i(51,52,html_i(0,div(52))).
-html_sub_i(52,53,html_i(0,div(53))).
-html_sub_i(53,54,html_i(0,comp(webcomp))).
  
 html_tags_i(1,'Class','form-horizontal Form').
 html_tags_i(2,'data-gx-base-lib',bootstrapv3).
@@ -349,10 +323,6 @@ html_tags_i(25,style,'display:none;').
 html_tags_i(30,'Object','').
 html_tags_i(33,style,'display:none;').
 html_tags_i(38,'Object','').
-html_tags_i(41,style,'display:none;').
-html_tags_i(46,'Object','').
-html_tags_i(49,style,'display:none;').
-html_tags_i(54,'Object','').
  
 html_comp_i(2,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(2,'Class','Section',d,[ str ]).
@@ -552,7 +522,7 @@ html_comp_i(22,'Usercontroltype','Tab',d,[ str ]).
 html_comp_i(22,'Constructorname','gx.ui.controls.Tab',d,[ str ]).
 html_comp_i(22,'Showmethodname',show,d,[ str ]).
 html_comp_i(22,'Controlname','Tab',v,[ str ]).
-html_comp_i(22,'Pagecount',4,v,[ num ]).
+html_comp_i(22,'Pagecount',2,v,[ num ]).
 html_comp_i(22,'Class','WWTab',v,[ str ]).
 html_comp_i(22,'Historymanagement',-1,v,[ bool ]).
 html_comp_i(22,'Visible',-1,d,[ bool ]).
@@ -658,104 +628,6 @@ html_comp_i(37,'Valign',top,d,[ str ]).
 html_comp_i(38,'Isabstractlayoutcontrol',0,d,[ bool ]).
 html_comp_i(38,'Controlname','Ciudadwc',v,[ str ]).
 html_comp_i(38,'Params',[],v,[ params ]).
-html_comp_i(39,'Containerid',title3,v,[ str ]).
-html_comp_i(40,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(40,'Caption','Venta Pais',d,[ str ]).
-html_comp_i(40,'Id','Venta_title',v,[ str ]).
-html_comp_i(40,'Class','TextBlock',d,[ str ]).
-html_comp_i(40,'Event','',d,[ str ]).
-html_comp_i(40,'Returnonclick',0,d,[ bool ]).
-html_comp_i(40,'Gxformat',0,v,[ num ]).
-html_comp_i(40,'Title','',d,[ str ]).
-html_comp_i(40,'Fill',-1,d,[ bool ]).
-html_comp_i(40,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(40,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(40,'Font','',d,[ str ]).
-html_comp_i(41,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(41,'Class','Section',d,[ str ]).
-html_comp_i(41,'Id','',d,[ str ]).
-html_comp_i(41,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(41,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(41,'Semanticcontent',div,d,[ str ]).
-html_comp_i(41,'Align',left,d,[ str ]).
-html_comp_i(41,'Valign',top,d,[ str ]).
-html_comp_i(42,'Containerid',panel3,v,[ str ]).
-html_comp_i(43,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(43,'Class','TabsFormContainer',v,[ str ]).
-html_comp_i(43,'Id','Tableventa',v,[ str ]).
-html_comp_i(43,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(43,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(43,'Semanticcontent',div,d,[ str ]).
-html_comp_i(43,'Align',left,d,[ str ]).
-html_comp_i(43,'Valign',top,d,[ str ]).
-html_comp_i(44,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(44,'Class',row,v,[ str ]).
-html_comp_i(44,'Id','',d,[ str ]).
-html_comp_i(44,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(44,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(44,'Semanticcontent',div,d,[ str ]).
-html_comp_i(44,'Align',left,d,[ str ]).
-html_comp_i(44,'Valign',top,d,[ str ]).
-html_comp_i(45,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(45,'Class','col-xs-12',v,[ str ]).
-html_comp_i(45,'Id','',d,[ str ]).
-html_comp_i(45,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(45,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(45,'Semanticcontent',div,d,[ str ]).
-html_comp_i(45,'Align',left,d,[ str ]).
-html_comp_i(45,'Valign',top,d,[ str ]).
-html_comp_i(46,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(46,'Controlname','Ventawc',v,[ str ]).
-html_comp_i(46,'Params',[],v,[ params ]).
-html_comp_i(47,'Containerid',title4,v,[ str ]).
-html_comp_i(48,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(48,'Caption','Espectaculo Pais',d,[ str ]).
-html_comp_i(48,'Id','Venta1_title',v,[ str ]).
-html_comp_i(48,'Class','TextBlock',d,[ str ]).
-html_comp_i(48,'Event','',d,[ str ]).
-html_comp_i(48,'Returnonclick',0,d,[ bool ]).
-html_comp_i(48,'Gxformat',0,v,[ num ]).
-html_comp_i(48,'Title','',d,[ str ]).
-html_comp_i(48,'Fill',-1,d,[ bool ]).
-html_comp_i(48,'Backcolor',rgb(255,255,255),d,[ color ]).
-html_comp_i(48,'Forecolor',rgb(0,0,0),d,[ color ]).
-html_comp_i(48,'Font','',d,[ str ]).
-html_comp_i(49,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(49,'Class','Section',d,[ str ]).
-html_comp_i(49,'Id','',d,[ str ]).
-html_comp_i(49,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(49,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(49,'Semanticcontent',div,d,[ str ]).
-html_comp_i(49,'Align',left,d,[ str ]).
-html_comp_i(49,'Valign',top,d,[ str ]).
-html_comp_i(50,'Containerid',panel4,v,[ str ]).
-html_comp_i(51,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(51,'Class','TabsFormContainer',v,[ str ]).
-html_comp_i(51,'Id','Tableventa1',v,[ str ]).
-html_comp_i(51,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(51,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(51,'Semanticcontent',div,d,[ str ]).
-html_comp_i(51,'Align',left,d,[ str ]).
-html_comp_i(51,'Valign',top,d,[ str ]).
-html_comp_i(52,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(52,'Class',row,v,[ str ]).
-html_comp_i(52,'Id','',d,[ str ]).
-html_comp_i(52,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(52,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(52,'Semanticcontent',div,d,[ str ]).
-html_comp_i(52,'Align',left,d,[ str ]).
-html_comp_i(52,'Valign',top,d,[ str ]).
-html_comp_i(53,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(53,'Class','col-xs-12',v,[ str ]).
-html_comp_i(53,'Id','',d,[ str ]).
-html_comp_i(53,'Height',measure(0,px),d,[ measure ]).
-html_comp_i(53,'Width',measure(0,px),d,[ measure ]).
-html_comp_i(53,'Semanticcontent',div,d,[ str ]).
-html_comp_i(53,'Align',left,d,[ str ]).
-html_comp_i(53,'Valign',top,d,[ str ]).
-html_comp_i(54,'Isabstractlayoutcontrol',0,d,[ bool ]).
-html_comp_i(54,'Controlname','Venta1wc',v,[ str ]).
-html_comp_i(54,'Params',[],v,[ params ]).
  
  
  
@@ -791,19 +663,7 @@ lit_i(38,1,comp(webcomp),[ ctlname('Ciudadwc'),width(0),rect(0,0,10,10),title('N
 lit_i(37,1,div(37),[ ctlname('') ]).
 lit_i(36,1,div(36),[ ctlname('') ]).
 lit_i(35,1,div(35),[ ctlname('Tableciudad') ]).
-lit_i(40,1,t('Venta Pais',3),[ ctlname('Venta_title') ]).
-lit_i(41,1,div(41),[ ctlname('') ]).
-lit_i(46,1,comp(webcomp),[ ctlname('Ventawc'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(45,1,div(45),[ ctlname('') ]).
-lit_i(44,1,div(44),[ ctlname('') ]).
-lit_i(43,1,div(43),[ ctlname('Tableventa') ]).
-lit_i(48,1,t('Espectaculo Pais',3),[ ctlname('Venta1_title') ]).
-lit_i(49,1,div(49),[ ctlname('') ]).
-lit_i(54,1,comp(webcomp),[ ctlname('Venta1wc'),width(0),rect(0,0,10,10),title('Nothing') ]).
-lit_i(53,1,div(53),[ ctlname('') ]).
-lit_i(52,1,div(52),[ ctlname('') ]).
-lit_i(51,1,div(51),[ ctlname('Tableventa1') ]).
-lit_i(22,1,usercontrol(22),[ ctlname('Tab'),ctrltype(tab),el([]),containers([ container(23),container(26),container(31),container(34),container(39),container(42),container(47),container(50) ]) ]).
+lit_i(22,1,usercontrol(22),[ ctlname('Tab'),ctrltype(tab),el([]),containers([ container(23),container(26),container(31),container(34) ]) ]).
 lit_i(21,1,div(21),[ ctlname('') ]).
 lit_i(20,1,div(20),[ ctlname('') ]).
 lit_i(3,1,div(3),[ ctlname('Maintable') ]).
@@ -832,8 +692,11 @@ att_prop_i(2,1,'ExternalName','PaisId',d).
 att_prop_i(2,1,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,1,'EmptyAsNull','Yes',d).
 att_prop_i(2,1,idBasedOn,71,v).
-att_prop_i(2,1,'AUTONUMBER','0',d).
-att_prop_i(2,1,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,1,'AUTONUMBER','-1',v).
+att_prop_i(2,1,'AUTONUMBER_START','1',d).
+att_prop_i(2,1,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,1,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,1,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,1,'AttRegEx','',d).
 att_prop_i(2,1,'AttValidationFailedMsg','',d).
 att_prop_i(2,1,'DownloadOffline','0',d).
@@ -841,11 +704,13 @@ att_prop_i(2,1,'FullName','PaisId',v).
  
  
 tbl_att_prop_i(2,1,1,'AllowNulls',n).
+tbl_att_prop_i(2,1,1,'AUTONUMBER',y).
 tbl_att_prop_i(2,1,2,'AllowNulls',n).
  
 var_prop_i(2,'Tabcode',idBasedOn,74,v).
 var_prop_i(2,'Selectedtabcode',idBasedOn,74,v).
 var_prop_i(2,'Paisid',idBasedOn,'',v).
+var_prop_i(2,'Paisid','ATT_INITIAL_VALUE',[ t('1',3) ],d).
  
  
  
@@ -871,6 +736,8 @@ struct_dt_i([ 26,49,76 ],name,'TabOptionsItem').
 struct_dt_i([ 26,49,76 ],namespace,'GXObligatorio1.TabOptions').
 struct_dt_i([ 26,49,0 ],fullname,'TabOptions').
 struct_dt_i([ 26,49,76 ],fullname,'TabOptions.TabOptionsItem').
+struct_dt_i([ 26,49,0 ],modified,yes).
+struct_dt_i([ 26,49,76 ],modified,yes).
  
 struct_dt_elem_i([ 26,49,76 ],1,name,'Code').
 struct_dt_elem_i([ 26,49,76 ],1,camelname,'Code').
@@ -944,12 +811,10 @@ struct_dt_elem_i([ 26,49,76 ],4,'JsonInclude',idJsonEmpty).
  
  
  
-sub_info_i(146,'Start',1,24,[ [ 'Pgmname',1,'Paisid',2,'Tabcode','Loadalltabs','Selectedtabcode' ],[ [ t('Form',3),t('Caption',3) ],[ t('Viewall',3),t('Link',3) ],[ t('Viewall',3),t('Visible',3) ],'Loadalltabs','Selectedtabcode',[ t('Tab',3),t('Activepagecontrolname',3) ],[ t('Generalwc',3),t('Object',3) ],[ t('Ciudadwc',3),t('Object',3) ],[ t('Ventawc',3),t('Object',3) ],[ t('Venta1wc',3),t('Object',3) ] ] ]).
-sub_info_i(146,[ t('Tab',3,26,7),t('Tabchanged',3,26,11) ],26,30,[ [ [ t('Tab',3),t('Activepagecontrolname',3) ],'Loadalltabs','Selectedtabcode','Paisid' ],[ 'Selectedtabcode','Loadalltabs',[ t('Generalwc',3),t('Object',3) ],[ t('Ciudadwc',3),t('Object',3) ],[ t('Ventawc',3),t('Object',3) ],[ t('Venta1wc',3),t('Object',3) ] ] ]).
+sub_info_i(146,'Start',1,24,[ [ 'Pgmname',1,'Paisid',2,'Tabcode','Loadalltabs','Selectedtabcode' ],[ [ t('Form',3),t('Caption',3) ],[ t('Viewall',3),t('Link',3) ],[ t('Viewall',3),t('Visible',3) ],'Loadalltabs','Selectedtabcode',[ t('Tab',3),t('Activepagecontrolname',3) ],[ t('Generalwc',3),t('Object',3) ],[ t('Ciudadwc',3),t('Object',3) ] ] ]).
+sub_info_i(146,[ t('Tab',3,26,7),t('Tabchanged',3,26,11) ],26,30,[ [ [ t('Tab',3),t('Activepagecontrolname',3) ],'Loadalltabs','Selectedtabcode','Paisid' ],[ 'Selectedtabcode','Loadalltabs',[ t('Generalwc',3),t('Object',3) ],[ t('Ciudadwc',3),t('Object',3) ] ] ]).
  
 pgm_parm_i(web,17,'NOTAUTHORIZED',[ [ svchar,256,0,0 ] ],[ [ 'GxObject',in,[] ] ]).
-pgm_parm_i(web,69,'PAISVENTA1WC',[ [ int,4,0,0 ] ],[ [ 'EspectaculoPaisId',in,[] ] ]).
-pgm_parm_i(web,42,'PAISVENTAWC',[ [ int,4,0,0 ] ],[ [ 'VentaPaisId',in,[] ] ]).
 pgm_parm_i(web,39,'PAISCIUDADWC',[ [ int,4,0,0 ] ],[ [ 'PaisId',in,[] ] ]).
 pgm_parm_i(web,38,'PAISGENERAL',[ [ int,4,0,0 ] ],[ [ 'PaisId',in,[] ] ]).
 pgm_parm_i(web,37,'WWPAIS',[],[]).
@@ -957,8 +822,6 @@ pgm_parm_i(proc,11,'ISAUTHORIZED',[ [ svchar,256,0,0 ],[ boolean,4,0,0 ] ],[ [ '
  
 pgm_callprotocol_i(web,36,'VIEWPAIS','INTERNAL','Secure').
 pgm_callprotocol_i(web,17,'NOTAUTHORIZED','INTERNAL','Secure').
-pgm_callprotocol_i(web,69,'PAISVENTA1WC','INTERNAL','Secure').
-pgm_callprotocol_i(web,42,'PAISVENTAWC','INTERNAL','Secure').
 pgm_callprotocol_i(web,39,'PAISCIUDADWC','INTERNAL','Secure').
 pgm_callprotocol_i(web,38,'PAISGENERAL','INTERNAL','Secure').
 pgm_callprotocol_i(web,37,'WWPAIS','INTERNAL','Secure').

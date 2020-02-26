@@ -1,11 +1,9 @@
-current_obj_i(2,web,68).
+current_obj_i(2,web,89).
  
-current_guid('9419650a-7103-4351-801f-c62aa67aece0').
- 
- 
-called_tree_i(13,68,13,6).
+current_guid('27b930b4-dbea-4c1b-adbc-41ab1fcbf505').
  
  
+called_tree_i(13,89,13,6).
  
  
  
@@ -20,7 +18,9 @@ called_tree_i(13,68,13,6).
  
  
  
-ij_object_dependency(gx00f2,[],[],[],68).
+ 
+ 
+ij_object_dependency(gx00f2,[],[],[],89).
  
  
 obj_parms_i([ 'short aP0_pEspectaculoId','short aP1_pLocalidadId','short aP2_pSectorId' ],[ [ 'Pespectaculoid',in ],[ 'Plocalidadid',in ],[ 'Psectorid',out ] ]).

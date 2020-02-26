@@ -10,7 +10,15 @@
 <ObjPgmName>WWTipoEspectaculo</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
 <Result>genreq</Result>
-<Warnings></Warnings>
+<Warnings>
+<Warning>
+<MsgCode>spc0156</MsgCode>
+<Message>
+<Token>Event </Token>
+<Token>'DoListaEspectaculosPorTipo'</Token>
+<Token> for control '</Token>
+<Token>Btnlista</Token>
+<Token>' is not defined.</Token></Message></Warning></Warnings>
 <Errors></Errors>
 <Generator>
 <GenId>15</GenId>

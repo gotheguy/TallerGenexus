@@ -17,5 +17,7 @@
 /r:bin\GeneXus.dll
 /r:GxBaseBuilder.dll
 /out:bin\wwlugar.dll
-isauthorized.cs
 wwlugar.cs
+isauthorized.cs
+lugar_bc.cs
+getcantespectaculoslugar.cs

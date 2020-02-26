@@ -10,7 +10,25 @@
 <ObjPgmName>Venta</ObjPgmName>
 <ObjClsName>Transaction</ObjClsName></Object>
 <Result>genreq</Result>
-<Warnings></Warnings>
+<Warnings>
+<Warning>
+<MsgCode>spc0033</MsgCode>
+<Message>
+<Token></Token>
+<Attribute>
+<AttriId>34</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Token> will be read-only in update mode.</Token></Message></Warning>
+<Warning>
+<MsgCode>spc0033</MsgCode>
+<Message>
+<Token></Token>
+<Attribute>
+<AttriId>11</AttriId>
+<AttriName>LocalidadId</AttriName>
+<Description>Localidad Id</Description></Attribute>
+<Token> will be read-only in update mode.</Token></Message></Warning></Warnings>
 <Errors></Errors>
 <Generator>
 <GenId>15</GenId>
@@ -61,62 +79,60 @@
 <Description>Espectaculo Id</Description></Attribute></KeyAttributes>
 <Tables></Tables></Table>
 <Table>
-<TableId>1</TableId>
-<TableName>Pais</TableName>
-<Description>Pais</Description>
+<TableId>14</TableId>
+<TableName>EspectaculoLocalidad</TableName>
+<Description>Localidad</Description>
+<Updated>Yes</Updated>
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
 <Attribute>
-<AttriId>24</AttriId>
-<AttriName>VentaPaisId</AttriName>
-<Description>Venta Pais Id</Description></Attribute></KeyAttributes>
+<AttriId>34</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>11</AttriId>
+<AttriName>LocalidadId</AttriName>
+<Description>Localidad Id</Description></Attribute></KeyAttributes>
 <Tables></Tables></Table>
 <Table>
-<TableId>1</TableId>
-<TableName>Pais</TableName>
-<Description>Pais</Description>
+<TableId>15</TableId>
+<TableName>EspectaculoLocalidadSector</TableName>
+<Description>Sector</Description>
 <RecordsToRead>one</RecordsToRead>
 <KeyAttributes>
 <Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table>
-<Table>
-<TableId>2</TableId>
-<TableName>PaisCiudad</TableName>
-<Description>Ciudad</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
+<AttriId>34</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
 <Attribute>
-<AttriId>24</AttriId>
-<AttriName>VentaPaisId</AttriName>
-<Description>Venta Pais Id</Description></Attribute>
+<AttriId>11</AttriId>
+<AttriName>LocalidadId</AttriName>
+<Description>Localidad Id</Description></Attribute>
 <Attribute>
-<AttriId>27</AttriId>
-<AttriName>VentaCiudadId</AttriName>
-<Description>Venta Ciudad Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table>
-<Table>
-<TableId>2</TableId>
-<TableName>PaisCiudad</TableName>
-<Description>Ciudad</Description>
-<RecordsToRead>one</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>22</AttriId>
-<AttriName>EspectaculoCiudadId</AttriName>
-<Description>Espectaculo Ciudad Id</Description></Attribute></KeyAttributes>
+<AttriId>17</AttriId>
+<AttriName>SectorId</AttriName>
+<Description>Sector Id</Description></Attribute></KeyAttributes>
 <Tables></Tables></Table></Tables></Table></NavigationTree>
 <Formulas>
 <VerticalFormulas></VerticalFormulas>
 <AggSelFormulas></AggSelFormulas></Formulas>
 <DynamicLoads></DynamicLoads>
-<Rules></Rules>
+<Rules>
+<ActionType>BusinessRule</ActionType>
+<CALL>
+<Object>
+<ObjClsGuid>84a12160-f59b-4ad7-a683-ea4481ac23e9</ObjClsGuid>
+<ObjCls>1</ObjCls>
+<ObjId>14</ObjId>
+<ObjName>ImprimirEntradas</ObjName>
+<ObjPgmName>ImprimirEntradas</ObjPgmName>
+<ObjClsName>Procedure</ObjClsName></Object>
+<Parameters>
+<Attribute>
+<AttriId>37</AttriId>
+<AttriName>VentaId</AttriName>
+<Description>Venta Id</Description></Attribute></Parameters>
+<IF></IF></CALL></Rules>
 <AfterAttributeRules></AfterAttributeRules>
 <AfterConfirmRules></AfterConfirmRules>
 <TablesToUpdate>
@@ -128,41 +144,25 @@
 <TableAction>insert</TableAction>
 <AttrisToUpdate>
 <Attribute>
-<AttriId>37</AttriId>
-<AttriName>VentaId</AttriName>
-<Description>Venta Id</Description></Attribute>
-<Attribute>
 <AttriId>38</AttriId>
 <AttriName>VentaFecha</AttriName>
 <Description>Venta Fecha</Description></Attribute>
 <Attribute>
-<AttriId>40000</AttriId>
-<AttriName>VentaFecha.Uri  </AttriName>
-<Description></Description></Attribute>
-<Attribute>
-<AttriId>40</AttriId>
-<AttriName>VentaTotal</AttriName>
-<Description>Venta Total</Description></Attribute>
+<AttriId>43</AttriId>
+<AttriName>VentaCantidadEntradas</AttriName>
+<Description>Venta Cantidad Entradas</Description></Attribute>
 <Attribute>
 <AttriId>34</AttriId>
 <AttriName>EspectaculoId</AttriName>
 <Description>Espectaculo Id</Description></Attribute>
 <Attribute>
-<AttriId>24</AttriId>
-<AttriName>VentaPaisId</AttriName>
-<Description>Venta Pais Id</Description></Attribute>
+<AttriId>11</AttriId>
+<AttriName>LocalidadId</AttriName>
+<Description>Localidad Id</Description></Attribute>
 <Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>27</AttriId>
-<AttriName>VentaCiudadId</AttriName>
-<Description>Venta Ciudad Id</Description></Attribute>
-<Attribute>
-<AttriId>22</AttriId>
-<AttriName>EspectaculoCiudadId</AttriName>
-<Description>Espectaculo Ciudad Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<AttriId>17</AttriId>
+<AttriName>SectorId</AttriName>
+<Description>Sector Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
 <TableToUpdate>
 <Table>
 <TableId>8</TableId>
@@ -175,40 +175,39 @@
 <AttriName>VentaFecha</AttriName>
 <Description>Venta Fecha</Description></Attribute>
 <Attribute>
-<AttriId>40000</AttriId>
-<AttriName>VentaFecha.Uri  </AttriName>
-<Description></Description></Attribute>
-<Attribute>
-<AttriId>40</AttriId>
-<AttriName>VentaTotal</AttriName>
-<Description>Venta Total</Description></Attribute>
+<AttriId>43</AttriId>
+<AttriName>VentaCantidadEntradas</AttriName>
+<Description>Venta Cantidad Entradas</Description></Attribute>
 <Attribute>
 <AttriId>34</AttriId>
 <AttriName>EspectaculoId</AttriName>
 <Description>Espectaculo Id</Description></Attribute>
 <Attribute>
-<AttriId>24</AttriId>
-<AttriName>VentaPaisId</AttriName>
-<Description>Venta Pais Id</Description></Attribute>
+<AttriId>11</AttriId>
+<AttriName>LocalidadId</AttriName>
+<Description>Localidad Id</Description></Attribute>
 <Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>27</AttriId>
-<AttriName>VentaCiudadId</AttriName>
-<Description>Venta Ciudad Id</Description></Attribute>
-<Attribute>
-<AttriId>22</AttriId>
-<AttriName>EspectaculoCiudadId</AttriName>
-<Description>Espectaculo Ciudad Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<AttriId>17</AttriId>
+<AttriName>SectorId</AttriName>
+<Description>Sector Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
 <TableToUpdate>
 <Table>
 <TableId>8</TableId>
 <TableName>Venta</TableName>
 <Description>Venta</Description></Table>
 <TableAction>delete</TableAction>
-<AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
+<AttrisToUpdate></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>14</TableId>
+<TableName>EspectaculoLocalidad</TableName>
+<Description>Localidad</Description></Table>
+<TableAction>update</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>15</AttriId>
+<AttriName>LocalidadesVendidas</AttriName>
+<Description>Localidades Vendidas</Description></Attribute></AttrisToUpdate></TableToUpdate></TablesToUpdate>
 <AfterInsertRules></AfterInsertRules>
 <AfterUpdateRules></AfterUpdateRules>
 <AfterDeleteRules></AfterDeleteRules>
@@ -219,87 +218,53 @@
 <Prompts>
 <Prompt>
 <Table>
-<TableId>2</TableId>
-<TableName>PaisCiudad</TableName>
-<Description>Ciudad</Description></Table>
+<TableId>15</TableId>
+<TableName>EspectaculoLocalidadSector</TableName>
+<Description>Sector</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
-<ObjId>8</ObjId>
-<ObjName>Gx0021</ObjName>
-<ObjPgmName>Gx0021</ObjPgmName>
+<ObjId>89</ObjId>
+<ObjName>Gx00F2</ObjName>
+<ObjPgmName>Gx00F2</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
-<InputParameters></InputParameters>
+<InputParameters>
+<Attribute>
+<AttriId>34</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute>
+<Attribute>
+<AttriId>11</AttriId>
+<AttriName>LocalidadId</AttriName>
+<Description>Localidad Id</Description></Attribute></InputParameters>
 <OutputParameters>
 <Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>22</AttriId>
-<AttriName>EspectaculoCiudadId</AttriName>
-<Description>Espectaculo Ciudad Id</Description></Attribute></OutputParameters>
+<AttriId>17</AttriId>
+<AttriName>SectorId</AttriName>
+<Description>Sector Id</Description></Attribute></OutputParameters>
 <PromptType>System</PromptType></Prompt>
 <Prompt>
 <Table>
-<TableId>2</TableId>
-<TableName>PaisCiudad</TableName>
-<Description>Ciudad</Description></Table>
+<TableId>14</TableId>
+<TableName>EspectaculoLocalidad</TableName>
+<Description>Localidad</Description></Table>
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
-<ObjId>8</ObjId>
-<ObjName>Gx0021</ObjName>
-<ObjPgmName>Gx0021</ObjPgmName>
+<ObjId>88</ObjId>
+<ObjName>Gx00E1</ObjName>
+<ObjPgmName>Gx00E1</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>
-<InputParameters></InputParameters>
+<InputParameters>
+<Attribute>
+<AttriId>34</AttriId>
+<AttriName>EspectaculoId</AttriName>
+<Description>Espectaculo Id</Description></Attribute></InputParameters>
 <OutputParameters>
 <Attribute>
-<AttriId>24</AttriId>
-<AttriName>VentaPaisId</AttriName>
-<Description>Venta Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>27</AttriId>
-<AttriName>VentaCiudadId</AttriName>
-<Description>Venta Ciudad Id</Description></Attribute></OutputParameters>
-<PromptType>System</PromptType></Prompt>
-<Prompt>
-<Table>
-<TableId>1</TableId>
-<TableName>Pais</TableName>
-<Description>Pais</Description></Table>
-<Object>
-<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
-<ObjCls>13</ObjCls>
-<ObjId>7</ObjId>
-<ObjName>Gx0010</ObjName>
-<ObjPgmName>Gx0010</ObjPgmName>
-<ObjClsName>Web Panel</ObjClsName></Object>
-<InputParameters></InputParameters>
-<OutputParameters>
-<Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute></OutputParameters>
-<PromptType>System</PromptType></Prompt>
-<Prompt>
-<Table>
-<TableId>1</TableId>
-<TableName>Pais</TableName>
-<Description>Pais</Description></Table>
-<Object>
-<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
-<ObjCls>13</ObjCls>
-<ObjId>7</ObjId>
-<ObjName>Gx0010</ObjName>
-<ObjPgmName>Gx0010</ObjPgmName>
-<ObjClsName>Web Panel</ObjClsName></Object>
-<InputParameters></InputParameters>
-<OutputParameters>
-<Attribute>
-<AttriId>24</AttriId>
-<AttriName>VentaPaisId</AttriName>
-<Description>Venta Pais Id</Description></Attribute></OutputParameters>
+<AttriId>11</AttriId>
+<AttriName>LocalidadId</AttriName>
+<Description>Localidad Id</Description></Attribute></OutputParameters>
 <PromptType>System</PromptType></Prompt>
 <Prompt>
 <Table>
@@ -309,7 +274,7 @@
 <Object>
 <ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
 <ObjCls>13</ObjCls>
-<ObjId>9</ObjId>
+<ObjId>90</ObjId>
 <ObjName>Gx0070</ObjName>
 <ObjPgmName>Gx0070</ObjPgmName>
 <ObjClsName>Web Panel</ObjClsName></Object>

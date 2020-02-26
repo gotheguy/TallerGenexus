@@ -2,7 +2,7 @@
                File: type_SdtPais
         Description: Pais
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/18/2020 22:53:12.44
+       Generated on: 2/25/2020 21:45:23.61
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -68,6 +68,7 @@ namespace GeneXus.Programs {
          metadata.Set("Name", "Pais");
          metadata.Set("BT", "Pais");
          metadata.Set("PK", "[ \"PaisId\" ]");
+         metadata.Set("PKAssigned", "[ \"PaisId\" ]");
          metadata.Set("Levels", "[ \"Ciudad\" ]");
          metadata.Set("AllowInsert", "True");
          metadata.Set("AllowUpdate", "True");
@@ -455,6 +456,7 @@ namespace GeneXus.Programs {
 
       public void initialize( )
       {
+         gxTv_SdtPais_Paisid = 1;
          gxTv_SdtPais_Paisnombre = "";
          gxTv_SdtPais_Paisbandera = "";
          gxTv_SdtPais_Paisbandera_gxi = "";

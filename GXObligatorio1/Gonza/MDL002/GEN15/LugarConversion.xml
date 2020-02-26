@@ -24,7 +24,7 @@
 <Properties>
 <Property>
 <Name>Autonumber</Name>
-<Value>No</Value></Property>
+<Value>Yes</Value></Property>
 <Property>
 <Name>Autogenerate</Name>
 <Value>No</Value></Property>
@@ -73,7 +73,7 @@
 <Name>AllowNulls</Name>
 <Value>No</Value></Property></Properties></AttriType></Attribute>
 <Attribute>
-<AttriId>40001</AttriId>
+<AttriId>40000</AttriId>
 <AttriName>LugarFoto_GXI</AttriName>
 <Description>LugarFoto_GXI</Description>
 <TakesValueFrom></TakesValueFrom>
@@ -174,7 +174,7 @@
 <AttriName>CiudadId</AttriName>
 <Description>Ciudad Id</Description></Attribute></Attributes></FKConstraint></FKConstraints>
 <Statements>
-<Statement>CREATE TABLE [Lugar] ([LugarId] smallint NOT NULL , [LugarNombre] nchar(100) NOT NULL , [LugarFoto] VARBINARY(MAX) NOT NULL , [LugarFoto_GXI] varchar(2048) NOT NULL , [PaisId] smallint NOT NULL , [CiudadId] smallint NOT NULL , PRIMARY KEY([LugarId])) </Statement>
+<Statement>CREATE TABLE [Lugar] ([LugarId] smallint NOT NULL IDENTITY(1,1), [LugarNombre] nchar(100) NOT NULL , [LugarFoto] VARBINARY(MAX) NOT NULL , [LugarFoto_GXI] varchar(2048) NOT NULL , [PaisId] smallint NOT NULL , [CiudadId] smallint NOT NULL , PRIMARY KEY([LugarId])) </Statement>
 <Statement>CREATE NONCLUSTERED INDEX [ILUGAR1] ON [Lugar] ([PaisId] ,[CiudadId] )</Statement>
 <Statement>ALTER TABLE [Lugar] ADD CONSTRAINT [ILUGAR1] FOREIGN KEY ([PaisId], [CiudadId]) REFERENCES [PaisCiudad] ([PaisId], [CiudadId])</Statement></Statements>
 <NeedReorganizationProgram>False</NeedReorganizationProgram>

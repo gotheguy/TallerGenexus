@@ -6,27 +6,16 @@
 <TableName>Venta</TableName>
 <Description>Venta</Description></Table>
 <ReorgCls>c</ReorgCls>
-<ReorgCode>pk</ReorgCode>
-<ReorgMsg>Venta needs conversion</ReorgMsg>
-<ReorgAction>#</ReorgAction>
+<ReorgCode>new</ReorgCode>
+<ReorgMsg>Venta is new</ReorgMsg>
+<ReorgAction>*</ReorgAction>
 <TableAttributes>
 <AttrisInTable>
 <Attribute>
 <AttriId>37</AttriId>
 <AttriName>VentaId</AttriName>
 <Description>Venta Id</Description>
-<TakesValueFrom>
-<Table>
-<TableId>8</TableId>
-<TableName>Venta</TableName>
-<Description>Venta</Description></Table>
-<FromValue>
-<Token>.</Token>
-<Sp></Sp>
-<Attribute>
-<AttriId>37</AttriId>
-<AttriName>VentaId</AttriName>
-<Description>Venta Id</Description></Attribute></FromValue></TakesValueFrom>
+<TakesValueFrom></TakesValueFrom>
 <OnPrimaryKey>Yes</OnPrimaryKey>
 <AttriType>
 <DataType>N</DataType>
@@ -35,7 +24,7 @@
 <Properties>
 <Property>
 <Name>Autonumber</Name>
-<Value>No</Value></Property>
+<Value>Yes</Value></Property>
 <Property>
 <Name>Autogenerate</Name>
 <Value>No</Value></Property>
@@ -46,51 +35,10 @@
 <AttriId>38</AttriId>
 <AttriName>VentaFecha</AttriName>
 <Description>Venta Fecha</Description>
-<TakesValueFrom>
-<Table>
-<TableId>8</TableId>
-<TableName>Venta</TableName>
-<Description>Venta</Description></Table>
-<FromValue>
-<Token>.</Token>
-<Sp></Sp>
-<Attribute>
-<AttriId>38</AttriId>
-<AttriName>VentaFecha</AttriName>
-<Description>Venta Fecha</Description></Attribute></FromValue></TakesValueFrom>
+<TakesValueFrom></TakesValueFrom>
 <AttriType>
-<DataType>B</DataType>
-<Presicion>1024</Presicion>
-<Scale>0</Scale>
-<Properties>
-<Property>
-<Name>Autonumber</Name>
-<Value>No</Value></Property>
-<Property>
-<Name>Autogenerate</Name>
-<Value>No</Value></Property>
-<Property>
-<Name>AllowNulls</Name>
-<Value>No</Value></Property></Properties></AttriType></Attribute>
-<Attribute>
-<AttriId>40000</AttriId>
-<AttriName>VentaFecha_GXI</AttriName>
-<Description>VentaFecha_GXI</Description>
-<TakesValueFrom>
-<Table>
-<TableId>8</TableId>
-<TableName>Venta</TableName>
-<Description>Venta</Description></Table>
-<FromValue>
-<Token>.</Token>
-<Sp></Sp>
-<Attribute>
-<AttriId>40000</AttriId>
-<AttriName>VentaFecha.Uri  </AttriName>
-<Description></Description></Attribute></FromValue></TakesValueFrom>
-<AttriType>
-<DataType>V</DataType>
-<Presicion>2048</Presicion>
+<DataType>D</DataType>
+<Presicion>8</Presicion>
 <Scale>0</Scale>
 <Properties>
 <Property>
@@ -106,18 +54,7 @@
 <AttriId>34</AttriId>
 <AttriName>EspectaculoId</AttriName>
 <Description>Espectaculo Id</Description>
-<TakesValueFrom>
-<Table>
-<TableId>8</TableId>
-<TableName>Venta</TableName>
-<Description>Venta</Description></Table>
-<FromValue>
-<Token>.</Token>
-<Sp></Sp>
-<Attribute>
-<AttriId>34</AttriId>
-<AttriName>EspectaculoId</AttriName>
-<Description>Espectaculo Id</Description></Attribute></FromValue></TakesValueFrom>
+<TakesValueFrom></TakesValueFrom>
 <AttriType>
 <DataType>N</DataType>
 <Presicion>4</Presicion>
@@ -133,21 +70,10 @@
 <Name>AllowNulls</Name>
 <Value>No</Value></Property></Properties></AttriType></Attribute>
 <Attribute>
-<AttriId>24</AttriId>
-<AttriName>VentaPaisId</AttriName>
-<Description>Venta Pais Id</Description>
-<TakesValueFrom>
-<Table>
-<TableId>8</TableId>
-<TableName>Venta</TableName>
-<Description>Venta</Description></Table>
-<FromValue>
-<Token>.</Token>
-<Sp></Sp>
-<Attribute>
-<AttriId>24</AttriId>
-<AttriName>VentaPaisId</AttriName>
-<Description>Venta Pais Id</Description></Attribute></FromValue></TakesValueFrom>
+<AttriId>43</AttriId>
+<AttriName>VentaCantidadEntradas</AttriName>
+<Description>Venta Cantidad Entradas</Description>
+<TakesValueFrom></TakesValueFrom>
 <AttriType>
 <DataType>N</DataType>
 <Presicion>4</Presicion>
@@ -163,21 +89,10 @@
 <Name>AllowNulls</Name>
 <Value>No</Value></Property></Properties></AttriType></Attribute>
 <Attribute>
-<AttriId>27</AttriId>
-<AttriName>VentaCiudadId</AttriName>
-<Description>Venta Ciudad Id</Description>
-<TakesValueFrom>
-<Table>
-<TableId>8</TableId>
-<TableName>Venta</TableName>
-<Description>Venta</Description></Table>
-<FromValue>
-<Token>.</Token>
-<Sp></Sp>
-<Attribute>
-<AttriId>27</AttriId>
-<AttriName>VentaCiudadId</AttriName>
-<Description>Venta Ciudad Id</Description></Attribute></FromValue></TakesValueFrom>
+<AttriId>11</AttriId>
+<AttriName>LocalidadId</AttriName>
+<Description>Localidad Id</Description>
+<TakesValueFrom></TakesValueFrom>
 <AttriType>
 <DataType>N</DataType>
 <Presicion>4</Presicion>
@@ -193,21 +108,10 @@
 <Name>AllowNulls</Name>
 <Value>No</Value></Property></Properties></AttriType></Attribute>
 <Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description>
-<TakesValueFrom>
-<Table>
-<TableId>8</TableId>
-<TableName>Venta</TableName>
-<Description>Venta</Description></Table>
-<FromValue>
-<Token>.</Token>
-<Sp></Sp>
-<Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute></FromValue></TakesValueFrom>
+<AttriId>17</AttriId>
+<AttriName>SectorId</AttriName>
+<Description>Sector Id</Description>
+<TakesValueFrom></TakesValueFrom>
 <AttriType>
 <DataType>N</DataType>
 <Presicion>4</Presicion>
@@ -221,74 +125,9 @@
 <Value>No</Value></Property>
 <Property>
 <Name>AllowNulls</Name>
-<Value>No</Value></Property></Properties></AttriType></Attribute>
-<Attribute>
-<AttriId>22</AttriId>
-<AttriName>EspectaculoCiudadId</AttriName>
-<Description>Espectaculo Ciudad Id</Description>
-<TakesValueFrom>
-<Table>
-<TableId>8</TableId>
-<TableName>Venta</TableName>
-<Description>Venta</Description></Table>
-<FromValue>
-<Token>.</Token>
-<Sp></Sp>
-<Attribute>
-<AttriId>22</AttriId>
-<AttriName>EspectaculoCiudadId</AttriName>
-<Description>Espectaculo Ciudad Id</Description></Attribute></FromValue></TakesValueFrom>
-<AttriType>
-<DataType>N</DataType>
-<Presicion>4</Presicion>
-<Scale>0</Scale>
-<Properties>
-<Property>
-<Name>Autonumber</Name>
-<Value>No</Value></Property>
-<Property>
-<Name>Autogenerate</Name>
-<Value>No</Value></Property>
-<Property>
-<Name>AllowNulls</Name>
-<Value>No</Value></Property></Properties></AttriType></Attribute>
-<Attribute>
-<AttriId>40</AttriId>
-<AttriName>VentaTotal</AttriName>
-<Description>Venta Total</Description>
-<TakesValueFrom>
-<FromValue>
-<Token>0</Token></FromValue></TakesValueFrom>
-<AttriType>
-<DataType>N</DataType>
-<Presicion>4</Presicion>
-<Scale>0</Scale>
-<Properties>
-<Property>
-<Name>Autonumber</Name>
-<Value>No</Value></Property>
-<Property>
-<Name>Autogenerate</Name>
-<Value>No</Value></Property>
-<Property>
-<Name>AllowNulls</Name>
-<Value>No</Value></Property></Properties></AttriType>
-<AttriChangeType>ni</AttriChangeType></Attribute></AttrisInTable>
+<Value>No</Value></Property></Properties></AttriType></Attribute></AttrisInTable>
 <AttrisNoLongerInTable></AttrisNoLongerInTable>
 <AttrisInManyTables></AttrisInManyTables></TableAttributes>
-<NavigationTree>
-<Table>
-<TableId>8</TableId>
-<TableName>Venta</TableName>
-<Description>Venta</Description>
-<RecordsToRead>many</RecordsToRead>
-<KeyAttributes>
-<Attribute>
-<AttriId>37</AttriId>
-<AttriName>VentaId</AttriName>
-<Description>Venta Id</Description></Attribute></KeyAttributes>
-<Tables></Tables></Table></NavigationTree>
-<TablesToUpdate></TablesToUpdate>
 <TableIndices>
 <Indices>
 <Index>
@@ -302,97 +141,47 @@
 <IndexExistance>AlreadyExist</IndexExistance>
 <Clustered>Yes</Clustered></Index>
 <Index>
-<IndexName>IVENTA1</IndexName>
-<IndexType>d</IndexType>
-<IndexAttris>
-<Attribute>
-<AttriId>24</AttriId>
-<AttriName>VentaPaisId</AttriName>
-<Description>Venta Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>27</AttriId>
-<AttriName>VentaCiudadId</AttriName>
-<Description>Venta Ciudad Id</Description></Attribute></IndexAttris>
-<IndexExistance>AlreadyExist</IndexExistance>
-<Clustered>No</Clustered></Index>
-<Index>
 <IndexName>IVENTA2</IndexName>
 <IndexType>d</IndexType>
 <IndexAttris>
 <Attribute>
 <AttriId>34</AttriId>
 <AttriName>EspectaculoId</AttriName>
-<Description>Espectaculo Id</Description></Attribute></IndexAttris>
-<IndexExistance>AlreadyExist</IndexExistance>
-<Clustered>No</Clustered></Index>
-<Index>
-<IndexName>IVENTA3</IndexName>
-<IndexType>d</IndexType>
-<IndexAttris>
+<Description>Espectaculo Id</Description></Attribute>
 <Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute>
+<AttriId>11</AttriId>
+<AttriName>LocalidadId</AttriName>
+<Description>Localidad Id</Description></Attribute>
 <Attribute>
-<AttriId>22</AttriId>
-<AttriName>EspectaculoCiudadId</AttriName>
-<Description>Espectaculo Ciudad Id</Description></Attribute></IndexAttris>
+<AttriId>17</AttriId>
+<AttriName>SectorId</AttriName>
+<Description>Sector Id</Description></Attribute></IndexAttris>
 <IndexExistance>AlreadyExist</IndexExistance>
 <Clustered>No</Clustered></Index></Indices></TableIndices>
 <FKConstraints>
 <FKConstraint>
 <ChangeType>none</ChangeType>
 <Table>
-<TableId>2</TableId>
-<TableName>PaisCiudad</TableName>
-<Description>Ciudad</Description></Table>
-<Attributes>
-<Attribute>
-<AttriId>24</AttriId>
-<AttriName>VentaPaisId</AttriName>
-<Description>Venta Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>27</AttriId>
-<AttriName>VentaCiudadId</AttriName>
-<Description>Venta Ciudad Id</Description></Attribute></Attributes></FKConstraint>
-<FKConstraint>
-<ChangeType>none</ChangeType>
-<Table>
-<TableId>2</TableId>
-<TableName>PaisCiudad</TableName>
-<Description>Ciudad</Description></Table>
-<Attributes>
-<Attribute>
-<AttriId>19</AttriId>
-<AttriName>EspectaculoPaisId</AttriName>
-<Description>Espectaculo Pais Id</Description></Attribute>
-<Attribute>
-<AttriId>22</AttriId>
-<AttriName>EspectaculoCiudadId</AttriName>
-<Description>Espectaculo Ciudad Id</Description></Attribute></Attributes></FKConstraint>
-<FKConstraint>
-<ChangeType>none</ChangeType>
-<Table>
-<TableId>7</TableId>
-<TableName>Espectaculo</TableName>
-<Description>Espectaculo</Description></Table>
+<TableId>15</TableId>
+<TableName>EspectaculoLocalidadSector</TableName>
+<Description>Sector</Description></Table>
 <Attributes>
 <Attribute>
 <AttriId>34</AttriId>
 <AttriName>EspectaculoId</AttriName>
-<Description>Espectaculo Id</Description></Attribute></Attributes></FKConstraint></FKConstraints>
-<Statements>
-<Statement>ALTER TABLE [Venta] ADD [VentaTotal] smallint NOT NULL CONSTRAINT VentaTotalVenta_DEFAULT DEFAULT convert(int, 0)</Statement>
-<Statement>ALTER TABLE [Venta] DROP CONSTRAINT VentaTotalVenta_DEFAULT</Statement></Statements>
-<NeedReorganizationProgram>False</NeedReorganizationProgram>
-<Warnings>
-<Warning>
-<MsgCode>rgz0007</MsgCode>
-<Message>
-<Token>Attribute </Token>
+<Description>Espectaculo Id</Description></Attribute>
 <Attribute>
-<AttriId>40</AttriId>
-<AttriName>VentaTotal</AttriName>
-<Description>Venta Total</Description></Attribute>
-<Token> does not allow nulls and does not have an Initial Value. An empty default value will be used.</Token></Message></Warning></Warnings>
+<AttriId>11</AttriId>
+<AttriName>LocalidadId</AttriName>
+<Description>Localidad Id</Description></Attribute>
+<Attribute>
+<AttriId>17</AttriId>
+<AttriName>SectorId</AttriName>
+<Description>Sector Id</Description></Attribute></Attributes></FKConstraint></FKConstraints>
+<Statements>
+<Statement>CREATE TABLE [Venta] ([VentaId] smallint NOT NULL IDENTITY(1,1), [VentaFecha] datetime NOT NULL , [EspectaculoId] smallint NOT NULL , [VentaCantidadEntradas] smallint NOT NULL , [LocalidadId] smallint NOT NULL , [SectorId] smallint NOT NULL , PRIMARY KEY([VentaId])) </Statement>
+<Statement>CREATE NONCLUSTERED INDEX [IVENTA2] ON [Venta] ([EspectaculoId] ,[LocalidadId] ,[SectorId] )</Statement>
+<Statement>ALTER TABLE [Venta] ADD CONSTRAINT [IVENTA2] FOREIGN KEY ([EspectaculoId], [LocalidadId], [SectorId]) REFERENCES [EspectaculoLocalidadSector] ([EspectaculoId], [LocalidadId], [SectorId])</Statement></Statements>
+<NeedReorganizationProgram>False</NeedReorganizationProgram>
+<Warnings></Warnings>
 <Errors></Errors></ReorgSpec>

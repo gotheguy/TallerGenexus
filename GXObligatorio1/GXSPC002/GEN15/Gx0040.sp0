@@ -1,6 +1,6 @@
-spec_i([ web,12,'Selection List Lugar','Gx0040',0,eng,'16_0_7-138086' ]).
+spec_i([ web,86,'Selection List Lugar','Gx0040',0,eng,'16_0_7-138086' ]).
  
-struct_i(2,1,[ 'Advanced_label_template' ],[]).
+struct_i(2,1,[ 'Advanced_label_template','Clugarid','Cpaisid','Plugarid' ],[]).
  
 level_i(2,[ 4,[ [ 4,many ] ],[],[],[ [ [ 4 ],[ 4,1,10,40000,9,8 ] ] ],[ [ [ 4 ],[] ] ],[ 8 ],'ILUGAR',[],[] ]).
  
@@ -167,11 +167,11 @@ attri_i(1,[ 'PaisId',int,4,0,'ZZZ9',0,'Pais Id','',0 ]).
 attri_i(10,[ 'LugarFoto',bits,4,0,'',0,'Lugar Foto','',0 ]).
 attri_i(9,[ 'LugarNombre',char,100,0,'',0,'Lugar Nombre','',0 ]).
 attri_i(8,[ 'LugarId',int,4,0,'ZZZ9',0,'Lugar Id','',0 ]).
-attri_i('Linkselection_GXI',[ 'Linkselection_GXI',svchar,2048,0,'',0,'',[],14 ]).
-attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',13 ]).
-attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',12 ]).
-attri_i('Advanced_label_template',[ 'ADVANCED_LABEL_TEMPLATE',char,20,0,'',0,'ADVANCED_LABEL_TEMPLATE','',11 ]).
-attri_i('Plugarid',[ pLugarId,int,4,0,'ZZZ9',0,'Lugar Id','',10 ]).
+attri_i('Linkselection_GXI',[ 'Linkselection_GXI',svchar,2048,0,'',0,'',[],15 ]).
+attri_i('Errmsg',[ 'Gx_emsg',char,70,0,'',1,'Error text','',14 ]).
+attri_i('Err',[ 'Gx_err',int,3,0,'ZZ9',1,'Error code','',13 ]).
+attri_i('Advanced_label_template',[ 'ADVANCED_LABEL_TEMPLATE',char,20,0,'',0,'ADVANCED_LABEL_TEMPLATE','',12 ]).
+attri_i('Plugarid',[ pLugarId,int,4,0,'ZZZ9',0,'Lugar Id','',11 ]).
 attri_i('Cciudadid',[ cCiudadId,int,4,0,'ZZZ9',0,'Ciudad Id','',9 ]).
 attri_i('Cpaisid',[ cPaisId,int,4,0,'ZZZ9',0,'Pais Id','',8 ]).
 attri_i('Clugarnombre',[ cLugarNombre,char,100,0,'',0,'Lugar Nombre','',7 ]).
@@ -1170,8 +1170,11 @@ att_prop_i(2,8,'ExternalName','LugarId',d).
 att_prop_i(2,8,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,8,'EmptyAsNull','Yes',d).
 att_prop_i(2,8,idBasedOn,71,v).
-att_prop_i(2,8,'AUTONUMBER','0',d).
-att_prop_i(2,8,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,8,'AUTONUMBER','-1',v).
+att_prop_i(2,8,'AUTONUMBER_START','1',d).
+att_prop_i(2,8,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,8,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,8,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,8,'AttRegEx','',d).
 att_prop_i(2,8,'AttValidationFailedMsg','',d).
 att_prop_i(2,8,'DownloadOffline','0',d).
@@ -1200,8 +1203,11 @@ att_prop_i(2,1,'ExternalName','PaisId',d).
 att_prop_i(2,1,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,1,'EmptyAsNull','Yes',d).
 att_prop_i(2,1,idBasedOn,71,v).
-att_prop_i(2,1,'AUTONUMBER','0',d).
-att_prop_i(2,1,'ATT_INITIAL_VALUE','',d).
+att_prop_i(2,1,'AUTONUMBER','-1',v).
+att_prop_i(2,1,'AUTONUMBER_START','1',d).
+att_prop_i(2,1,'AUTONUMBER_STEP','1',d).
+att_prop_i(2,1,'AUTONUMBER_FORREPLICATION','-1',d).
+att_prop_i(2,1,'ATT_INITIAL_VALUE',[ t('1',3) ],v).
 att_prop_i(2,1,'AttRegEx','',d).
 att_prop_i(2,1,'AttValidationFailedMsg','',d).
 att_prop_i(2,1,'DownloadOffline','0',d).
@@ -1210,7 +1216,7 @@ att_prop_i(2,4,'ExternalName','CiudadId',d).
 att_prop_i(2,4,'ExternalNamespace','GXObligatorio1',d).
 att_prop_i(2,4,'EmptyAsNull','Yes',d).
 att_prop_i(2,4,idBasedOn,71,v).
-att_prop_i(2,4,'AUTONUMBER','0',d).
+att_prop_i(2,4,'AUTONUMBER','0',v).
 att_prop_i(2,4,'ATT_INITIAL_VALUE','',d).
 att_prop_i(2,4,'AttRegEx','',d).
 att_prop_i(2,4,'AttValidationFailedMsg','',d).
@@ -1228,6 +1234,7 @@ att_prop_i(2,40000,'FullName','',v).
  
  
 tbl_att_prop_i(2,4,8,'AllowNulls',n).
+tbl_att_prop_i(2,4,8,'AUTONUMBER',y).
 tbl_att_prop_i(2,4,9,'AllowNulls',n).
 tbl_att_prop_i(2,4,10,'AllowNulls',n).
 tbl_att_prop_i(2,4,40000,'AllowNulls',n).
@@ -1235,10 +1242,13 @@ tbl_att_prop_i(2,4,1,'AllowNulls',n).
 tbl_att_prop_i(2,4,4,'AllowNulls',n).
  
 var_prop_i(2,'Clugarid',idBasedOn,'',v).
+var_prop_i(2,'Clugarid','ATT_INITIAL_VALUE',[ t('1',3) ],d).
 var_prop_i(2,'Clugarnombre',idBasedOn,'',v).
 var_prop_i(2,'Cpaisid',idBasedOn,'',v).
+var_prop_i(2,'Cpaisid','ATT_INITIAL_VALUE',[ t('1',3) ],d).
 var_prop_i(2,'Cciudadid',idBasedOn,'',v).
 var_prop_i(2,'Plugarid',idBasedOn,'',v).
+var_prop_i(2,'Plugarid','ATT_INITIAL_VALUE',[ t('1',3) ],d).
  
  
  
@@ -1260,7 +1270,7 @@ sub_info_i(146,'Load',56,58,[ [],[ 'Linkselection' ] ]).
 sub_info_i(146,'Enter',60,63,[ [ 8 ],[ 'Plugarid' ] ]).
  
  
-pgm_callprotocol_i(web,12,'GX0040','INTERNAL','Secure').
+pgm_callprotocol_i(web,86,'GX0040','INTERNAL','Secure').
  
  
  

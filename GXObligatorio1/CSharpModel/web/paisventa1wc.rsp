@@ -17,5 +17,5 @@
 /r:bin\GeneXus.dll
 /r:GxBaseBuilder.dll
 /out:bin\paisventa1wc.dll
-isauthorized.cs
 paisventa1wc.cs
+isauthorized.cs

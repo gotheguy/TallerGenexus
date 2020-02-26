@@ -1,11 +1,9 @@
-current_obj_i(2,web,12).
+current_obj_i(2,web,86).
  
-current_guid('5e518ed8-b9de-4da3-992d-4e9faf014af8').
- 
- 
-called_tree_i(13,12,13,6).
+current_guid('040e3b94-7b68-420c-afd1-1e45d8c05b24').
  
  
+called_tree_i(13,86,13,6).
  
  
  
@@ -20,7 +18,9 @@ called_tree_i(13,12,13,6).
  
  
  
-ij_object_dependency(gx0040,[],[],[],12).
+ 
+ 
+ij_object_dependency(gx0040,[],[],[],86).
  
  
 obj_parms_i([ 'short aP0_pLugarId' ],[ [ 'Plugarid',out ] ]).

@@ -2,7 +2,7 @@
                File: PaisCiudadWC
         Description: Pais Ciudad WC
              Author: GeneXus C# Generator version 16_0_7-138086
-       Generated on: 2/18/2020 22:52:56.66
+       Generated on: 2/25/2020 21:45:21.95
        Program type: Callable routine
           Main DBMS: SQL Server
 */
@@ -288,7 +288,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 138086), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 138086), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202021822525671", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202022521452199", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -381,7 +381,7 @@ namespace GeneXus.Programs {
          SendCloseFormHiddens( ) ;
          if ( ( StringUtil.Len( sPrefix) != 0 ) && ( context.isAjaxRequest( ) || context.isSpaRequest( ) ) )
          {
-            context.AddJavascriptSource("paisciudadwc.js", "?202021822525673", false, true);
+            context.AddJavascriptSource("paisciudadwc.js", "?20202252145221", false, true);
          }
          GxWebStd.gx_hidden_field( context, sPrefix+"GX_FocusControl", GX_FocusControl);
          define_styles( ) ;
@@ -1460,7 +1460,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20202182252571", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202022521452230", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1477,7 +1477,7 @@ namespace GeneXus.Programs {
       {
          if ( nGXWrapped != 1 )
          {
-            context.AddJavascriptSource("paisciudadwc.js", "?20202182252572", false, true);
+            context.AddJavascriptSource("paisciudadwc.js", "?202022521452230", false, true);
          }
          /* End function include_jscripts */
       }
